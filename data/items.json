@@ -1,8 +1,8 @@
 {
   "_meta": {
     "set": 16,
-    "version": "0.3",
-    "notes": "Updated to Set 16 (Lore & Legends). Items removed since Set 14: Redemption, Locket, Zeke's Herald, Shroud of Stillness. Spirit Visage added. Categories changed to carry/mage/tank. Icons from Community Dragon CDN."
+    "version": "0.4",
+    "notes": "Added Deathblade (BF+BF) and Quicksilver (Gloves+Gloves) to fix combinator gaps."
   },
 
   "components": [
@@ -389,6 +389,44 @@
       },
       "why_it_matters": "Spirit Visage replaced Redemption as the go-to sustain item for tanks. The missing-HP scaling means it heals more when your tank is in danger — effectively acting as a regenerating safety net during long fights. Stack with Warmog's for maximum staying power.",
       "best_on": ["Frontline tanks", "Juggernaut champions", "HP-heavy tanks that take sustained damage"],
+      "priority": 7
+    },
+
+    {
+      "id": "deathblade",
+      "name": "Deathblade",
+      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_deathblade.tft_set13.png",
+      "category": "carry",
+      "tier": "A",
+      "components": ["b_f_sword", "b_f_sword"],
+      "stats": {
+        "ad": 50
+      },
+      "passive": {
+        "name": "Blood Harvest",
+        "description": "Gain +5 bonus Attack Damage each time an ally or the holder scores a takedown. Stacks up to 10 times (max +50 bonus AD)."
+      },
+      "why_it_matters": "Deathblade snowballs harder than any other AD item. It starts strong with +50 AD and keeps getting stronger every time someone on your team gets a kill. In a winning fight, it can double or triple its own damage bonus before the round is over — making it terrifying on carries who fight often.",
+      "best_on": ["AD carries in aggressive comps", "Slayer carries", "Carries in comps with many early takedowns"],
+      "priority": 8
+    },
+
+    {
+      "id": "quicksilver",
+      "name": "Quicksilver",
+      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.tft_set13.png",
+      "category": "carry",
+      "tier": "A",
+      "components": ["sparring_gloves", "sparring_gloves"],
+      "stats": {
+        "crit_chance": 20
+      },
+      "passive": {
+        "name": "Spell Shield",
+        "description": "At the start of combat, gain a Spell Shield that absorbs the first crowd control effect. Refreshes every few seconds."
+      },
+      "why_it_matters": "Quicksilver is the carry's panic button against CC-heavy comps. If the enemy team has assassins or stuns that would stop your carry from attacking, Quicksilver automatically blocks the first one — keeping your carry fighting when it matters most. Essential if you keep losing your carry to crowd control.",
+      "best_on": ["AD and AP carries vs CC-heavy comps", "Backline carries targeted by assassins"],
       "priority": 7
     }
   ]
