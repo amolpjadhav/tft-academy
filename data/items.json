@@ -1,433 +1,991 @@
 {
-  "_meta": {
-    "set": 16,
-    "version": "0.4",
-    "notes": "Added Deathblade (BF+BF) and Quicksilver (Gloves+Gloves) to fix combinator gaps."
-  },
-
-  "components": [
-    {
-      "id": "b_f_sword",
-      "name": "B.F. Sword",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bfsword.tft_set13.png",
-      "stats": { "ad": 10 }
+    "_meta": {
+        "set": 16,
+        "version": "0.6",
+        "notes": "Categories updated to ad_carry | ap_carry | melee_carry | tank based on Set 16 champion archetypes."
     },
-    {
-      "id": "needlessly_large_rod",
-      "name": "Needlessly Large Rod",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_needlesslylargerod.tft_set13.png",
-      "stats": { "ap": 10 }
-    },
-    {
-      "id": "recurve_bow",
-      "name": "Recurve Bow",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_recurvebow.tft_set13.png",
-      "stats": { "attack_speed": 15 }
-    },
-    {
-      "id": "tear_of_the_goddess",
-      "name": "Tear of the Goddess",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_tearofthegoddess.tft_set13.png",
-      "stats": { "mana": 15 }
-    },
-    {
-      "id": "chain_vest",
-      "name": "Chain Vest",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_chainvest.tft_set13.png",
-      "stats": { "armor": 20 }
-    },
-    {
-      "id": "negatron_cloak",
-      "name": "Negatron Cloak",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_negatroncloak.tft_set13.png",
-      "stats": { "magic_resist": 20 }
-    },
-    {
-      "id": "giants_belt",
-      "name": "Giant's Belt",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_giantsbelt.tft_set13.png",
-      "stats": { "hp": 150 }
-    },
-    {
-      "id": "sparring_gloves",
-      "name": "Sparring Gloves",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_sparringgloves.tft_set13.png",
-      "stats": { "crit_chance": 10 }
-    }
-  ],
-
-  "items": [
-    {
-      "id": "infinity_edge",
-      "name": "Infinity Edge",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_infinityedge.tft_set13.png",
-      "category": "carry",
-      "tier": "S",
-      "components": ["b_f_sword", "sparring_gloves"],
-      "stats": {
-        "ad": 35,
-        "crit_chance": 35
-      },
-      "passive": {
-        "name": "Perfect Timing",
-        "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
-      },
-      "why_it_matters": "Infinity Edge is the cornerstone crit item for AD carries. It unlocks spell crits and piles on damage, making it the default first item for snipers like Caitlyn or Jinx. Stack crit from other sources and every hit becomes massive.",
-      "best_on": ["Vanquisher carries", "Gunslinger carries", "Crit-scaling AD champions"],
-      "priority": 9
-    },
-
-    {
-      "id": "giant_slayer",
-      "name": "Giant Slayer",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_madredsbloodrazor.tft_set13.png",
-      "category": "carry",
-      "tier": "A",
-      "components": ["b_f_sword", "recurve_bow"],
-      "stats": {
-        "ad": 10,
-        "attack_speed": 15
-      },
-      "passive": {
-        "name": "Executioner",
-        "description": "Abilities and attacks deal 15% bonus damage. This bonus increases to 45% against enemies with more than 1600 max HP."
-      },
-      "why_it_matters": "Giant Slayer punishes lobbies that stack HP-heavy tanks. The bonus damage scales directly with how beefy the target is — so the tankier the opponent's frontline, the harder Giant Slayer hits. Build it when you see Bruisers and Juggernauts.",
-      "best_on": ["AD carries vs tank-heavy lobbies", "Longshot backline snipers"],
-      "priority": 7
-    },
-
-    {
-      "id": "bloodthirster",
-      "name": "Bloodthirster",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bloodthirster.tft_set13.png",
-      "category": "carry",
-      "tier": "A",
-      "components": ["b_f_sword", "negatron_cloak"],
-      "stats": {
-        "ad": 25,
-        "magic_resist": 25
-      },
-      "passive": {
-        "name": "Lifeline",
-        "description": "Once per combat at 40% max Health, gain a shield equal to 25% of max Health that decays over 3 seconds."
-      },
-      "why_it_matters": "Bloodthirster is defensive insurance for your carry. The shield at 40% HP absorbs a burst of damage at the exact moment your carry is most vulnerable — often keeping them alive through an assassin's combo long enough to finish the fight.",
-      "best_on": ["AD carries", "Backline carries threatened by assassins", "Slayer carries"],
-      "priority": 7
-    },
-
-    {
-      "id": "last_whisper",
-      "name": "Last Whisper",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_lastwhisper.tft_set13.png",
-      "category": "carry",
-      "tier": "B",
-      "components": ["recurve_bow", "sparring_gloves"],
-      "stats": {
-        "attack_speed": 15,
-        "crit_chance": 10
-      },
-      "passive": {
-        "name": "Armor Shred",
-        "description": "Physical damage Sunders (reduces armor by 30%) the target for 3 seconds."
-      },
-      "why_it_matters": "Last Whisper is a team amplifier disguised as a carry item. Every Sunder on the target means your entire team's physical damage is boosted against them. Essential when the enemy frontline is stacking Armor.",
-      "best_on": ["Fast-attacking AD carries", "Comps with multiple physical damage sources"],
-      "priority": 5
-    },
-
-    {
-      "id": "rageblade",
-      "name": "Guinsoo's Rageblade",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_guinsoosrageblade.tft_set13.png",
-      "category": "carry",
-      "tier": "A",
-      "components": ["recurve_bow", "recurve_bow"],
-      "stats": {
-        "attack_speed": 30
-      },
-      "passive": {
-        "name": "Guinsoo's Rage",
-        "description": "Gain +6% Attack Speed per second in combat. Stacks have no cap."
-      },
-      "why_it_matters": "Rageblade turns any fast-attacking champion into a late-fight monster. The longer the combat goes, the faster they attack — snowballing into fights that drag on. Ideal on Quickstriker carries who already scale with attack speed.",
-      "best_on": ["Quickstriker carries", "AS-scaling on-hit champions"],
-      "priority": 7
-    },
-
-    {
-      "id": "rabadons_deathcap",
-      "name": "Rabadon's Deathcap",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_rabadonsdeathcap.tft_set13.png",
-      "category": "mage",
-      "tier": "S",
-      "components": ["needlessly_large_rod", "needlessly_large_rod"],
-      "stats": {
-        "ap": 80
-      },
-      "passive": {
-        "name": "Magical Mastery",
-        "description": "Grants +50 bonus Ability Power. Core item that amplifies every other AP source on the holder."
-      },
-      "why_it_matters": "Rabadon's is a flat AP powerhouse. 80 AP from the item plus the bonus from the passive means your Arcanist carry starts nuking targets immediately. Every other AP item you build becomes stronger by proxy — it's always the first item to consider on any mage.",
-      "best_on": ["Arcanist carries", "AP burst mages", "Any champion that scales with Ability Power"],
-      "priority": 9
-    },
-
-    {
-      "id": "jeweled_gauntlet",
-      "name": "Jeweled Gauntlet",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_jeweledgauntlet.tft_set13.png",
-      "category": "mage",
-      "tier": "S",
-      "components": ["needlessly_large_rod", "sparring_gloves"],
-      "stats": {
-        "ap": 40,
-        "crit_chance": 20
-      },
-      "passive": {
-        "name": "Spell Crit",
-        "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
-      },
-      "why_it_matters": "By default, TFT abilities cannot crit. Jeweled Gauntlet removes that ceiling entirely. Pair it with Rabadon's and your mage is suddenly one-shotting targets mid-fight. Currently the highest win-rate item in Set 16 — never skip it on Arcanist carries.",
-      "best_on": ["Arcanist carries", "Single-target burst mages", "Champions with high-damage point-and-click abilities"],
-      "priority": 10
-    },
-
-    {
-      "id": "archangels_staff",
-      "name": "Archangel's Staff",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.tft_set13.png",
-      "category": "mage",
-      "tier": "A",
-      "components": ["needlessly_large_rod", "tear_of_the_goddess"],
-      "stats": {
-        "ap": 40,
-        "mana": 15
-      },
-      "passive": {
-        "name": "Mana to Power",
-        "description": "Every 5 seconds in combat, gain +20 Ability Power. This effect stacks without limit."
-      },
-      "why_it_matters": "Archangel's is the patience item — it rewards mages who stay alive long enough to ramp. In a 20-second fight, that's +80 bonus AP on top of the base stats. Pair with Invoker trait for extra mana regen and your mage reaches full ramp in seconds.",
-      "best_on": ["Tankier AP casters", "Invoker trait champions", "Extended-fight mages"],
-      "priority": 7
-    },
-
-    {
-      "id": "blue_buff",
-      "name": "Blue Buff",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bluebuff.tft_set13.png",
-      "category": "mage",
-      "tier": "S",
-      "components": ["tear_of_the_goddess", "tear_of_the_goddess"],
-      "stats": {
-        "ap": 20,
-        "mana": 30
-      },
-      "passive": {
-        "name": "Empowered",
-        "description": "Grants +10% bonus Attack Damage and Ability Power from all sources. This amplification stacks with other sources of bonus AD and AP."
-      },
-      "why_it_matters": "Blue Buff was reworked in Set 14 into a flat amplifier: all bonus AD and AP you receive is increased by 10%. It synergizes with every other item on the holder, making the items you already built stronger. Effectively a mini Rabadon's that works on both AD and AP.",
-      "best_on": ["AP carries with multiple AP items", "Hybrid scaling champions", "Any carry with stacked stats"],
-      "priority": 8
-    },
-
-    {
-      "id": "morellonomicon",
-      "name": "Morellonomicon",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_morellonomicon.tft_set13.png",
-      "category": "mage",
-      "tier": "B",
-      "components": ["needlessly_large_rod", "giants_belt"],
-      "stats": {
-        "ap": 40,
-        "hp": 150
-      },
-      "passive": {
-        "name": "Grievous Wounds",
-        "description": "Attacks and abilities apply 1% Burn and 33% Wound for 10 seconds, reducing healing received by the target."
-      },
-      "why_it_matters": "Morellonomicon is a hard counter to healing-heavy comps. The 33% Wound effect cuts enemy heals dramatically — critical against Slayer carries who rely on Omnivamp or Bruiser frontlines with healing augments. Always build at least one on your team when you see heavy sustain.",
-      "best_on": ["AP casters vs healing comps", "AoE mages who hit multiple targets"],
-      "priority": 5
-    },
-
-    {
-      "id": "warmogs_armor",
-      "name": "Warmog's Armor",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.tft_set13.png",
-      "category": "tank",
-      "tier": "A",
-      "components": ["giants_belt", "giants_belt"],
-      "stats": {
-        "hp": 800
-      },
-      "passive": {
-        "name": "Warmog's Heart",
-        "description": "Grants +12% bonus max Health."
-      },
-      "why_it_matters": "Warmog's is the simplest and most reliable tank item: a massive HP spike. The bonus max Health passive means every HP item you build afterward becomes slightly more effective too. Stack two on a Bruiser or Juggernaut and they become nearly unkillable.",
-      "best_on": ["Bruiser frontliners", "Juggernaut champions", "HP-scaling tanks"],
-      "priority": 7
-    },
-
-    {
-      "id": "dragons_claw",
-      "name": "Dragon's Claw",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_dragonsclaw.tft_set13.png",
-      "category": "tank",
-      "tier": "A",
-      "components": ["negatron_cloak", "negatron_cloak"],
-      "stats": {
-        "magic_resist": 50
-      },
-      "passive": {
-        "name": "Wyrmguard",
-        "description": "Grants +9% bonus max Health. Heals 2.5% of max Health every 2 seconds in combat."
-      },
-      "why_it_matters": "Dragon's Claw makes your frontline nearly immune to AP damage while also giving them constant healing. In Arcanist-heavy lobbies, one Dragon's Claw on your main tank can completely nullify the enemy carry's output while keeping that tank alive indefinitely.",
-      "best_on": ["Frontline tanks vs AP-heavy lobbies", "Defender trait champions"],
-      "priority": 7
-    },
-
-    {
-      "id": "gargoyle_stoneplate",
-      "name": "Gargoyle Stoneplate",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.tft_set13.png",
-      "category": "tank",
-      "tier": "S",
-      "components": ["chain_vest", "negatron_cloak"],
-      "stats": {
-        "armor": 20,
-        "magic_resist": 20
-      },
-      "passive": {
-        "name": "Stone Form",
-        "description": "Gain +10 Armor and +10 Magic Resist for each enemy targeting the holder."
-      },
-      "why_it_matters": "Gargoyle Stoneplate is the best item for any tank that draws a lot of fire. The more enemies targeting your tank, the tankier they become — which also means they keep drawing fire even longer. Synergizes perfectly with Warden shields and Juggernaut durability.",
-      "best_on": ["Primary frontline tanks", "Warden/Defender champions", "Units with taunt or aggro-drawing abilities"],
-      "priority": 9
-    },
-
-    {
-      "id": "sunfire_cape",
-      "name": "Sunfire Cape",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_redbuff.tft_set13.png",
-      "category": "tank",
-      "tier": "A",
-      "components": ["chain_vest", "giants_belt"],
-      "stats": {
-        "armor": 25,
-        "hp": 200
-      },
-      "passive": {
-        "name": "Immolate",
-        "description": "Grants +8% bonus max Health. Every 2 seconds in combat, applies 1% Burn and 33% Wound to a nearby enemy."
-      },
-      "why_it_matters": "Sunfire Cape gives your frontline passive AoE damage and healing suppression without needing to be a damage dealer. Just having your tank stand near clustered enemies slowly melts them while countering their sustain — great against Bruiser or Slayer frontlines.",
-      "best_on": ["Central frontline tanks", "HP-stacking Bruisers", "Comps facing high-heal opponents"],
-      "priority": 7
-    },
-
-    {
-      "id": "bramble_vest",
-      "name": "Bramble Vest",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bramblevest.tft_set13.png",
-      "category": "tank",
-      "tier": "B",
-      "components": ["chain_vest", "chain_vest"],
-      "stats": {
-        "armor": 60
-      },
-      "passive": {
-        "name": "Thorns",
-        "description": "Grants +7% bonus max Health. Upon taking physical damage, deal 100 magic damage to nearby enemies. Applies 33% Wound for 3 seconds."
-      },
-      "why_it_matters": "Bramble Vest punishes auto-attack-heavy comps hard. Every hit on your tank deals splash damage to nearby enemies and Wounds them — meaning Gunslinger or Quickstriker carries are literally hurting themselves by attacking your frontline.",
-      "best_on": ["Frontline tanks vs AD-carry lobbies", "Tanks that position near clustered enemies"],
-      "priority": 5
-    },
-
-    {
-      "id": "ionic_spark",
-      "name": "Ionic Spark",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_ionicspark.tft_set13.png",
-      "category": "tank",
-      "tier": "A",
-      "components": ["negatron_cloak", "tear_of_the_goddess"],
-      "stats": {
-        "magic_resist": 25,
-        "mana": 15
-      },
-      "passive": {
-        "name": "Zap",
-        "description": "Shreds the Magic Resist of enemies within 2 hexes by 30%. When a nearby enemy casts their ability, zap them for magic damage scaling with their mana spent."
-      },
-      "why_it_matters": "Ionic Spark is the frontline's answer to Arcanist-heavy lobbies. It shreds enemy MR on every nearby unit constantly — making your entire AP team hit harder — and punishes enemies for casting abilities. A single Ionic Spark tank can amplify your whole mage comp.",
-      "best_on": ["Frontline tanks in AP mage comps", "Defender or Warden champions with high MR"],
-      "priority": 8
-    },
-
-    {
-      "id": "spirit_visage",
-      "name": "Spirit Visage",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.tft_tft14_5.png",
-      "category": "tank",
-      "tier": "A",
-      "components": ["tear_of_the_goddess", "giants_belt"],
-      "stats": {
-        "hp": 200,
-        "mana": 15
-      },
-      "passive": {
-        "name": "Blessed",
-        "description": "Heals the holder for 2.5% of missing Health every second in combat."
-      },
-      "why_it_matters": "Spirit Visage replaced Redemption as the go-to sustain item for tanks. The missing-HP scaling means it heals more when your tank is in danger — effectively acting as a regenerating safety net during long fights. Stack with Warmog's for maximum staying power.",
-      "best_on": ["Frontline tanks", "Juggernaut champions", "HP-heavy tanks that take sustained damage"],
-      "priority": 7
-    },
-
-    {
-      "id": "deathblade",
-      "name": "Deathblade",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_deathblade.tft_set13.png",
-      "category": "carry",
-      "tier": "A",
-      "components": ["b_f_sword", "b_f_sword"],
-      "stats": {
-        "ad": 50
-      },
-      "passive": {
-        "name": "Blood Harvest",
-        "description": "Gain +5 bonus Attack Damage each time an ally or the holder scores a takedown. Stacks up to 10 times (max +50 bonus AD)."
-      },
-      "why_it_matters": "Deathblade snowballs harder than any other AD item. It starts strong with +50 AD and keeps getting stronger every time someone on your team gets a kill. In a winning fight, it can double or triple its own damage bonus before the round is over — making it terrifying on carries who fight often.",
-      "best_on": ["AD carries in aggressive comps", "Slayer carries", "Carries in comps with many early takedowns"],
-      "priority": 8
-    },
-
-    {
-      "id": "quicksilver",
-      "name": "Quicksilver",
-      "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.tft_set13.png",
-      "category": "carry",
-      "tier": "A",
-      "components": ["sparring_gloves", "sparring_gloves"],
-      "stats": {
-        "crit_chance": 20
-      },
-      "passive": {
-        "name": "Spell Shield",
-        "description": "At the start of combat, gain a Spell Shield that absorbs the first crowd control effect. Refreshes every few seconds."
-      },
-      "why_it_matters": "Quicksilver is the carry's panic button against CC-heavy comps. If the enemy team has assassins or stuns that would stop your carry from attacking, Quicksilver automatically blocks the first one — keeping your carry fighting when it matters most. Essential if you keep losing your carry to crowd control.",
-      "best_on": ["AD and AP carries vs CC-heavy comps", "Backline carries targeted by assassins"],
-      "priority": 7
-    }
-  ]
+    "components": [
+        {
+            "id": "b_f_sword",
+            "name": "B.F. Sword",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bfsword.tft_set13.png",
+            "stats": {
+                "ad": 10
+            }
+        },
+        {
+            "id": "needlessly_large_rod",
+            "name": "Needlessly Large Rod",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_needlesslylargerod.tft_set13.png",
+            "stats": {
+                "ap": 10
+            }
+        },
+        {
+            "id": "recurve_bow",
+            "name": "Recurve Bow",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_recurvebow.tft_set13.png",
+            "stats": {
+                "attack_speed": 15
+            }
+        },
+        {
+            "id": "tear_of_the_goddess",
+            "name": "Tear of the Goddess",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_tearofthegoddess.tft_set13.png",
+            "stats": {
+                "mana": 15
+            }
+        },
+        {
+            "id": "chain_vest",
+            "name": "Chain Vest",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_chainvest.tft_set13.png",
+            "stats": {
+                "armor": 20
+            }
+        },
+        {
+            "id": "negatron_cloak",
+            "name": "Negatron Cloak",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_negatroncloak.tft_set13.png",
+            "stats": {
+                "magic_resist": 20
+            }
+        },
+        {
+            "id": "giants_belt",
+            "name": "Giant's Belt",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_giantsbelt.tft_set13.png",
+            "stats": {
+                "hp": 150
+            }
+        },
+        {
+            "id": "sparring_gloves",
+            "name": "Sparring Gloves",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_sparringgloves.tft_set13.png",
+            "stats": {
+                "crit_chance": 10
+            }
+        }
+    ],
+    "items": [
+        {
+            "id": "infinity_edge",
+            "name": "Infinity Edge",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_infinityedge.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "S",
+            "components": [
+                "b_f_sword",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "ad": 35,
+                "crit_chance": 35
+            },
+            "passive": {
+                "name": "Perfect Timing",
+                "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
+            },
+            "why_it_matters": "Infinity Edge is the cornerstone crit item for AD carries. It unlocks spell crits and piles on damage, making it the default first item for snipers like Caitlyn or Jinx. Stack crit from other sources and every hit becomes massive.",
+            "best_on": [
+                "Vanquisher carries",
+                "Gunslinger carries",
+                "Crit-scaling AD champions"
+            ],
+            "priority": 9
+        },
+        {
+            "id": "giant_slayer",
+            "name": "Giant Slayer",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_madredsbloodrazor.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "recurve_bow"
+            ],
+            "stats": {
+                "ad": 10,
+                "attack_speed": 15
+            },
+            "passive": {
+                "name": "Executioner",
+                "description": "Abilities and attacks deal 15% bonus damage. This bonus increases to 45% against enemies with more than 1600 max HP."
+            },
+            "why_it_matters": "Giant Slayer punishes lobbies that stack HP-heavy tanks. The bonus damage scales directly with how beefy the target is — so the tankier the opponent's frontline, the harder Giant Slayer hits. Build it when you see Bruisers and Juggernauts.",
+            "best_on": [
+                "AD carries vs tank-heavy lobbies",
+                "Longshot backline snipers"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "bloodthirster",
+            "name": "Bloodthirster",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bloodthirster.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "ad": 25,
+                "magic_resist": 25
+            },
+            "passive": {
+                "name": "Lifeline",
+                "description": "Once per combat at 40% max Health, gain a shield equal to 25% of max Health that decays over 3 seconds."
+            },
+            "why_it_matters": "Bloodthirster is defensive insurance for your carry. The shield at 40% HP absorbs a burst of damage at the exact moment your carry is most vulnerable — often keeping them alive through an assassin's combo long enough to finish the fight.",
+            "best_on": [
+                "AD carries",
+                "Backline carries threatened by assassins",
+                "Slayer carries"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "last_whisper",
+            "name": "Last Whisper",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_lastwhisper.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "B",
+            "components": [
+                "recurve_bow",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "attack_speed": 15,
+                "crit_chance": 10
+            },
+            "passive": {
+                "name": "Armor Shred",
+                "description": "Physical damage Sunders (reduces armor by 30%) the target for 3 seconds."
+            },
+            "why_it_matters": "Last Whisper is a team amplifier disguised as a carry item. Every Sunder on the target means your entire team's physical damage is boosted against them. Essential when the enemy frontline is stacking Armor.",
+            "best_on": [
+                "Fast-attacking AD carries",
+                "Comps with multiple physical damage sources"
+            ],
+            "priority": 5
+        },
+        {
+            "id": "rageblade",
+            "name": "Guinsoo's Rageblade",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_guinsoosrageblade.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "recurve_bow",
+                "needlessly_large_rod"
+            ],
+            "stats": {
+                "attack_speed": 30
+            },
+            "passive": {
+                "name": "Guinsoo's Rage",
+                "description": "Gain +6% Attack Speed per second in combat. Stacks have no cap."
+            },
+            "why_it_matters": "Rageblade turns any fast-attacking champion into a late-fight monster. The longer the combat goes, the faster they attack — snowballing into fights that drag on. Ideal on Quickstriker carries who already scale with attack speed.",
+            "best_on": [
+                "Quickstriker carries",
+                "AS-scaling on-hit champions"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "rabadons_deathcap",
+            "name": "Rabadon's Deathcap",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_rabadonsdeathcap.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "S",
+            "components": [
+                "needlessly_large_rod",
+                "needlessly_large_rod"
+            ],
+            "stats": {
+                "ap": 80
+            },
+            "passive": {
+                "name": "Magical Mastery",
+                "description": "Grants +50 bonus Ability Power. Core item that amplifies every other AP source on the holder."
+            },
+            "why_it_matters": "Rabadon's is a flat AP powerhouse. 80 AP from the item plus the bonus from the passive means your Arcanist carry starts nuking targets immediately. Every other AP item you build becomes stronger by proxy — it's always the first item to consider on any mage.",
+            "best_on": [
+                "Arcanist carries",
+                "AP burst mages",
+                "Any champion that scales with Ability Power"
+            ],
+            "priority": 9
+        },
+        {
+            "id": "jeweled_gauntlet",
+            "name": "Jeweled Gauntlet",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_jeweledgauntlet.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "S",
+            "components": [
+                "needlessly_large_rod",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "ap": 40,
+                "crit_chance": 20
+            },
+            "passive": {
+                "name": "Spell Crit",
+                "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
+            },
+            "why_it_matters": "By default, TFT abilities cannot crit. Jeweled Gauntlet removes that ceiling entirely. Pair it with Rabadon's and your mage is suddenly one-shotting targets mid-fight. Currently the highest win-rate item in Set 16 — never skip it on Arcanist carries.",
+            "best_on": [
+                "Arcanist carries",
+                "Single-target burst mages",
+                "Champions with high-damage point-and-click abilities"
+            ],
+            "priority": 10
+        },
+        {
+            "id": "archangels_staff",
+            "name": "Archangel's Staff",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "A",
+            "components": [
+                "needlessly_large_rod",
+                "tear_of_the_goddess"
+            ],
+            "stats": {
+                "ap": 40,
+                "mana": 15
+            },
+            "passive": {
+                "name": "Mana to Power",
+                "description": "Every 5 seconds in combat, gain +20 Ability Power. This effect stacks without limit."
+            },
+            "why_it_matters": "Archangel's is the patience item — it rewards mages who stay alive long enough to ramp. In a 20-second fight, that's +80 bonus AP on top of the base stats. Pair with Invoker trait for extra mana regen and your mage reaches full ramp in seconds.",
+            "best_on": [
+                "Tankier AP casters",
+                "Invoker trait champions",
+                "Extended-fight mages"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "blue_buff",
+            "name": "Blue Buff",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bluebuff.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "S",
+            "components": [
+                "tear_of_the_goddess",
+                "tear_of_the_goddess"
+            ],
+            "stats": {
+                "ap": 20,
+                "mana": 30
+            },
+            "passive": {
+                "name": "Empowered",
+                "description": "Grants +10% bonus Attack Damage and Ability Power from all sources. This amplification stacks with other sources of bonus AD and AP."
+            },
+            "why_it_matters": "Blue Buff was reworked in Set 14 into a flat amplifier: all bonus AD and AP you receive is increased by 10%. It synergizes with every other item on the holder, making the items you already built stronger. Effectively a mini Rabadon's that works on both AD and AP.",
+            "best_on": [
+                "AP carries with multiple AP items",
+                "Hybrid scaling champions",
+                "Any carry with stacked stats"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "morellonomicon",
+            "name": "Morellonomicon",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_morellonomicon.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "B",
+            "components": [
+                "needlessly_large_rod",
+                "giants_belt"
+            ],
+            "stats": {
+                "ap": 40,
+                "hp": 150
+            },
+            "passive": {
+                "name": "Grievous Wounds",
+                "description": "Attacks and abilities apply 1% Burn and 33% Wound for 10 seconds, reducing healing received by the target."
+            },
+            "why_it_matters": "Morellonomicon is a hard counter to healing-heavy comps. The 33% Wound effect cuts enemy heals dramatically — critical against Slayer carries who rely on Omnivamp or Bruiser frontlines with healing augments. Always build at least one on your team when you see heavy sustain.",
+            "best_on": [
+                "AP casters vs healing comps",
+                "AoE mages who hit multiple targets"
+            ],
+            "priority": 5
+        },
+        {
+            "id": "warmogs_armor",
+            "name": "Warmog's Armor",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "giants_belt",
+                "giants_belt"
+            ],
+            "stats": {
+                "hp": 800
+            },
+            "passive": {
+                "name": "Warmog's Heart",
+                "description": "Grants +12% bonus max Health."
+            },
+            "why_it_matters": "Warmog's is the simplest and most reliable tank item: a massive HP spike. The bonus max Health passive means every HP item you build afterward becomes slightly more effective too. Stack two on a Bruiser or Juggernaut and they become nearly unkillable.",
+            "best_on": [
+                "Bruiser frontliners",
+                "Juggernaut champions",
+                "HP-scaling tanks"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "dragons_claw",
+            "name": "Dragon's Claw",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_dragonsclaw.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "negatron_cloak",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "magic_resist": 50
+            },
+            "passive": {
+                "name": "Wyrmguard",
+                "description": "Grants +9% bonus max Health. Heals 2.5% of max Health every 2 seconds in combat."
+            },
+            "why_it_matters": "Dragon's Claw makes your frontline nearly immune to AP damage while also giving them constant healing. In Arcanist-heavy lobbies, one Dragon's Claw on your main tank can completely nullify the enemy carry's output while keeping that tank alive indefinitely.",
+            "best_on": [
+                "Frontline tanks vs AP-heavy lobbies",
+                "Defender trait champions"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "gargoyle_stoneplate",
+            "name": "Gargoyle Stoneplate",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.tft_set13.png",
+            "category": "tank",
+            "tier": "S",
+            "components": [
+                "chain_vest",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "armor": 20,
+                "magic_resist": 20
+            },
+            "passive": {
+                "name": "Stone Form",
+                "description": "Gain +10 Armor and +10 Magic Resist for each enemy targeting the holder."
+            },
+            "why_it_matters": "Gargoyle Stoneplate is the best item for any tank that draws a lot of fire. The more enemies targeting your tank, the tankier they become — which also means they keep drawing fire even longer. Synergizes perfectly with Warden shields and Juggernaut durability.",
+            "best_on": [
+                "Primary frontline tanks",
+                "Warden/Defender champions",
+                "Units with taunt or aggro-drawing abilities"
+            ],
+            "priority": 9
+        },
+        {
+            "id": "sunfire_cape",
+            "name": "Sunfire Cape",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_redbuff.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "chain_vest",
+                "giants_belt"
+            ],
+            "stats": {
+                "armor": 25,
+                "hp": 200
+            },
+            "passive": {
+                "name": "Immolate",
+                "description": "Grants +8% bonus max Health. Every 2 seconds in combat, applies 1% Burn and 33% Wound to a nearby enemy."
+            },
+            "why_it_matters": "Sunfire Cape gives your frontline passive AoE damage and healing suppression without needing to be a damage dealer. Just having your tank stand near clustered enemies slowly melts them while countering their sustain — great against Bruiser or Slayer frontlines.",
+            "best_on": [
+                "Central frontline tanks",
+                "HP-stacking Bruisers",
+                "Comps facing high-heal opponents"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "bramble_vest",
+            "name": "Bramble Vest",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bramblevest.tft_set13.png",
+            "category": "tank",
+            "tier": "B",
+            "components": [
+                "chain_vest",
+                "chain_vest"
+            ],
+            "stats": {
+                "armor": 60
+            },
+            "passive": {
+                "name": "Thorns",
+                "description": "Grants +7% bonus max Health. Upon taking physical damage, deal 100 magic damage to nearby enemies. Applies 33% Wound for 3 seconds."
+            },
+            "why_it_matters": "Bramble Vest punishes auto-attack-heavy comps hard. Every hit on your tank deals splash damage to nearby enemies and Wounds them — meaning Gunslinger or Quickstriker carries are literally hurting themselves by attacking your frontline.",
+            "best_on": [
+                "Frontline tanks vs AD-carry lobbies",
+                "Tanks that position near clustered enemies"
+            ],
+            "priority": 5
+        },
+        {
+            "id": "ionic_spark",
+            "name": "Ionic Spark",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_ionicspark.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "needlessly_large_rod",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "magic_resist": 25,
+                "mana": 15
+            },
+            "passive": {
+                "name": "Zap",
+                "description": "Shreds the Magic Resist of enemies within 2 hexes by 30%. When a nearby enemy casts their ability, zap them for magic damage scaling with their mana spent."
+            },
+            "why_it_matters": "Ionic Spark is the frontline's answer to Arcanist-heavy lobbies. It shreds enemy MR on every nearby unit constantly — making your entire AP team hit harder — and punishes enemies for casting abilities. A single Ionic Spark tank can amplify your whole mage comp.",
+            "best_on": [
+                "Frontline tanks in AP mage comps",
+                "Defender or Warden champions with high MR"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "spirit_visage",
+            "name": "Spirit Visage",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.tft_tft14_5.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "tear_of_the_goddess",
+                "giants_belt"
+            ],
+            "stats": {
+                "hp": 200,
+                "mana": 15
+            },
+            "passive": {
+                "name": "Blessed",
+                "description": "Heals the holder for 2.5% of missing Health every second in combat."
+            },
+            "why_it_matters": "Spirit Visage replaced Redemption as the go-to sustain item for tanks. The missing-HP scaling means it heals more when your tank is in danger — effectively acting as a regenerating safety net during long fights. Stack with Warmog's for maximum staying power.",
+            "best_on": [
+                "Frontline tanks",
+                "Juggernaut champions",
+                "HP-heavy tanks that take sustained damage"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "deathblade",
+            "name": "Deathblade",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_deathblade.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "b_f_sword"
+            ],
+            "stats": {
+                "ad": 50
+            },
+            "passive": {
+                "name": "Blood Harvest",
+                "description": "Gain +5 bonus Attack Damage each time an ally or the holder scores a takedown. Stacks up to 10 times (max +50 bonus AD)."
+            },
+            "why_it_matters": "Deathblade snowballs harder than any other AD item. It starts strong with +50 AD and keeps getting stronger every time someone on your team gets a kill. In a winning fight, it can double or triple its own damage bonus before the round is over — making it terrifying on carries who fight often.",
+            "best_on": [
+                "AD carries in aggressive comps",
+                "Slayer carries",
+                "Carries in comps with many early takedowns"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "quicksilver",
+            "name": "Quicksilver",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "sparring_gloves",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "crit_chance": 20
+            },
+            "passive": {
+                "name": "Spell Shield",
+                "description": "At the start of combat, gain a Spell Shield that absorbs the first crowd control effect. Refreshes every few seconds."
+            },
+            "why_it_matters": "Quicksilver is the carry's panic button against CC-heavy comps. If the enemy team has assassins or stuns that would stop your carry from attacking, Quicksilver automatically blocks the first one — keeping your carry fighting when it matters most. Essential if you keep losing your carry to crowd control.",
+            "best_on": [
+                "AD and AP carries vs CC-heavy comps",
+                "Backline carries targeted by assassins"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "adaptive_helm",
+            "name": "Adaptive Helm",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_adaptivehelm.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "A",
+            "components": [
+                "tear_of_the_goddess",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "ap": 20,
+                "magic_resist": 20
+            },
+            "passive": {
+                "name": "Adaptive",
+                "description": "Reduce the damage taken from the first ability that hits the holder each combat. Also reduces damage from subsequent casts of the same spell."
+            },
+            "why_it_matters": "Adaptive Helm is a defensive AP item — it gives your mage survivability against enemy casters while still adding Ability Power. When a single enemy spell is hitting your carry repeatedly, Adaptive Helm softens each repeated hit more and more.",
+            "best_on": [
+                "Mage carries facing AP-heavy comps",
+                "Arcanist champions who need survivability"
+            ],
+            "priority": 6
+        },
+        {
+            "id": "crownguard",
+            "name": "Crownguard",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_crownguard.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "A",
+            "components": [
+                "needlessly_large_rod",
+                "chain_vest"
+            ],
+            "stats": {
+                "ap": 30,
+                "armor": 20
+            },
+            "passive": {
+                "name": "Crown",
+                "description": "At the start of combat, grant the holder a 350 HP shield that lasts until broken."
+            },
+            "why_it_matters": "Crownguard turns an AP carry into a sturdier caster. The upfront shield buys crucial seconds at the start of combat — especially against assassins who dive your mage immediately. Think of it as Bloodthirster for AP carries: safety insurance so your mage lives long enough to deal damage.",
+            "best_on": [
+                "AP carries threatened by assassins",
+                "Arcanist carries in the frontline"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "edge_of_night",
+            "name": "Edge of Night",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "S",
+            "components": [
+                "b_f_sword",
+                "chain_vest"
+            ],
+            "stats": {
+                "ad": 15,
+                "armor": 20
+            },
+            "passive": {
+                "name": "Night's Edge",
+                "description": "At the start of combat, the holder becomes stealthed and gains a Spell Shield that blocks the first ability that hits them."
+            },
+            "why_it_matters": "Edge of Night is one of the strongest defensive carry items in Set 16. The stealth + spell shield combo means your carry is invisible AND immune to the first ability at the start of every fight — completely negating the enemy's burst setup. Essential against CC-heavy or assassin-heavy lobbies.",
+            "best_on": [
+                "AD carries vs ability-based burst",
+                "Backline carries vs assassins",
+                "Longshot and Gunslinger carries"
+            ],
+            "priority": 9
+        },
+        {
+            "id": "evenshroud",
+            "name": "Evenshroud",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spectralgauntlet.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "negatron_cloak",
+                "giants_belt"
+            ],
+            "stats": {
+                "magic_resist": 25,
+                "hp": 150
+            },
+            "passive": {
+                "name": "Spectral",
+                "description": "Enemies within 2 hexes have their Armor and Magic Resist reduced by 20% (Sundered and Shredded)."
+            },
+            "why_it_matters": "Evenshroud is a team multiplier on a tank. It permanently Sunders and Shreds nearby enemies — reducing both their Armor and MR — so every damage dealer on your team hits harder. Pair it with both AP and AD carries for maximum value since it helps both at once.",
+            "best_on": [
+                "Central frontline tanks",
+                "Tanks positioned near clustered enemies",
+                "Mixed AP+AD damage comps"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "strikers_flail",
+            "name": "Striker's Flail",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_powergauntlet.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "giants_belt",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "hp": 150,
+                "crit_chance": 10
+            },
+            "passive": {
+                "name": "Crusher",
+                "description": "Attacks and abilities deal 20% bonus damage to enemies with a shield. After breaking a shield, the holder gains 30% Attack Speed for 3 seconds."
+            },
+            "why_it_matters": "Striker's Flail (formerly Guardbreaker) shuts down defensive comps that rely on shields. Every shielded target takes extra damage, and breaking the shield gives your carry a burst of attack speed to follow up with. Essential when your opponent is stacking shields — like Warden, Crownguard, or Protector's Vow comps.",
+            "best_on": [
+                "AD carries vs shield-heavy comps",
+                "Carries facing Warden or Guardian traits",
+                "Bruiser or Slayer carries"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "hand_of_justice",
+            "name": "Hand of Justice",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_unstableconcoction.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "A",
+            "components": [
+                "tear_of_the_goddess",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "mana": 15,
+                "crit_chance": 10
+            },
+            "passive": {
+                "name": "Justice Dealt",
+                "description": "At the start of each combat, randomly gain either +40% Attack Damage or +40 Ability Power for the entire round."
+            },
+            "why_it_matters": "Hand of Justice is the ultimate flex item — it works on any carry. Each round it randomly gives a massive boost to either AD or AP, making it valuable on hybrid champions or when you don't know which carry you'll end up building. The mana bonus also helps cast more often.",
+            "best_on": [
+                "Hybrid AD/AP carries",
+                "Champions that benefit from either stat",
+                "Flex itemization in uncertain lobbies"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "hextech_gunblade",
+            "name": "Hextech Gunblade",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_hextechgunblade.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "needlessly_large_rod"
+            ],
+            "stats": {
+                "ad": 30,
+                "ap": 30
+            },
+            "passive": {
+                "name": "Spellblade",
+                "description": "Dealing ability damage heals the holder for a portion of the damage dealt. Healing scales with both AD and AP."
+            },
+            "why_it_matters": "Hextech Gunblade is the best item for hybrid champions who deal both ability and physical damage. It gives significant boosts to both AD and AP, and the healing passive means your carry is constantly topping up their HP during combat — becoming harder and harder to kill the longer the fight goes.",
+            "best_on": [
+                "Hybrid AD/AP champions",
+                "Soulbound carries (Lucian/Senna)",
+                "Self-healing sustain carries"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "nashors_tooth",
+            "name": "Nashor's Tooth",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_leviathan.tft_set13.png",
+            "category": "ap_carry",
+            "tier": "A",
+            "components": [
+                "recurve_bow",
+                "giants_belt"
+            ],
+            "stats": {
+                "attack_speed": 15,
+                "hp": 150
+            },
+            "passive": {
+                "name": "Acidic Bite",
+                "description": "Attacks deal bonus magic damage on-hit equal to a percentage of the holder's Ability Power."
+            },
+            "why_it_matters": "Nashor's Tooth bridges the gap between auto-attacking and ability damage. Champions that cast often AND attack quickly become dual threats — each basic attack deals extra magic damage scaled by their AP. It's the go-to item for AP champions in the Quickstriker or Arcanist class who also auto-attack frequently.",
+            "best_on": [
+                "AP champions who also attack often",
+                "Quickstriker AP hybrids",
+                "Champions with high base AP scaling"
+            ],
+            "priority": 6
+        },
+        {
+            "id": "protectors_vow",
+            "name": "Protector's Vow",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_frozenheart.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "tear_of_the_goddess",
+                "chain_vest"
+            ],
+            "stats": {
+                "mana": 15,
+                "armor": 20
+            },
+            "passive": {
+                "name": "Vow",
+                "description": "At the start of combat, grant the nearest ally a 250 HP shield that lasts until broken."
+            },
+            "why_it_matters": "Protector's Vow is positioned-based protection. Place it on a tank next to your carry and your carry starts every fight with a free 250 HP shield — absorbing early burst before their own HP is touched. It's like having Crownguard on your carry for free, applied from the adjacent tank.",
+            "best_on": [
+                "Tanks directly adjacent to your main carry",
+                "Frontline units next to fragile backline carries"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "red_buff",
+            "name": "Red Buff",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_redbuff.tft_set13.png",
+            "category": "ad_carry",
+            "tier": "B",
+            "components": [
+                "recurve_bow",
+                "recurve_bow"
+            ],
+            "stats": {
+                "attack_speed": 30
+            },
+            "passive": {
+                "name": "Cinder",
+                "description": "Attacks apply a 1% Burn and 33% Wound to the target for 3 seconds."
+            },
+            "why_it_matters": "Red Buff is a cheap, effective anti-sustain item for fast-attacking carries. Every auto-attack applies Burn damage over time and reduces enemy healing — making it especially strong against Slayer carries with Omnivamp or healing-heavy frontlines. The double Recurve Bow recipe also gives a big attack speed spike.",
+            "best_on": [
+                "Fast-attacking AD carries vs sustain comps",
+                "Quickstriker carries",
+                "Comps with no other Wound source"
+            ],
+            "priority": 5
+        },
+        {
+            "id": "krakens_fury",
+            "name": "Kraken's Fury",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_krakenslayer.tft_tft14_5.png",
+            "category": "ad_carry",
+            "tier": "A",
+            "components": [
+                "recurve_bow",
+                "negatron_cloak"
+            ],
+            "stats": {
+                "attack_speed": 15,
+                "magic_resist": 20
+            },
+            "passive": {
+                "name": "Kraken's Wrath",
+                "description": "Every 3rd attack deals bonus true damage equal to a percentage of the target's maximum Health, bypassing shields and armor."
+            },
+            "why_it_matters": "Kraken's Fury is the definitive anti-tank item for AD carries in Set 16. Every third auto-attack rips through a portion of the target's max HP as true damage — shields and armor can't stop it. The harder the enemy tanks stack HP, the harder Kraken's punishes them. Essential in Bruiser or Juggernaut-heavy lobbies.",
+            "best_on": [
+                "AD carries vs HP-stacking tanks",
+                "Fast-attacking carries who proc it quickly",
+                "Gunslinger or Longshot carries"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "spear_of_shojin",
+            "name": "Spear of Shojin",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spearofshojin.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "tear_of_the_goddess"
+            ],
+            "stats": {
+                "ad": 15,
+                "mana": 15
+            },
+            "passive": {
+                "name": "Focus",
+                "description": "Attacks restore 5 bonus Mana, causing the holder to cast their ability much more frequently."
+            },
+            "why_it_matters": "Spear of Shojin is the bridge between auto-attacks and ability spam. Every basic attack refills mana faster, so carries who have strong abilities cast them far more often. It's especially powerful on AD carries whose abilities scale with Attack Damage — they hit hard with autos AND cast constantly.",
+            "best_on": [
+                "AD carries with powerful ability casts",
+                "Slayer or Vanquisher carries",
+                "Champions with low mana costs"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "void_staff",
+            "name": "Void Staff",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_voidstaff.tft_tft14_5.png",
+            "category": "ap_carry",
+            "tier": "A",
+            "components": [
+                "recurve_bow",
+                "tear_of_the_goddess"
+            ],
+            "stats": {
+                "attack_speed": 15,
+                "mana": 15
+            },
+            "passive": {
+                "name": "Void Corruption",
+                "description": "Abilities deal bonus magic damage. The holder's spells also Shred enemy Magic Resist, making all magic damage against those targets stronger."
+            },
+            "why_it_matters": "Void Staff is a core AP carry item in Set 16 — it amplifies ability damage while shredding the target's Magic Resist. This means every other AP item on your carry (and your whole AP team) benefits from the MR reduction. Build it early on any mage carry to dramatically increase your AP comp's damage output.",
+            "best_on": [
+                "AP carry mages",
+                "Arcanist carries",
+                "AP comps facing tanks with high Magic Resist"
+            ],
+            "priority": 8
+        },
+        {
+            "id": "steadfast_heart",
+            "name": "Steadfast Heart",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_nightharvester.tft_set13.png",
+            "category": "tank",
+            "tier": "A",
+            "components": [
+                "chain_vest",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "armor": 20,
+                "crit_chance": 10
+            },
+            "passive": {
+                "name": "Steadfast",
+                "description": "While above 50% Health, the holder takes 20% reduced damage from all sources."
+            },
+            "why_it_matters": "Steadfast Heart is passive damage reduction that requires no condition other than staying healthy. Above 50% HP your tank takes 20% less damage from everything — abilities, auto-attacks, true damage, all of it. This makes your frontline dramatically harder to burst down in the first half of combat.",
+            "best_on": [
+                "Frontline tanks",
+                "Warden and Juggernaut champions",
+                "Tanks with natural HP-sustain to stay above 50%"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "steraks_gage",
+            "name": "Sterak's Gage",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_steraksgage.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "A",
+            "components": [
+                "b_f_sword",
+                "giants_belt"
+            ],
+            "stats": {
+                "ad": 20,
+                "hp": 200
+            },
+            "passive": {
+                "name": "Primal Roar",
+                "description": "When the holder drops below 60% Health, gain a shield equal to 35% of max Health that decays over 4 seconds."
+            },
+            "why_it_matters": "Sterak's Gage gives AD carries both more damage and a massive reactive shield. Unlike Bloodthirster (which triggers at 40% HP), Sterak's fires at 60% — earlier, and with a bigger shield. It keeps your carry alive through the most dangerous window of a fight and gives them more AD to hit harder during it.",
+            "best_on": [
+                "AD carries who need durability",
+                "Bruiser-style carries in the frontline",
+                "Carries in comps without other sustain"
+            ],
+            "priority": 7
+        },
+        {
+            "id": "thiefs_gloves",
+            "name": "Thief's Gloves",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_thiefsgloves.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "A",
+            "components": [
+                "sparring_gloves",
+                "sparring_gloves"
+            ],
+            "stats": {
+                "crit_chance": 20
+            },
+            "passive": {
+                "name": "Stolen Goods",
+                "description": "Equip 2 random items at the start of each combat. Higher player level increases the quality of items granted."
+            },
+            "why_it_matters": "Thief's Gloves is the wildcard item — you never know what you'll get, but it takes up all 3 of a champion's item slots (it needs 2 free slots) and gives 2 random items each round. At high levels, it frequently rolls powerful Radiant or Artifact items. Put it on a flex unit to get unpredictable but potentially game-winning combinations.",
+            "best_on": [
+                "Flex units without a fixed item build",
+                "High player level (8+) for better rolls",
+                "Secondary carries in the late game"
+            ],
+            "priority": 6
+        },
+        {
+            "id": "titans_resolve",
+            "name": "Titan's Resolve",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_titansresolve.tft_set13.png",
+            "category": "melee_carry",
+            "tier": "S",
+            "components": [
+                "recurve_bow",
+                "chain_vest"
+            ],
+            "stats": {
+                "attack_speed": 15,
+                "armor": 20
+            },
+            "passive": {
+                "name": "Resolve",
+                "description": "Gain +2 Attack Damage and +2 Ability Power each time the holder takes damage or deals a critical strike. Stacks up to 25 times. At 25 stacks, gain +25 Armor and Magic Resist."
+            },
+            "why_it_matters": "Titan's Resolve is a snowball item that rewards tanky champions who stay alive long enough to stack it fully. At 25 stacks it gives massive stats across the board — AD, AP, and bonus resistances. It turns a frontline tank into a legitimate damage threat while also getting harder to kill as the fight progresses.",
+            "best_on": [
+                "Tanks that deal damage (Juggernaut, Bruiser)",
+                "Champions who take lots of hits",
+                "Tanks that double as secondary carries"
+            ],
+            "priority": 9
+        }
+    ]
 }

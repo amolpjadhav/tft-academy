@@ -1,10 +1,17 @@
 import type { FilterCategory } from "@/hooks/useItemFilter";
 
-const TABS: { id: FilterCategory; label: string; icon: string; color: string }[] = [
-  { id: "all",   label: "All Items", icon: "⚔",  color: "text-text-primary" },
-  { id: "carry", label: "Carry",     icon: "🎯",  color: "text-accent-gold" },
-  { id: "mage",  label: "Mage",      icon: "🔮",  color: "text-blue-400" },
-  { id: "tank",  label: "Tank",      icon: "🛡",   color: "text-green-400" },
+const TABS: {
+  id: FilterCategory;
+  label: string;
+  icon: string;
+  color: string;
+  desc: string;
+}[] = [
+  { id: "all",         label: "All",         icon: "⚔️",  color: "text-text-primary", desc: "All items" },
+  { id: "ad_carry",    label: "AD Carry",    icon: "🎯",  color: "text-accent-gold",  desc: "Gunslingers, Snipers, Longshots" },
+  { id: "ap_carry",    label: "AP Carry",    icon: "🔮",  color: "text-blue-400",     desc: "Arcanists, Mages" },
+  { id: "melee_carry", label: "Melee Carry", icon: "⚡",  color: "text-red-400",      desc: "Slayers, Juggernauts" },
+  { id: "tank",        label: "Tank",        icon: "🛡️",  color: "text-green-400",    desc: "Bruisers, Wardens, Defenders" },
 ];
 
 interface CategoryTabsProps {

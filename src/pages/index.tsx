@@ -25,7 +25,7 @@ export default function CatalogPage({ items, components }: Props) {
   );
 
   const counts = useMemo(() => {
-    const cats: FilterCategory[] = ["all", "carry", "mage", "tank"];
+    const cats: FilterCategory[] = ["all", "ad_carry", "ap_carry", "melee_carry", "tank"];
     return Object.fromEntries(
       cats.map((cat) => [
         cat,

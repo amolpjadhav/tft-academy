@@ -9,9 +9,10 @@ const TIER_COLORS: Record<string, string> = {
 };
 
 const CATEGORY_ACCENT: Record<string, string> = {
-  carry: "border-accent-gold/30 hover:border-accent-gold/60",
-  mage:  "border-blue-500/30 hover:border-blue-500/60",
-  tank:  "border-green-500/30 hover:border-green-500/60",
+  ad_carry:    "border-accent-gold/30 hover:border-accent-gold/60",
+  ap_carry:    "border-blue-500/30 hover:border-blue-500/60",
+  melee_carry: "border-red-500/30 hover:border-red-500/60",
+  tank:        "border-green-500/30 hover:border-green-500/60",
 };
 
 interface ItemCardProps {

@@ -3,6 +3,7 @@ import type { Item, ItemCategory } from "@/types/item";
 
 export type FilterCategory = ItemCategory | "all";
 
+
 export function useItemFilter(items: Item[]) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<FilterCategory>("all");

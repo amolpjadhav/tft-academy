@@ -1,4 +1,4 @@
-export type ItemCategory = "carry" | "mage" | "tank";
+export type ItemCategory = "ad_carry" | "ap_carry" | "melee_carry" | "tank";
 export type ItemTier = "S" | "A" | "B" | "C";
 
 export interface ItemStats {
