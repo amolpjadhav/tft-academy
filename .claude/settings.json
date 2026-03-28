@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.metasrc.com)",
+      "WebFetch(domain:wiki.leagueoflegends.com)",
+      "WebFetch(domain:leagueoflegends.fandom.com)",
+      "WebFetch(domain:tftacademy.com)",
+      "WebFetch(domain:blitz.gg)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(rm -rf .git)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
