@@ -1,10 +1,20 @@
 import { GLOSSARY } from "@/data/glossary";
 import type { GlossaryCategory, GlossaryTerm } from "@/data/glossary";
 
-export type QuizCategory = GlossaryCategory | "all";
+export type QuizCategory = GlossaryCategory | "all" | "champions";
 export type QuestionCount = 5 | 10 | 15 | "all";
 
-export type QuestionType = "term_to_definition" | "definition_to_term";
+export type QuestionType = "term_to_definition" | "definition_to_term" | string;
+
+/** Generic term shape used by both glossary and champion questions */
+export interface QuizTerm {
+  emoji: string;
+  category: string;
+  term: string;
+  detail: string;
+  /** Optional portrait/icon URL (champion questions) */
+  image?: string;
+}
 
 export interface QuizQuestion {
   id: string;
@@ -18,7 +28,7 @@ export interface QuizQuestion {
   /** All 4 options (shuffled) */
   options: string[];
   /** The source term (used for result recap) */
-  term: GlossaryTerm;
+  term: QuizTerm;
   /** Hint: first sentence of detail explanation */
   hint: string;
 }

@@ -1,8 +1,9 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import type { GetStaticProps } from "next";
 import type { Champion } from "@/types/champion";
+import type { ComputedStats } from "@/types/champion";
 import type { Item, ItemsData } from "@/types/item";
-import { computeStats, getSynergyTips } from "@/utils/simulator";
+import { computeStats, getSynergyTips, calcPowerScore } from "@/utils/simulator";
 import PageShell from "@/components/layout/PageShell";
 import ChampionPicker from "@/components/simulator/ChampionPicker";
 import BuildPanel from "@/components/simulator/BuildPanel";
@@ -16,6 +17,19 @@ interface Props {
   items: Item[];
 }
 
+export type StatDeltas = {
+  hp?: number;
+  ad?: number;
+  ap?: number;
+  as?: number;
+  armor?: number;
+  mr?: number;
+  omnivamp?: number;
+  durability?: number;
+  damageAmp?: number;
+  score?: number;
+};
+
 type MobileTab = "pick" | "build" | "stats";
 
 export default function SimulatorPage({ champions, items }: Props) {
@@ -24,6 +38,12 @@ export default function SimulatorPage({ champions, items }: Props) {
   const [slots, setSlots] = useState<(string | null)[]>([null, null, null]);
   const [activeSlot, setActiveSlot] = useState<number | null>(null);
   const [mobileTab, setMobileTab] = useState<MobileTab>("pick");
+
+  // Delta tracking
+  const prevStatsRef = useRef<ComputedStats | null>(null);
+  const prevScoreRef = useRef<number>(0);
+  const [deltas, setDeltas] = useState<StatDeltas>({});
+  const [deltaKey, setDeltaKey] = useState(0);
 
   const equippedItems = useMemo(
     () => slots.map((id) => items.find((i) => i.id === id) ?? null),
@@ -34,6 +54,56 @@ export default function SimulatorPage({ champions, items }: Props) {
     () => (champion ? computeStats(champion, star, slots, items) : null),
     [champion, star, slots, items]
   );
+
+  const score = useMemo(
+    () => (champion && stats ? calcPowerScore(stats, champion) : 0),
+    [champion, stats]
+  );
+
+  // Compute deltas whenever stats/score change
+  useEffect(() => {
+    if (!stats) {
+      prevStatsRef.current = null;
+      prevScoreRef.current = 0;
+      setDeltas({});
+      return;
+    }
+    const prev = prevStatsRef.current;
+    const prevScore = prevScoreRef.current;
+
+    if (prev) {
+      const d: StatDeltas = {};
+      const hp = stats.hp - prev.hp;
+      const ad = stats.attackDamage - prev.attackDamage;
+      const ap = stats.abilityPower - prev.abilityPower;
+      const as = Math.round((stats.attackSpeed - prev.attackSpeed) * 100) / 100;
+      const armor = stats.armor - prev.armor;
+      const mr = stats.magicResist - prev.magicResist;
+      const omnivamp = stats.omnivamp - prev.omnivamp;
+      const durability = stats.durability - prev.durability;
+      const damageAmp = stats.damageAmp - prev.damageAmp;
+      const sc = score - prevScore;
+
+      if (hp > 0) d.hp = hp;
+      if (ad > 0) d.ad = ad;
+      if (ap > 0) d.ap = ap;
+      if (as > 0) d.as = as;
+      if (armor > 0) d.armor = armor;
+      if (mr > 0) d.mr = mr;
+      if (omnivamp > 0) d.omnivamp = omnivamp;
+      if (durability > 0) d.durability = durability;
+      if (damageAmp > 0) d.damageAmp = damageAmp;
+      if (sc > 0) d.score = sc;
+
+      if (Object.keys(d).length > 0) {
+        setDeltas(d);
+        setDeltaKey((k) => k + 1);
+      }
+    }
+
+    prevStatsRef.current = stats;
+    prevScoreRef.current = score;
+  }, [stats, score]);
 
   const tips = useMemo(
     () => (champion ? getSynergyTips(champion, slots, items) : []),
@@ -67,24 +137,24 @@ export default function SimulatorPage({ champions, items }: Props) {
     [activeSlot]
   );
 
-  const handleSlotClick = useCallback(
-    (index: number) => {
-      setActiveSlot(index);
-    },
-    []
-  );
+  const handleSlotClick = useCallback((index: number) => {
+    setActiveSlot(index);
+  }, []);
 
   const handleSelectChampion = useCallback((c: Champion) => {
     setChampion(c);
     setStar(1);
     setSlots([null, null, null]);
+    prevStatsRef.current = null;
+    prevScoreRef.current = 0;
+    setDeltas({});
     setMobileTab("build");
   }, []);
 
   const handleRecommendItem = useCallback(
     (item: Item) => {
       const emptyIdx = slots.findIndex((s) => s === null);
-      if (emptyIdx === -1) return; // no empty slots
+      if (emptyIdx === -1) return;
       setSlots((prev) => {
         const next = [...prev];
         next[emptyIdx] = item.id;
@@ -157,6 +227,9 @@ export default function SimulatorPage({ champions, items }: Props) {
                   slots={slots}
                   equippedItems={equippedItems}
                   onSlotClick={handleSlotClick}
+                  score={score}
+                  scoreDelta={deltas.score}
+                  deltaKey={deltaKey}
                 />
               </div>
             ) : (
@@ -187,6 +260,8 @@ export default function SimulatorPage({ champions, items }: Props) {
                 tips={tips}
                 recommendedItems={recommendedItems}
                 onRecommendItem={handleRecommendItem}
+                deltas={deltas}
+                deltaKey={deltaKey}
               />
             ) : (
               <div className="bg-bg-surface rounded-2xl border border-white/8 p-6 flex flex-col items-center justify-center text-center min-h-48">

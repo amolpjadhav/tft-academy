@@ -37,6 +37,9 @@ export interface ComputedStats {
   magicResist: number;
   critChance: number;
   maxMana: number;
+  omnivamp: number;
+  durability: number;
+  damageAmp: number;
   // Item bonus deltas (for bar visualization)
   hpBonus: number;
   adBonus: number;
@@ -44,4 +47,7 @@ export interface ComputedStats {
   asBonus: number;
   armorBonus: number;
   mrBonus: number;
+  omnivampBonus: number;
+  durabilityBonus: number;
+  damageAmpBonus: number;
 }

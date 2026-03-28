@@ -26,6 +26,7 @@ export default function QuizResult({
   const pct     = Math.round((correct / total) * 100);
   const grade   = scoreGrade(pct);
   const wrong   = results.filter((r) => !r.correct);
+  const isChampionQuiz = results.some((r) => r.question.term.category === "champions");
 
   return (
     <div className="max-w-xl mx-auto">
@@ -33,6 +34,9 @@ export default function QuizResult({
       <div className="bg-bg-surface border border-white/10 rounded-2xl p-8 text-center mb-8 animate-slide-up">
         <div className="text-6xl mb-4">{grade.emoji}</div>
         <h2 className={`font-heading text-3xl mb-1 ${grade.color}`}>{grade.label}</h2>
+        {isChampionQuiz && (
+          <p className="text-text-muted text-sm mt-1">Champions Quiz</p>
+        )}
 
         {/* Score ring */}
         <div className="flex justify-center my-6">
@@ -82,43 +86,55 @@ export default function QuizResult({
             Review — {wrong.length} missed
           </p>
           <div className="space-y-3">
-            {wrong.map(({ question, chosen }) => (
-              <div
-                key={question.id}
-                className="bg-bg-surface border border-red-500/20 rounded-xl p-4"
-              >
-                <div className="flex items-start gap-3">
-                  <span className="text-xl shrink-0 mt-0.5">{question.term.emoji}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-text-primary mb-1">
-                      {question.term.term}
-                    </p>
-                    <p className="text-xs text-text-muted mb-2">{question.promptLabel}</p>
+            {wrong.map(({ question, chosen }) => {
+              const hasPortrait = !!question.term.image;
+              return (
+                <div
+                  key={question.id}
+                  className="bg-bg-surface border border-red-500/20 rounded-xl p-4"
+                >
+                  <div className="flex items-start gap-3">
+                    {/* Portrait (champion quiz) or emoji (glossary) */}
+                    {hasPortrait ? (
+                      <div className="relative shrink-0 mt-0.5">
+                        <img
+                          src={question.term.image}
+                          alt={question.term.term}
+                          className="w-12 h-12 rounded-xl object-cover border border-white/15"
+                        />
+                      </div>
+                    ) : (
+                      <span className="text-xl shrink-0 mt-0.5">{question.term.emoji}</span>
+                    )}
 
-                    {/* What you picked */}
-                    <div className="flex items-start gap-2 mb-1.5">
-                      <span className="text-red-400 text-xs shrink-0 mt-0.5">✗ You chose:</span>
-                      <span className="text-red-300 text-xs">{chosen}</span>
-                    </div>
-                    {/* Correct answer */}
-                    <div className="flex items-start gap-2 mb-3">
-                      <span className="text-green-400 text-xs shrink-0 mt-0.5">✓ Answer:</span>
-                      <span className="text-green-300 text-xs">{question.correctAnswer}</span>
-                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-text-primary mb-1">
+                        {question.term.term}
+                      </p>
+                      <p className="text-xs text-text-muted mb-2">{question.promptLabel}</p>
 
-                    {/* Why it matters */}
-                    <div className="bg-accent-purple/10 border border-accent-purple/20 rounded-lg px-3 py-2">
-                      <p className="text-xs text-accent-purple-light font-semibold mb-1">
-                        📝 Quick reminder
-                      </p>
-                      <p className="text-xs text-text-secondary leading-relaxed">
-                        {question.term.detail.split(".")[0]}.
-                      </p>
+                      <div className="flex items-start gap-2 mb-1.5">
+                        <span className="text-red-400 text-xs shrink-0 mt-0.5">✗ You chose:</span>
+                        <span className="text-red-300 text-xs">{chosen}</span>
+                      </div>
+                      <div className="flex items-start gap-2 mb-3">
+                        <span className="text-green-400 text-xs shrink-0 mt-0.5">✓ Answer:</span>
+                        <span className="text-green-300 text-xs">{question.correctAnswer}</span>
+                      </div>
+
+                      <div className="bg-accent-purple/10 border border-accent-purple/20 rounded-lg px-3 py-2">
+                        <p className="text-xs text-accent-purple-light font-semibold mb-1">
+                          📝 Quick reminder
+                        </p>
+                        <p className="text-xs text-text-secondary leading-relaxed">
+                          {question.term.detail.split(".")[0]}.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
@@ -127,7 +143,11 @@ export default function QuizResult({
       <div className="flex gap-3">
         <button
           onClick={onPlayAgain}
-          className="flex-1 py-3 rounded-xl bg-accent-purple hover:bg-accent-purple/80 text-white font-semibold text-sm transition-all shadow-glow"
+          className={`flex-1 py-3 rounded-xl text-white font-semibold text-sm transition-all ${
+            isChampionQuiz
+              ? "bg-gradient-to-r from-amber-500 to-yellow-400 text-black hover:from-amber-400"
+              : "bg-accent-purple hover:bg-accent-purple/80 shadow-glow"
+          }`}
         >
           🔄 Same Quiz Again
         </button>

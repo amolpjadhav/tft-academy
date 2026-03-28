@@ -5,6 +5,7 @@ export const NAV_ITEMS = [
   { href: "/",           label: "Items",      icon: "⚔️" },
   { href: "/combinator", label: "Combinator", icon: "🔨" },
   { href: "/simulator",  label: "Simulator",  icon: "🎮" },
+  { href: "/traits",     label: "Traits",     icon: "🌟" },
   { href: "/glossary",   label: "Glossary",   icon: "📖" },
   { href: "/quiz",       label: "Quiz",       icon: "🧠" },
 ];

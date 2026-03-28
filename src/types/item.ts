@@ -10,6 +10,9 @@ export interface ItemStats {
   magic_resist?: number;
   hp?: number;
   mana?: number;
+  omnivamp?: number;      // % heal from all damage dealt
+  durability?: number;    // % damage reduction
+  damage_amp?: number;    // % bonus damage dealt
 }
 
 export interface ItemPassive {

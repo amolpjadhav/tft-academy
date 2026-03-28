@@ -1,14 +1,22 @@
 import { useState, useCallback } from "react";
+import type { GetStaticProps } from "next";
+import type { Champion } from "@/types/champion";
 import PageShell from "@/components/layout/PageShell";
 import QuizSetup from "@/components/quiz/QuizSetup";
 import QuizQuestionCard from "@/components/quiz/QuizQuestion";
 import QuizResult from "@/components/quiz/QuizResult";
 import { buildQuiz } from "@/utils/quiz";
+import { buildChampionQuiz } from "@/utils/championQuiz";
 import type { QuizCategory, QuestionCount, QuizQuestion, QuizResult as QResult } from "@/utils/quiz";
+import championsData from "../../data/champions.json";
+
+interface Props {
+  champions: Champion[];
+}
 
 type Screen = "setup" | "question" | "result";
 
-export default function QuizPage() {
+export default function QuizPage({ champions }: Props) {
   const [screen, setScreen]         = useState<Screen>("setup");
   const [questions, setQuestions]   = useState<QuizQuestion[]>([]);
   const [current, setCurrent]       = useState(0);
@@ -16,7 +24,6 @@ export default function QuizPage() {
   const [streak, setStreak]         = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
 
-  // Store the last config so "Play Again" can replay the same quiz
   const [lastConfig, setLastConfig] = useState<{
     category: QuizCategory;
     count: QuestionCount;
@@ -24,7 +31,13 @@ export default function QuizPage() {
 
   const startQuiz = useCallback(
     (category: QuizCategory, count: QuestionCount) => {
-      const qs = buildQuiz(category, count);
+      let qs: QuizQuestion[];
+      if (category === "champions") {
+        const n = count === "all" ? champions.length : Math.min(count as number, champions.length);
+        qs = buildChampionQuiz(champions, n);
+      } else {
+        qs = buildQuiz(category, count);
+      }
       setLastConfig({ category, count });
       setQuestions(qs);
       setCurrent(0);
@@ -33,7 +46,7 @@ export default function QuizPage() {
       setBestStreak(0);
       setScreen("question");
     },
-    []
+    [champions]
   );
 
   const handleAnswer = useCallback(
@@ -77,7 +90,9 @@ export default function QuizPage() {
           : "Test your TFT knowledge"
       }
     >
-      {screen === "setup" && <QuizSetup onStart={startQuiz} />}
+      {screen === "setup" && (
+        <QuizSetup onStart={startQuiz} championsCount={champions.length} />
+      )}
 
       {screen === "question" && questions[current] && (
         <QuizQuestionCard
@@ -101,3 +116,11 @@ export default function QuizPage() {
     </PageShell>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      champions: championsData as Champion[],
+    },
+  };
+};

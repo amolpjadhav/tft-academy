@@ -20,18 +20,18 @@ export default function QuizQuestionCard({
   streak,
   onAnswer,
 }: QuizQuestionProps) {
-  const [chosen, setChosen]       = useState<string | null>(null);
-  const [state, setState]         = useState<AnswerState>("idle");
-  const [hintOpen, setHintOpen]   = useState(false);
+  const [chosen, setChosen]     = useState<string | null>(null);
+  const [state, setState]       = useState<AnswerState>("idle");
+  const [hintOpen, setHintOpen] = useState(false);
 
-  const progress = ((index) / total) * 100;
+  const progress = (index / total) * 100;
+  const isChampionQ = question.term.category === "champions";
 
   function handleSelect(option: string) {
     if (state !== "idle") return;
     setChosen(option);
     const correct = option === question.correctAnswer;
     setState(correct ? "correct" : "wrong");
-    // Delay before advancing so the player can see feedback
     setTimeout(() => onAnswer(option), 900);
   }
 
@@ -76,7 +76,9 @@ export default function QuizQuestionCard({
           </div>
           <div className="h-2 bg-white/5 rounded-full overflow-hidden">
             <div
-              className="h-full bg-accent-purple rounded-full transition-all duration-500"
+              className={`h-full rounded-full transition-all duration-500 ${
+                isChampionQ ? "bg-accent-gold" : "bg-accent-purple"
+              }`}
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -90,8 +92,32 @@ export default function QuizQuestionCard({
       </div>
 
       {/* Question card */}
-      <div className="bg-bg-surface border border-white/10 rounded-2xl p-7 mb-5 animate-slide-up">
-        <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+      <div className={`border rounded-2xl p-7 mb-5 animate-slide-up ${
+        isChampionQ
+          ? "bg-bg-surface border-accent-gold/20"
+          : "bg-bg-surface border-white/10"
+      }`}>
+
+        {/* Champion portrait */}
+        {question.term.image && (
+          <div className="flex justify-center mb-5">
+            <div className="relative">
+              <img
+                src={question.term.image}
+                alt={question.term.term}
+                className="w-20 h-20 rounded-2xl object-cover border-2 border-white/20 shadow-lg"
+              />
+              {/* Cost badge */}
+              <div className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full bg-bg-base border border-white/20 flex items-center justify-center text-xs leading-none">
+                {question.term.emoji}
+              </div>
+            </div>
+          </div>
+        )}
+
+        <p className={`text-xs font-semibold uppercase tracking-widest mb-3 ${
+          isChampionQ ? "text-accent-gold/70" : "text-text-muted"
+        }`}>
           {question.promptLabel}
         </p>
         <p className="font-heading text-xl text-text-primary leading-snug">
@@ -100,9 +126,15 @@ export default function QuizQuestionCard({
 
         {/* Category tag */}
         <div className="mt-3 flex items-center gap-2">
-          <span className="text-lg">{question.term.emoji}</span>
-          <span className="text-xs text-text-muted capitalize">
-            {question.term.category === "tft" ? "TFT Basics" : question.term.category}
+          {!question.term.image && (
+            <span className="text-lg">{question.term.emoji}</span>
+          )}
+          <span className={`text-xs capitalize ${isChampionQ ? "text-accent-gold/60" : "text-text-muted"}`}>
+            {question.term.category === "tft"
+              ? "TFT Basics"
+              : question.term.category === "champions"
+              ? "Champions"
+              : question.term.category}
           </span>
         </div>
       </div>

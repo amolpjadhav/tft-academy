@@ -109,7 +109,8 @@
             ],
             "stats": {
                 "ad": 10,
-                "attack_speed": 15
+                "attack_speed": 15,
+                "damage_amp": 15
             },
             "passive": {
                 "name": "Executioner",
@@ -134,7 +135,8 @@
             ],
             "stats": {
                 "ad": 25,
-                "magic_resist": 25
+                "magic_resist": 25,
+                "omnivamp": 20
             },
             "passive": {
                 "name": "Lifeline",
@@ -160,7 +162,8 @@
             ],
             "stats": {
                 "attack_speed": 15,
-                "crit_chance": 10
+                "crit_chance": 10,
+                "damage_amp": 10
             },
             "passive": {
                 "name": "Armor Shred",
@@ -437,7 +440,8 @@
                 "chain_vest"
             ],
             "stats": {
-                "armor": 60
+                "armor": 60,
+                "durability": 5
             },
             "passive": {
                 "name": "Thorns",
@@ -716,7 +720,8 @@
             ],
             "stats": {
                 "ad": 30,
-                "ap": 30
+                "ap": 30,
+                "omnivamp": 15
             },
             "passive": {
                 "name": "Spellblade",
@@ -896,7 +901,8 @@
             ],
             "stats": {
                 "armor": 20,
-                "crit_chance": 10
+                "crit_chance": 10,
+                "durability": 20
             },
             "passive": {
                 "name": "Steadfast",

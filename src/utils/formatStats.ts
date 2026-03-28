@@ -9,6 +9,9 @@ const STAT_LABELS: Record<keyof ItemStats, (v: number) => string> = {
   magic_resist: (v) => `+${v} MR`,
   hp: (v) => `+${v} HP`,
   mana: (v) => `+${v} Mana`,
+  omnivamp: (v) => `+${v}% Omnivamp`,
+  durability: (v) => `+${v}% Durability`,
+  damage_amp: (v) => `+${v}% Damage Amp`,
 };
 
 export function formatStats(stats: ItemStats): string[] {

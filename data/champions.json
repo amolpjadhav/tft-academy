@@ -22,7 +22,7 @@
     },
     "ability": {
       "name": "Frostbite",
-      "description": "Fire an ice shard at target that deals # (%i:scaleAP%) magic damage. If they are Chilled, the damage Critically Strikes.{{TFT_Keyword_Chill}}"
+      "description": "Fire an ice shard at target that deals # (AP) magic damage. If they are Chilled, the damage Critically Strikes."
     }
   },
   {
@@ -48,7 +48,7 @@
     },
     "ability": {
       "name": "Static Field",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds and deal # (%i:scaleMR%) magic damage to all enemies within # hex."
+      "description": "Gain # (AP) Shield for # seconds and deal # (MR) magic damage to all enemies within # hex."
     }
   },
   {
@@ -75,7 +75,7 @@
     },
     "ability": {
       "name": "Blood Frenzy",
-      "description": "Leap to the furthest enemy within # hexes. For # seconds gain increased Move Speed, #% Attack Damage, and # (%i:scaleAP%) decaying Attack Speed."
+      "description": "Leap to the furthest enemy within # hexes. For # seconds gain increased Move Speed, #% Attack Damage, and # (AP) decaying Attack Speed."
     }
   },
   {
@@ -101,7 +101,7 @@
     },
     "ability": {
       "name": "Ace in the Hole",
-      "description": "Fire a bullet towards the farthest enemy, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to the first enemy it hits. If they die, the bullet ricochets, dealing excess damage to the next enemy hit."
+      "description": "Fire a bullet towards the farthest enemy, dealing # (AD)(AP) physical damage to the first enemy it hits. If they die, the bullet ricochets, dealing excess damage to the next enemy hit."
     }
   },
   {
@@ -127,7 +127,7 @@
     },
     "ability": {
       "name": "Tentacle Smash",
-      "description": "Restore # (%i:scaleHealth%%i:scaleAP%) Health and slam a tentacle, dealing # (%i:scaleAD%) physical damage to enemies in a line."
+      "description": "Restore # (AP) Health and slam a tentacle, dealing # (AD) physical damage to enemies in a line."
     }
   },
   {
@@ -153,7 +153,7 @@
     },
     "ability": {
       "name": "Demacian Standard",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds. Grant all allies # (%i:scaleAP%) Attack Speed for # seconds."
+      "description": "Gain # (AP) Shield for # seconds. Grant all allies # (AP) Attack Speed for # seconds."
     }
   },
   {
@@ -179,7 +179,7 @@
     },
     "ability": {
       "name": "Curtain Call",
-      "description": "For the next 4 attacks, set Attack Speed to #, gain infinite range and replace attacks with a cannon shot. Cannon shots deal # (%i:scaleAD%%i:scaleAP%) physical damage. The 4th shot deals #% more damage."
+      "description": "For the next 4 attacks, set Attack Speed to #, gain infinite range and replace attacks with a cannon shot. Cannon shots deal # (AD)(AP) physical damage. The 4th shot deals #% more damage."
     }
   },
   {
@@ -206,7 +206,7 @@
     },
     "ability": {
       "name": "Caustic Spittle",
-      "description": "Deal # (%i:scaleAP%) magic damage to target and reduce their Armor and Magic Resist by #. Adjacent enemies are dealt #% of the damage and effect."
+      "description": "Deal # (AP) magic damage to target and reduce their Armor and Magic Resist by #. Adjacent enemies are dealt #% of the damage and effect."
     }
   },
   {
@@ -232,7 +232,7 @@
     },
     "ability": {
       "name": "Whimsy",
-      "description": "Deal # (%i:scaleAP%) magic damage to target and make them dance for # seconds. The projectile then bounces to the nearest target, dealing # (%i:scaleAP%) magic damage."
+      "description": "Deal # (AP) magic damage to target and make them dance for # seconds. The projectile then bounces to the nearest target, dealing # (AP) magic damage."
     }
   },
   {
@@ -258,7 +258,7 @@
     },
     "ability": {
       "name": "Clear The Brush",
-      "description": "Dash to a nearby hex and swing forward, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies in a #-hex line."
+      "description": "Dash to a nearby hex and swing forward, dealing # (AD)(AP) physical damage to enemies in a #-hex line."
     }
   },
   {
@@ -284,7 +284,7 @@
     },
     "ability": {
       "name": "Junkyard Titan",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds. Fire a burst of flames, dealing # (%i:scaleArmor%) magic damage in a cone."
+      "description": "Gain # (AP) Shield for # seconds. Fire a burst of flames, dealing # (Armor) magic damage in a cone."
     }
   },
   {
@@ -310,7 +310,7 @@
     },
     "ability": {
       "name": "Stand United",
-      "description": "Grant # (%i:scaleAP%) Shield to this unit and a nearby damaged ally for # seconds."
+      "description": "Grant # (AP) Shield to this unit and a nearby damaged ally for # seconds."
     }
   },
   {
@@ -336,7 +336,7 @@
     },
     "ability": {
       "name": "Power Chord",
-      "description": "Deal # (%i:scaleAP%) magic damage to # nearby enemies and restore # (%i:scaleAP%) Health to the lowest Health ally."
+      "description": "Deal # (AP) magic damage to # nearby enemies and restore # (AP) Health to the lowest Health ally."
     }
   },
   {
@@ -362,7 +362,7 @@
     },
     "ability": {
       "name": "Blade of the Ruined King",
-      "description": "Passive: Gain #% (%i:scaleSouls%) Attack Speed.Active: Deal # (%i:scaleAD%) physical damage to target. For the rest of combat, Viego's attacks deal # (%i:scaleAP%) bonus stacking magic damage."
+      "description": "Passive: Gain #% () Attack Speed.Active: Deal # (AD) physical damage to target. For the rest of combat, Viego's attacks deal # (AP) bonus stacking magic damage."
     }
   },
   {
@@ -387,7 +387,7 @@
     },
     "ability": {
       "name": "Incendiary Onslaught",
-      "description": "Start with Infernum equipped. On cast, switch to Severum for # (%i:scaleAP%) attacks.Infernum: Attacks hit # enemies and apply #% Sunder for # seconds.Severum: Gain #% Attack Speed and #% Omnivamp. Attacks are replaced with swipes that deal # (%i:scaleAD%) physical damage.{{TFT_Keyword_Sunder}}"
+      "description": "Start with Infernum equipped. On cast, switch to Severum for # (AP) attacks.Infernum: Attacks hit # enemies and apply #% Sunder for # seconds.Severum: Gain #% Attack Speed and #% Omnivamp. Attacks are replaced with swipes that deal # (AD) physical damage."
     }
   },
   {
@@ -413,7 +413,7 @@
     },
     "ability": {
       "name": "True Ice Arrow",
-      "description": "Fire an arrow at target that deals # (%i:scaleAD%%i:scaleAP%) physical damage to them and # (%i:scaleAD%%i:scaleAP%) damage to adjacent enemies. Targets below #% max Health take true damage instead. 30% Chill all enemies hit for # seconds.Bloodsworn Bond: When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.Bloodsworn Bond: Attacks fire a bonus arrow for every #% Attack Damage granted to Tryndamere by Bloodsworn Bond. These arrows deal # (%i:TFTBaseAD%) physical damage. (Current Bonus Arrows: #).{{TFT_Keyword_Chill}}"
+      "description": "Fire an arrow at target that deals # (AD)(AP) physical damage to them and # (AD)(AP) damage to adjacent enemies. Targets below #% max Health take true damage instead. 30% Chill all enemies hit for # seconds.Bloodsworn Bond: When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.Bloodsworn Bond: Attacks fire a bonus arrow for every #% Attack Damage granted to Tryndamere by Bloodsworn Bond. These arrows deal # () physical damage. (Current Bonus Arrows: #)."
     }
   },
   {
@@ -438,7 +438,7 @@
     },
     "ability": {
       "name": "Traveler's Call",
-      "description": "Launch # Meeps at nearby enemies that deal # (%i:scaleAP%) magic damage. Add an additional Meep for each 3-star unit on your board. (Total Meeps: #)"
+      "description": "Launch # Meeps at nearby enemies that deal # (AP) magic damage. Add an additional Meep for each 3-star unit on your board. (Total Meeps: #)"
     }
   },
   {
@@ -464,7 +464,7 @@
     },
     "ability": {
       "name": "Rupture",
-      "description": "Restore # (%i:scaleAP%) Health and rupture a 2 hex circle beneath target. After a brief delay, enemies within are knocked up for # seconds and take # (%i:scaleHealth%%i:scaleAP%) magic damage."
+      "description": "Restore # (AP) Health and rupture a 2 hex circle beneath target. After a brief delay, enemies within are knocked up for # seconds and take # (AP) magic damage."
     }
   },
   {
@@ -490,7 +490,7 @@
     },
     "ability": {
       "name": "Parallel Convergence",
-      "description": "Create a # hex zone around the target that lasts # seconds. The next 3 attacks deal # (%i:scaleAP%) bonus magic damage. When the zone ends, it deals # (%i:scaleAP%) magic damage + #% of the target's damage taken during the duration to all enemies in the zone."
+      "description": "Create a # hex zone around the target that lasts # seconds. The next 3 attacks deal # (AP) bonus magic damage. When the zone ends, it deals # (AP) magic damage + #% of the target's damage taken during the duration to all enemies in the zone."
     }
   },
   {
@@ -516,7 +516,7 @@
     },
     "ability": {
       "name": "Collateral Damage",
-      "description": "Passive: Attacks fire in a cone on target, dealing #% damage to other enemies hit. Active: Fire an explosive shell at target, dealing # (%i:scaleAD%) physical damage split among enemies in a 1 hex circle. Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses."
+      "description": "Passive: Attacks fire in a cone on target, dealing #% damage to other enemies hit. Active: Fire an explosive shell at target, dealing # (AD) physical damage split among enemies in a 1 hex circle. Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses."
     }
   },
   {
@@ -543,7 +543,7 @@
     },
     "ability": {
       "name": "Pop Blossom",
-      "description": "Leap at target and gain # (%i:scaleAP%) Shield for # seconds. Slam down after a brief delay, dealing # (%i:scaleAP%) magic damage to enemies within two hexes and 20% Chilling them for # seconds.{{TFT_Keyword_Chill}}"
+      "description": "Leap at target and gain # (AP) Shield for # seconds. Slam down after a brief delay, dealing # (AP) magic damage to enemies within two hexes and 20% Chilling them for # seconds."
     }
   },
   {
@@ -569,7 +569,7 @@
     },
     "ability": {
       "name": "Command: Protect",
-      "description": "Send the Ball to target, dealing # (%i:scaleAP%) magic damage and splitting # (%i:scaleAP%) magic damage among enemies within a 1 hex circle.Then grant # (%i:scaleAP%) Shield to the two lowest Health allies for # seconds."
+      "description": "Send the Ball to target, dealing # (AP) magic damage and splitting # (AP) magic damage among enemies within a 1 hex circle.Then grant # (AP) Shield to the two lowest Health allies for # seconds."
     }
   },
   {
@@ -596,7 +596,7 @@
     },
     "ability": {
       "name": "Hammer Shock",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds and deal # (%i:scaleAD%) physical damage to target. After a delay, briefly knock them up and deal the damage again. Bucklers fly out from the target, granting # nearby allies #% of the Shield gained."
+      "description": "Gain # (AP) Shield for # seconds and deal # (AD) physical damage to target. After a delay, briefly knock them up and deal the damage again. Bucklers fly out from the target, granting # nearby allies #% of the Shield gained."
     }
   },
   {
@@ -622,7 +622,7 @@
     },
     "ability": {
       "name": "Burrow",
-      "description": "Dash to the furthest enemy within # hexes and deal # (%i:scaleAD%%i:scaleAP%) physical damage to them. The next # attacks hit adjacent enemies and deal # (%i:scaleAD%) physical damage."
+      "description": "Dash to the furthest enemy within # hexes and deal # (AD)(AP) physical damage to them. The next # attacks hit adjacent enemies and deal # (AD) physical damage."
     }
   },
   {
@@ -648,7 +648,7 @@
     },
     "ability": {
       "name": "Soul Furnace",
-      "description": "Passive: Takedowns grant # permanent max Health. (Total: #)Active: Gain # (%i:scaleHealth%%i:scaleAP%) Shield for # seconds. When it breaks, deal # (%i:scaleHealth%) magic damage to adjacent enemies."
+      "description": "Passive: Takedowns grant # permanent max Health. (Total: #)Active: Gain # (AP) Shield for # seconds. When it breaks, deal # () magic damage to adjacent enemies."
     }
   },
   {
@@ -674,7 +674,7 @@
     },
     "ability": {
       "name": "Toxic Dart",
-      "description": "Shoot the closest unpoisoned enemy, dealing # (%i:scaleAP%) magic damage and poisoning them for # seconds. Poisoned enemies take # (%i:scaleAP%) magic damage each second."
+      "description": "Shoot the closest unpoisoned enemy, dealing # (AP) magic damage and poisoning them for # seconds. Poisoned enemies take # (AP) magic damage each second."
     }
   },
   {
@@ -700,7 +700,7 @@
     },
     "ability": {
       "name": "Buster Shot",
-      "description": "Fire a massive cannonball at target, dealing # (%i:scaleAD%%i:scaleAP%) physical damage. If they are within # hexes, knock them back # hexes and briefly Stun them."
+      "description": "Fire a massive cannonball at target, dealing # (AD)(AP) physical damage. If they are within # hexes, knock them back # hexes and briefly Stun them."
     }
   },
   {
@@ -726,7 +726,7 @@
     },
     "ability": {
       "name": "Undying Rage",
-      "description": "Become enraged for # seconds. While enraged, gain # (%i:scaleAP%) Durability and attacks are replaced with a strike that deals # (%i:scaleAD%) physical damage. Ignore #% of Armor against Chilled enemies.Bloodsworn Bond: When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.Bloodsworn Bond: Gain increased Move Speed. Gain #% Attack Damage, permanently increased by #% whenever Ashe or Tryndamere score a kill. (Current Bonus: #%){{TFT_Keyword_Chill}}"
+      "description": "Become enraged for # seconds. While enraged, gain # (AP) Durability and attacks are replaced with a strike that deals # (AD) physical damage. Ignore #% of Armor against Chilled enemies.Bloodsworn Bond: When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.Bloodsworn Bond: Gain increased Move Speed. Gain #% Attack Damage, permanently increased by #% whenever Ashe or Tryndamere score a kill. (Current Bonus: #%)"
     }
   },
   {
@@ -752,7 +752,7 @@
     },
     "ability": {
       "name": "Stacked Deck",
-      "description": "Passive: Attacks deal # (%i:scaleAP%) bonus magic damage. After every #rd attack, throw 3 cards in a cone that deal # (%i:scaleAP%) magic damage, reduced by #% for each enemy they pass through.Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses"
+      "description": "Passive: Attacks deal # (AP) bonus magic damage. After every #rd attack, throw 3 cards in a cone that deal # (AP) magic damage, reduced by #% for each enemy they pass through.Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses"
     }
   },
   {
@@ -779,7 +779,7 @@
     },
     "ability": {
       "name": "Relentless Force",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds. Slam on target, dealing # (%i:scaleAD%) physical damage to enemies in a # hex range. Every third cast deals # (%i:scaleAD%) damage in a # hex range instead and knocks up enemies hit for # second."
+      "description": "Gain # (AP) Shield for # seconds. Slam on target, dealing # (AD) physical damage to enemies in a # hex range. Every third cast deals # (AD) damage in a # hex range instead and knocks up enemies hit for # second."
     }
   },
   {
@@ -806,7 +806,7 @@
     },
     "ability": {
       "name": "Three Talon Strike",
-      "description": "Strike target 3 times. Each strike deals # (%i:scaleAD%) physical damage and restores # (%i:scaleAP%) Health. The final one Stuns for # seconds."
+      "description": "Strike target 3 times. Each strike deals # (AD) physical damage and restores # (AP) Health. The final one Stuns for # seconds."
     }
   },
   {
@@ -832,7 +832,7 @@
     },
     "ability": {
       "name": "Sweeping Blade",
-      "description": "Dash, then deal # (%i:scaleAD%%i:scaleAP%) physical damage to adjacent enemies. If only one enemy is hit, deal double damage.Blade Brothers: When you field Yasuo and Yone, Yasuo assists Yone's casts.Blade Brothers: When Yone casts, your strongest Yasuo blinks to every target Yone hits and deals #% %i:TFTBaseAD% physical damage to each."
+      "description": "Dash, then deal # (AD)(AP) physical damage to adjacent enemies. If only one enemy is hit, deal double damage.Blade Brothers: When you field Yasuo and Yone, Yasuo assists Yone's casts.Blade Brothers: When Yone casts, your strongest Yasuo blinks to every target Yone hits and deals #% physical damage to each."
     }
   },
   {
@@ -858,7 +858,7 @@
     },
     "ability": {
       "name": "Mourning Mist",
-      "description": "Restore # (%i:scaleAP%%i:scaleSouls%) Health. Throw a globule of black mist at the enemy who has dealt the most damage this combat, preferring unique enemies. It 20% Chills them for # seconds and raises the Mana cost of their next cast by #. It then deals # (%i:scaleHealth%) magic damage in 1 hex radius.{{TFT_Keyword_Chill}}"
+      "description": "Restore # (AP) Health. Throw a globule of black mist at the enemy who has dealt the most damage this combat, preferring unique enemies. It 20% Chills them for # seconds and raises the Mana cost of their next cast by #. It then deals # () magic damage in 1 hex radius."
     }
   },
   {
@@ -884,7 +884,7 @@
     },
     "ability": {
       "name": "Fox-Fire",
-      "description": "Fire # flames at target, each dealing # (%i:scaleAP%) magic damage. Every 3rd cast, fire # flames split between the target and up to # nearby enemies.If there are nearby enemies, dash away."
+      "description": "Fire # flames at target, each dealing # (AP) magic damage. Every 3rd cast, fire # flames split between the target and up to # nearby enemies.If there are nearby enemies, dash away."
     }
   },
   {
@@ -910,7 +910,7 @@
     },
     "ability": {
       "name": "Decimate",
-      "description": "Restore # (%i:scaleHealth%%i:scaleAP%) Health and spin, dealing # (%i:scaleAD%) physical damage to adjacent enemies and applying a stack of Hemorrhage that deals # (%i:scaleAD%) physical damage each second for # seconds.If an enemy with Hemorrhage drops below #% Health, slam on them, instantly killing them. (Each stack increases the execute threshold by #%)"
+      "description": "Restore # (AP) Health and spin, dealing # (AD) physical damage to adjacent enemies and applying a stack of Hemorrhage that deals # (AD) physical damage each second for # seconds.If an enemy with Hemorrhage drops below #% Health, slam on them, instantly killing them. (Each stack increases the execute threshold by #%)"
     }
   },
   {
@@ -936,7 +936,7 @@
     },
     "ability": {
       "name": "Maximum Dosage",
-      "description": "Bulk up for # seconds. While bulked, restore # (%i:scaleHealth%%i:scaleAP%) Health every second and attacks deal # (%i:scaleHealth%%i:scaleAD%) physical damage."
+      "description": "Bulk up for # seconds. While bulked, restore # (AP) Health every second and attacks deal # (AD) physical damage."
     }
   },
   {
@@ -962,7 +962,7 @@
     },
     "ability": {
       "name": "Spinning Axes",
-      "description": "Passive: If Draven has an empowered axe in hand, his next attack will throw it. On takedown, gain an Adoration stack, doubled if Draven or Darius scored the kill. Every # Adoration stacks grants # Gold. (Adoration Left: #, Gold Generated: #g) Active: Spin an empowered axe that replaces his basic attack and deals # (%i:scaleAD%%i:scaleAP%) physical damage and returns to Draven after hitting an enemy."
+      "description": "Passive: If Draven has an empowered axe in hand, his next attack will throw it. On takedown, gain an Adoration stack, doubled if Draven or Darius scored the kill. Every # Adoration stacks grants # Gold. (Adoration Left: #, Gold Generated: #g) Active: Spin an empowered axe that replaces his basic attack and deals # (AD)(AP) physical damage and returns to Draven after hitting an enemy."
     }
   },
   {
@@ -989,7 +989,7 @@
     },
     "ability": {
       "name": "Powder Kegs",
-      "description": "Toss barrels at the 3 nearest enemies and detonate them. They deal # (%i:scaleAD%%i:scaleAP%) damage, reduced by #% for each barrel in the chain. Barrels reduce their target's Armor by #, increased to # if the damage critically strikes."
+      "description": "Toss barrels at the 3 nearest enemies and detonate them. They deal # (AD)(AP) damage, reduced by #% for each barrel in the chain. Barrels reduce their target's Armor by #, increased to # if the damage critically strikes."
     }
   },
   {
@@ -1015,7 +1015,7 @@
     },
     "ability": {
       "name": "Snip Snip!",
-      "description": "Dash around target and snip # (%i:scaleSouls%) times, dealing # (%i:scaleAP%) magic damage to them and # (%i:scaleAP%) damage to all other enemies in a cone."
+      "description": "Dash around target and snip # () times, dealing # (AP) magic damage to them and # (AP) damage to all other enemies in a cone."
     }
   },
   {
@@ -1041,7 +1041,7 @@
     },
     "ability": {
       "name": "Switcheroo!",
-      "description": "Passive: After attacking # times, switch to Fishbones. While equipped, attacks are replaced with # rockets that target random enemies and deal # (%i:scaleAD%) physical damage."
+      "description": "Passive: After attacking # times, switch to Fishbones. While equipped, attacks are replaced with # rockets that target random enemies and deal # (AD) physical damage."
     }
   },
   {
@@ -1068,7 +1068,7 @@
     },
     "ability": {
       "name": "Slicing Maelstrom",
-      "description": "Gain # (%i:scaleAP%) Shield and summon storm of lightning. # waves of bolts hit enemies within, dealing # (%i:scaleAP%) magic damage over # seconds. The first # targets to be struck by # bolts are Stunned for # seconds. Multiple Stuns on the same enemy have #% effectiveness."
+      "description": "Gain # (AP) Shield and summon storm of lightning. # waves of bolts hit enemies within, dealing # (AP) magic damage over # seconds. The first # targets to be struck by # bolts are Stunned for # seconds. Multiple Stuns on the same enemy have #% effectiveness."
     }
   },
   {
@@ -1095,7 +1095,7 @@
     },
     "ability": {
       "name": "You & Me!",
-      "description": "Passive: Yuumi joins your strongest Kobuko. Every # seconds, she alternates between healing the lowest Health ally for # (%i:scaleAP%) Health or granting #% Attack Speed to the ally who has dealt the most damage for # seconds.Active: Dance, restoring # (%i:scaleHealth%%i:scaleAP%) Health over # seconds."
+      "description": "Passive: Yuumi joins your strongest Kobuko. Every # seconds, she alternates between healing the lowest Health ally for # (AP) Health or granting #% Attack Speed to the ally who has dealt the most damage for # seconds.Active: Dance, restoring # (AP) Health over # seconds."
     }
   },
   {
@@ -1121,7 +1121,7 @@
     },
     "ability": {
       "name": "Distortions",
-      "description": "Summon # dashing mirror images that strike the target and up to # other nearby enemies. The target takes # (%i:scaleAP%) magic damage and is Stunned for # second, while other units hit take # (%i:scaleAP%) magic damage."
+      "description": "Summon # dashing mirror images that strike the target and up to # other nearby enemies. The target takes # (AP) magic damage and is Stunned for # second, while other units hit take # (AP) magic damage."
     }
   },
   {
@@ -1146,7 +1146,7 @@
     },
     "ability": {
       "name": "Solar Flare",
-      "description": "Passive: Reduce instances of incoming damage by # (%i:scaleAP%). Your strongest Leona grants your strongest Diana # Ability Power every second she survives.Active: Call down sun beams on the # nearest enemies, Stunning them for # second and dealing # (%i:scaleAP%) magic damage. Wound and 1% Burn them for # seconds.{{TFT_Keyword_Wound}}{{TFT_Keyword_Burn}}"
+      "description": "Passive: Reduce instances of incoming damage by # (AP). Your strongest Leona grants your strongest Diana # Ability Power every second she survives.Active: Call down sun beams on the # nearest enemies, Stunning them for # second and dealing # (AP) magic damage. Wound and 1% Burn them for # seconds."
     }
   },
   {
@@ -1172,7 +1172,7 @@
     },
     "ability": {
       "name": "Piltover Tussle",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds. Charge and knock the target backwards, Stunning them and units hit for # seconds and dealing # (%i:scaleAP%) magic damage to them. After charging, force nearby enemies to target this unit."
+      "description": "Gain # (AP) Shield for # seconds. Charge and knock the target backwards, Stunning them and units hit for # seconds and dealing # (AP) magic damage to them. After charging, force nearby enemies to target this unit."
     }
   },
   {
@@ -1198,7 +1198,7 @@
     },
     "ability": {
       "name": "Void Swarm",
-      "description": "Summon # Voidlings that each attack a nearby enemy # times. Each attack deals # (%i:scaleAP%) magic damage."
+      "description": "Summon # Voidlings that each attack a nearby enemy # times. Each attack deals # (AP) magic damage."
     }
   },
   {
@@ -1224,7 +1224,7 @@
     },
     "ability": {
       "name": "Ultra Mega Fire Kick!!!",
-      "description": "Launch a fuemigo at target that bounces # times, dealing # (%i:scaleAP%) magic damage to enemies hit. The last bounce deals # (%i:scaleAP%) magic damage to enemies in a # hex radius."
+      "description": "Launch a fuemigo at target that bounces # times, dealing # (AP) magic damage to enemies hit. The last bounce deals # (AP) magic damage to enemies in a # hex radius."
     }
   },
   {
@@ -1251,7 +1251,7 @@
     },
     "ability": {
       "name": "Titan's Wrath",
-      "description": "Passive: Every # seconds and on cast, the next attack deals damage in a 1 hex circle and deals # (%i:scaleMR%) bonus magic damage.Active: Gain # (%i:scaleHealth%%i:scaleAP%) Shield for # seconds."
+      "description": "Passive: Every # seconds and on cast, the next attack deals damage in a 1 hex circle and deals # (MR) bonus magic damage.Active: Gain # (AP) Shield for # seconds."
     }
   },
   {
@@ -1277,7 +1277,7 @@
     },
     "ability": {
       "name": "Winter's Wrath",
-      "description": "Gain # (%i:scaleAP%) Shield for # seconds. Strike in a cone and a line. Enemies hit take # (%i:scaleAP%) magic damage and are 30% Chilled for # seconds. If they are already Chilled, Stun them for # second.{{TFT_Keyword_Chill}}"
+      "description": "Gain # (AP) Shield for # seconds. Strike in a cone and a line. Enemies hit take # (AP) magic damage and are 30% Chilled for # seconds. If they are already Chilled, Stun them for # second."
     }
   },
   {
@@ -1303,7 +1303,7 @@
     },
     "ability": {
       "name": "Tumble",
-      "description": "Tumble to a nearby hex, then fire a bolt at target that deals # (%i:scaleAD%%i:scaleAP%) true damage."
+      "description": "Tumble to a nearby hex, then fire a bolt at target that deals # (AD)(AP) true damage."
     }
   },
   {
@@ -1328,7 +1328,7 @@
     },
     "ability": {
       "name": "Double Trouble Bubble",
-      "description": "Passive: Damaging an enemy applies 30% Shred for # seconds.Active: Kick # bubbles at nearby enemies, dealing # (%i:scaleAP%) magic damage and 30% Chilling them for # seconds.{{TFT_Keyword_Shred}}{{TFT_Keyword_Chill}}"
+      "description": "Passive: Damaging an enemy applies 30% Shred for # seconds.Active: Kick # bubbles at nearby enemies, dealing # (AP) magic damage and 30% Chilling them for # seconds."
     }
   },
   {
@@ -1354,7 +1354,7 @@
     },
     "ability": {
       "name": "Lacerate",
-      "description": "Swipe and dash around target, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies in the path. Then slam chains on target, dealing # (%i:scaleAD%%i:scaleAP%) physical damage in a line. If any enemies are killed, immediately recast this ability, dealing #% damage.The slam deals #% more damage to Tanks."
+      "description": "Swipe and dash around target, dealing # (AD)(AP) physical damage to enemies in the path. Then slam chains on target, dealing # (AD)(AP) physical damage in a line. If any enemies are killed, immediately recast this ability, dealing #% damage.The slam deals #% more damage to Tanks."
     }
   },
   {
@@ -1380,7 +1380,7 @@
     },
     "ability": {
       "name": "Endless Banquet",
-      "description": "Passive: On takedown, gain #% Attack Speed that decays over # seconds.Active: Deal # (%i:scaleAD%) physical damage in a 2 hex radius and transform for the rest of combat.While transformed, gain # (%i:scaleAP%) Attack Speed, #% max Health, and increased Move Speed. Attacks deal # bonus true damage, increased by # for each time the same enemy is hit."
+      "description": "Passive: On takedown, gain #% Attack Speed that decays over # seconds.Active: Deal # (AD) physical damage in a 2 hex radius and transform for the rest of combat.While transformed, gain # (AP) Attack Speed, #% max Health, and increased Move Speed. Attacks deal # bonus true damage, increased by # for each time the same enemy is hit."
     }
   },
   {
@@ -1406,7 +1406,7 @@
     },
     "ability": {
       "name": "Unbreakable Frost",
-      "description": "Raise shield for # seconds, gaining # (%i:scaleAP%) Durability and redirecting projectiles to towards Braum instead. When hit, deal # (%i:scaleArmor%%i:scaleAP%) magic damage to nearby enemies and 30% Chill them for # seconds.{{TFT_Keyword_Chill}}"
+      "description": "Raise shield for # seconds, gaining # (AP) Durability and redirecting projectiles to towards Braum instead. When hit, deal # (Armor)(AP) magic damage to nearby enemies and 30% Chill them for # seconds."
     }
   },
   {
@@ -1431,7 +1431,7 @@
     },
     "ability": {
       "name": "Lunar Rush",
-      "description": "Passive: Ability damage from your strongest Leona and strongest Diana marks enemies as Moonlit, reducing their damage by #%.Active: Gain # (%i:scaleAP%) Shield. Unleash a bolt of lunar energy at the farthest non-Moonlit enemy within # hexes, dealing # (%i:scaleAP%) magic damage. Then, dash to all Moonlit enemies, dealing # (%i:scaleAP%) magic damage to them."
+      "description": "Passive: Ability damage from your strongest Leona and strongest Diana marks enemies as Moonlit, reducing their damage by #%.Active: Gain # (AP) Shield. Unleash a bolt of lunar energy at the farthest non-Moonlit enemy within # hexes, dealing # (AP) magic damage. Then, dash to all Moonlit enemies, dealing # (AP) magic damage to them."
     }
   },
   {
@@ -1457,7 +1457,7 @@
     },
     "ability": {
       "name": "Playful Trickster",
-      "description": "Become briefly untargetable, then jump to the farthest enemy within # hexes, avoiding Tanks and Fighters, and deal # (%i:scaleAP%) magic damage to adjacent enemies. For the next # attacks, gain #% Attack Speed and deal # (%i:scaleAP%) bonus magic damage on hit."
+      "description": "Become briefly untargetable, then jump to the farthest enemy within # hexes, avoiding Tanks and Fighters, and deal # (AP) magic damage to adjacent enemies. For the next # attacks, gain #% Attack Speed and deal # (AP) bonus magic damage on hit."
     }
   },
   {
@@ -1483,7 +1483,7 @@
     },
     "ability": {
       "name": "Judgment",
-      "description": "Spin for # seconds, gaining #% Durability and healing for # (%i:scaleHealth%%i:scaleAP%) over the duration. Each second, deal # (%i:scaleAD%) physical damage to adjacent enemies and reduce their Armor and Magic Resistance by #."
+      "description": "Spin for # seconds, gaining #% Durability and healing for # (AP) over the duration. Each second, deal # (AD) physical damage to adjacent enemies and reduce their Armor and Magic Resistance by #."
     }
   },
   {
@@ -1510,7 +1510,7 @@
     },
     "ability": {
       "name": "Icathian Rain",
-      "description": "Dash away from all enemies, then fire # missiles split across the # nearest enemies. Each missile deals # (%i:scaleAD%%i:scaleAP%) physical damage."
+      "description": "Dash away from all enemies, then fire # missiles split across the # nearest enemies. Each missile deals # (AD)(AP) physical damage."
     }
   },
   {
@@ -1536,7 +1536,7 @@
     },
     "ability": {
       "name": "Endless Rend",
-      "description": "Summon # (%i:scaleSouls%) spears split among the # nearest enemies. After a brief delay, they each impale their target, dealing # (%i:scaleAD%%i:scaleAP%) physical damage and reducing Armor by #."
+      "description": "Summon # () spears split among the # nearest enemies. After a brief delay, they each impale their target, dealing # (AD)(AP) physical damage and reducing Armor by #."
     }
   },
   {
@@ -1562,7 +1562,7 @@
     },
     "ability": {
       "name": "Frozen Tomb",
-      "description": "Encase target in ice, Stunning them for # second and dealing # (%i:scaleAP%) magic damage. All enemies within 2 hexes of them split # (%i:scaleAP%) magic damage. If the target dies, shards fly out and split excess damage between the # nearest enemies.Chilled enemies take #% more damage from this ability.{{TFT_Keyword_Chill}}"
+      "description": "Encase target in ice, Stunning them for # second and dealing # (AP) magic damage. All enemies within 2 hexes of them split # (AP) magic damage. If the target dies, shards fly out and split excess damage between the # nearest enemies.Chilled enemies take #% more damage from this ability."
     }
   },
   {
@@ -1588,7 +1588,7 @@
     },
     "ability": {
       "name": "Final Spark",
-      "description": "Fire a ball of light at the most enemies, dealing # (%i:scaleAP%) magic damage to the first # enemies hit and Rooting them for # second. Then fire a beam, dealing # (%i:scaleAP%) magic damage to enemies hit by the ball and # (%i:scaleAP%) magic damage to all other enemies hit."
+      "description": "Fire a ball of light at the most enemies, dealing # (AP) magic damage to the first # enemies hit and Rooting them for # second. Then fire a beam, dealing # (AP) magic damage to enemies hit by the ball and # (AP) magic damage to all other enemies hit."
     }
   },
   {
@@ -1614,7 +1614,7 @@
     },
     "ability": {
       "name": "Heartbreaker",
-      "description": "Passive: Attacks ricochet to the highest current Health enemy, dealing #% damage.Active: Fire waves of bullets that land on the # nearest enemies. The first wave deals # (%i:scaleAD%%i:scaleAP%) physical damage and the rest deal # (%i:scaleAD%%i:scaleAP%) physical damage. Every #rd cast, increase the number of waves by 1."
+      "description": "Passive: Attacks ricochet to the highest current Health enemy, dealing #% damage.Active: Fire waves of bullets that land on the # nearest enemies. The first wave deals # (AD)(AP) physical damage and the rest deal # (AD)(AP) physical damage. Every #rd cast, increase the number of waves by 1."
     }
   },
   {
@@ -1639,7 +1639,7 @@
     },
     "ability": {
       "name": "Fury of the Sands",
-      "description": "Steal # (%i:scaleAP%) Health split between the # nearest enemies. For # seconds, gain # Armor and Magic Resist and deal # (%i:scaleHealth%) magic damage to adjacent enemies each second."
+      "description": "Steal # (AP) Health split between the # nearest enemies. For # seconds, gain # Armor and Magic Resist and deal # () magic damage to adjacent enemies each second."
     }
   },
   {
@@ -1665,7 +1665,7 @@
     },
     "ability": {
       "name": "Relentless Pounce",
-      "description": "Jump on an adjacent enemy with the lowest health, then deal # (%i:scaleAP%) magic damage to them and # (%i:scaleAP%) magic damage to adjacent enemies. If any die, cast again, dealing #% damage.Tanks take #% more damage from this ability and Fighters take #% more."
+      "description": "Jump on an adjacent enemy with the lowest health, then deal # (AP) magic damage to them and # (AP) magic damage to adjacent enemies. If any die, cast again, dealing #% damage.Tanks take #% more damage from this ability and Fighters take #% more."
     }
   },
   {
@@ -1690,7 +1690,7 @@
     },
     "ability": {
       "name": "Slice and Dice",
-      "description": "Dash to the lowest Health enemy within # hexes, dealing # (%i:scaleAD%) physical damage to all enemies in the path. Then slash # times, each dealing # (%i:scaleAD%%i:scaleAP%) physical damage. Subsquent casts increase the number of slashes by #."
+      "description": "Dash to the lowest Health enemy within # hexes, dealing # (AD) physical damage to all enemies in the path. Then slash # times, each dealing # (AD)(AP) physical damage. Subsquent casts increase the number of slashes by #."
     }
   },
   {
@@ -1716,7 +1716,7 @@
     },
     "ability": {
       "name": "Warp Armor",
-      "description": "Gain # max Health and grow larger. Slam in a # Hex circle on the target, dealing # (%i:scaleAP%%i:scaleHealth%) magic damage to enemies hit. For # seconds, gain # (%i:scaleAP%) Durability + #% for each enemy targeting this unit."
+      "description": "Gain # max Health and grow larger. Slam in a # Hex circle on the target, dealing # (AP) magic damage to enemies hit. For # seconds, gain # (AP) Durability + #% for each enemy targeting this unit."
     }
   },
   {
@@ -1742,7 +1742,7 @@
     },
     "ability": {
       "name": "Grand Encore",
-      "description": "Gain # notes. For each one active, deal # (%i:scaleAP%) magic damage to a nearby enemy.While holding # notes on cast, consume them to project a wave of energy. Allies hit restore # (%i:scaleAP%) Health. Enemies hit take # (%i:scaleAP%) magic damage, reduced by #% for each enemy it's passed through."
+      "description": "Gain # notes. For each one active, deal # (AP) magic damage to a nearby enemy.While holding # notes on cast, consume them to project a wave of energy. Allies hit restore # (AP) Health. Enemies hit take # (AP) magic damage, reduced by #% for each enemy it's passed through."
     }
   },
   {
@@ -1768,7 +1768,7 @@
     },
     "ability": {
       "name": "Poison Trail",
-      "description": "Passive: Run around the battlefield, leaving a poison trail that lingers for # seconds. Poison trails deal # (%i:scaleAP%) magic damage per second to enemies within. Gain # (%i:scaleAS%) Mana each second.Active: For # seconds, gain increased Move Speed, restore # (%i:scaleAP%) Health each second, and gain # Armor and Magic Resistance."
+      "description": "Passive: Run around the battlefield, leaving a poison trail that lingers for # seconds. Poison trails deal # (AP) magic damage per second to enemies within. Gain # (AS) Mana each second.Active: For # seconds, gain increased Move Speed, restore # (AP) Health each second, and gain # Armor and Magic Resistance."
     }
   },
   {
@@ -1793,7 +1793,7 @@
     },
     "ability": {
       "name": "Impale",
-      "description": "Passive: All allies gain # Armor.Active: Gain # (%i:scaleAP%) Shield for # seconds. Impale up to three nearby enemies in a line, dealing # (%i:scaleArmor%) physical damage and Stunning them for # seconds."
+      "description": "Passive: All allies gain # Armor.Active: Gain # (AP) Shield for # seconds. Impale up to three nearby enemies in a line, dealing # (Armor) physical damage and Stunning them for # seconds."
     }
   },
   {
@@ -1820,7 +1820,7 @@
     },
     "ability": {
       "name": "Nevermove",
-      "description": "Passive: Each second, restore # (%i:scaleHealth%%i:scaleAP%) Health and deal # (%i:scaleAP%) magic damage to enemies within 1 Hex. Active: Open a demonic eye on the largest group of nearby enemies, dealing # (%i:scaleAP%) magic damage and Stunning them for # seconds."
+      "description": "Passive: Each second, restore # (AP) Health and deal # (AP) magic damage to enemies within 1 Hex. Active: Open a demonic eye on the largest group of nearby enemies, dealing # (AP) magic damage and Stunning them for # seconds."
     }
   },
   {
@@ -1845,7 +1845,7 @@
     },
     "ability": {
       "name": "Starlight's Touch",
-      "description": "Passive: All allies gain # Magic Resist. Once per combat after dropping below #% max Health, restore # health over # seconds.Active: Gain # (%i:scaleAP%) Shield and grant the # lowest Health allies # (%i:scaleAP%) Shield for # seconds. The next # attacks deal # (%i:scaleAP%) bonus magic damage."
+      "description": "Passive: All allies gain # Magic Resist. Once per combat after dropping below #% max Health, restore # health over # seconds.Active: Gain # (AP) Shield and grant the # lowest Health allies # (AP) Shield for # seconds. The next # attacks deal # (AP) bonus magic damage."
     }
   },
   {
@@ -1871,7 +1871,7 @@
     },
     "ability": {
       "name": "Dark Storm",
-      "description": "Passive: Gain #% more Ability Power from all sources. Active: Call down a storm of # meteors across the battlefield that deal # (%i:scaleAP%) magic damage each. They can innately critically strike. For each one that kills an enemy, permanently gain # Ability Power. (Permanent Ability Power: #% %i:scaleAP%)"
+      "description": "Passive: Gain #% more Ability Power from all sources. Active: Call down a storm of # meteors across the battlefield that deal # (AP) magic damage each. They can innately critically strike. For each one that kills an enemy, permanently gain # Ability Power. (Permanent Ability Power: #% (AP)"
     }
   },
   {
@@ -1897,7 +1897,7 @@
     },
     "ability": {
       "name": "Eternal Hunger",
-      "description": "Gain #% Attack Speed, #% Omnivamp, increased Move Speed, and deal # (%i:scaleAD%) bonus physical damage on attack for the rest of combat. While this effect is active, takedowns grant Warwick, Jinx, and Vi # (%i:scaleAP%) Attack Speed for # seconds."
+      "description": "Gain #% Attack Speed, #% Omnivamp, increased Move Speed, and deal # (AD) bonus physical damage on attack for the rest of combat. While this effect is active, takedowns grant Warwick, Jinx, and Vi # (AP) Attack Speed for # seconds."
     }
   },
   {
@@ -1923,7 +1923,7 @@
     },
     "ability": {
       "name": "Diverting Trickster",
-      "description": "Passive: On death, summon a Stone copy with # (%i:scaleHealth%) Health and Wukong's items.Active: For 4 seconds, gain # (%i:scaleAP%) Armor and Magic Resist. Then spin, dealing # (%i:scaleAD%) physical damage to all enemies within 2 hexes."
+      "description": "Passive: On death, summon a Stone copy with # () Health and Wukong's items.Active: For 4 seconds, gain # (AP) Armor and Magic Resist. Then spin, dealing # (AD) physical damage to all enemies within 2 hexes."
     }
   },
   {
@@ -1949,7 +1949,7 @@
     },
     "ability": {
       "name": "Kin of the Stained Blade",
-      "description": "Passive: Attacks alternate between dealing # (%i:scaleAD%) bonus physical damage and # (%i:scaleAP%) bonus magic damage.Active: Strike through the most enemies possible within # hexes, knocking them up for # seconds and dealing # (%i:scaleAD%%i:scaleAP%) physical damage and # (%i:scaleAD%%i:scaleAP%) magic damage. Yone then splits # (%i:scaleAD%%i:scaleAP%) physical damage and # (%i:scaleAD%%i:scaleAP%) magic damage among all enemies hit.Blade Brothers: When you field Yasuo and Yone, Yasuo assists Yone's casts.Blade Brothers: When Yone casts, your strongest Yasuo blinks to each target, dealing bonus physical damage."
+      "description": "Passive: Attacks alternate between dealing # (AD) bonus physical damage and # (AP) bonus magic damage.Active: Strike through the most enemies possible within # hexes, knocking them up for # seconds and dealing # (AD)(AP) physical damage and # (AD)(AP) magic damage. Yone then splits # (AD)(AP) physical damage and # (AD)(AP) magic damage among all enemies hit.Blade Brothers: When you field Yasuo and Yone, Yasuo assists Yone's casts.Blade Brothers: When Yone casts, your strongest Yasuo blinks to each target, dealing bonus physical damage."
     }
   },
   {
@@ -1975,7 +1975,7 @@
     },
     "ability": {
       "name": "Transcendent State",
-      "description": "For the next # seconds, gain # Attack Speed, infinite range, and replace attacks with lasers. Lasers deal # (%i:scaleAD%%i:scaleAP%) physical damage in a line, reduced by #% for each enemy they pass through. When lasers critically strike, they deal #% bonus true damage."
+      "description": "For the next # seconds, gain # Attack Speed, infinite range, and replace attacks with lasers. Lasers deal # (AD)(AP) physical damage in a line, reduced by #% for each enemy they pass through. When lasers critically strike, they deal #% bonus true damage."
     }
   },
   {
@@ -2002,7 +2002,7 @@
     },
     "ability": {
       "name": "The Darkin Blade",
-      "description": "On cast, cycle through one of the following abilities:Slash in a line, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies hit and 20% Sundering them for # seconds.Swipe in a cone, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies hit and knocking them up for # second.Slam on target, dealing # (%i:scaleAD%%i:scaleAP%) physical damage in a 1 hex circle. Targets below #% max Health are executed."
+      "description": "On cast, cycle through one of the following abilities:Slash in a line, dealing # (AD)(AP) physical damage to enemies hit and 20% Sundering them for # seconds.Swipe in a cone, dealing # (AD)(AP) physical damage to enemies hit and knocking them up for # second.Slam on target, dealing # (AD)(AP) physical damage in a 1 hex circle. Targets below #% max Health are executed."
     }
   },
   {
@@ -2028,7 +2028,7 @@
     },
     "ability": {
       "name": "Enraged Inferno",
-      "description": "Erupt the entire battlefield in flames, permanently Burning and Wounding all enemies and dealing # (%i:scaleAP%) magic damage to each of them over # seconds. Annie's max Mana is reduced by # for the rest of combat. Subsquent casts launch a fireball at target that deals # (%i:scaleAP%) magic damage.{{TFT_Keyword_Burn}}{{TFT_Keyword_Wound}}"
+      "description": "Erupt the entire battlefield in flames, permanently Burning and Wounding all enemies and dealing # (AP) magic damage to each of them over # seconds. Annie's max Mana is reduced by # for the rest of combat. Subsquent casts launch a fireball at target that deals # (AP) magic damage."
     }
   },
   {
@@ -2054,7 +2054,7 @@
     },
     "ability": {
       "name": "The Skies Descend",
-      "description": "Passive: For every # ability damage dealt to enemies in player combat, gain Stardust. Stardust makes The Skies Descend more powerful. (Current Stardust: #) Active: Crash a star on target, dealing # (%i:scaleAP%) magic damage in a # hex radius.Stardust Upgrades:#: Create a shockwave that deals # (%i:scaleAP%) additional magic damage in a # Hex radius.#: Create a shockwave that deals # (%i:scaleAP%) additional magic damage in a # Hex radius.#: The star crash deals #% more damage.#: The star crash deals #% more damage.#: Shockwave increases to a # hex radius.#: Shockwave increases to a # hex radius.#: Knock up targets in the star crash for # seconds.#: Knock up targets in the star crash for # seconds.#: Shockwave increases to # radius.#: Shockwave increases to # radius.#: The star crash deals #% bonus true damage.#: The star crash deals #% bonus true damage.#: Also call down a meteor storm that deals # (%i:scaleAP%) magic damage split between living enemies.#: Also call down a meteor storm that deals # (%i:scaleAP%) magic damage split between living enemies.#: Summon a black hole at the epicenter, instantly killing enemies within.#: Summon a black hole at the epicenter, instantly killing enemies within."
+      "description": "Passive: For every # ability damage dealt to enemies in player combat, gain Stardust. Stardust makes The Skies Descend more powerful. (Current Stardust: #) Active: Crash a star on target, dealing # (AP) magic damage in a # hex radius.Stardust Upgrades:#: Create a shockwave that deals # (AP) additional magic damage in a # Hex radius.#: Create a shockwave that deals # (AP) additional magic damage in a # Hex radius.#: The star crash deals #% more damage.#: The star crash deals #% more damage.#: Shockwave increases to a # hex radius.#: Shockwave increases to a # hex radius.#: Knock up targets in the star crash for # seconds.#: Knock up targets in the star crash for # seconds.#: Shockwave increases to # radius.#: Shockwave increases to # radius.#: The star crash deals #% bonus true damage.#: The star crash deals #% bonus true damage.#: Also call down a meteor storm that deals # (AP) magic damage split between living enemies.#: Also call down a meteor storm that deals # (AP) magic damage split between living enemies.#: Summon a black hole at the epicenter, instantly killing enemies within.#: Summon a black hole at the epicenter, instantly killing enemies within."
     }
   },
   {
@@ -2081,7 +2081,7 @@
     },
     "ability": {
       "name": "Arise!",
-      "description": "Passive: After witnessing 3 attacks from Azir, Sand Soldiers deal # (%i:scaleAP%) magic damage to their target.Active: Summon a Sand Soldier near target and command them to strike. If # Soldiers are already out, they all immediately deal # (%i:scaleAP%) magic damage instead."
+      "description": "Passive: After witnessing 3 attacks from Azir, Sand Soldiers deal # (AP) magic damage to their target.Active: Summon a Sand Soldier near target and command them to strike. If # Soldiers are already out, they all immediately deal # (AP) magic damage instead."
     }
   },
   {
@@ -2107,7 +2107,7 @@
     },
     "ability": {
       "name": "Wrath of the Void",
-      "description": "Passive: Immune to Crowd Control effects. Attacks deal damage in a line on target. If no enemies are in range, dash to the next one and knock up adjacent enemies on arrival.While in the Void Rift, erupt a tentacle below a random enemy every # seconds that knocks them up for # seconds.Active: Slam and erect spikes in a 2 hex circle, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies hit. Then over 3 seconds, spit # globs of acid that deal # (%i:scaleAD%%i:scaleAP%) physical damage."
+      "description": "Passive: Immune to Crowd Control effects. Attacks deal damage in a line on target. If no enemies are in range, dash to the next one and knock up adjacent enemies on arrival.While in the Void Rift, erupt a tentacle below a random enemy every # seconds that knocks them up for # seconds.Active: Slam and erect spikes in a 2 hex circle, dealing # (AD)(AP) physical damage to enemies hit. Then over 3 seconds, spit # globs of acid that deal # (AD)(AP) physical damage."
     }
   },
   {
@@ -2132,7 +2132,7 @@
     },
     "ability": {
       "name": "Seismic Slam",
-      "description": "Passive: Immune to crowd control effects. Attacks briefly knock up the target and deal #% damage in a 1 hex radius around them.Active: Slam the ground, dealing # (%i:scaleHealth%%i:scaleAD%) physical damage to ALL enemies, reduced by #% for each hex from the center (down to #%.) If this is the first time they've been hit by Seismic Slam this combat, knock them up for up to # seconds. # rocks fall around the battlefield, each dealing # (%i:scaleAD%%i:scaleAP%) physical damage to enemies hit."
+      "description": "Passive: Immune to crowd control effects. Attacks briefly knock up the target and deal #% damage in a 1 hex radius around them.Active: Slam the ground, dealing # (AD) physical damage to ALL enemies, reduced by #% for each hex from the center (down to #%.) If this is the first time they've been hit by Seismic Slam this combat, knock them up for up to # seconds. # rocks fall around the battlefield, each dealing # (AD)(AP) physical damage to enemies hit."
     }
   },
   {
@@ -2158,7 +2158,7 @@
     },
     "ability": {
       "name": "Crowstorm",
-      "description": "Teleport into a large cluster of enemies within # hexes and Stun them for # seconds. Begin losing # mana per second. While casting, deal # (%i:scaleAP%) magic damage per second to all enemies within a # hex radius. The closest # enemies take #% more damage."
+      "description": "Teleport into a large cluster of enemies within # hexes and Stun them for # seconds. Begin losing # mana per second. While casting, deal # (AP) magic damage per second to all enemies within a # hex radius. The closest # enemies take #% more damage."
     }
   },
   {
@@ -2184,7 +2184,7 @@
     },
     "ability": {
       "name": "Inspirational Might",
-      "description": "Passive: Every #rd attack deals # (%i:scaleMR%) magic damage in a circle around the target.Active: Dash into the largest group of units and inspire all allies within 2 hexes, granting them # (%i:scaleAP%) Shield for # seconds. Then crash down, dealing # (%i:scaleMR%%i:scaleArmor%) bonus magic damage to all enemies with 2 hexes."
+      "description": "Passive: Every #rd attack deals # (MR) magic damage in a circle around the target.Active: Dash into the largest group of units and inspire all allies within 2 hexes, granting them # (AP) Shield for # seconds. Then crash down, dealing # (MR)(Armor) bonus magic damage to all enemies with 2 hexes."
     }
   },
   {
@@ -2210,7 +2210,7 @@
     },
     "ability": {
       "name": "Lamb's Respite",
-      "description": "Dash, then create a #-hex radius zone for # seconds that shields allies within for # (%i:scaleAP%) health for the zone's duration. While active, double current Attack Speed and on attack, fire a secondary arrow at a nearby enemy that deals # (%i:scaleAD%) physical damage. When the zone ends, heal all allies for # (%i:scaleAP%) of damage dealt while it was up and dash away."
+      "description": "Dash, then create a #-hex radius zone for # seconds that shields allies within for # (AP) health for the zone's duration. While active, double current Attack Speed and on attack, fire a secondary arrow at a nearby enemy that deals # (AD) physical damage. When the zone ends, heal all allies for # (AP) of damage dealt while it was up and dash away."
     }
   },
   {
@@ -2236,7 +2236,7 @@
     },
     "ability": {
       "name": "The Culling",
-      "description": "Fire # (%i:scaleAS%) shots towards target. Each shot explodes on the first enemy hit, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to all nearby enemies."
+      "description": "Fire # (AS) shots towards target. Each shot explodes on the first enemy hit, dealing # (AD)(AP) physical damage to all nearby enemies."
     }
   },
   {
@@ -2262,7 +2262,7 @@
     },
     "ability": {
       "name": "Radiant Eclipse",
-      "description": "Passive: While gaining Mana, throw out # radiant orbs that orbit around target. They deal # (%i:scaleAP%) magic damage in a 1 hex radius and drain # Mana from enemies hit each second. After draining # mana, gain a random Radiant Item. (#/#)Active: Detonate orbs on target, causing a # hex radius explosion that deals # (%i:scaleAP%) magic damage to them and # (%i:scaleAP%) damage to all other enemies hit."
+      "description": "Passive: While gaining Mana, throw out # radiant orbs that orbit around target. They deal # (AP) magic damage in a 1 hex radius and drain # Mana from enemies hit each second. After draining # mana, gain a random Radiant Item. (#/#)Active: Detonate orbs on target, causing a # hex radius explosion that deals # (AP) magic damage to them and # (AP) damage to all other enemies hit."
     }
   },
   {
@@ -2288,7 +2288,7 @@
     },
     "ability": {
       "name": "Call of the Forge",
-      "description": "Summon an elemental from behind the farthest enemy. It 20% Chills enemies hit for # seconds and deals # (%i:scaleAP%) magic damage to them.When it arrives, headbutt it and redirect it toward another distant enemy, dealing # (%i:scaleAP%) magic damage instead.{{TFT_Keyword_Chill}}"
+      "description": "Summon an elemental from behind the farthest enemy. It 20% Chills enemies hit for # seconds and deals # (AP) magic damage to them.When it arrives, headbutt it and redirect it toward another distant enemy, dealing # (AP) magic damage instead."
     }
   },
   {
@@ -2313,7 +2313,7 @@
     },
     "ability": {
       "name": "Runic Overload",
-      "description": "Release a runic blast, dealing # (%i:scaleAP%) magic damage. It splits in two, dealing #% of the damage to the closest two enemies. Each secondary blast splits an additional time.Bilgewater: Blasts explode on impact, dealing #% of the damage as physical damage to adjacent enemies.Demacia: Execute targets below # (%i:scaleArmor%%i:scaleMR%) Health.Freljord: Chill targets for # seconds and deal # (%i:scaleHealth%) bonus true damage.Ionia: Blasts split an additional time, dealing #% damage.Ixtal: Gain a random Region's effect on combat start and every # seconds.Noxus: Blasts now pierce targets, dealing #% reduced damage per enemy hit.Piltover: Every third cast is Overcharged, dealing #% more damage.Shadow Isles: Increase blast damage by # (%i:scaleSouls%).Shurima: Knock up enemies for # seconds, with a chance to dredge up Gold or Treasures.Targon: Heal the lowest Health ally for #% of the damage dealt.Void: Ignore #% of enemies' Armor and Magic Resistance.Yordle: Shrink targets hit, lowering their damage by #% percent for # seconds.Zaun: Poison targets, dealing # magic damage # (%i:scaleAS%) times over # seconds."
+      "description": "Release a runic blast, dealing # (AP) magic damage. It splits in two, dealing #% of the damage to the closest two enemies. Each secondary blast splits an additional time.Bilgewater: Blasts explode on impact, dealing #% of the damage as physical damage to adjacent enemies.Demacia: Execute targets below # (Armor)(MR) Health.Freljord: Chill targets for # seconds and deal # () bonus true damage.Ionia: Blasts split an additional time, dealing #% damage.Ixtal: Gain a random Region's effect on combat start and every # seconds.Noxus: Blasts now pierce targets, dealing #% reduced damage per enemy hit.Piltover: Every third cast is Overcharged, dealing #% more damage.Shadow Isles: Increase blast damage by # ().Shurima: Knock up enemies for # seconds, with a chance to dredge up Gold or Treasures.Targon: Heal the lowest Health ally for #% of the damage dealt.Void: Ignore #% of enemies' Armor and Magic Resistance.Yordle: Shrink targets hit, lowering their damage by #% percent for # seconds.Zaun: Poison targets, dealing # magic damage # (AS) times over # seconds."
     }
   },
   {
@@ -2339,7 +2339,7 @@
     },
     "ability": {
       "name": "The Show Stopper",
-      "description": "Grab target and slam them forward, dealing # (%i:scaleAP%) + # (%i:scaleAP%) of their max Health as magic damage to them. All other enemies within # hexes take #% of the total damage."
+      "description": "Grab target and slam them forward, dealing # (AP) + # (AP) of their max Health as magic damage to them. All other enemies within # hexes take #% of the total damage."
     }
   },
   {
@@ -2365,7 +2365,7 @@
     },
     "ability": {
       "name": "Dragon's Descent / Flame Breath",
-      "description": "Dragon's Descent: Transform into a dragon, gaining # max Health. Briefly gain #% Durability and dive-bomb into the largest group of enemies, dealing # (%i:scaleAD%) physical damage in a 3 hex circle.Flame Breath: Breath fire in a cone for # seconds, dealing # (%i:scaleAD%%i:scaleAP%) physical damage each second to enemies hit."
+      "description": "Dragon's Descent: Transform into a dragon, gaining # max Health. Briefly gain #% Durability and dive-bomb into the largest group of enemies, dealing # (AD) physical damage in a 3 hex circle.Flame Breath: Breath fire in a cone for # seconds, dealing # (AD)(AP) physical damage each second to enemies hit."
     }
   },
   {
@@ -2392,7 +2392,7 @@
     },
     "ability": {
       "name": "Stolen Might",
-      "description": "Cast one of three spells:Cataclysm: Leap on a nearby enemy. Deal # (%i:scaleAP%) magic damage to all enemies within 2 hexes and Stun them for # seconds.Demacian Justice: Deal # (%i:scaleAP%) magic damage to target. If they are below #% max Health, execute them.Final Spark: Gain # (%i:scaleAP%) Shield for # seconds. Deal # (%i:scaleAP%) magic damage to all enemies in a line."
+      "description": "Cast one of three spells:Cataclysm: Leap on a nearby enemy. Deal # (AP) magic damage to all enemies within 2 hexes and Stun them for # seconds.Demacian Justice: Deal # (AP) magic damage to target. If they are below #% max Health, execute them.Final Spark: Gain # (AP) Shield for # seconds. Deal # (AP) magic damage to all enemies in a line."
     }
   },
   {
@@ -2419,7 +2419,7 @@
     },
     "ability": {
       "name": "Hextech Arsenal",
-      "description": "Passive: Attacks fire a barrage of # bullets.Active: Gain # (%i:scaleHealth%) Shield and begin consuming # mana per second. Each second while casting, fire a laser that deals # (%i:scaleAD%%i:scaleAP%) physical damage, reduced by #% per enemy hit up to #%. Additionally, launch # (%i:scaleAS%) missiles split between # nearby enemies that each deal # (%i:scaleAD%%i:scaleAP%) physical damage."
+      "description": "Passive: Attacks fire a barrage of # bullets.Active: Gain # () Shield and begin consuming # mana per second. Each second while casting, fire a laser that deals # (AD)(AP) physical damage, reduced by #% per enemy hit up to #%. Additionally, launch # (AS) missiles split between # nearby enemies that each deal # (AD)(AP) physical damage."
     }
   },
   {
@@ -2446,7 +2446,7 @@
     },
     "ability": {
       "name": "Devour",
-      "description": "Devour target for # seconds, dealing # (%i:scaleAP%) magic damage and making them immune to other sources of damage. During this time, gain #% Durability. If they are immune to crowd control, deal # (%i:scaleAP%) magic damage instead.If they die while devoured, spit out a random component they were holding or the unit's cost in gold. Otherwise, spit them towards the farthest enemy, briefly Stunning targets on impact."
+      "description": "Devour target for # seconds, dealing # (AP) magic damage and making them immune to other sources of damage. During this time, gain #% Durability. If they are immune to crowd control, deal # (AP) magic damage instead.If they die while devoured, spit out a random component they were holding or the unit's cost in gold. Otherwise, spit them towards the farthest enemy, briefly Stunning targets on impact."
     }
   },
   {
@@ -2472,7 +2472,7 @@
     },
     "ability": {
       "name": "The Box",
-      "description": "Passive: Each second, deal # (%i:scaleAP%%i:scaleSouls%) magic damage to all enemies within 2 hexes. Heal for #% of the damage dealt by this effect.Active: Create a prison of walls in a 2 hex radius that lasts # seconds. While active, the Passive's damage is doubled. When an enemy touches a wall, they take # (%i:scaleAP%) magic damage. If there are less than # enemies inside The Box at any time, drag an enemy in."
+      "description": "Passive: Each second, deal # (AP) magic damage to all enemies within 2 hexes. Heal for #% of the damage dealt by this effect.Active: Create a prison of walls in a 2 hex radius that lasts # seconds. While active, the Passive's damage is doubled. When an enemy touches a wall, they take # (AP) magic damage. If there are less than # enemies inside The Box at any time, drag an enemy in."
     }
   },
   {
@@ -2498,7 +2498,7 @@
     },
     "ability": {
       "name": "The Relentless Storm",
-      "description": "Bite the target and mark them, dealing # (%i:scaleAD%%i:scaleHealth%) physical damage, increased by #% if they are already marked. After casting # times, leap to a nearby hex, activating Stormbringer and dealing # (%i:scaleHealth%%i:scaleAD%) physical damage to enemies within a two hex radius.Stormbringer: Gain # Health and #% Attack Speed. Every # seconds, summon a lightning bolt on a nearby enemy, dealing # (%i:scaleHealth%%i:scaleAP%) magic damage. Takedowns summon a bolt on fallen enemies."
+      "description": "Bite the target and mark them, dealing # (AD) physical damage, increased by #% if they are already marked. After casting # times, leap to a nearby hex, activating Stormbringer and dealing # (AD) physical damage to enemies within a two hex radius.Stormbringer: Gain # Health and #% Attack Speed. Every # seconds, summon a lightning bolt on a nearby enemy, dealing # (AP) magic damage. Takedowns summon a bolt on fallen enemies."
     }
   },
   {
@@ -2524,7 +2524,7 @@
     },
     "ability": {
       "name": "Eye of the Ascendant",
-      "description": "Launch # arcane blasts randomly split between the closest # enemies that each deal # (%i:scaleAP%) magic damage."
+      "description": "Launch # arcane blasts randomly split between the closest # enemies that each deal # (AP) magic damage."
     }
   },
   {
@@ -2550,7 +2550,7 @@
     },
     "ability": {
       "name": "Divine Challenge",
-      "description": "Dash around target and slash in a circle, dealing # (%i:scaleAD%%i:scaleAP%) physical damage to target and # (%i:scaleAD%%i:scaleAP%) physical damage to all other adjacent enemies hit. If the target doesn't die, immediately cast again.If this Ability is cast # times in a row, instead slam on target, instantly killing them and dealing # (%i:scaleAD%%i:scaleAP%) physical damage to all enemies within 3 hexes."
+      "description": "Dash around target and slash in a circle, dealing # (AD)(AP) physical damage to target and # (AD)(AP) physical damage to all other adjacent enemies hit. If the target doesn't die, immediately cast again.If this Ability is cast # times in a row, instead slam on target, instantly killing them and dealing # (AD)(AP) physical damage to all enemies within 3 hexes."
     }
   },
   {
@@ -2577,7 +2577,7 @@
     },
     "ability": {
       "name": "Mega Inferno Bomb",
-      "description": "Passive: Attacks are replaced with a bomb that bounces # time, dealing # (%i:scaleAD%%i:scaleAP%) magic damage to units hit.Active: Throw an enormous bomb at the largest #-hex group of enemies that explodes on impact, dealing between # (%i:scaleAP%) and # (%i:scaleAP%) magic damage to enemies hit based on their distance from the epicenter."
+      "description": "Passive: Attacks are replaced with a bomb that bounces # time, dealing # (AD)(AP) magic damage to units hit.Active: Throw an enormous bomb at the largest #-hex group of enemies that explodes on impact, dealing between # (AP) and # (AP) magic damage to enemies hit based on their distance from the epicenter."
     }
   },
   {
@@ -2603,7 +2603,7 @@
     },
     "ability": {
       "name": "Visions of the End",
-      "description": "Throw a Time Bomb on the nearest enemy without one. Time Bombs deal # (%i:scaleAP%) magic damage each second. When the target dies, they explode, dealing # (%i:scaleAP%) magic damage in a 1 hex radius and grant Zilean # mana.If a Time Bomb is on an enemy for # seconds and Zilean is alive, the enemy instantly dies."
+      "description": "Throw a Time Bomb on the nearest enemy without one. Time Bombs deal # (AP) magic damage each second. When the target dies, they explode, dealing # (AP) magic damage in a 1 hex radius and grant Zilean # mana.If a Time Bomb is on an enemy for # seconds and Zilean is alive, the enemy instantly dies."
     }
   }
 ]

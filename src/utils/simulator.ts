@@ -27,6 +27,9 @@ export function computeStats(
   let mrBonus = 0;
   let critBonus = 0;
   let manaBonus = 0;
+  let omnivampBonus = 0;
+  let durabilityBonus = 0;
+  let damageAmpBonus = 0;
 
   for (const id of slotIds) {
     if (!id) continue;
@@ -36,14 +39,16 @@ export function computeStats(
     hpBonus += s.hp ?? 0;
     adBonus += s.ad ?? 0;
     apBonus += s.ap ?? 0;
-    asBonus += s.attack_speed ?? 0;   // stored as whole percent, e.g. 15
+    asBonus += s.attack_speed ?? 0;
     armorBonus += s.armor ?? 0;
     mrBonus += s.magic_resist ?? 0;
     critBonus += s.crit_chance ?? 0;
     manaBonus += s.mana ?? 0;
+    omnivampBonus += s.omnivamp ?? 0;
+    durabilityBonus += s.durability ?? 0;
+    damageAmpBonus += s.damage_amp ?? 0;
   }
 
-  // Attack speed: base + item % bonus (TFT items add flat % increments)
   const totalAS = Math.min(champion.stats.attackSpeed + asBonus / 100, 5.0);
 
   return {
@@ -55,12 +60,18 @@ export function computeStats(
     magicResist: champion.stats.magicResist + mrBonus,
     critChance: Math.min(critBonus, 100),
     maxMana: champion.stats.maxMana + manaBonus,
+    omnivamp: omnivampBonus,
+    durability: durabilityBonus,
+    damageAmp: damageAmpBonus,
     hpBonus,
     adBonus,
     apBonus,
     asBonus: Math.round(asBonus / 100 * 100) / 100,
     armorBonus,
     mrBonus,
+    omnivampBonus,
+    durabilityBonus,
+    damageAmpBonus,
   };
 }
 
