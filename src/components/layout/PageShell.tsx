@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
+import TFTLogo from "@/components/brand/TFTLogo";
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -15,9 +17,10 @@ export default function PageShell({ children, title, subtitle }: PageShellProps)
 
       {/* Mobile top bar */}
       <header className="md:hidden fixed top-0 inset-x-0 z-40 bg-bg-surface border-b border-white/10 flex items-center gap-3 px-4 h-14">
-        <span className="font-heading text-accent-gold text-base tracking-wide">
-          TFT School
-        </span>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <TFTLogo size={28} glow={false} />
+          <span className="font-heading text-accent-gold text-sm tracking-wide">TFT School</span>
+        </Link>
         <span className="text-white/20 text-lg">·</span>
         <span className="text-text-secondary text-sm truncate">{title}</span>
       </header>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import TFTLogo from "@/components/brand/TFTLogo";
 
 export const NAV_ITEMS = [
   { href: "/items",      label: "Items",      icon: "⚔️" },
@@ -18,12 +19,15 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex fixed inset-y-0 left-0 z-40 w-56 bg-bg-surface border-r border-white/5 flex-col">
       {/* Logo */}
-      <div className="px-5 py-6 border-b border-white/5">
-        <span className="font-heading text-accent-gold text-lg leading-tight tracking-wide">
-          TFT School
-        </span>
-        <p className="text-text-muted text-xs mt-0.5">Set 16 · Lore &amp; Legends</p>
-      </div>
+      <Link href="/" className="flex items-center gap-3 px-5 py-4 border-b border-white/5 hover:bg-white/3 transition-colors group">
+        <TFTLogo size={36} glow={false} />
+        <div>
+          <span className="font-heading text-accent-gold text-base leading-tight tracking-wide group-hover:text-accent-gold-light transition-colors">
+            TFT School
+          </span>
+          <p className="text-text-muted text-[10px] mt-0.5">Set 16 · Lore &amp; Legends</p>
+        </div>
+      </Link>
 
       {/* Nav */}
       <nav className="flex-1 px-3 py-4 space-y-1">
