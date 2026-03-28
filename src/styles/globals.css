@@ -52,6 +52,64 @@
   animation: score-pulse 1.2s ease-out forwards;
 }
 
+/* ── Landing page animations ── */
+@keyframes hex-float {
+  0%   { transform: translateY(0px) rotate(0deg); opacity: 0.04; }
+  50%  { opacity: 0.08; }
+  100% { transform: translateY(-28px) rotate(15deg); opacity: 0.03; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(245,158,11,0.4)); }
+  50%       { filter: drop-shadow(0 0 18px rgba(245,158,11,0.8)); }
+}
+
+@keyframes word-in {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-up {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scan-line {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-hex-float   { animation: hex-float ease-in-out infinite alternate; }
+.animate-glow-pulse  { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-word-in     { animation: word-in 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.animate-reveal-up   { animation: reveal-up 0.6s ease-out forwards; }
+
+/* ── Flashcard flip animation ── */
+.flashcard-scene {
+  perspective: 1200px;
+}
+
+.flashcard-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flashcard-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-face--back {
+  transform: rotateY(180deg);
+}
+
 @layer base {
   html {
     @apply bg-bg-base text-text-primary;
