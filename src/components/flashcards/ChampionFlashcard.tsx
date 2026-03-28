@@ -182,9 +182,14 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props
               <h2 className="font-heading text-3xl text-white tracking-wide leading-tight">
                 {champion.name}
               </h2>
+              {champion.beginnerTip && (
+                <p className="text-accent-gold/80 text-xs font-medium mt-0.5">
+                  {champion.beginnerTip.nickname}
+                </p>
+              )}
 
               {/* Stars */}
-              <p className={`text-sm font-mono mt-0.5 ${starColor}`}>{stars}</p>
+              <p className={`text-sm font-mono mt-1 ${starColor}`}>{stars}</p>
 
               {/* Hint */}
               <p className="text-white/40 text-xs mt-3 text-center">Tap to reveal details</p>
@@ -206,6 +211,11 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props
               <h3 className="font-heading text-lg text-text-primary leading-tight truncate">
                 {champion.name}
               </h3>
+              {champion.beginnerTip && (
+                <p className="text-accent-gold text-[11px] font-medium truncate">
+                  {champion.beginnerTip.nickname}
+                </p>
+              )}
               <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
                 <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${costBadge}`}>
                   {champion.cost}-cost
@@ -219,6 +229,33 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props
 
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto scrollbar-none px-4 py-3 space-y-3">
+
+            {/* Beginner explain — the fun kid-friendly description */}
+            {champion.beginnerTip && (
+              <div className="bg-accent-gold/8 border border-accent-gold/20 rounded-xl p-3">
+                <p className="text-[10px] text-accent-gold uppercase tracking-wider font-semibold mb-1">
+                  🧒 Explained Simply
+                </p>
+                <p className="text-text-primary text-xs leading-relaxed">
+                  {champion.beginnerTip.kidExplain}
+                </p>
+              </div>
+            )}
+
+            {/* Unlock tip */}
+            {champion.beginnerTip && (
+              <div className="bg-emerald-500/8 border border-emerald-500/20 rounded-xl px-3 py-2 flex gap-2">
+                <span className="text-sm shrink-0">💡</span>
+                <div>
+                  <p className="text-[10px] text-emerald-400 uppercase tracking-wider font-semibold mb-0.5">
+                    Beginner Tip
+                  </p>
+                  <p className="text-text-secondary text-xs leading-relaxed">
+                    {champion.beginnerTip.unlockTip}
+                  </p>
+                </div>
+              </div>
+            )}
 
             {/* Ability section */}
             <div className="bg-bg-surface rounded-xl p-3 border border-white/8">
@@ -234,16 +271,6 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props
               <p className="text-accent-gold font-semibold text-sm mb-1">
                 {champion.ability.name}
               </p>
-
-              {/* Beginner summary */}
-              <div className="bg-accent-purple/10 border border-accent-purple/20 rounded-lg px-3 py-2 mb-2">
-                <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold mb-0.5">
-                  What it does
-                </p>
-                <p className="text-text-primary text-sm font-medium leading-snug">
-                  {ability.beginnerSummary}
-                </p>
-              </div>
 
               {/* Full description (numbers stripped) */}
               <p className="text-text-secondary text-xs leading-relaxed">

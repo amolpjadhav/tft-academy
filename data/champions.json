@@ -23,6 +23,11 @@
     "ability": {
       "name": "Frostbite",
       "description": "Fire an ice shard at target that deals 325/455/650 (AP) magic damage. If they are Chilled, the damage Critically Strikes."
+    },
+    "beginnerTip": {
+      "nickname": "The Ice Bird",
+      "unlockTip": "Place her in the back row — she shoots from 4 hexes away",
+      "kidExplain": "Imagine throwing a snowball at someone. If they're already shivering (Chilled = slowed down), your snowball hits WAY harder! That's Anivia: she shoots an ice shard, and if the enemy is already Chilled, it becomes a Critical Strike — double damage!"
     }
   },
   {
@@ -49,6 +54,11 @@
     "ability": {
       "name": "Static Field",
       "description": "Gain 400/480/600 (AP) Shield for 4 seconds and deal 56/84/126 magic damage to all enemies within 1 hex."
+    },
+    "beginnerTip": {
+      "nickname": "The Robot Bouncer",
+      "unlockTip": "Put him in front so he soaks damage while his shield is up",
+      "kidExplain": "Blitzcrank is a big robot who puts up a force field (a Shield) to protect himself, then zaps everyone nearby with electricity. Think of him as a robot bodyguard who also shocks people who get too close!"
     }
   },
   {
@@ -76,6 +86,11 @@
     "ability": {
       "name": "Blood Frenzy",
       "description": "Leap to the furthest enemy within 2 hexes. For 4 seconds gain increased Move Speed, 25% Attack Damage, and 300%/300%/350% (AP) decaying Attack Speed."
+    },
+    "beginnerTip": {
+      "nickname": "The Feral Vampire",
+      "unlockTip": "Give her attack-speed items — she goes berserk and attacks super fast",
+      "kidExplain": "Briar is a vampire who gets SO hungry for a fight that she goes completely berserk! She leaps to a far enemy and for 4 seconds becomes a whirlwind of claws, moving faster and attacking faster. Basically, she turns into a rage-mode vampire blender."
     }
   },
   {
@@ -102,6 +117,11 @@
     "ability": {
       "name": "Ace in the Hole",
       "description": "Fire a bullet towards the farthest enemy, dealing 515/775/1205 (ADAP) physical damage to the first enemy it hits. If they die, the bullet ricochets, dealing excess damage to the next enemy hit.."
+    },
+    "beginnerTip": {
+      "nickname": "The Long-Range Sheriff",
+      "unlockTip": "She shoots from 6 hexes away — keep her safe in the far back row",
+      "kidExplain": "Caitlyn fires a single massive sniper bullet at the FARTHEST enemy. If that enemy dies, the bullet keeps going and hits the next enemy too! It's like bowling — one bullet, potentially two kills!"
     }
   },
   {
@@ -128,6 +148,11 @@
     "ability": {
       "name": "Tentacle Smash",
       "description": "Restore 249/328/439 (HealthAP) Health and slam a tentacle, dealing 180/270/405 (AD) physical damage to enemies in a line."
+    },
+    "beginnerTip": {
+      "nickname": "The Tentacle Priestess",
+      "unlockTip": "Put her in front — she heals while fighting and hits multiple enemies in a line",
+      "kidExplain": "Illaoi worships a giant tentacle god. When she casts, she heals herself AND slams a tentacle down in a line, hitting every enemy in a row. She's basically a self-healing puncher with a giant rubber arm!"
     }
   },
   {
@@ -154,6 +179,11 @@
     "ability": {
       "name": "Demacian Standard",
       "description": "Gain 350/425/500 (AP) Shield for 4 seconds. Grant all allies 20%/25%/50% (AP) Attack Speed for 4 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Prince of Demacia",
+      "unlockTip": "Put him with other Demacia champions — his attack speed boost helps your whole team",
+      "kidExplain": "Jarvan IV is a prince who plants his kingdom's flag and yells 'CHARGE!' When he casts, he gives himself a shield AND boosts attack speed for ALL allies nearby. He's the cheerleader of your team — but with a giant spear."
     }
   },
   {
@@ -180,6 +210,11 @@
     "ability": {
       "name": "Curtain Call",
       "description": "For the next 4 attacks, set Attack Speed to 1, gain infinite range and replace attacks with a cannon shot. Cannon shots deal 160/237/359 (AD/AP) physical damage. The 4th shot deals 144% more damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Artistic Assassin",
+      "unlockTip": "Stack crit chance items on him — his 4th shot deals 144% more damage!",
+      "kidExplain": "Jhin obsessively counts to 4. When he casts, he gets 4 special shots with INFINITE range — he can hit anyone on the board. His 4th shot is the grand finale, hitting like a truck. He's an artist who treats every fight like a performance! 🎨"
     }
   },
   {
@@ -207,6 +242,11 @@
     "ability": {
       "name": "Caustic Spittle",
       "description": "Deal 140/200/300 (AP) magic damage to target and reduce their Armor and Magic Resist by 8/10/15. Adjacent enemies are dealt 50% of the damage and effect."
+    },
+    "beginnerTip": {
+      "nickname": "The Void Puppy",
+      "unlockTip": "He shoots from 6 hexes — pair with Void and Arcanist champions for bonuses",
+      "kidExplain": "Kog'Maw looks like a cute alien puppy but spits disgusting acid at enemies. The acid melts their armor and magic resist (making them take more damage from everything), and even splashes onto nearby enemies. A cute little monster who ruins everyone's defenses!"
     }
   },
   {
@@ -233,6 +273,11 @@
     "ability": {
       "name": "Whimsy",
       "description": "Deal 330/500/750 (AP) magic damage to target and make them dance for 2 seconds. The projectile then bounces to the nearest target, dealing 140/210/315 (AP) magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Mischievous Fairy",
+      "unlockTip": "She's a support — her Whimsy makes enemies DANCE (stun) for 2 seconds!",
+      "kidExplain": "Lulu is a tiny fairy who casts a spell called Whimsy that makes enemies DANCE — literally forces them to dance for 2 seconds (that's a stun) while dealing damage. The spell then bounces to a nearby enemy. She's chaotically helpful!"
     }
   },
   {
@@ -259,6 +304,11 @@
     "ability": {
       "name": "Clear The Brush",
       "description": "Dash to a nearby hex and swing forward, dealing 180/270/445 (ADAP) physical damage to enemies in a 2-hex line."
+    },
+    "beginnerTip": {
+      "nickname": "The Elemental Queen",
+      "unlockTip": "She works best with Ixtal and Slayer traits active",
+      "kidExplain": "Qiyana thinks she's the queen of everything (and she kind of is). She dashes to a nearby hex and slices in a line, hitting everyone in front of her with elemental power. Quick, precise, and deadly — like a ninja with a magic blade."
     }
   },
   {
@@ -285,6 +335,11 @@
     "ability": {
       "name": "Junkyard Titan",
       "description": "Gain 350/430/550 (AP) Shield for 4 seconds. Fire a burst of flames, dealing 72%/108%/162% (Armor) magic damage in a cone."
+    },
+    "beginnerTip": {
+      "nickname": "The Tiny Mech Pilot",
+      "unlockTip": "Give him armor items — his fire damage actually scales with how much armor he has!",
+      "kidExplain": "Rumble is a tiny yordle (a small furry creature) who built a giant robot suit. When he casts, the suit puts up a shield AND shoots fire in a cone. Fun fact: the more armor he has, the more damage his fire does! Techy stuff."
     }
   },
   {
@@ -311,6 +366,11 @@
     "ability": {
       "name": "Stand United",
       "description": "Grant 250/325/425 (AP) Shield to this unit and a nearby damaged ally for 4 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Spirit Ninja",
+      "unlockTip": "Put him next to the unit taking the most damage — he shields the most hurt ally",
+      "kidExplain": "Shen is a ninja who specializes in protecting people. When he casts, he shields BOTH himself AND the most injured ally on your team. He's the ninja guardian — while everyone else fights, he makes sure nobody dies."
     }
   },
   {
@@ -337,6 +397,11 @@
     "ability": {
       "name": "Power Chord",
       "description": "Deal 130/195/300 (AP) magic damage to 2 nearby enemies and restore 30/40/65 (AP) Health to the lowest Health ally."
+    },
+    "beginnerTip": {
+      "nickname": "The Music Healer",
+      "unlockTip": "She's a support — put her in the back and let her heal your lowest-health ally",
+      "kidExplain": "Sona is a musician who can't speak but her music does damage AND heals! She hits 2 nearby enemies with a power chord, then the music bounces and heals your lowest-health ally. She's a healer who also punches people with sound waves!"
     }
   },
   {
@@ -363,6 +428,11 @@
     "ability": {
       "name": "Blade of the Ruined King",
       "description": "Active: Deal 55/85/125 (AD) physical damage to target. For the rest of combat, Viego's attacks deal 18/27/42 (AP) bonus stacking magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Ruined King",
+      "unlockTip": "Give him attack speed items — his stacking bonus grows with every attack",
+      "kidExplain": "Viego is a cursed king who can't move on from his dead wife. He starts combat normally, but after casting, every single attack does STACKING bonus magic damage — getting stronger and stronger the longer he attacks. He snowballs!"
     }
   },
   {
@@ -388,6 +458,11 @@
     "ability": {
       "name": "Incendiary Onslaught",
       "description": "Start with Infernum equipped. On cast, switch to Severum for 8 (AP) attacks. Infernum: Attacks hit 3 enemies and apply 30% Sunder for 6 seconds. Severum: Gain 200% Attack Speed and 10% Omnivamp. Attacks are replaced with swipes that deal 80/120/200 (AD) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Moonboy with Two Guns",
+      "unlockTip": "Let him cycle through his guns — Gun 1 hits 3 enemies at once, Gun 2 gives super speed",
+      "kidExplain": "Aphelios has two guns and switches between them. Infernum (Gun 1) shoots through 3 enemies at once. Then he switches to Severum (Gun 2) which gives him super attack speed and life-steal. He's a silent weapon-juggler from the moon!"
     }
   },
   {
@@ -414,6 +489,11 @@
     "ability": {
       "name": "True Ice Arrow",
       "description": "Fire an arrow at target that deals 155/225/340 (ADAP) physical damage to them and 51/74/112 (ADAP) damage to adjacent enemies. Targets below 30% max Health take true damage instead. 30% Chill all enemies hit for 3 seconds. Bloodsworn Bond: Attacks fire a bonus arrow for every 10% Attack Damage granted to Tryndamere by Bloodsworn Bond. These arrows deal 2%/4%/5% (AD) physical damage. (Current Bonus Arrows: X).Chill: Reduce Attack Speed."
+    },
+    "beginnerTip": {
+      "nickname": "The Ice Archer",
+      "unlockTip": "Pair with Tryndamere for Bloodsworn Bond — they fire bonus arrows for each other!",
+      "kidExplain": "Ashe fires an ice arrow that Chills enemies (reduces their attack speed). Enemies that are very low on health take TRUE damage — ignores ALL armor. She's also bonded with Tryndamere: when both are alive, she fires bonus arrows for him. Teamwork makes the ice dream work!"
     }
   },
   {
@@ -439,6 +519,11 @@
     "ability": {
       "name": "Traveler's Call",
       "description": "Launch 6 Meeps at nearby enemies that deal 130/185/255 (AP) magic damage. Add an additional Meep for each 3-star unit on your board."
+    },
+    "beginnerTip": {
+      "nickname": "The Meep Thrower",
+      "unlockTip": "3-star your other champions — each 3-star unit on your board adds an extra Meep!",
+      "kidExplain": "Bard travels the universe collecting tiny blue spirit blobs called MEEPS. Meeps are little spirit creatures that follow him around. When he casts, he flings all his Meeps at nearby enemies and they explode on impact! The more 3-star champions you have, the more Meeps he throws. More 3-stars = more Meeps = more damage!"
     }
   },
   {
@@ -465,6 +550,11 @@
     "ability": {
       "name": "Rupture",
       "description": "Restore 200/225/400 (AP) Health and rupture a 2 hex circle beneath target. After a brief delay, enemies within are knocked up for 1.5 seconds and take 88/152/248 (HealthAP) magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Void Monster",
+      "unlockTip": "He heals every cast — tank items make him nearly unkillable",
+      "kidExplain": "Cho'Gath is a HUGE void monster who never stops eating. When he casts, he heals himself AND ruptures the ground under a nearby enemy. After a short delay, the ground explodes upward and knocks that enemy into the air! He's a living earthquake who also heals."
     }
   },
   {
@@ -491,6 +581,11 @@
     "ability": {
       "name": "Parallel Convergence",
       "description": "Create a 1 hex zone around the target that lasts 3 seconds. The next 3 attacks deal 160/240/380 (AP) bonus magic damage. When the zone ends, it deals 130/195/295 (AP) magic damage + 10% of the target's damage taken during the"
+    },
+    "beginnerTip": {
+      "nickname": "The Time Boy",
+      "unlockTip": "Pair with Zaun and Disruptor traits — his zone damage gets stronger the more you hit",
+      "kidExplain": "Ekko can control time! He creates a time zone around an enemy. His next 3 attacks do bonus damage to that enemy. When the zone ends, it explodes and deals damage PLUS a percentage of all damage the enemy took inside. It's a time bomb that gets stronger the more you hit them!"
     }
   },
   {
@@ -517,6 +612,11 @@
     "ability": {
       "name": "Collateral Damage",
       "description": "Passive: Attacks fire in a cone on target, dealing 45% damage to other enemies hit. Active: Fire an explosive shell at target, dealing 200/300/495 (AD) physical damage split among enemies in a 1 hex circle. Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses."
+    },
+    "beginnerTip": {
+      "nickname": "The Shotgun Cowboy",
+      "unlockTip": "Pair with Twisted Fate — they have a Partners in Crime bond for bonus stats!",
+      "kidExplain": "Graves is a grumpy cowboy with a shotgun that fires in a CONE — hitting multiple enemies at once passively. When he casts, he fires a massive explosive shell that damages everyone in a small circle. He and Twisted Fate are best friends (and rivals) who both get stronger together!"
     }
   },
   {
@@ -544,6 +644,11 @@
     "ability": {
       "name": "Pop Blossom",
       "description": "Leap at target and gain 400/475/600 (AP) Shield for 4 seconds. Slam down after a brief delay, dealing 80/120/180 (AP) magic damage to enemies within two hexes and 20% Chilling them for 2 seconds. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Shapeshifting Shield",
+      "unlockTip": "She has high HP — put her in front to absorb hits while her shield is up",
+      "kidExplain": "Neeko can disguise herself as anyone! In TFT, she leaps at an enemy, gains a big shield, slams down, and slows (Chills) everyone nearby. She's a tricky shapeshifter who drops in like a bomb and protects herself on the way down!"
     }
   },
   {
@@ -570,6 +675,11 @@
     "ability": {
       "name": "Command: Protect",
       "description": "Send the Ball to target, dealing 200/300/550 (AP) magic damage and splitting 120/180/300 (AP) magic damage among enemies within a 1 hex circle. Then grant 60/90/130 (AP) Shield to the two lowest Health allies for 3 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Ball Lady",
+      "unlockTip": "Her ball hits enemies AND shields your 2 lowest-health allies — great for protecting carries",
+      "kidExplain": "Orianna has a magical metal ball she controls remotely. She sends it flying at enemies (damage!), then it circles back and gives shields to your 2 most injured teammates. She's a one-woman damage-and-heal machine with a floating robot ball!"
     }
   },
   {
@@ -597,6 +707,11 @@
     "ability": {
       "name": "Hammer Shock",
       "description": "Gain 330/410/500 (AP) Shield for 4 seconds and deal 70/105/165 (AD) physical damage to target. After a delay, briefly knock them up and deal the damage again. Bucklers fly out from the target, granting 2 nearby allies 30% of the Shield gained."
+    },
+    "beginnerTip": {
+      "nickname": "The Tiny Hammer Girl",
+      "unlockTip": "She shares her shield with nearby allies — pair with other Yordles for team synergy!",
+      "kidExplain": "Poppy is the tiniest yordle with the BIGGEST hammer. She gains a shield, BONKS an enemy on the head, then bonks them AGAIN and knocks them into the air. The bonus? Little shields fly out and protect 2 nearby teammates too. She's adorably devastating!"
     }
   },
   {
@@ -623,6 +738,11 @@
     "ability": {
       "name": "Burrow",
       "description": "Dash to the furthest enemy within 3 hexes and deal 160/240/360 (ADAP) physical damage to them. The next 3 attacks hit adjacent enemies and deal 110/165/300 (AD) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Tunneling Predator",
+      "unlockTip": "She attacks very fast — give her crit chance items for big damage spikes",
+      "kidExplain": "Rek'Sai is a blind underground monster that hunts by feeling vibrations. She tunnels (dashes) to a faraway enemy and hits them hard. Her next 3 attacks then hit adjacent enemies too — like she's swinging wildly in all directions. A burrowing blender!"
     }
   },
   {
@@ -649,6 +769,11 @@
     "ability": {
       "name": "Soul Furnace",
       "description": "Passive: Takedowns grant 18/20/50 permanent max Health. (Total: X) Active: Gain 226/247/284 (HealthAP) Shield for 4 seconds. When it breaks, deal 26/47/84 (Health) magic damage to adjacent enemies."
+    },
+    "beginnerTip": {
+      "nickname": "The Undead Juggernaut",
+      "unlockTip": "He gains permanent HP from kills — the more he kills, the tankier he gets forever",
+      "kidExplain": "Sion is an enormous zombie soldier who just won't die. Every time he kills someone, he gains PERMANENT health (carries to future rounds). When he casts, he gains a huge shield — and when the shield breaks, it EXPLODES and damages everyone nearby. A walking bomb that grows stronger with every kill!"
     }
   },
   {
@@ -675,6 +800,11 @@
     "ability": {
       "name": "Toxic Dart",
       "description": "Shoot the closest unpoisoned enemy, dealing 130/200/375 (AP) magic damage and poisoning them for 8 seconds. Poisoned enemies take 35/55/100 (AP) magic damage each second.."
+    },
+    "beginnerTip": {
+      "nickname": "The Adorably Evil Scout",
+      "unlockTip": "He only targets UN-poisoned enemies — he methodically poisons the whole team one by one",
+      "kidExplain": "Teemo looks like the cutest little fluffy scout but he is pure evil. He shoots a poison dart at the nearest unpoisoned enemy, which deals damage for 8 whole seconds. He then moves to the next unpoisoned target. Cute outside, methodical poison machine inside!"
     }
   },
   {
@@ -701,6 +831,11 @@
     "ability": {
       "name": "Buster Shot",
       "description": "Fire a massive cannonball at target, dealing 295/445/730 (ADAP) physical damage. If they are within 2 hexes, knock them back 2 hexes and briefly Stun them.."
+    },
+    "beginnerTip": {
+      "nickname": "The Rocket Jumper",
+      "unlockTip": "She's great vs. melee — the closer the enemy, the further she knocks them back!",
+      "kidExplain": "Tristana is a yordle who carries a comically giant cannon. She fires a massive cannonball at an enemy. If that enemy is close to her, she ALSO knocks them FLYING backwards and stuns them! She literally sends melee enemies back to where they started. Boom and bye!"
     }
   },
   {
@@ -727,6 +862,11 @@
     "ability": {
       "name": "Undying Rage",
       "description": "Become enraged for 5 seconds. While enraged, gain 15% (AP) Durability and attacks are replaced with a strike that deals 110/160/235 (AD) physical damage. Ignore 30% of Armor against Chilled enemies. Bloodsworn Bond: Gain increased Move Speed. Gain 10% Attack Damage, permanently increased by 1% whenever Ashe or Tryndamere score a kill. (Current Bonus: X) Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Rage Berserker",
+      "unlockTip": "Pair with Ashe for Bloodsworn Bond — he gains permanent attack damage from shared kills",
+      "kidExplain": "Tryndamere is a barbarian who goes completely insane in a good way. When he casts, he enters RAGE MODE for 5 seconds: attacks faster, deals more damage, and ignores some enemy armor (especially vs. Chilled enemies). With Ashe alive, he permanently grows stronger after every kill. A screaming Viking who gets better with age!"
     }
   },
   {
@@ -753,6 +893,11 @@
     "ability": {
       "name": "Stacked Deck",
       "description": "Passive: Attacks deal 50/75/115 (AP) bonus magic damage. After every 3rd attack, throw 3 cards in a cone that deal 70/105/160 (AP) magic damage, reduced by 50% for each enemy they pass through. Partners in Crime: When you field Graves and Twisted Fate, both gain bonuses"
+    },
+    "beginnerTip": {
+      "nickname": "The Card Hustler",
+      "unlockTip": "His ability costs only 3 mana — he casts almost constantly!",
+      "kidExplain": "Twisted Fate is a charming gambler who throws magical cards. His passive does bonus damage on every single attack. Every 3rd attack, he throws 3 cards in a cone — each one damages whoever it hits. He and Graves are Partners in Crime — they boost each other just by being on the team!"
     }
   },
   {
@@ -780,6 +925,11 @@
     "ability": {
       "name": "Relentless Force",
       "description": "Gain 125/150/175 (AP) Shield for 2 seconds. Slam on target, dealing 120/180/270 (AD) physical damage to enemies in a 1 hex range. Every third cast deals 150/225/340 (AD) damage in a 2 hex range instead and knocks up enemies hit for 1 second."
+    },
+    "beginnerTip": {
+      "nickname": "The Piltover Enforcer",
+      "unlockTip": "Every third cast she does a huge slam — count her casts and position her well!",
+      "kidExplain": "Vi is a detective with GIANT mechanical fists. She shields up, punches an enemy (hits nearby units too), then knocks them up. Every THIRD cast, her punch gets way bigger — 2 hexes of knockup instead of 1. She's the 'hit them so hard they fly' champion!"
     }
   },
   {
@@ -807,6 +957,11 @@
     "ability": {
       "name": "Three Talon Strike",
       "description": "Strike target 3 times. Each strike deals 65/100/150 (AD) physical damage and restores 105/145/200 (AP) Health. The final one Stuns for 1.5 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Royal Guard",
+      "unlockTip": "His final strike stuns the target — great frontliner who disrupts enemy carries",
+      "kidExplain": "Xin Zhao is a royal guard who attacks 3 times in a combo: hit 1 = damage + heal, hit 2 = damage + heal, hit 3 = damage + heal + STUN for 1.5 seconds. He heals while fighting (hard to kill!) and that final stun is super useful for stopping enemy carries in their tracks!"
     }
   },
   {
@@ -833,6 +988,11 @@
     "ability": {
       "name": "Sweeping Blade",
       "description": "Dash, then deal 103/157/233 (ADAP) physical damage to adjacent enemies. If only one enemy is hit, deal double damage. Blade Brothers: When Yone casts, your strongest Yasuo blinks to every target Yone hits and deals 100% AD physical damage to each."
+    },
+    "beginnerTip": {
+      "nickname": "The Wandering Swordsman",
+      "unlockTip": "Pair with Yone — when Yone casts, Yasuo teleports to every enemy Yone hits for free bonus damage!",
+      "kidExplain": "Yasuo dashes through enemies swinging his wind sword. If only one enemy is nearby, he hits them DOUBLE. The coolest part: when his brother Yone casts, Yasuo TELEPORTS to every enemy Yone hits and does bonus damage. Two brothers, one devastating combo!"
     }
   },
   {
@@ -859,6 +1019,11 @@
     "ability": {
       "name": "Mourning Mist",
       "description": "Restore 250/350/500 (APSouls) Health. Throw a globule of black mist at the enemy who has dealt the most damage this combat, preferring unique enemies. It 20% Chills them for 4 seconds and raises the Mana cost of their next cast by 20. It then deals 123/187/288 (Health) magic damage in 1 hex radius. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Gravedigger",
+      "unlockTip": "He targets the enemy who's dealt the most damage — great counter to enemy carries",
+      "kidExplain": "Yorick is a creepy gravedigger with a shovel. He heals himself, then throws a ball of black mist at the enemy who's been hitting hardest. That mist slows them AND raises the mana cost of their next ability. Then it explodes for area damage. He disrupts the scariest enemy!"
     }
   },
   {
@@ -885,6 +1050,11 @@
     "ability": {
       "name": "Fox-Fire",
       "description": "Fire 3 flames at target, each dealing 82/125/225 (AP) magic damage. Every 3rd cast, fire 9 flames split between the target and up to 2 nearby enemies. If there are nearby enemies, dash away."
+    },
+    "beginnerTip": {
+      "nickname": "The Nine-Tailed Fox",
+      "unlockTip": "Every 3rd cast she fires 9 flames and dashes away — great for survivability",
+      "kidExplain": "Ahri is a magical fox with nine fluffy tails who shoots Spirit Fires. She fires 3 at a time normally, but every THIRD cast she fires 9 flames split between nearby enemies AND dashes away from danger. She's elusive and burns things — the stylish fox of destruction!"
     }
   },
   {
@@ -911,6 +1081,11 @@
     "ability": {
       "name": "Decimate",
       "description": "Restore 345/523/857 (HealthAP) Health and spin, dealing 90/135/210 (AD) physical damage to adjacent enemies and applying a stack of Hemorrhage that deals 12/18/30 (AD) physical damage each second for 5 seconds. If an enemy with Hemorrhage drops below 8% Health, slam on them, instantly killing them. (Each stack increases the execute threshold by 5%)"
+    },
+    "beginnerTip": {
+      "nickname": "The Hand of Noxus",
+      "unlockTip": "His executes kick in at 8% health — the more stacks of Hemorrhage, the lower the threshold gets",
+      "kidExplain": "Darius is Noxus's most powerful general with a giant axe. He heals, spins his axe, and applies a bleed called Hemorrhage. If a bleeding enemy drops below 8% health, he INSTANTLY executes them — no matter how much HP they have. Blood is bad if you're his enemy!"
     }
   },
   {
@@ -937,6 +1112,11 @@
     "ability": {
       "name": "Maximum Dosage",
       "description": "Bulk up for 5 seconds. While bulked, restore 114/192/325 (HealthAP) Health every second and attacks deal 105/171/291 (HealthAD) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Mad Chemist",
+      "unlockTip": "Give him HP items — both his healing and attack damage scale with max health!",
+      "kidExplain": "Dr. Mundo injects himself with mysterious chemicals because he GOES WHERE HE PLEASES. When he casts, he bulks up for 5 seconds: heals every second AND his attacks deal bonus damage based on his max health. The bigger he is, the harder he hits AND heals!"
     }
   },
   {
@@ -963,6 +1143,11 @@
     "ability": {
       "name": "Spinning Axes",
       "description": "Passive: If Draven has an empowered axe in hand, his next attack will throw it. On takedown, gain an Adoration stack, doubled if Draven or Darius scored the kill. Every 11 Adoration stacks grants 1/3/5 Gold. (Adoration Left: 11, Gold Generated: Xg) Active: Spin an empowered axe that replaces his basic attack and deals 130/195/375 (ADAP) physical damage and returns to Draven after hitting an enemy."
+    },
+    "beginnerTip": {
+      "nickname": "The Glorious Executioner",
+      "unlockTip": "Getting kills (especially with Darius) generates Adoration stacks and free gold!",
+      "kidExplain": "Draven is the loudest, most self-obsessed axe-spinner in the game. He throws spinning axes that come back to him. Every kill earns Adoration stacks, and every 11 stacks gives you REAL GOLD to spend in the shop. He's the one champion who literally makes you richer!"
     }
   },
   {
@@ -990,6 +1175,11 @@
     "ability": {
       "name": "Powder Kegs",
       "description": "Toss barrels at the 3 nearest enemies and detonate them. They deal 215/325/525 (ADAP) damage, reduced by 25% for each barrel in the chain. Barrels reduce their target's Armor by 10, increased to 20 if the damage critically strikes."
+    },
+    "beginnerTip": {
+      "nickname": "The Saltwater Scourge",
+      "unlockTip": "His barrels chain together — the closer enemies are, the more damage they deal",
+      "kidExplain": "Gangplank is a pirate who blows up barrels for fun. He tosses 3 barrels at the nearest enemies and detonates them. Each barrel chains to the next in a combo, and crits reduce enemy armor. He's essentially a pirate with explosive bowling balls!"
     }
   },
   {
@@ -1016,6 +1206,11 @@
     "ability": {
       "name": "Snip Snip!",
       "description": "Dash around target and snip 5 (Souls) times, dealing 50/75/120 (AP) magic damage to them and 25/35/60 (AP) damage to all other enemies in a cone."
+    },
+    "beginnerTip": {
+      "nickname": "The Ghost Seamstress",
+      "unlockTip": "She gains extra snips from the Souls trait — more Shadow Isles champions = more cuts",
+      "kidExplain": "Gwen is a living doll made of cursed magic scissors. She dashes around an enemy and SNIPS them 5 times with her giant scissors! Each snip also hits everyone behind the target. She circles and cuts like a tailor who is way too into their job. Snip snip!"
     }
   },
   {
@@ -1042,6 +1237,11 @@
     "ability": {
       "name": "Switcheroo!",
       "description": "Passive: After attacking 18/18/16 times, switch to Fishbones. While equipped, attacks are replaced with 3 rockets that target random enemies and deal 58/88/159 (AD) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Loose Cannon",
+      "unlockTip": "After 18 attacks she switches to her rocket launcher — attack speed helps her get there faster",
+      "kidExplain": "Jinx gets bored of her regular gun. After 18 attacks, she switches to FISHBONES (her rocket launcher) and fires 3 rockets at random enemies. Rockets are slower but hit multiple targets. She's a chaotic goblin who gets progressively more dangerous the longer she attacks!"
     }
   },
   {
@@ -1069,6 +1269,11 @@
     "ability": {
       "name": "Slicing Maelstrom",
       "description": "Gain 600/700/900 (AP) Shield and summon storm of lightning. 6 waves of bolts hit enemies within, dealing 120/180/290 (AP) magic damage over 3 seconds. The first 3 targets to be struck by 3 bolts are Stunned for 1.5 seconds. Multiple Stuns on the same enemy have 50% effectiveness."
+    },
+    "beginnerTip": {
+      "nickname": "The Electric Ninja",
+      "unlockTip": "His shield is huge — put him in front to tank while the storm stuns nearby enemies",
+      "kidExplain": "Kennen is a tiny electric ninja who summons a lightning storm. The storm fires 6 waves of bolts. If an enemy gets struck by 3 bolts, they get STUNNED! He gets a massive shield to protect himself while the storm rages. A tiny ninja calling down lightning from the sky!"
     }
   },
   {
@@ -1096,6 +1301,11 @@
     "ability": {
       "name": "You & Me!",
       "description": "Passive: Yuumi joins your strongest Kobuko. Every 3 seconds, she alternates between healing the lowest Health ally for 140/180/240 (AP) Health or granting 25/33/50% Attack Speed to the ally who has dealt the most damage for 4 seconds. Active: Dance, restoring 314/485/819 (HealthAP) Health over 3 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Fluffy Tank with a Magic Cat",
+      "unlockTip": "Yuumi alternates between healing and giving attack speed — she helps whoever needs it most",
+      "kidExplain": "Kobuko & Yuumi are a duo: Kobuko is a big round Yordle, and Yuumi is a magical cat who rides on his head! Every 3 seconds, Yuumi either heals the most-injured ally OR speeds up the hardest-hitting ally. When Kobuko casts, he heals himself over time. A self-healing tank with a helpful cat on top!"
     }
   },
   {
@@ -1122,6 +1332,11 @@
     "ability": {
       "name": "Distortions",
       "description": "Summon 3 dashing mirror images that strike the target and up to 2 other nearby enemies. The target takes 300/450/800 (AP) magic damage and is Stunned for 1 second, while other units hit take 180/270/500 (AP) magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Deceiver",
+      "unlockTip": "She stuns the main target — pair with other damage champions to capitalize on the stun window",
+      "kidExplain": "LeBlanc creates mirror copies of herself that dash around and STUN the main target for 1 second while dealing massive damage. The copies also hit 2 nearby enemies. She's so confusing — which one is the real LeBlanc? Spoiler: all of them hurt you!"
     }
   },
   {
@@ -1147,6 +1362,11 @@
     "ability": {
       "name": "Solar Flare",
       "description": "Passive: Reduce instances of incoming damage by 15/30/80 (AP). Your strongest Leona grants your strongest Diana 3/4/5 Ability Power every second she survives. Active: Call down sun beams on the 3/3/4 nearest enemies, Stunning them for 1 second and dealing 80/120/200 (AP) magic damage. Wound and 1% Burn them for 4 seconds. Wound: Reduce healing received by 33% Burn: Deal a percent of the target's max Health as true damage every second"
+    },
+    "beginnerTip": {
+      "nickname": "The Radiant Dawn",
+      "unlockTip": "Pair with Diana — Leona gives Diana bonus ability power every second she survives!",
+      "kidExplain": "Leona is the sun warrior who calls down SUNBEAMS on enemies. Her beams stun, deal damage, set enemies on fire (Burn), and reduce their healing (Wound). Every second Leona survives, Diana gets stronger. Leona and Diana = sun and moon sisters who are stronger together!"
     }
   },
   {
@@ -1173,6 +1393,11 @@
     "ability": {
       "name": "Piltover Tussle",
       "description": "Gain 700/800/1000 (AP) Shield for 4 seconds. Charge and knock the target backwards, Stunning them and units hit for 1.25 seconds and dealing 150/225/360 (AP) magic damage to them. After charging, force nearby enemies to target this unit."
+    },
+    "beginnerTip": {
+      "nickname": "The Piltover Colossus",
+      "unlockTip": "He's a tank — put him at the front and let him draw all enemy attention after charging",
+      "kidExplain": "Loris is a GIANT mechanical enforcer. He gains an enormous shield, then CHARGES at an enemy and bulldozes them and everything behind them, stunning everyone in the path. After charging, nearby enemies all turn and attack HIM instead. He's the big wall who says 'hey, attack ME instead!'"
     }
   },
   {
@@ -1199,6 +1424,11 @@
     "ability": {
       "name": "Void Swarm",
       "description": "Summon 2 Voidlings that each attack a nearby enemy 8 times. Each attack deals 30/45/80 (AP) magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Prophet of the Void",
+      "unlockTip": "His Voidlings attack 8 times each — they benefit from his ability power items",
+      "kidExplain": "Malzahar is a mage who stared into the Void and went a little crazy. He summons 2 Voidlings — little bug-like creatures — that each attack a nearby enemy 8 times rapidly. Voidlings are basically tiny aggressive pets who do his damage for him. He calls them and they bite!"
     }
   },
   {
@@ -1225,6 +1455,11 @@
     "ability": {
       "name": "Ultra Mega Fire Kick!!!",
       "description": "Launch a fuemigo at target that bounces 3 times, dealing 190/285/445 (AP) magic damage to enemies hit. The last bounce deals 160/240/375 (AP) magic damage to enemies in a 1 hex radius."
+    },
+    "beginnerTip": {
+      "nickname": "The Fire Fuemigo Kicker",
+      "unlockTip": "His fireball bounces 3 times — enemies in the back row still get hit!",
+      "kidExplain": "Milio is a little kid who learned fire magic from his family. He kicks a FUEMIGO (a tiny fire spirit ball) at enemies. A fuemigo is like a little living fireball companion — it bounces 3 times between enemies and explodes at the end! Basically Milio is playing soccer with a fire bomb."
     }
   },
   {
@@ -1252,6 +1487,11 @@
     "ability": {
       "name": "Titan's Wrath",
       "description": "Passive: Every 4 seconds and on cast, the next attack deals damage in a 1 hex circle and deals 45/68/108 (MR) bonus magic damage. Active: Gain 465/562/717 (HealthAP) Shield for 4 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Titan of the Depths",
+      "unlockTip": "His passive procs every 4 seconds — attack speed items help him hit that 3rd attack faster",
+      "kidExplain": "Nautilus is a huge dude in an old diving suit with a giant anchor. Every 4 seconds, his next attack hits EVERYONE in a circle and deals bonus magic damage based on his Magic Resist. When he casts, he gains a big shield. A slow but massive anchor-swinging ocean guardian!"
     }
   },
   {
@@ -1278,6 +1518,11 @@
     "ability": {
       "name": "Winter's Wrath",
       "description": "Gain 525/575/775 (AP) Shield for 4 seconds. Strike in a cone and a line. Enemies hit take 70/105/170 (AP) magic damage and are 30% Chilled for 4 seconds. If they are already Chilled, Stun them for 1 second. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Boar Rider",
+      "unlockTip": "Pair with other Freljord champions — Chilled enemies get bonus stunned when she hits them!",
+      "kidExplain": "Sejuani rides a giant boar named Bristle into battle! She hits in a cone AND a line with ice damage. If an enemy is already Chilled (slowed), she STUNS them for a bonus second! So: first hit slows them, second hit freezes them solid. She's the ice warrior who hits twice as hard!"
     }
   },
   {
@@ -1304,6 +1549,11 @@
     "ability": {
       "name": "Tumble",
       "description": "Tumble to a nearby hex, then fire a bolt at target that deals 116/175/300 (ADAP) true damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Night Hunter",
+      "unlockTip": "Her damage is TRUE damage — it ignores ALL armor and magic resist!",
+      "kidExplain": "Vayne fires crossbow bolts of pure silver energy. When she casts, she rolls to a nearby hex then fires a bolt of TRUE DAMAGE — meaning no armor can reduce it at all! She goes through tanks like butter. The thickest shield means nothing. She's the anti-tank specialist who ignores ALL defenses!"
     }
   },
   {
@@ -1329,6 +1579,11 @@
     "ability": {
       "name": "Double Trouble Bubble",
       "description": "Passive: Damaging an enemy applies 30% Shred for 6 seconds. Active: Kick 2 bubbles at nearby enemies, dealing 330/500/1000 (AP) magic damage and 30% Chilling them for 2 seconds. Shred: Reduce Magic Resist Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Chaos Bubble Mage",
+      "unlockTip": "Her passive reduces enemy Magic Resist on every attack — great for boosting your whole AP team",
+      "kidExplain": "Zoe is a chaotic magical girl who kicks bubbles. Her bubbles Chill enemies (slow their attack speed). Every single attack she does also reduces enemy Magic Resist (Shred), making your whole team of magic damage dealers hit harder. She's chaotically fun and surprisingly team-boosting!"
     }
   },
   {
@@ -1355,6 +1610,11 @@
     "ability": {
       "name": "Lacerate",
       "description": "Swipe and dash around target, dealing 50/75/350 (ADAP) physical damage to enemies in the path. Then slam chains on target, dealing 158/236/1103 (ADAP) physical damage in a line. If any enemies are killed, immediately recast this ability, dealing 80% damage. The slam deals 40/40/100% more damage to Tanks."
+    },
+    "beginnerTip": {
+      "nickname": "The Noxus Conqueror",
+      "unlockTip": "If she kills anyone, she instantly casts again — chain-kill potential is massive",
+      "kidExplain": "Ambessa is Mel's mom and a ruthless Noxus general. She dashes in slashing enemies, then slams her chains for big damage in a line. The insane part: if any enemy DIES from this, she immediately casts AGAIN doing 80% damage. Chain kills = chain casts = total chaos!"
     }
   },
   {
@@ -1381,6 +1641,11 @@
     "ability": {
       "name": "Endless Banquet",
       "description": "Passive: On takedown, gain 75/75/200% Attack Speed that decays over 3 seconds. Active: Deal 150/225/900 (AD) physical damage in a 2 hex radius and transform for the rest of combat. While transformed, gain 33%/33%/133% (AP) Attack Speed, 33% max Health, and increased Move Speed. Attacks deal 15/25/100 bonus true damage, increased by 3/5/30 for each time the same enemy is hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Empress of the Void",
+      "unlockTip": "First kill gives massive attack speed — she snowballs hard in fights with multiple enemies",
+      "kidExplain": "Bel'Veth is a terrifying void empress who looks like a manta ray of nightmares. When she kills someone, she gains a HUGE burst of attack speed. When she casts, she damages a circle of enemies and TRANSFORMS permanently: bigger, faster, and every attack does growing true damage. She gets scarier with every second!"
     }
   },
   {
@@ -1407,6 +1672,11 @@
     "ability": {
       "name": "Unbreakable Frost",
       "description": "Raise shield for 4 seconds, gaining 55%/55%/90% (AP) Durability and redirecting projectiles to towards Braum instead. When hit, deal 27/43/1245 (ArmorAP) magic damage to nearby enemies and 30% Chill them for 2 seconds. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Door Shield Mustache Man",
+      "unlockTip": "Position him to absorb enemy projectiles — he redirects them as AoE damage to nearby enemies!",
+      "kidExplain": "Braum uses an ACTUAL DOOR as a shield. When he casts, he raises his door and REDIRECTS all enemy arrows and bullets to hit him instead. But every projectile he absorbs also damages nearby enemies AND slows them! He's the friendly giant who says 'let me take that bullet for everyone' and punishes the shooter!"
     }
   },
   {
@@ -1432,6 +1702,11 @@
     "ability": {
       "name": "Lunar Rush",
       "description": "Passive: Ability damage from your strongest Leona and strongest Diana marks enemies as Moonlit, reducing their damage by 10%. Active: Gain 100/175/300 (AP) Shield. Unleash a bolt of lunar energy at the farthest non-Moonlit enemy within 4 hexes, dealing 125/190/600 (AP) magic damage. Then, dash to all Moonlit enemies, dealing 160/240/1500 (AP) magic damage to them."
+    },
+    "beginnerTip": {
+      "nickname": "The Scorn of the Moon",
+      "unlockTip": "Pair with Leona — they create Moonlit debuffs together and Diana dashes to ALL marked enemies",
+      "kidExplain": "Diana is the moon to Leona's sun. She and Leona together mark enemies as Moonlit, reducing their damage. When Diana casts, she dashes to ALL Moonlit enemies on the field and deals magic damage to each! She's a moon warrior who dashes around the whole battlefield picking off weakened enemies!"
     }
   },
   {
@@ -1458,6 +1733,11 @@
     "ability": {
       "name": "Playful Trickster",
       "description": "Become briefly untargetable, then jump to the farthest enemy within 4 hexes, avoiding Tanks and Fighters, and deal 75/115/450 (AP) magic damage to adjacent enemies. For the next 4 attacks, gain 100% Attack Speed and deal 50/75/600 (AP) bonus magic damage on hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Tidal Trickster",
+      "unlockTip": "His ability costs only 10 mana — he casts almost every other attack!",
+      "kidExplain": "Fizz is a tiny fish-like creature who can briefly become UNTARGETABLE — you literally can't hit him for a moment! He jumps away, then pounces on the farthest enemy, damages everyone nearby, and gains super attack speed for 4 attacks. He disappears and reappears right on top of you!"
     }
   },
   {
@@ -1484,6 +1764,11 @@
     "ability": {
       "name": "Judgment",
       "description": "Spin for 3 seconds, gaining 50/50/80% Durability and healing for 370/516/1589 (HealthAP) over the duration. Each second, deal 100/150/1700 (AD) physical damage to adjacent enemies and reduce their Armor and Magic Resistance by 5."
+    },
+    "beginnerTip": {
+      "nickname": "The Spinning Sword of Justice",
+      "unlockTip": "Give him armor and HP — his spin damage scales with attack damage!",
+      "kidExplain": "GAREN SPINS. That's his whole thing. He spins his giant sword for 3 seconds, HEALING himself the whole time, and every second deals damage to adjacent enemies while reducing their armor. He's a spinning top of justice that heals while killing. DEMACIA!"
     }
   },
   {
@@ -1511,6 +1796,11 @@
     "ability": {
       "name": "Icathian Rain",
       "description": "Dash away from all enemies, then fire 15/15/25 missiles split across the 4 nearest enemies. Each missile deals 45/72/170 (ADAP) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Void Symbiote Hunter",
+      "unlockTip": "She dashes AWAY from enemies first — keep her in back so her dash doesn't waste movement",
+      "kidExplain": "Kai'Sa has a living void armor suit. She dashes AWAY from all enemies first (safety first!), then fires 15 missiles split between the 4 nearest enemies. Each missile does physical damage. She's a hit-and-run missile launcher who retreats to safety before opening fire!"
     }
   },
   {
@@ -1537,6 +1827,11 @@
     "ability": {
       "name": "Endless Rend",
       "description": "Summon 25 (Souls) spears split among the 4 nearest enemies. After a brief delay, they each impale their target, dealing 33/53/465 (ADAP) physical damage and reducing Armor by 1."
+    },
+    "beginnerTip": {
+      "nickname": "The Spear of Vengeance",
+      "unlockTip": "She gets more spears from the Souls stacks — more Shadow Isles champions = more spears!",
+      "kidExplain": "Kalista is a ghost warrior with infinite spears. She summons 25 spears that split among the 4 nearest enemies. After a brief delay, ALL spears impale their targets simultaneously! Each impale also reduces armor permanently. Imagine 25 spears flying at 4 people at the same time. Ouch."
     }
   },
   {
@@ -1563,6 +1858,11 @@
     "ability": {
       "name": "Frozen Tomb",
       "description": "Encase target in ice, Stunning them for 1 second and dealing 315/475/2800 (AP) magic damage. All enemies within 2 hexes of them split 415/625/2800 (AP) magic damage. If the target dies, shards fly out and split excess damage between the 2 nearest enemies. Chilled enemies take 12% more damage from this ability. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Ice Witch",
+      "unlockTip": "Pair with Ashe for Chill synergy — Chilled enemies take 12% more damage from her!",
+      "kidExplain": "Lissandra encases her target in a GIANT ICE CUBE, stunning them and dealing massive damage. Nearby enemies also take damage from the cold. If the frozen enemy DIES, ice shards fly out and damage 2 more enemies! She's a walking deep freeze who chains explosions of cold."
     }
   },
   {
@@ -1589,6 +1889,11 @@
     "ability": {
       "name": "Final Spark",
       "description": "Fire a ball of light at the most enemies, dealing 30/45/100 (AP) magic damage to the first 2 enemies hit and Rooting them for 1 second. Then fire a beam, dealing 330/500/1600 (AP) magic damage to enemies hit by the ball and 90/135/900 (AP) magic damage to all other enemies hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Lady of Luminosity",
+      "unlockTip": "She fires a ball then a beam — the beam does way more damage to targets the ball hit",
+      "kidExplain": "Lux fires a ball of light that Roots (stops movement) 2 enemies. Then she fires a GIANT LASER BEAM at those enemies and everything in the line. If you were hit by the ball, the beam hits you extra hard. It's a combo: ball pins you, beam blasts you!"
     }
   },
   {
@@ -1615,6 +1920,11 @@
     "ability": {
       "name": "Heartbreaker",
       "description": "Passive: Attacks ricochet to the highest current Health enemy, dealing 50/50/100% damage. Active: Fire waves of bullets that land on the 2/2/6 nearest enemies. The first wave deals 245/370/3070 (ADAP) physical damage and the rest deal 98/148/2456 (ADAP) physical damage. Every 3rd cast, increase the number of waves by 1."
+    },
+    "beginnerTip": {
+      "nickname": "The Bounty Hunter",
+      "unlockTip": "Every 3rd cast she fires more waves — she gets scarier and scarier as the fight goes on",
+      "kidExplain": "Miss Fortune has two guns and no chill. Her attacks RICOCHET to the highest-health enemy (so tanks can't protect squishies!). When she casts, she fires WAVES of bullets at nearby enemies. Every 3rd cast she adds another wave. She scales up all fight — the longer it goes, the more bullets fly!"
     }
   },
   {
@@ -1640,6 +1950,11 @@
     "ability": {
       "name": "Fury of the Sands",
       "description": "Steal 500/685/3000 (AP) Health split between the 4/4/8 nearest enemies. For 8 seconds, gain 30 Armor and Magic Resist and deal 23/41/583 (Health) magic damage to adjacent enemies each second."
+    },
+    "beginnerTip": {
+      "nickname": "The Jackal God of Sands",
+      "unlockTip": "He steals health from up to 8 enemies — the more enemies, the more HP he absorbs",
+      "kidExplain": "Nasus is a giant jackal god who steals health — literally rips HP from enemies and adds it to himself. For 8 seconds after, he gains bonus armor AND damages everyone adjacent to him every second. He's a health vampire who becomes a walking aura of pain!"
     }
   },
   {
@@ -1666,6 +1981,11 @@
     "ability": {
       "name": "Relentless Pounce",
       "description": "Jump on an adjacent enemy with the lowest health, then deal 290/470/2000 (AP) magic damage to them and 100/150/600 (AP) magic damage to adjacent enemies. If any die, cast again, dealing 70% damage. Tanks take 60% more damage from this ability and Fighters take 30% more."
+    },
+    "beginnerTip": {
+      "nickname": "The Bestial Huntress",
+      "unlockTip": "Tanks take 60% more damage from her — she's specifically built to delete tanks!",
+      "kidExplain": "Nidalee lives in the jungle and fights like a wild animal. She POUNCES on the lowest-health enemy, deals damage to them and nearby enemies, and if any die, she pounces AGAIN doing 70% damage. She loves targeting tanks (60% bonus damage!) and keeps pouncing until everyone is dead!"
     }
   },
   {
@@ -1691,6 +2011,11 @@
     "ability": {
       "name": "Slice and Dice",
       "description": "Dash to the lowest Health enemy within 2 hexes, dealing 80/120/360 (AD) physical damage to all enemies in the path. Then slash 4 times, each dealing 55/85/600 (ADAP) physical damage. Subsquent casts increase the number of slashes by 1."
+    },
+    "beginnerTip": {
+      "nickname": "The Angry Crocodile",
+      "unlockTip": "Each cast adds 1 more slash — the longer the fight, the more hits he does each cast!",
+      "kidExplain": "Renekton is an angry crocodile with a giant curved blade. He dashes in, then slashes 4 times rapidly. Every subsequent cast adds 1 more slash. So cast 1 = 4 slashes, cast 2 = 5 slashes, cast 3 = 6 slashes... He gets scarier with every cast. An angry croc who learns new ways to slice you!"
     }
   },
   {
@@ -1717,6 +2042,11 @@
     "ability": {
       "name": "Warp Armor",
       "description": "Gain 300/425/2000 max Health and grow larger. Slam in a 2 Hex circle on the target, dealing 166/269/2428 (APHealth) magic damage to enemies hit. For 4 seconds, gain 25%/25%/80% (AP) Durability + 1% for each enemy targeting this unit."
+    },
+    "beginnerTip": {
+      "nickname": "The Growing Void Boss",
+      "unlockTip": "He gains HP when he grows — tank items amplify his durability bonus enormously",
+      "kidExplain": "The Rift Herald is a giant purple void creature that literally GROWS BIGGER when it casts. It gains max HP and increases in size, then slams in a wide circle. The more enemies are targeting it, the more damage resistance it gets! He's the 'come get me' big boy who loves getting hit."
     }
   },
   {
@@ -1743,6 +2073,11 @@
     "ability": {
       "name": "Grand Encore",
       "description": "Gain 3 notes. For each one active, deal 40/60/300 (AP) magic damage to a nearby enemy. While holding 12 notes on cast, consume them to project a wave of energy. Allies hit restore 40/80/400 (AP) Health. Enemies hit take 270/405/2200 (AP) magic damage, reduced by 30% for each enemy it's passed through."
+    },
+    "beginnerTip": {
+      "nickname": "The Starry-Eyed Songstress",
+      "unlockTip": "Building 12 notes unleashes her big wave — the wave heals allies AND damages enemies!",
+      "kidExplain": "Seraphine is a pop star who builds notes over time. She starts small — each cast hits a few enemies with musical energy. When she collects 12 notes, she fires a MASSIVE WAVE that heals ALL allies AND damages all enemies it passes through. She's literally becoming more powerful the more she performs!"
     }
   },
   {
@@ -1769,6 +2104,11 @@
     "ability": {
       "name": "Poison Trail",
       "description": "Passive: Run around the battlefield, leaving a poison trail that lingers for 4 seconds. Poison trails deal 8/18/160 (AP) magic damage per second to enemies within. Gain 3.5 (AS) Mana each second. Active: For 4 seconds, gain increased Move Speed, restore 15/80/500 (AP) Health each second, and gain 20/60/100 Armor and Magic Resistance"
+    },
+    "beginnerTip": {
+      "nickname": "The Mad Chemist",
+      "unlockTip": "Keep him running — his poison trail appears automatically as he moves around",
+      "kidExplain": "Singed is a crazy scientist who runs around the battlefield dragging a giant poisonous gas cloud behind him. Any enemy who walks through his trail takes damage. When he casts, he runs even faster, heals every second, and gains bonus armor. He doesn't attack — he just runs and lets the poison do the work!"
     }
   },
   {
@@ -1794,6 +2134,11 @@
     "ability": {
       "name": "Impale",
       "description": "Passive: All allies gain 10/20/100 Armor. Active: Gain 750/950/3000 (AP) Shield for 4 seconds. Impale up to three nearby enemies in a line, dealing 8400%/12600%/175000% (Armor) physical damage and Stunning them for 1.5/1.75/8 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Crystal Scorpion",
+      "unlockTip": "He stuns up to 3 enemies in a line — position him to catch multiple enemies at once",
+      "kidExplain": "Skarner is a giant crystal scorpion. His passive gives ALL your allies bonus armor just by being on your team. When he casts, he gains a MASSIVE shield AND grabs up to 3 enemies in a line with his claws, STUNNING them all for 1.5 seconds. He's the team armor booster and the best stun machine!"
     }
   },
   {
@@ -1821,6 +2166,11 @@
     "ability": {
       "name": "Nevermove",
       "description": "Passive: Each second, restore 36/52/158 (HealthAP) Health and deal 20/30/90 (AP) magic damage to enemies within 1 Hex. Active: Open a demonic eye on the largest group of nearby enemies, dealing 100/150/1800 (AP) magic damage and Stunning them for 1.5/1.75/8 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Demon Bird Warlord",
+      "unlockTip": "He heals passively every second — give him AP to increase healing and burst damage",
+      "kidExplain": "Swain has a demon bird trapped in his arm. The bird constantly reaches out and damages nearby enemies while healing Swain. When he casts, he opens a demonic eye that STUNS the biggest group of enemies! He's a self-healing area mage who constantly drains life while preparing to blast everyone at once."
     }
   },
   {
@@ -1846,6 +2196,11 @@
     "ability": {
       "name": "Starlight's Touch",
       "description": "Passive: All allies gain 10/20/100 Magic Resist. Once per combat after dropping below 35% max Health, restore 300/700/2500 health over 2 seconds. Active: Gain 600/700/2500 (AP) Shield and grant the 2 lowest Health allies 125/150/1000 (AP) Shield for 4 seconds. The next 2/2/10 attacks deal 200/300/3000 (AP) bonus magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Gem Shield Knight",
+      "unlockTip": "He boosts Magic Resist for the WHOLE team passively — great support champion",
+      "kidExplain": "Taric is a knight who is obsessed with gems and protecting others. He gives ALL allies extra Magic Resist just by being on your board (passive!). He heals himself when near death. When he casts, he puts huge shields on himself AND the 2 lowest-health allies. He's the ultimate team-protector in shiny gem armor!"
     }
   },
   {
@@ -1872,6 +2227,11 @@
     "ability": {
       "name": "Dark Storm",
       "description": "Passive: Gain 50% more Ability Power from all sources. Active: Call down a storm of 12/12/24 meteors across the battlefield that deal 56/84/199 (AP) magic damage each. They can innately critically strike. For each one that kills an enemy, permanently gain 1 Ability Power. (Permanent Ability Power: X AP)"
+    },
+    "beginnerTip": {
+      "nickname": "The Tiny Master of Evil",
+      "unlockTip": "He gains permanent AP from kills — he snowballs exponentially in late game",
+      "kidExplain": "Veigar is a tiny Yordle who desperately wants to be taken seriously as an evil villain. He gets 50% more ability power from items than anyone else! When he casts, meteors rain down on the whole battlefield. Every meteor that KILLS an enemy gives Veigar PERMANENT bonus AP. More kills = more power forever. He's the snowball champion of doom!"
     }
   },
   {
@@ -1898,6 +2258,11 @@
     "ability": {
       "name": "Eternal Hunger",
       "description": "Gain 100/100/400% Attack Speed, 15% Omnivamp, increased Move Speed, and deal 55/85/550 (AD) bonus physical damage on attack for the rest of combat. While this effect is active, takedowns grant Warwick, Jinx, and Vi 20%/20%/50% (AP) Attack Speed for 3 seconds."
+    },
+    "beginnerTip": {
+      "nickname": "The Uncaged Werewolf",
+      "unlockTip": "He triggers a team-wide attack speed boost on kills — pair him with Jinx and Vi!",
+      "kidExplain": "Warwick is a werewolf-like experiment gone wrong. When he casts, he gets massive attack speed, life-steal, movement speed, and bonus damage — ALL FOR THE REST OF COMBAT permanently. Every kill also gives attack speed to Jinx and Vi. He permanently transforms into a killing machine after one cast!"
     }
   },
   {
@@ -1924,6 +2289,11 @@
     "ability": {
       "name": "Diverting Trickster",
       "description": "Passive: On death, summon a Stone copy with 570/956/3361 (Health) Health and Wukong's items. Active: For 4 seconds, gain 100/110/400 (AP) Armor and Magic Resist. Then spin, dealing 150/225/3000 (AD) physical damage to all enemies within 2 hexes."
+    },
+    "beginnerTip": {
+      "nickname": "The Monkey King",
+      "unlockTip": "His stone clone fights with all his items — don't underestimate it as extra free damage!",
+      "kidExplain": "Wukong is a magical monkey king with a staff. He gains bonus armor and magic resist, then spins his staff hitting everyone nearby. The BEST part: when he DIES, a stone clone of him spawns with all his items and some HP and keeps fighting! He literally comes back from the dead as a statue!"
     }
   },
   {
@@ -1950,6 +2320,11 @@
     "ability": {
       "name": "Kin of the Stained Blade",
       "description": "Passive: Attacks alternate between dealing 55/85/800 (AD) bonus physical damage and 110/165/1400 (AP) bonus magic damage. Active: Strike through the most enemies possible within 3 hexes, knocking them up for 1.5 seconds and dealing 80/120/480 (ADAP) physical damage and 80/120/480 (ADAP) magic damage. Yone then splits 280/420/2160 (ADAP) physical damage and 280/420/2160 (ADAP) magic damage among all enemies hit. Blade Brothers: When Yone casts, your strongest Yasuo blinks to each target, dealing bonus physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Unforgotten Brother",
+      "unlockTip": "Pair with Yasuo — Yone's casts teleport Yasuo to every enemy Yone hits for free bonus hits!",
+      "kidExplain": "Yone fights with two swords: one deals physical damage, one deals magic damage. He alternates between them with every attack. When he casts, he hits through multiple enemies in a line, knocking them ALL up. Yasuo then teleports to every enemy Yone hit and does bonus damage. Two brothers, one devastating combo!"
     }
   },
   {
@@ -1976,6 +2351,11 @@
     "ability": {
       "name": "Transcendent State",
       "description": "For the next 4 seconds, gain 90%/90%/300% Attack Speed, infinite range, and replace attacks with lasers. Lasers deal 88/128/433 (ADAP) physical damage in a line, reduced by 75/75/30% for each enemy they pass through. When lasers critically strike, they deal 33% bonus true damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Ionian Laser Blade",
+      "unlockTip": "She gains infinite range while casting — keep her in the back row",
+      "kidExplain": "Yunara is a new Ionian warrior with a high-tech weapon. When she casts, she enters Transcendent State: insane attack speed + INFINITE RANGE + every attack becomes a laser that shoots through enemies in a line! The lasers can even critically strike for bonus true damage. She becomes an Ionian laser machine!"
     }
   },
   {
@@ -2003,6 +2383,11 @@
     "ability": {
       "name": "The Darkin Blade",
       "description": "On cast, cycle through one of the following abilities: Slash in a line, dealing 115/210/2500 (ADAP) physical damage to enemies hit and 20% Sundering them for 4 seconds. Swipe in a cone, dealing 138/252/3000 (ADAP) physical damage to enemies hit and knocking them up for 1 second. Slam on target, dealing 184/336/4000 (ADAP) physical damage in a 1 hex circle. Targets below 15% max Health are executed."
+    },
+    "beginnerTip": {
+      "nickname": "The World Ender",
+      "unlockTip": "He cycles through 3 different attacks — line, cone, and circle with execute",
+      "kidExplain": "Aatrox IS the ancient sword — the darkin weapon that fights on its own. He cycles through 3 big attacks: a Slash in a line, a Swipe in a cone, and a Slam on one target. If any enemy is below 15% health during the slam, they get instantly EXECUTED! An ancient weapon cycling through a beautiful destructive pattern."
     }
   },
   {
@@ -2029,6 +2414,11 @@
     "ability": {
       "name": "Enraged Inferno",
       "description": "Erupt the entire battlefield in flames, permanently Burning and Wounding all enemies and dealing 1500/2250/8000 (AP) magic damage to each of them over 45 seconds. Annie's max Mana is reduced by 140 for the rest of combat. Subsquent casts launch a fireball at target that deals 240/360/3000 (AP) magic damage. Burn: Deal a percent of the target's max Health as true damage every second Wound: Reduce healing received by 33%"
+    },
+    "beginnerTip": {
+      "nickname": "The Fire Child with Tibbers",
+      "unlockTip": "Her first cast sets the battlefield on FIRE permanently — position her to cast early!",
+      "kidExplain": "Annie is a 6-year-old girl with terrifying fire magic. Her first cast sets the ENTIRE BATTLEFIELD ablaze — every single enemy burns and bleeds for 45 full seconds. After that, she just throws fireballs at specific targets. She's a tiny child who sets the whole map permanently on fire and then calmly throws more fireballs. Absolutely terrifying."
     }
   },
   {
@@ -2055,6 +2445,11 @@
     "ability": {
       "name": "The Skies Descend",
       "description": "Passive: For every 250 ability damage dealt to enemies in player combat, gain Stardust. Stardust makes The Skies Descend more powerful. (Current Stardust: X) Active: Crash a star on target, dealing 525/725/5000 (AP) magic damage in a 2 hex radius. Stardust Upgrades: 25: Create a shockwave that deals 100/150/1000 (AP) additional magic damage in a 3 Hex radius. 60: The star crash deals 15% more damage. 140: Shockwave increases to a 4 hex radius. 200: Knock up targets in the star crash for 1.5 seconds. 300: Shockwave increases to 10 radius. 550: The star crash deals 33% bonus true damage. 800: Also call down a meteor storm that deals 500/750/9999 (AP) magic damage split between living enemies. 1444: Summon a black hole at the epicenter, instantly killing enemies within."
+    },
+    "beginnerTip": {
+      "nickname": "The Star Forger",
+      "unlockTip": "He gets stronger as he deals damage — in long games he eventually creates a black hole!",
+      "kidExplain": "Aurelion Sol is a massive space dragon who forges actual stars. He collects Stardust by dealing damage in player combats. As Stardust grows, his star crashes become more powerful: bigger radius, extra shockwave, knockups, meteor storms... and eventually a BLACK HOLE that instantly kills enemies. He's the final boss who scales with time!"
     }
   },
   {
@@ -2082,6 +2477,11 @@
     "ability": {
       "name": "Arise!",
       "description": "Passive: After witnessing 3 attacks from Azir, Sand Soldiers deal 100/150/3000 (AP) magic damage to their target. Active: Summon a Sand Soldier near target and command them to strike. If 2 Soldiers are already out, they all immediately deal 90/135/5000 (AP) magic damage instead."
+    },
+    "beginnerTip": {
+      "nickname": "The Sand Emperor",
+      "unlockTip": "If 2 soldiers are already out when he casts, they all strike simultaneously for huge burst!",
+      "kidExplain": "Azir summons Sand Soldiers — magical warrior statues made of sand. He summons them near enemies and they poke. When 2 soldiers are already out, casting makes ALL of them strike at once for massive damage. Imagine having 2 bodyguards who wait patiently then simultaneously attack the same target!"
     }
   },
   {
@@ -2108,6 +2508,11 @@
     "ability": {
       "name": "Wrath of the Void",
       "description": "Passive: Immune to Crowd Control effects. Attacks deal damage in a line on target. If no enemies are in range, dash to the next one and knock up adjacent enemies on arrival. While in the Void Rift, erupt a tentacle below a random enemy every 3/3/0.25 seconds that knocks them up for 1.5 seconds. Active: Slam and erect spikes in a 2 hex circle, dealing 280/420/20500 (ADAP) physical damage to enemies hit. Then over 3 seconds, spit 10 globs of acid that deal 112/189/10250 (ADAP) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Immortal Void Bastion",
+      "unlockTip": "He's IMMUNE to all crowd control — stuns, slows, nothing stops him",
+      "kidExplain": "Baron Nashor is THE boss monster from regular League of Legends and he's enormous. He's IMMUNE to ALL crowd control — can't be stunned or slowed by anything! His attacks go in a line. He slams and creates spikes, spits acid, and randomly erupts tentacles from the ground under random enemies. He's the unstoppable ancient monster!"
     }
   },
   {
@@ -2133,6 +2538,11 @@
     "ability": {
       "name": "Seismic Slam",
       "description": "Passive: Immune to crowd control effects. Attacks briefly knock up the target and deal 50% damage in a 1 hex radius around them. Active: Slam the ground, dealing 186/265/1617 (HealthAD) physical damage to ALL enemies, reduced by 15% for each hex from the center (down to 40%.) If this is the first time they've been hit by Seismic Slam this combat, knock them up for up to 1.75 seconds. 12/12/99 rocks fall around the battlefield, each dealing 220/405/700 (ADAP) physical damage to enemies hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Living Mountain",
+      "unlockTip": "He hits ALL enemies with one slam — position him in the center vs. clustered teams",
+      "kidExplain": "Brock is an enormous Ixtal golem — basically a walking mountain. IMMUNE to crowd control. His attacks knock enemies up and damage nearby units. When he casts, he SLAMS THE GROUND and damages EVERY SINGLE ENEMY on the board (reduced by distance). Then rocks fall everywhere for extra damage. He's the 'punish everyone' champion!"
     }
   },
   {
@@ -2159,6 +2569,11 @@
     "ability": {
       "name": "Crowstorm",
       "description": "Teleport into a large cluster of enemies within 2 hexes and Stun them for 1.25/1.25/99 seconds. Begin losing 22 mana per second. While casting, deal 100/150/6666 (AP) magic damage per second to all enemies within a 2 hex radius. The closest 2 enemies take 33% more damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Ancient Fear",
+      "unlockTip": "He teleports into the largest group of enemies — position-read the enemy team first",
+      "kidExplain": "Fiddlesticks is a TERRIFYING scarecrow from nightmares. He teleports directly into the biggest group of enemies and STUNS THEM ALL. Then he starts channeling and deals damage every second to everyone nearby. The longer he channels, the more damage he deals. He's the surprise jump-scare champion!"
     }
   },
   {
@@ -2185,6 +2600,11 @@
     "ability": {
       "name": "Inspirational Might",
       "description": "Passive: Every 3rd attack deals 209/314/4950 (MR) magic damage in a circle around the target. Active: Dash into the largest group of units and inspire all allies within 2 hexes, granting them 500/600/2000 (AP) Shield for 4 seconds. Then crash down, dealing 83/124/550 (MRArmor) bonus magic damage to all enemies with 2 hexes."
+    },
+    "beginnerTip": {
+      "nickname": "The Stone Guardian",
+      "unlockTip": "Every 3rd attack is a free AoE attack — attack speed items help him hit that 3rd faster",
+      "kidExplain": "Galio is a giant stone guardian of Demacia. Every 3rd attack hits everyone in a circle (free!). When he casts, he dashes into the biggest group of enemies and gives shields to all his nearby allies, then crashes down and damages all nearby enemies. He's the stone giant who says 'I got you!' to friends and 'catch this!' to enemies!"
     }
   },
   {
@@ -2211,6 +2631,11 @@
     "ability": {
       "name": "Lamb's Respite",
       "description": "Dash, then create a 2-hex radius zone for 2.5/2.5/99 seconds that shields allies within for 350/750/10000 (AP) health for the zone's duration. While active, double current Attack Speed and on attack, fire a secondary arrow at a nearby enemy that deals 25/38/999 (AD) physical damage. When the zone ends, heal all allies for 8% (AP) of damage dealt while it was up and dash away."
+    },
+    "beginnerTip": {
+      "nickname": "The Eternal Hunters",
+      "unlockTip": "Her zone heals for % of damage dealt inside it — pair with high-damage allies!",
+      "kidExplain": "Kindred is actually TWO spirits — Lamb (who you see) and Wolf (who runs alongside). Lamb dashes and creates a magical zone. Inside the zone: Kindred attacks twice as fast and fires bonus arrows at nearby enemies. When the zone ends, ALL allies heal based on damage dealt inside. A burst damage dealer who heals the whole team afterwards!"
     }
   },
   {
@@ -2237,6 +2662,11 @@
     "ability": {
       "name": "The Culling",
       "description": "Fire 12/12/42 (AS) shots towards target. Each shot explodes on the first enemy hit, dealing 83/132/900 (ADAP) physical damage to all nearby enemies."
+    },
+    "beginnerTip": {
+      "nickname": "The Power Couple Gunners",
+      "unlockTip": "He fires more shots with higher attack speed — stack AD and attack speed items",
+      "kidExplain": "Lucian and Senna are married hunters who fight as one. Lucian runs and shoots while Senna empowers him. When he casts, he fires 12 shots at a target. Each shot EXPLODES on impact, damaging all nearby enemies too. That's 12 individual explosions. At one target. They're the power couple of destruction!"
     }
   },
   {
@@ -2263,6 +2693,11 @@
     "ability": {
       "name": "Radiant Eclipse",
       "description": "Passive: While gaining Mana, throw out 2/2/9 radiant orbs that orbit around target. They deal 65/100/150 (AP) magic damage in a 1 hex radius and drain 1 Mana from enemies hit each second. After draining 235/235/10 mana, gain a random Radiant Item. (X/235/235/10) Active: Detonate orbs on target, causing a 3 hex radius explosion that deals 1000/1500/10000 (AP) magic damage to them and 400/600/10000 (AP) damage to all other enemies hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Radiant Mana Drainer",
+      "unlockTip": "She drains mana from enemies — after 235 mana drained, she earns a FREE Radiant Item!",
+      "kidExplain": "Mel is Noxus's most powerful mage who wields golden radiant magic. She summons orbiting balls of light that damage nearby enemies AND drain their mana (making it harder for them to cast abilities). After draining enough mana from enemies, she earns a RANDOM RADIANT ITEM for free! When she casts, all the orbs explode for massive area damage. She literally earns items in combat!"
     }
   },
   {
@@ -2289,6 +2724,11 @@
     "ability": {
       "name": "Call of the Forge",
       "description": "Summon an elemental from behind the farthest enemy. It 20% Chills enemies hit for 5 seconds and deals 100/150/3000 (AP) magic damage to them. When it arrives, headbutt it and redirect it toward another distant enemy, dealing 150/225/4500 (AP) magic damage instead. Chill: Reduce Attack Speed"
+    },
+    "beginnerTip": {
+      "nickname": "The Forge Ram",
+      "unlockTip": "He headbutts his own elemental to redirect it — great for hitting back-row enemies",
+      "kidExplain": "Ornn is a cranky mountain ram god who makes things in his forge. He summons an elemental from behind the FARTHEST enemy (it Chills and damages everything it passes through). When it arrives, Ornn HEADBUTTS it, sending it bouncing back toward another distant enemy! He uses his own creature as a ping-pong ball of destruction!"
     }
   },
   {
@@ -2314,6 +2754,11 @@
     "ability": {
       "name": "Runic Overload",
       "description": "Release a runic blast, dealing 250/430/1500 (AP) magic damage. It splits in two, dealing 33% of the damage to the closest two enemies. Each secondary blast splits an additional time."
+    },
+    "beginnerTip": {
+      "nickname": "The Splitting Rune Wizard",
+      "unlockTip": "His ability splits multiple times — great for hitting spread-out teams across the board",
+      "kidExplain": "Ryze is an old blue wizard covered in glowing rune tattoos. He fires a runic blast. It splits into 2. Each of THOSE splits again. Each of THOSE splits again! It's a chain reaction of magic bolts spreading across the battlefield. The farther they spread, the weaker each gets — but the coverage is incredible!"
     }
   },
   {
@@ -2340,6 +2785,11 @@
     "ability": {
       "name": "The Show Stopper",
       "description": "Grab target and slam them forward, dealing 200/350/9999 (AP) + 2%/5%/900% (AP) of their max Health as magic damage to them. All other enemies within 3 hexes take 50% of the total damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Boss",
+      "unlockTip": "He deals % max HP damage — he's best against high-health tanky champions",
+      "kidExplain": "Sett is the boss of underground fighting pits. He grabs an enemy with his bare hands, lifts them up, and SLAMS them into the ground. The damage is based on the enemy's MAX HEALTH — so the tankier they are, the harder they get slammed! Everyone within 3 hexes takes 50% of that damage. The bigger you are, the harder you fall!"
     }
   },
   {
@@ -2366,6 +2816,11 @@
     "ability": {
       "name": "Dragon's Descent / Flame Breath",
       "description": "Dragon's Descent: Transform into a dragon, gaining 600/1000/9999 max Health. Briefly gain 20/20/90% Durability and dive-bomb into the largest group of enemies, dealing 100/150/3000 (AD) physical damage in a 3 hex circle. Flame Breath: Breath fire in a cone for 3 seconds, dealing 205/305/13579 (ADAP) physical damage each second to enemies hit."
+    },
+    "beginnerTip": {
+      "nickname": "The Half-Dragon",
+      "unlockTip": "She transforms permanently on cast — give her HP items for the dragon form bonus health",
+      "kidExplain": "Shyvana is half-human, half-dragon — and when she casts, she goes FULL DRAGON permanently! She gains 600-1000 extra health and dive-bombs into the biggest group of enemies. Then she breathes FIRE in a cone for 3 straight seconds. She's a one-way button: press it, become a dragon, breathe fire forever!"
     }
   },
   {
@@ -2393,6 +2848,11 @@
     "ability": {
       "name": "Stolen Might",
       "description": "Cast one of three spells: Cataclysm: Leap on a nearby enemy. Deal 200/350/1000 (AP) magic damage to all enemies within 2 hexes and Stun them for 1.5/1.75/30 seconds. Demacian Justice: Deal 630/950/99999 (AP) magic damage to target. If they are below 15% max Health, execute them. Final Spark: Gain 400/450/800 (AP) Shield for 1.25 seconds. Deal 300/475/1000 (AP) magic damage to all enemies in a line."
+    },
+    "beginnerTip": {
+      "nickname": "The Ability Thief",
+      "unlockTip": "He cycles between 3 stolen spells — each has a different use (stun, execute, shield+line)",
+      "kidExplain": "Sylas is an escaped prisoner who can steal magic powers. In TFT, he cycles through 3 different stolen abilities each cast: Cataclysm (leap + big stun), Demacian Justice (giant blast that executes low-health enemies), or Final Spark (shield + line damage). Every cast is a DIFFERENT spell — you never know which is coming next!"
     }
   },
   {
@@ -2420,6 +2880,11 @@
     "ability": {
       "name": "Hextech Arsenal",
       "description": "Passive: Attacks fire a barrage of 4 bullets. Active: Gain 410/598/67022 (Health) Shield and begin consuming 30 mana per second. Each second while casting, fire a laser that deals 290/435/2150 (ADAP) physical damage, reduced by 70% per enemy hit up to 90%. Additionally, launch 4 (AS) missiles split between 4 nearby enemies that each deal 17/26/129 (ADAP) physical damage."
+    },
+    "beginnerTip": {
+      "nickname": "The HexTech Colossus",
+      "unlockTip": "He fires 4 bullets per attack passively — attack speed scales his passive extremely well",
+      "kidExplain": "T-Hex is a giant HexTech battle mech (a massive armored robot). His attacks fire 4 bullets instead of 1! When he casts, he gains a huge shield AND fires a laser that deals damage, plus 4 missiles every second for continuous fire. He's a walking weapons platform — a mech that shoots everything at once!"
     }
   },
   {
@@ -2447,6 +2912,11 @@
     "ability": {
       "name": "Devour",
       "description": "Devour target for 2.5 seconds, dealing 1200/1800/30000 (AP) magic damage and making them immune to other sources of damage. During this time, gain 30% Durability. If they are immune to crowd control, deal 1000/1500/20000 (AP) magic damage instead. If they die while devoured, spit out a random component they were holding or the unit's cost in gold. Otherwise, spit them towards the farthest enemy, briefly Stunning targets on impact."
+    },
+    "beginnerTip": {
+      "nickname": "The Hungry River Catfish",
+      "unlockTip": "If the devoured enemy dies inside him, it might drop their component items — timing matters!",
+      "kidExplain": "Tahm Kench is a giant catfish monster who EATS enemies whole. He literally swallows them for 2.5 seconds of sustained damage. If they die inside him, he might spit out their GOLD or ITEMS! If they survive, he spits them like a cannon toward the farthest enemy, stunning everything in the way. He's both a disposal unit and a living catapult!"
     }
   },
   {
@@ -2473,6 +2943,11 @@
     "ability": {
       "name": "The Box",
       "description": "Passive: Each second, deal 30/50/400 (APSouls) magic damage to all enemies within 2 hexes. Heal for 75% of the damage dealt by this effect. Active: Create a prison of walls in a 2 hex radius that lasts 5/5/60 seconds. While active, the Passive's damage is doubled. When an enemy touches a wall, they take 100/150/4000 (AP) magic damage. If there are less than 2 enemies inside The Box at any time, drag an enemy in."
+    },
+    "beginnerTip": {
+      "nickname": "The Chain Warden",
+      "unlockTip": "The Box drags enemies inside — combine with his passive AoE for free sustained damage",
+      "kidExplain": "Thresh is a ghost who carries a magical lantern and chains. His passive damages ALL nearby enemies every second AND heals himself from that damage. When he casts, he creates a Box — a ghost prison of walls. Enemies that touch the walls take damage. If fewer than 2 enemies are inside... he DRAGS another one in. He's the jailer who makes his own prisoners!"
     }
   },
   {
@@ -2499,6 +2974,11 @@
     "ability": {
       "name": "The Relentless Storm",
       "description": "Bite the target and mark them, dealing 136/215/2117 (ADHealth) physical damage, increased by 60% if they are already marked. After casting 5/5/2 times, leap to a nearby hex, activating Stormbringer and dealing 272/430/4234 (HealthAD) physical damage to enemies within a two hex radius. Stormbringer: Gain 400/550/9999 Health and 50/50/999% Attack Speed. Every 2/2/0.3 seconds, summon a lightning bolt on a nearby enemy, dealing 98/161/1155 (HealthAP) magic damage. Takedowns summon a bolt on fallen enemie"
+    },
+    "beginnerTip": {
+      "nickname": "The Thunder Bear God",
+      "unlockTip": "After 5 casts he transforms — fights are often won or lost at the Stormbringer moment",
+      "kidExplain": "Volibear is a giant divine bear god with lightning powers. He starts by biting enemies and marking them (extra damage on marked targets). After 5 casts, he LEAPS into battle and TRANSFORMS: gaining 400+ health, 50% attack speed, and summoning lightning bolts on nearby enemies every 2 seconds. He starts strong and becomes a storm god midway through every fight!"
     }
   },
   {
@@ -2525,6 +3005,11 @@
     "ability": {
       "name": "Eye of the Ascendant",
       "description": "Launch 10/10/99 arcane blasts randomly split between the closest 4/4/10 enemies that each deal 390/650/2500 (AP) magic damage."
+    },
+    "beginnerTip": {
+      "nickname": "The Ascended Artillery",
+      "unlockTip": "He fires 10 blasts between only 4 targets — they get hit multiple times each",
+      "kidExplain": "Xerath transformed himself into pure arcane energy — he's literally a floating being of power. He fires 10 arcane blasts split between the 4 closest enemies. Each blast does big damage. 10 blasts, 4 targets, they just keep getting blasted over and over with pure magic! He's pure artillery made of lightning."
     }
   },
   {
@@ -2551,6 +3036,11 @@
     "ability": {
       "name": "Divine Challenge",
       "description": "Dash around target and slash in a circle, dealing 110/165/1700 (ADAP) physical damage to target and 44/66/680 (ADAP) physical damage to all other adjacent enemies hit. If the target doesn't die, immediately cast again. If this Ability is cast 22 times in a row, instead slam on target, instantly killing them and dealing 220/330/3400 (ADAP) physical damage to all enemies within 3 hexes."
+    },
+    "beginnerTip": {
+      "nickname": "The Endless Slasher",
+      "unlockTip": "If he casts 22 times in a row without dying, he instantly kills the target — keep him alive!",
+      "kidExplain": "Zaahen is a Darkin — a corrupted warrior-weapon. He dashes around a target and slashes in a circle. If the target doesn't die, he IMMEDIATELY casts AGAIN. And again. And again. After 22 consecutive casts on the same target, he stops slashing and INSTANTLY KILLS THEM regardless of HP. He's the 'never stop attacking ever' champion!"
     }
   },
   {
@@ -2578,6 +3068,11 @@
     "ability": {
       "name": "Mega Inferno Bomb",
       "description": "Passive: Attacks are replaced with a bomb that bounces 1 time, dealing 40/65/500 (ADAP) magic damage to units hit. Active: Throw an enormous bomb at the largest 4-hex group of enemies that explodes on impact, dealing between 70/105/3000 (AP) and 550/875/7000 (AP) magic damage to enemies hit based on their distance from the epicenter."
+    },
+    "beginnerTip": {
+      "nickname": "The Hexplosives Expert",
+      "unlockTip": "His mega bomb targets the largest group of enemies — cluster them for maximum damage",
+      "kidExplain": "Ziggs is a Yordle absolutely obsessed with explosions. His regular attacks are BOUNCING BOMBS (not arrows!). When he casts, he throws his MEGA INFERNO BOMB at the largest cluster of enemies. Enemies right at the center take maximum damage; farther away = less damage. He's the party planner whose parties involve everyone getting blown up!"
     }
   },
   {
@@ -2604,6 +3099,11 @@
     "ability": {
       "name": "Visions of the End",
       "description": "Throw a Time Bomb on the nearest enemy without one. Time Bombs deal 90/135/1000 (AP) magic damage each second. When the target dies, they explode, dealing 150/225/4000 (AP) magic damage in a 1 hex radius and grant Zilean 15 mana. If a Time Bomb is on an enemy for 18/16/1 seconds and Zilean is alive, the enemy instantly dies."
+    },
+    "beginnerTip": {
+      "nickname": "The Chronokeeper",
+      "unlockTip": "Time Bombs that sit for 18 seconds INSTANTLY kill the target — Zilean must stay alive!",
+      "kidExplain": "Zilean is an old man who mastered time travel — he's seen every possible future. He plants Time Bombs on enemies that tick down while dealing damage per second. When the target dies from any cause, the bomb EXPLODES and damages nearby enemies AND gives Zilean mana back. If a bomb sits on someone for 18 whole seconds while Zilean is alive... they instantly die. He's the patient death clock!"
     }
   }
 ]

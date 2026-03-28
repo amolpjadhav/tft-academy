@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { GetStaticProps } from "next";
 import type { Champion, ChampionRole } from "@/types/champion";
 import PageShell from "@/components/layout/PageShell";
@@ -73,6 +73,40 @@ export default function FlashcardsPage({ champions }: Props) {
     setIsShuffled((v) => !v);
     setShuffleKey((k) => k + 1);
   }, []);
+
+  // ── Swipe gesture state ───────────────────────────────────────────────────
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const didSwipe    = useRef(false);
+  const [dragX, setDragX] = useState(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    didSwipe.current = false;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    const dx = e.touches[0].clientX - touchStartX.current;
+    const dy = e.touches[0].clientY - touchStartY.current;
+    // Only track horizontal drag if it's clearly more horizontal than vertical
+    if (Math.abs(dx) > Math.abs(dy)) {
+      setDragX(dx);
+    }
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    setDragX(0);
+
+    const SWIPE_THRESHOLD = 60;
+    if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
+      didSwipe.current = true;
+      if (dx < 0) next();   // swipe left → next card
+      else         prev();  // swipe right → prev card
+    }
+  }, [next, prev]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -171,19 +205,57 @@ export default function FlashcardsPage({ champions }: Props) {
 
       {/* ── Card ─────────────────────────────────────────────────────────── */}
       {current ? (
-        <ChampionFlashcard
-          key={current.id}
-          champion={current}
-          isFlipped={isFlipped}
-          onFlip={() => setIsFlipped((v) => !v)}
-        />
+        <div
+          className="relative"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          style={{
+            transform: dragX
+              ? `translateX(${dragX * 0.35}px) rotate(${dragX * 0.025}deg)`
+              : "translateX(0) rotate(0deg)",
+            transition: dragX ? "none" : "transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)",
+            // Show left/right edge fade based on drag direction
+            opacity: dragX ? Math.max(0.6, 1 - Math.abs(dragX) / 400) : 1,
+          }}
+        >
+          <ChampionFlashcard
+            key={current.id}
+            champion={current}
+            isFlipped={isFlipped}
+            onFlip={() => {
+              if (!didSwipe.current) setIsFlipped((v) => !v);
+            }}
+          />
+
+          {/* Swipe direction hint — fades in as user drags */}
+          {dragX !== 0 && (
+            <div
+              className="absolute inset-0 pointer-events-none flex items-center rounded-2xl overflow-hidden"
+              style={{ opacity: Math.min(1, Math.abs(dragX) / 80) }}
+            >
+              {dragX > 0 ? (
+                <div className="ml-4 text-2xl font-bold text-emerald-400 bg-emerald-500/20 rounded-full w-12 h-12 flex items-center justify-center">
+                  ←
+                </div>
+              ) : (
+                <div className="ml-auto mr-4 text-2xl font-bold text-accent-purple-light bg-accent-purple/20 rounded-full w-12 h-12 flex items-center justify-center">
+                  →
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       ) : (
         <div className="flex items-center justify-center h-64 text-text-muted text-sm">
           No champions match the current filters.
         </div>
       )}
 
-      {/* Keyboard hint — desktop only */}
+      {/* Hints */}
+      <p className="md:hidden text-center text-text-muted text-xs mt-4">
+        Swipe left / right to navigate &nbsp;·&nbsp; Tap to flip
+      </p>
       <p className="hidden md:block text-center text-text-muted text-xs mt-5">
         Keyboard: <kbd className="bg-bg-surface border border-white/10 rounded px-1.5 py-0.5 text-[11px]">←</kbd>{" "}
         <kbd className="bg-bg-surface border border-white/10 rounded px-1.5 py-0.5 text-[11px]">→</kbd> to navigate
