@@ -30,16 +30,16 @@ export default function Combinator({ components, items, onViewDetail }: Combinat
   }
 
   return (
-    <div className="space-y-8">
-      {/* Pickers */}
-      <div className="flex gap-6">
+    <div className="space-y-6">
+      {/* Pickers — side by side on md+, stacked on mobile */}
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         <ComponentPicker
           components={components}
           selected={slotA}
           onSelect={setSlotA}
           label="Component 1"
         />
-        <div className="flex items-center self-center mt-8 text-2xl text-text-muted font-bold">
+        <div className="flex md:flex-col items-center justify-center md:mt-8 text-xl text-text-muted font-bold py-1 md:py-0">
           +
         </div>
         <ComponentPicker

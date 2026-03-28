@@ -35,7 +35,7 @@ export default function QuizSetup({ onStart }: QuizSetupProps) {
     count === "all" ? poolSize : Math.min(count as number, poolSize);
 
   return (
-    <div className="max-w-xl mx-auto">
+    <div className="max-w-xl mx-auto w-full">
       {/* Hero */}
       <div className="text-center mb-10">
         <div className="text-6xl mb-4">🧠</div>
@@ -52,7 +52,7 @@ export default function QuizSetup({ onStart }: QuizSetupProps) {
         <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
           Choose a topic
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           {CATEGORIES.map(({ id, emoji }) => {
             const label = id === "all" ? "All Topics" : CATEGORY_META[id].label;
             const count = id === "all"

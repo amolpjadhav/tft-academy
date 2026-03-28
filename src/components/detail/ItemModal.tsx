@@ -38,16 +38,16 @@ export default function ItemModal({ item, componentMap, onClose }: ItemModalProp
   return (
     /* Backdrop */
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/70 backdrop-blur-sm animate-fade-in"
       onClick={onClose}
     >
-      {/* Panel */}
+      {/* Panel — full-width sheet on mobile, centered card on sm+ */}
       <div
-        className="relative w-full max-w-lg bg-bg-surface border border-white/10 rounded-2xl shadow-2xl animate-slide-up overflow-hidden"
+        className="relative w-full sm:max-w-lg bg-bg-surface border border-white/10 sm:rounded-2xl rounded-t-2xl shadow-2xl animate-slide-up overflow-hidden max-h-[90dvh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-start gap-4 p-6 border-b border-white/5">
+        <div className="flex items-start gap-4 p-5 md:p-6 border-b border-white/5 shrink-0">
           {/* Item icon */}
           <div className="w-16 h-16 flex-shrink-0 rounded-xl bg-bg-elevated border border-white/10 overflow-hidden">
             <img
@@ -85,8 +85,8 @@ export default function ItemModal({ item, componentMap, onClose }: ItemModalProp
           </button>
         </div>
 
-        {/* Body */}
-        <div className="p-6 space-y-5">
+        {/* Body — scrollable */}
+        <div className="p-5 md:p-6 space-y-5 overflow-y-auto">
           <StatBlock stats={item.stats} />
           <RecipePills components={recipeComponents} itemName={item.name} />
 

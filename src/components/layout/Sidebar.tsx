@@ -1,22 +1,23 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   { href: "/",           label: "Items",      icon: "⚔️" },
   { href: "/combinator", label: "Combinator", icon: "🔨" },
   { href: "/glossary",   label: "Glossary",   icon: "📖" },
   { href: "/quiz",       label: "Quiz",       icon: "🧠" },
 ];
 
+/** Desktop-only fixed left sidebar (hidden on mobile) */
 export default function Sidebar() {
   const { pathname } = useRouter();
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-40 w-56 bg-bg-surface border-r border-white/5 flex flex-col">
+    <aside className="hidden md:flex fixed inset-y-0 left-0 z-40 w-56 bg-bg-surface border-r border-white/5 flex-col">
       {/* Logo */}
       <div className="px-5 py-6 border-b border-white/5">
         <span className="font-heading text-accent-gold text-lg leading-tight tracking-wide">
-          TFT Academy
+          TFT School
         </span>
         <p className="text-text-muted text-xs mt-0.5">Set 16 · Lore &amp; Legends</p>
       </div>

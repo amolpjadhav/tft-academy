@@ -41,9 +41,11 @@ export default function CatalogPage({ items, components }: Props) {
         subtitle={`${filtered.length} of ${items.length} items · Set 16 · Lore & Legends`}
       >
         {/* Controls */}
-        <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="flex flex-col gap-3 mb-5">
           <SearchBar value={query} onChange={setQuery} />
-          <CategoryTabs active={category} onChange={setCategory} counts={counts} />
+          <div className="overflow-x-auto">
+            <CategoryTabs active={category} onChange={setCategory} counts={counts} />
+          </div>
         </div>
 
         {/* Grid */}

@@ -73,7 +73,7 @@ export default function GlossaryPage() {
         </div>
 
         {/* Category tabs */}
-        <div className="flex flex-wrap gap-1 bg-bg-surface rounded-lg p-1 border border-white/5 w-fit">
+        <div className="flex gap-1 bg-bg-surface rounded-lg p-1 border border-white/5 overflow-x-auto scrollbar-none">
           {TABS.map(({ id, label, emoji }) => {
             const count = id === "all"
               ? GLOSSARY.length
@@ -82,7 +82,7 @@ export default function GlossaryPage() {
               <button
                 key={id}
                 onClick={() => setCategory(id)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all shrink-0 ${
                   category === id
                     ? "bg-bg-elevated shadow text-text-primary"
                     : "text-text-secondary hover:text-text-primary hover:bg-white/5"

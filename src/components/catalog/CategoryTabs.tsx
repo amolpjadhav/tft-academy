@@ -15,14 +15,14 @@ interface CategoryTabsProps {
 
 export default function CategoryTabs({ active, onChange, counts }: CategoryTabsProps) {
   return (
-    <div className="flex gap-1 bg-bg-surface rounded-lg p-1 border border-white/5">
+    <div className="flex gap-1 bg-bg-surface rounded-lg p-1 border border-white/5 overflow-x-auto scrollbar-none">
       {TABS.map(({ id, label, icon, color }) => {
         const isActive = active === id;
         return (
           <button
             key={id}
             onClick={() => onChange(id)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all shrink-0 ${
               isActive
                 ? "bg-bg-elevated shadow text-text-primary"
                 : "text-text-secondary hover:text-text-primary hover:bg-white/5"
