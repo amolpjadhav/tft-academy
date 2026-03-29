@@ -13,6 +13,11 @@ export interface ChampionStats {
   range: number;
 }
 
+export interface IdealItem {
+  itemId: string;
+  reason: string;
+}
+
 export interface BeginnerTip {
   nickname: string;
   unlockTip: string;
@@ -33,6 +38,7 @@ export interface Champion {
     description: string;
   };
   beginnerTip?: BeginnerTip;
+  idealItems?: IdealItem[];
 }
 
 export interface ComputedStats {

@@ -28,7 +28,21 @@
       "nickname": "The Ice Bird",
       "unlockTip": "Place her in the back row — she shoots from 4 hexes away",
       "kidExplain": "Imagine throwing a snowball at someone. If they're already shivering (Chilled = slowed down), your snowball hits WAY harder! That's Anivia: she shoots an ice shard, and if the enemy is already Chilled, it becomes a Critical Strike — double damage!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "More AP = bigger Frostbite damage. Doubles her burst against Chilled targets."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "She only needs 40 mana to cast — Blue Buff lets her cast almost every other attack."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Frostbite can crit on Chilled enemies — Jeweled Gauntlet makes those crits even deadlier."
+      }
+    ]
   },
   {
     "id": "blitzcrank",
@@ -59,7 +73,21 @@
       "nickname": "The Robot Bouncer",
       "unlockTip": "Put him in front so he soaks damage while his shield is up",
       "kidExplain": "Blitzcrank is a big robot who puts up a force field (a Shield) to protect himself, then zaps everyone nearby with electricity. Think of him as a robot bodyguard who also shocks people who get too close!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He wants to survive long enough to keep zapping — Stoneplate massively boosts his tankiness when enemies surround him."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Raw HP keeps him alive; more HP means his shield soaks more before breaking."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always in melee range — Sunfire deals AoE burn to everything around him passively."
+      }
+    ]
   },
   {
     "id": "briar",
@@ -91,7 +119,21 @@
       "nickname": "The Feral Vampire",
       "unlockTip": "Give her attack-speed items — she goes berserk and attacks super fast",
       "kidExplain": "Briar is a vampire who gets SO hungry for a fight that she goes completely berserk! She leaps to a far enemy and for 4 seconds becomes a whirlwind of claws, moving faster and attacking faster. Basically, she turns into a rage-mode vampire blender."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "She attacks super fast in berserk mode — Titan's stacks up quickly and turns her into a monster."
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "Her decaying attack speed recovers faster with Rageblade constantly adding more speed."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "The life-steal or damage bonus is great on a melee who's always in the thick of it."
+      }
+    ]
   },
   {
     "id": "caitlyn",
@@ -122,7 +164,21 @@
       "nickname": "The Long-Range Sheriff",
       "unlockTip": "She shoots from 6 hexes away — keep her safe in the far back row",
       "kidExplain": "Caitlyn fires a single massive sniper bullet at the FARTHEST enemy. If that enemy dies, the bullet keeps going and hits the next enemy too! It's like bowling — one bullet, potentially two kills!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her bullet can crit — IE makes crits massive and lets her ability crit too."
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Protects her from the first crowd control attempt, keeping her safe in the backline."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "She targets the farthest enemy — Last Whisper shreds their armor for sustained physical damage."
+      }
+    ]
   },
   {
     "id": "illaoi",
@@ -153,7 +209,21 @@
       "nickname": "The Tentacle Priestess",
       "unlockTip": "Put her in front — she heals while fighting and hits multiple enemies in a line",
       "kidExplain": "Illaoi worships a giant tentacle god. When she casts, she heals herself AND slams a tentacle down in a line, hitting every enemy in a row. She's basically a self-healing puncher with a giant rubber arm!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "She heals on cast — Shojin lets her cast more often, healing more every fight."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "She's always in melee trading hits — Titan's stacks build fast and make her hit harder."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Bonus healing or damage both synergize well with her self-sustain playstyle."
+      }
+    ]
   },
   {
     "id": "jarvaniv",
@@ -184,7 +254,21 @@
       "nickname": "The Prince of Demacia",
       "unlockTip": "Put him with other Demacia champions — his attack speed boost helps your whole team",
       "kidExplain": "Jarvan IV is a prince who plants his kingdom's flag and yells 'CHARGE!' When he casts, he gives himself a shield AND boosts attack speed for ALL allies nearby. He's the cheerleader of your team — but with a giant spear."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's a frontline fighter — Stoneplate's bonus grows the more enemies attack him."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means his shield lasts longer and he soaks more punishment for the team."
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "Enemies attacking him reflect damage — great for a unit that intentionally draws hits."
+      }
+    ]
   },
   {
     "id": "jhin",
@@ -215,7 +299,21 @@
       "nickname": "The Artistic Assassin",
       "unlockTip": "Stack crit chance items on him — his 4th shot deals 144% more damage!",
       "kidExplain": "Jhin obsessively counts to 4. When he casts, he gets 4 special shots with INFINITE range — he can hit anyone on the board. His 4th shot is the grand finale, hitting like a truck. He's an artist who treats every fight like a performance! 🎨"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "His 4th shot deals 144% bonus damage — IE makes that shot an absolute nuke with crits."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "During his 4-shot mode he has infinite range and hits everyone — Giant Slayer shreds any HP-heavy targets."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "He fires physical damage shots — Last Whisper removes armor to increase all shot damage."
+      }
+    ]
   },
   {
     "id": "kogmaw",
@@ -247,7 +345,21 @@
       "nickname": "The Void Puppy",
       "unlockTip": "He shoots from 6 hexes — pair with Void and Arcanist champions for bonuses",
       "kidExplain": "Kog'Maw looks like a cute alien puppy but spits disgusting acid at enemies. The acid melts their armor and magic resist (making them take more damage from everything), and even splashes onto nearby enemies. A cute little monster who ruins everyone's defenses!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "His ability procs on each attack — more attack speed = more ability casts = more armor shred."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "He shreds armor with each cast — Giant Slayer stacks with that for crushing tank-killers."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "His acid permanently reduces armor — Last Whisper layers more armor reduction on top."
+      }
+    ]
   },
   {
     "id": "lulu",
@@ -278,7 +390,21 @@
       "nickname": "The Mischievous Fairy",
       "unlockTip": "She's a support — her Whimsy makes enemies DANCE (stun) for 2 seconds!",
       "kidExplain": "Lulu is a tiny fairy who casts a spell called Whimsy that makes enemies DANCE — literally forces them to dance for 2 seconds (that's a stun) while dealing damage. The spell then bounces to a nearby enemy. She's chaotically helpful!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "More AP = bigger Whimsy damage and longer effective duration on her bounce."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "70 mana is a lot — Blue Buff resets mana faster so she dances enemies more often."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "Her spell hits multiple targets — Morello spreads Grievous Wounds to stop enemy healing."
+      }
+    ]
   },
   {
     "id": "qiyana",
@@ -309,7 +435,21 @@
       "nickname": "The Elemental Queen",
       "unlockTip": "She works best with Ixtal and Slayer traits active",
       "kidExplain": "Qiyana thinks she's the queen of everything (and she kind of is). She dashes to a nearby hex and slices in a line, hitting everyone in front of her with elemental power. Quick, precise, and deadly — like a ninja with a magic blade."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her slash deals physical damage — IE crits turn her dash into a one-shot combo."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "She attacks fast in melee — Titan's stacks turn her into a stat-stick monster."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal keeps her alive in extended brawls; the damage boost amplifies her burst."
+      }
+    ]
   },
   {
     "id": "rumble",
@@ -340,7 +480,21 @@
       "nickname": "The Tiny Mech Pilot",
       "unlockTip": "Give him armor items — his fire damage actually scales with how much armor he has!",
       "kidExplain": "Rumble is a tiny yordle (a small furry creature) who built a giant robot suit. When he casts, the suit puts up a shield AND shoots fire in a cone. Fun fact: the more armor he has, the more damage his fire does! Techy stuff."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "His fire damage scales with armor — Stoneplate gives armor AND makes enemies focus him."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always close — Sunfire adds burn while his cone fire already damages nearby enemies."
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "More armor = more fire damage AND reflects hits. A perfect defensive-offensive combo."
+      }
+    ]
   },
   {
     "id": "shen",
@@ -371,7 +525,21 @@
       "nickname": "The Spirit Ninja",
       "unlockTip": "Put him next to the unit taking the most damage — he shields the most hurt ally",
       "kidExplain": "Shen is a ninja who specializes in protecting people. When he casts, he shields BOTH himself AND the most injured ally on your team. He's the ninja guardian — while everyone else fights, he makes sure nobody dies."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He tanks for the team — Stoneplate's armor/MR stack makes his shield even more impactful."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means he and his shielded ally both benefit from greater shield size."
+      },
+      {
+        "itemId": "protectors_vow",
+        "reason": "Gives armor and MR to a shielded ally — stacks directly with Shen's team-shield playstyle."
+      }
+    ]
   },
   {
     "id": "sona",
@@ -402,7 +570,21 @@
       "nickname": "The Music Healer",
       "unlockTip": "She's a support — put her in the back and let her heal your lowest-health ally",
       "kidExplain": "Sona is a musician who can't speak but her music does damage AND heals! She hits 2 nearby enemies with a power chord, then the music bounces and heals your lowest-health ally. She's a healer who also punches people with sound waves!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "She casts constantly at 30 mana — Blue Buff means she almost never stops healing and damaging."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Scales both her damage and her healing with more AP."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "She casts very frequently — Archangel stacks AP over time, making her stronger each fight."
+      }
+    ]
   },
   {
     "id": "viego",
@@ -433,7 +615,21 @@
       "nickname": "The Ruined King",
       "unlockTip": "Give him attack speed items — his stacking bonus grows with every attack",
       "kidExplain": "Viego is a cursed king who can't move on from his dead wife. He starts combat normally, but after casting, every single attack does STACKING bonus magic damage — getting stronger and stronger the longer he attacks. He snowballs!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "His stacking damage grows with every attack — Rageblade adds attacks faster so stacks grow faster."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "More attacks = more Titan's stacks = more bonus damage on top of his natural stacking."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal helps him survive while he ramps up his stacking magic damage."
+      }
+    ]
   },
   {
     "id": "aphelios",
@@ -463,7 +659,21 @@
       "nickname": "The Moonboy with Two Guns",
       "unlockTip": "Let him cycle through his guns — Gun 1 hits 3 enemies at once, Gun 2 gives super speed",
       "kidExplain": "Aphelios has two guns and switches between them. Infernum (Gun 1) shoots through 3 enemies at once. Then he switches to Severum (Gun 2) which gives him super attack speed and life-steal. He's a silent weapon-juggler from the moon!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "His Severum gun gives 200% attack speed — Rageblade stacks more on top for absurd speed."
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "His Infernum gun hits 3 enemies — IE makes all 3 hits crit simultaneously."
+      },
+      {
+        "itemId": "bloodthirster",
+        "reason": "His Severum gun grants Omnivamp — Bloodthirster stacks life-steal for incredible sustain."
+      }
+    ]
   },
   {
     "id": "ashe",
@@ -494,7 +704,21 @@
       "nickname": "The Ice Archer",
       "unlockTip": "Pair with Tryndamere for Bloodsworn Bond — they fire bonus arrows for each other!",
       "kidExplain": "Ashe fires an ice arrow that Chills enemies (reduces their attack speed). Enemies that are very low on health take TRUE damage — ignores ALL armor. She's also bonded with Tryndamere: when both are alive, she fires bonus arrows for him. Teamwork makes the ice dream work!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her arrow can crit and has ADAP scaling — IE makes crits and spell crits both massive."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Physical damage carry — Last Whisper strips enemy armor for consistent damage output."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "She targets high-HP enemies — Giant Slayer punishes anything above 1600 HP hard."
+      }
+    ]
   },
   {
     "id": "bard",
@@ -524,7 +748,21 @@
       "nickname": "The Meep Thrower",
       "unlockTip": "3-star your other champions — each 3-star unit on your board adds an extra Meep!",
       "kidExplain": "Bard travels the universe collecting tiny blue spirit blobs called MEEPS. Meeps are little spirit creatures that follow him around. When he casts, he flings all his Meeps at nearby enemies and they explode on impact! The more 3-star champions you have, the more Meeps he throws. More 3-stars = more Meeps = more damage!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "More Meeps per fight AND each Meep hits harder — Deathcap is his best scaling item."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "55 mana resets faster with Blue Buff — more Meep salvos per fight."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His Meeps can crit — Gauntlet makes each tiny Meep explosion much more painful."
+      }
+    ]
   },
   {
     "id": "chogath",
@@ -555,7 +793,21 @@
       "nickname": "The Void Monster",
       "unlockTip": "He heals every cast — tank items make him nearly unkillable",
       "kidExplain": "Cho'Gath is a HUGE void monster who never stops eating. When he casts, he heals himself AND ruptures the ground under a nearby enemy. After a short delay, the ground explodes upward and knocks that enemy into the air! He's a living earthquake who also heals."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He heals each cast and his HP scales ability power — Warmog's makes him nearly unkillable."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Draws enemy attention and makes him tankier — perfect for a self-healing frontliner."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always in melee — Sunfire adds passive burn while he waits to cast Rupture."
+      }
+    ]
   },
   {
     "id": "ekko",
@@ -586,7 +838,21 @@
       "nickname": "The Time Boy",
       "unlockTip": "Pair with Zaun and Disruptor traits — his zone damage gets stronger the more you hit",
       "kidExplain": "Ekko can control time! He creates a time zone around an enemy. His next 3 attacks do bonus damage to that enemy. When the zone ends, it explodes and deals damage PLUS a percentage of all damage the enemy took inside. It's a time bomb that gets stronger the more you hit them!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Both his zone damage and explosion scale with AP — Deathcap makes his combo gigantic."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "40 mana — Blue Buff means he drops zones almost every other attack."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "His zone ticks on enemies repeatedly — Morello stacks Grievous Wounds easily."
+      }
+    ]
   },
   {
     "id": "graves",
@@ -617,7 +883,21 @@
       "nickname": "The Shotgun Cowboy",
       "unlockTip": "Pair with Twisted Fate — they have a Partners in Crime bond for bonus stats!",
       "kidExplain": "Graves is a grumpy cowboy with a shotgun that fires in a CONE — hitting multiple enemies at once passively. When he casts, he fires a massive explosive shell that damages everyone in a small circle. He and Twisted Fate are best friends (and rivals) who both get stronger together!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "His shotgun cone and explosive shell both deal physical damage — IE crits make every pellet hurt."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "He hits multiple enemies per attack — Last Whisper's armor reduction benefits all of them."
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Protects him from the first disable so he can keep firing his shotgun freely."
+      }
+    ]
   },
   {
     "id": "neeko",
@@ -649,7 +929,21 @@
       "nickname": "The Shapeshifting Shield",
       "unlockTip": "She has high HP — put her in front to absorb hits while her shield is up",
       "kidExplain": "Neeko can disguise herself as anyone! In TFT, she leaps at an enemy, gains a big shield, slams down, and slows (Chills) everyone nearby. She's a tricky shapeshifter who drops in like a bomb and protects herself on the way down!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her slam and shield both scale with AP — Deathcap boosts both simultaneously."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her leap deals magic damage and she can build crit — Gauntlet makes her slam crit for huge burst."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "She casts often and scales hard with AP — Archangel's builds her power over each fight."
+      }
+    ]
   },
   {
     "id": "orianna",
@@ -680,7 +974,21 @@
       "nickname": "The Ball Lady",
       "unlockTip": "Her ball hits enemies AND shields your 2 lowest-health allies — great for protecting carries",
       "kidExplain": "Orianna has a magical metal ball she controls remotely. She sends it flying at enemies (damage!), then it circles back and gives shields to your 2 most injured teammates. She's a one-woman damage-and-heal machine with a floating robot ball!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her ball damage and shields both scale with AP — Deathcap amplifies everything she does."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "50 mana at 20 initial — Blue Buff means she fires her ball constantly."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her ball can crit — Gauntlet turns each ball throw into a potential massive nuke."
+      }
+    ]
   },
   {
     "id": "poppy",
@@ -712,7 +1020,21 @@
       "nickname": "The Tiny Hammer Girl",
       "unlockTip": "She shares her shield with nearby allies — pair with other Yordles for team synergy!",
       "kidExplain": "Poppy is the tiniest yordle with the BIGGEST hammer. She gains a shield, BONKS an enemy on the head, then bonks them AGAIN and knocks them into the air. The bonus? Little shields fly out and protect 2 nearby teammates too. She's adorably devastating!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Her shield scales with AP — Stoneplate gives her more armor to boost the shield AND draws attention."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP helps her sustain through extended fights while she shares shields with teammates."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "She's in melee and draws hits — Sunfire burns attackers while she's doing her thing."
+      }
+    ]
   },
   {
     "id": "reksai",
@@ -743,7 +1065,21 @@
       "nickname": "The Tunneling Predator",
       "unlockTip": "She attacks very fast — give her crit chance items for big damage spikes",
       "kidExplain": "Rek'Sai is a blind underground monster that hunts by feeling vibrations. She tunnels (dashes) to a faraway enemy and hits them hard. Her next 3 attacks then hit adjacent enemies too — like she's swinging wildly in all directions. A burrowing blender!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "She attacks very fast and deals physical damage — IE crits mean explosive burst on her dash."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Fast attack speed builds Titan's stacks quickly for permanent growing power."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal keeps her alive in extended brawls where she's attacking rapidly."
+      }
+    ]
   },
   {
     "id": "sion",
@@ -774,7 +1110,21 @@
       "nickname": "The Undead Juggernaut",
       "unlockTip": "He gains permanent HP from kills — the more he kills, the tankier he gets forever",
       "kidExplain": "Sion is an enormous zombie soldier who just won't die. Every time he kills someone, he gains PERMANENT health (carries to future rounds). When he casts, he gains a huge shield — and when the shield breaks, it EXPLODES and damages everyone nearby. A walking bomb that grows stronger with every kill!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He gains permanent HP from kills — Warmog's adds even more base HP and makes him a wall."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's frontline — Stoneplate grows when enemies cluster around him which is always."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He stays in melee getting hit — Sunfire passively burns everything attacking him."
+      }
+    ]
   },
   {
     "id": "teemo",
@@ -805,7 +1155,21 @@
       "nickname": "The Adorably Evil Scout",
       "unlockTip": "He only targets UN-poisoned enemies — he methodically poisons the whole team one by one",
       "kidExplain": "Teemo looks like the cutest little fluffy scout but he is pure evil. He shoots a poison dart at the nearest unpoisoned enemy, which deals damage for 8 whole seconds. He then moves to the next unpoisoned target. Cute outside, methodical poison machine inside!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "morellonomicon",
+        "reason": "His poison ticks every second — Morello's Grievous Wounds stacks perfectly with poison DoT."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "More AP = higher poison damage per tick AND bigger initial dart damage."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He casts constantly (30 mana) — Archangel's builds massive AP over long fights."
+      }
+    ]
   },
   {
     "id": "tristana",
@@ -836,7 +1200,21 @@
       "nickname": "The Rocket Jumper",
       "unlockTip": "She's great vs. melee — the closer the enemy, the further she knocks them back!",
       "kidExplain": "Tristana is a yordle who carries a comically giant cannon. She fires a massive cannonball at an enemy. If that enemy is close to her, she ALSO knocks them FLYING backwards and stuns them! She literally sends melee enemies back to where they started. Boom and bye!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her cannonball deals ADAP damage and can crit — IE makes the knockback shot devastating."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Physical damage carry that fires at high-health enemies — Last Whisper strips their armor."
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "She's a backline carry — Edge protects her from the first stun trying to shut her down."
+      }
+    ]
   },
   {
     "id": "tryndamere",
@@ -867,7 +1245,21 @@
       "nickname": "The Rage Berserker",
       "unlockTip": "Pair with Ashe for Bloodsworn Bond — he gains permanent attack damage from shared kills",
       "kidExplain": "Tryndamere is a barbarian who goes completely insane in a good way. When he casts, he enters RAGE MODE for 5 seconds: attacks faster, deals more damage, and ignores some enemy armor (especially vs. Chilled enemies). With Ashe alive, he permanently grows stronger after every kill. A screaming Viking who gets better with age!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "In rage mode he attacks very fast — Titan's stacks accumulate rapidly for massive bonus damage."
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "He already has high attack speed in rage mode — Rageblade takes it to absurd levels."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal or damage bonus; both are great on a melee who fights for 5 seconds straight."
+      }
+    ]
   },
   {
     "id": "twistedfate",
@@ -898,7 +1290,21 @@
       "nickname": "The Card Hustler",
       "unlockTip": "His ability costs only 3 mana — he casts almost constantly!",
       "kidExplain": "Twisted Fate is a charming gambler who throws magical cards. His passive does bonus damage on every single attack. Every 3rd attack, he throws 3 cards in a cone — each one damages whoever it hits. He and Graves are Partners in Crime — they boost each other just by being on the team!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His attacks and cards both scale with AP — Deathcap multiplies all his damage."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "He only needs 3 mana to cast — Blue Buff means he's throwing cards every single attack."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His card spread can crit — Gauntlet makes his cone of cards deal critical damage."
+      }
+    ]
   },
   {
     "id": "vi",
@@ -930,7 +1336,21 @@
       "nickname": "The Piltover Enforcer",
       "unlockTip": "Every third cast she does a huge slam — count her casts and position her well!",
       "kidExplain": "Vi is a detective with GIANT mechanical fists. She shields up, punches an enemy (hits nearby units too), then knocks them up. Every THIRD cast, her punch gets way bigger — 2 hexes of knockup instead of 1. She's the 'hit them so hard they fly' champion!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "Her power is in her third cast — Shojin lets her reach that massive punch faster."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "She attacks fast — Titan's stacks quickly for escalating permanent damage."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal sustains her in the extended brawls she naturally gravitates toward."
+      }
+    ]
   },
   {
     "id": "xinzhao",
@@ -962,7 +1382,21 @@
       "nickname": "The Royal Guard",
       "unlockTip": "His final strike stuns the target — great frontliner who disrupts enemy carries",
       "kidExplain": "Xin Zhao is a royal guard who attacks 3 times in a combo: hit 1 = damage + heal, hit 2 = damage + heal, hit 3 = damage + heal + STUN for 1.5 seconds. He heals while fighting (hard to kill!) and that final stun is super useful for stopping enemy carries in their tracks!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "He heals on every cast — Shojin lets him cast more often, healing more frequently."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks 3 times per combo — Titan's stacks build fast giving him growing power."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP helps him stay alive longer while his heal keeps ticking."
+      }
+    ]
   },
   {
     "id": "yasuo",
@@ -993,7 +1427,21 @@
       "nickname": "The Wandering Swordsman",
       "unlockTip": "Pair with Yone — when Yone casts, Yasuo teleports to every enemy Yone hits for free bonus damage!",
       "kidExplain": "Yasuo dashes through enemies swinging his wind sword. If only one enemy is nearby, he hits them DOUBLE. The coolest part: when his brother Yone casts, Yasuo TELEPORTS to every enemy Yone hits and does bonus damage. Two brothers, one devastating combo!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "His dash deals physical damage and can crit — IE makes each sweep a potential one-shot."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks fast and dashes repeatedly — Titan's stacks quickly for compounding power."
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "More attack speed means more Blade Brothers procs with Yone for bonus free hits."
+      }
+    ]
   },
   {
     "id": "yorick",
@@ -1024,7 +1472,21 @@
       "nickname": "The Gravedigger",
       "unlockTip": "He targets the enemy who's dealt the most damage — great counter to enemy carries",
       "kidExplain": "Yorick is a creepy gravedigger with a shovel. He heals himself, then throws a ball of black mist at the enemy who's been hitting hardest. That mist slows them AND raises the mana cost of their next ability. Then it explodes for area damage. He disrupts the scariest enemy!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His explosion damage scales with his HP — more HP means a bigger bang when his shield breaks."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's frontline and draws hits naturally — Stoneplate gives massive survivability."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always in melee range — Sunfire adds passive burn while he waits to cast."
+      }
+    ]
   },
   {
     "id": "ahri",
@@ -1055,7 +1517,21 @@
       "nickname": "The Nine-Tailed Fox",
       "unlockTip": "Every 3rd cast she fires 9 flames and dashes away — great for survivability",
       "kidExplain": "Ahri is a magical fox with nine fluffy tails who shoots Spirit Fires. She fires 3 at a time normally, but every THIRD cast she fires 9 flames split between nearby enemies AND dashes away from danger. She's elusive and burns things — the stylish fox of destruction!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her Fox-Fires can crit — Gauntlet removes the penalty and makes crit Ahri lethal."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "More AP = harder fires; she fires 9 on every 3rd cast which all benefit enormously."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "30 mana — Blue Buff means she reaches her 9-flame triple-cast much more frequently."
+      }
+    ]
   },
   {
     "id": "darius",
@@ -1086,7 +1562,21 @@
       "nickname": "The Hand of Noxus",
       "unlockTip": "His executes kick in at 8% health — the more stacks of Hemorrhage, the lower the threshold gets",
       "kidExplain": "Darius is Noxus's most powerful general with a giant axe. He heals, spins his axe, and applies a bleed called Hemorrhage. If a bleeding enemy drops below 8% health, he INSTANTLY executes them — no matter how much HP they have. Blood is bad if you're his enemy!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He heals based on max HP — Warmog's multiplies every heal he gets during Decimate."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks fast enough to stack Titan's while spinning — growing damage on top of his execute."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always adjacent to enemies when spinning — Sunfire burns add to his natural AoE."
+      }
+    ]
   },
   {
     "id": "drmundo",
@@ -1117,7 +1607,21 @@
       "nickname": "The Mad Chemist",
       "unlockTip": "Give him HP items — both his healing and attack damage scale with max health!",
       "kidExplain": "Dr. Mundo injects himself with mysterious chemicals because he GOES WHERE HE PLEASES. When he casts, he bulks up for 5 seconds: heals every second AND his attacks deal bonus damage based on his max health. The bigger he is, the harder he hits AND heals!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Both his healing and attack damage scale with max HP — Warmog's supercharges everything he does."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "More tankiness lets him stay alive through his 5-second bulk-up heal window."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always in melee and heals through damage — Sunfire lets him burn attackers for free."
+      }
+    ]
   },
   {
     "id": "draven",
@@ -1148,7 +1652,21 @@
       "nickname": "The Glorious Executioner",
       "unlockTip": "Getting kills (especially with Darius) generates Adoration stacks and free gold!",
       "kidExplain": "Draven is the loudest, most self-obsessed axe-spinner in the game. He throws spinning axes that come back to him. Every kill earns Adoration stacks, and every 11 stacks gives you REAL GOLD to spend in the shop. He's the one champion who literally makes you richer!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "His spinning axe deals ADAP damage and can crit — IE turns each axe throw into a crit nuke."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Physical damage with a multi-hit axe — Last Whisper's armor reduction applies to every hit."
+      },
+      {
+        "itemId": "bloodthirster",
+        "reason": "He attacks frequently and up close — Bloodthirster life-steal keeps him alive while he generates gold."
+      }
+    ]
   },
   {
     "id": "gangplank",
@@ -1180,7 +1698,21 @@
       "nickname": "The Saltwater Scourge",
       "unlockTip": "His barrels chain together — the closer enemies are, the more damage they deal",
       "kidExplain": "Gangplank is a pirate who blows up barrels for fun. He tosses 3 barrels at the nearest enemies and detonates them. Each barrel chains to the next in a combo, and crits reduce enemy armor. He's essentially a pirate with explosive bowling balls!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "His barrels can critically strike and reduce armor more when they crit — IE is a must."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "The barrel chain reduces armor — Last Whisper stacks extra reduction for melting tanks."
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "He gets kills often with barrel chains — Deathblade stacks permanent AD for growing power."
+      }
+    ]
   },
   {
     "id": "gwen",
@@ -1211,7 +1743,21 @@
       "nickname": "The Ghost Seamstress",
       "unlockTip": "She gains extra snips from the Souls trait — more Shadow Isles champions = more cuts",
       "kidExplain": "Gwen is a living doll made of cursed magic scissors. She dashes around an enemy and SNIPS them 5 times with her giant scissors! Each snip also hits everyone behind the target. She circles and cuts like a tailor who is way too into their job. Snip snip!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Each snip deals magic damage and she snips 5+ times — Deathcap multiplies the entire combo."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her snips can crit — Gauntlet makes every cut a potential critical hit."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "She casts very often — Archangel's builds large amounts of AP over an extended fight."
+      }
+    ]
   },
   {
     "id": "jinx",
@@ -1242,7 +1788,21 @@
       "nickname": "The Loose Cannon",
       "unlockTip": "After 18 attacks she switches to her rocket launcher — attack speed helps her get there faster",
       "kidExplain": "Jinx gets bored of her regular gun. After 18 attacks, she switches to FISHBONES (her rocket launcher) and fires 3 rockets at random enemies. Rockets are slower but hit multiple targets. She's a chaotic goblin who gets progressively more dangerous the longer she attacks!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "She needs to attack 18 times to switch guns — Rageblade gets her there faster for more rocket time."
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her rockets deal physical damage and can crit — IE makes each rocket explosion massive."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Her rockets hit multiple targets — Giant Slayer bonus damage applies to every enemy hit."
+      }
+    ]
   },
   {
     "id": "kennen",
@@ -1274,7 +1834,21 @@
       "nickname": "The Electric Ninja",
       "unlockTip": "His shield is huge — put him in front to tank while the storm stuns nearby enemies",
       "kidExplain": "Kennen is a tiny electric ninja who summons a lightning storm. The storm fires 6 waves of bolts. If an enemy gets struck by 3 bolts, they get STUNNED! He gets a massive shield to protect himself while the storm rages. A tiny ninja calling down lightning from the sky!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His lightning bolts can crit — Gauntlet makes the 3-bolt stun proc deal critical damage."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His 6 waves of bolts all scale with AP — Deathcap turns each wave into a devastating strike."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He starts with 70 initial mana and large shield — Archangel's adds AP while he keeps casting."
+      }
+    ]
   },
   {
     "id": "kobuko",
@@ -1306,7 +1880,21 @@
       "nickname": "The Fluffy Tank with a Magic Cat",
       "unlockTip": "Yuumi alternates between healing and giving attack speed — she helps whoever needs it most",
       "kidExplain": "Kobuko & Yuumi are a duo: Kobuko is a big round Yordle, and Yuumi is a magical cat who rides on his head! Every 3 seconds, Yuumi either heals the most-injured ally OR speeds up the hardest-hitting ally. When Kobuko casts, he heals himself over time. A self-healing tank with a helpful cat on top!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He's a bruiser and heals over time — Warmog's HP amplifies his sustain massively."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He wants to be in melee and soak hits — Stoneplate gives huge defensive stats."
+      },
+      {
+        "itemId": "spirit_visage",
+        "reason": "Yuumi heals allies — Spirit Visage amplifies ALL healing received by everyone it affects."
+      }
+    ]
   },
   {
     "id": "leblanc",
@@ -1337,7 +1925,21 @@
       "nickname": "The Deceiver",
       "unlockTip": "She stuns the main target — pair with other damage champions to capitalize on the stun window",
       "kidExplain": "LeBlanc creates mirror copies of herself that dash around and STUN the main target for 1 second while dealing massive damage. The copies also hit 2 nearby enemies. She's so confusing — which one is the real LeBlanc? Spoiler: all of them hurt you!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her mirror dashes can crit — Gauntlet makes her 300+ AP burst deal critical magic damage."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "She deals 300+ AP magic damage on the main target — Deathcap pushes that to instant-kill territory."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "60 mana — Blue Buff lets her send mirror images nearly every other attack."
+      }
+    ]
   },
   {
     "id": "leona",
@@ -1367,7 +1969,21 @@
       "nickname": "The Radiant Dawn",
       "unlockTip": "Pair with Diana — Leona gives Diana bonus ability power every second she survives!",
       "kidExplain": "Leona is the sun warrior who calls down SUNBEAMS on enemies. Her beams stun, deal damage, set enemies on fire (Burn), and reduce their healing (Wound). Every second Leona survives, Diana gets stronger. Leona and Diana = sun and moon sisters who are stronger together!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "She needs to survive long enough to keep giving Diana AP — Stoneplate makes her nearly unkillable."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means she survives longer, giving Diana more ability power over time."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "She's frontline and draws hits — Sunfire passively burns enemies attacking her."
+      }
+    ]
   },
   {
     "id": "loris",
@@ -1398,7 +2014,21 @@
       "nickname": "The Piltover Colossus",
       "unlockTip": "He's a tank — put him at the front and let him draw all enemy attention after charging",
       "kidExplain": "Loris is a GIANT mechanical enforcer. He gains an enormous shield, then CHARGES at an enemy and bulldozes them and everything behind them, stunning everyone in the path. After charging, nearby enemies all turn and attack HIM instead. He's the big wall who says 'hey, attack ME instead!'"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "After charging, all nearby enemies target him — Stoneplate spikes his tankiness at that moment."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His shield and charge damage both scale with AP and HP — more HP helps him survive the aggro."
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "He forces enemies to target him — Bramble Vest reflects damage to every attacker."
+      }
+    ]
   },
   {
     "id": "malzahar",
@@ -1429,7 +2059,21 @@
       "nickname": "The Prophet of the Void",
       "unlockTip": "His Voidlings attack 8 times each — they benefit from his ability power items",
       "kidExplain": "Malzahar is a mage who stared into the Void and went a little crazy. He summons 2 Voidlings — little bug-like creatures — that each attack a nearby enemy 8 times rapidly. Voidlings are basically tiny aggressive pets who do his damage for him. He calls them and they bite!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His Voidlings deal AP damage 8 times each — Deathcap multiplies the total output enormously."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "Voidlings proc on-hit effects — Morello spreads Grievous Wounds through rapid Voidling attacks."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He casts frequently at 35 mana — Archangel's continuously builds AP over each fight."
+      }
+    ]
   },
   {
     "id": "milio",
@@ -1460,7 +2104,21 @@
       "nickname": "The Fire Fuemigo Kicker",
       "unlockTip": "His fireball bounces 3 times — enemies in the back row still get hit!",
       "kidExplain": "Milio is a little kid who learned fire magic from his family. He kicks a FUEMIGO (a tiny fire spirit ball) at enemies. A fuemigo is like a little living fireball companion — it bounces 3 times between enemies and explodes at the end! Basically Milio is playing soccer with a fire bomb."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His bouncing fuemigo can crit — Gauntlet makes each bounce deal critical magic damage."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "3 bounces + final explosion all scale with AP — Deathcap amplifies the whole chain."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "60 mana — Blue Buff lets him kick fuemigos constantly for relentless bouncing damage."
+      }
+    ]
   },
   {
     "id": "nautilus",
@@ -1492,7 +2150,21 @@
       "nickname": "The Titan of the Depths",
       "unlockTip": "His passive procs every 4 seconds — attack speed items help him hit that 3rd attack faster",
       "kidExplain": "Nautilus is a huge dude in an old diving suit with a giant anchor. Every 4 seconds, his next attack hits EVERYONE in a circle and deals bonus magic damage based on his Magic Resist. When he casts, he gains a big shield. A slow but massive anchor-swinging ocean guardian!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His passive bonus damage scales with Magic Resist — wait, more HP helps his shield proc more."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He draws hits frontline — Stoneplate scales with attackers which is always high for him."
+      },
+      {
+        "itemId": "ionic_spark",
+        "reason": "His passive hits in a circle — Ionic Spark adds more AoE magic damage with each attack."
+      }
+    ]
   },
   {
     "id": "sejuani",
@@ -1523,7 +2195,21 @@
       "nickname": "The Boar Rider",
       "unlockTip": "Pair with other Freljord champions — Chilled enemies get bonus stunned when she hits them!",
       "kidExplain": "Sejuani rides a giant boar named Bristle into battle! She hits in a cone AND a line with ice damage. If an enemy is already Chilled (slowed), she STUNS them for a bonus second! So: first hit slows them, second hit freezes them solid. She's the ice warrior who hits twice as hard!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "She's frontline using her shield — Stoneplate stacks more armor and MR when enemies attack her."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Her shield scales with AP — more HP means she survives to cast again and chain CC."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "She's always in melee — Sunfire Chills and burns enemies which chains with her ability."
+      }
+    ]
   },
   {
     "id": "vayne",
@@ -1554,7 +2240,21 @@
       "nickname": "The Night Hunter",
       "unlockTip": "Her damage is TRUE damage — it ignores ALL armor and magic resist!",
       "kidExplain": "Vayne fires crossbow bolts of pure silver energy. When she casts, she rolls to a nearby hex then fires a bolt of TRUE DAMAGE — meaning no armor can reduce it at all! She goes through tanks like butter. The thickest shield means nothing. She's the anti-tank specialist who ignores ALL defenses!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her Tumble deals true damage and can crit — IE makes each shot ignore ALL defenses for huge damage."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "True damage already ignores armor — Giant Slayer adds more damage vs. high-HP tanks."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "She deals physical damage with basic attacks — Last Whisper reduces armor between Tumbles."
+      }
+    ]
   },
   {
     "id": "zoe",
@@ -1584,7 +2284,21 @@
       "nickname": "The Chaos Bubble Mage",
       "unlockTip": "Her passive reduces enemy Magic Resist on every attack — great for boosting your whole AP team",
       "kidExplain": "Zoe is a chaotic magical girl who kicks bubbles. Her bubbles Chill enemies (slow their attack speed). Every single attack she does also reduces enemy Magic Resist (Shred), making your whole team of magic damage dealers hit harder. She's chaotically fun and surprisingly team-boosting!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her bubbles and passive Shred both scale with AP — Deathcap makes her team-wide Shred more impactful."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her bubbles can crit and she Chills first — Gauntlet makes the critical Chill hit devastatingly hard."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "60 mana — Blue Buff doubles her bubble-throwing rate for more CC and Shred application."
+      }
+    ]
   },
   {
     "id": "ambessa",
@@ -1615,7 +2329,21 @@
       "nickname": "The Noxus Conqueror",
       "unlockTip": "If she kills anyone, she instantly casts again — chain-kill potential is massive",
       "kidExplain": "Ambessa is Mel's mom and a ruthless Noxus general. She dashes in slashing enemies, then slams her chains for big damage in a line. The insane part: if any enemy DIES from this, she immediately casts AGAIN doing 80% damage. Chain kills = chain casts = total chaos!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her chain attacks deal ADAP physical damage and chain on kills — IE crits turn each chain into a massacre."
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "She gets kills constantly and recasts — Deathblade stacks permanent AD from every kill."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "She hits multiple enemies in lines — Last Whisper's armor reduction makes each sweep hit harder."
+      }
+    ]
   },
   {
     "id": "belveth",
@@ -1646,7 +2374,21 @@
       "nickname": "The Empress of the Void",
       "unlockTip": "First kill gives massive attack speed — she snowballs hard in fights with multiple enemies",
       "kidExplain": "Bel'Veth is a terrifying void empress who looks like a manta ray of nightmares. When she kills someone, she gains a HUGE burst of attack speed. When she casts, she damages a circle of enemies and TRANSFORMS permanently: bigger, faster, and every attack does growing true damage. She gets scarier with every second!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "She attacks extremely fast after transformation — Rageblade stacks up rapidly for compounding speed."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Hundreds of fast attacks stack Titan's almost instantly — permanent bonus damage grows constantly."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal keeps her alive through fights where she's attacked by multiple enemies."
+      }
+    ]
   },
   {
     "id": "braum",
@@ -1677,7 +2419,21 @@
       "nickname": "The Door Shield Mustache Man",
       "unlockTip": "Position him to absorb enemy projectiles — he redirects them as AoE damage to nearby enemies!",
       "kidExplain": "Braum uses an ACTUAL DOOR as a shield. When he casts, he raises his door and REDIRECTS all enemy arrows and bullets to hit him instead. But every projectile he absorbs also damages nearby enemies AND slows them! He's the friendly giant who says 'let me take that bullet for everyone' and punishes the shooter!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He absorbs projectiles — Stoneplate makes him tankier so he blocks more hits overall."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means he survives longer to keep blocking incoming projectiles for his team."
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "Every projectile he absorbs deals chill AoE — Bramble adds reflect damage to every projectile too."
+      }
+    ]
   },
   {
     "id": "diana",
@@ -1707,7 +2463,21 @@
       "nickname": "The Scorn of the Moon",
       "unlockTip": "Pair with Leona — they create Moonlit debuffs together and Diana dashes to ALL marked enemies",
       "kidExplain": "Diana is the moon to Leona's sun. She and Leona together mark enemies as Moonlit, reducing their damage. When Diana casts, she dashes to ALL Moonlit enemies on the field and deals magic damage to each! She's a moon warrior who dashes around the whole battlefield picking off weakened enemies!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her Lunar Rush deals magic damage to ALL Moonlit enemies — Gauntlet makes every dash crit."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "She hits multiple targets per cast — Deathcap multiplies damage across every enemy she dashes through."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "30 mana — Blue Buff means she constantly fires and dashes between Moonlit enemies."
+      }
+    ]
   },
   {
     "id": "fizz",
@@ -1738,7 +2508,21 @@
       "nickname": "The Tidal Trickster",
       "unlockTip": "His ability costs only 10 mana — he casts almost every other attack!",
       "kidExplain": "Fizz is a tiny fish-like creature who can briefly become UNTARGETABLE — you literally can't hit him for a moment! He jumps away, then pounces on the farthest enemy, damages everyone nearby, and gains super attack speed for 4 attacks. He disappears and reappears right on top of you!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His leap and bonus attacks can crit — Gauntlet makes his burst window after landing massive."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His pounce and bonus attacks scale with AP — Deathcap amplifies both simultaneously."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "He only needs 10 mana — with Blue Buff he's essentially untargetable and leaping constantly."
+      }
+    ]
   },
   {
     "id": "garen",
@@ -1769,7 +2553,21 @@
       "nickname": "The Spinning Sword of Justice",
       "unlockTip": "Give him armor and HP — his spin damage scales with attack damage!",
       "kidExplain": "GAREN SPINS. That's his whole thing. He spins his giant sword for 3 seconds, HEALING himself the whole time, and every second deals damage to adjacent enemies while reducing their armor. He's a spinning top of justice that heals while killing. DEMACIA!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He heals based on max HP while spinning — Warmog's makes his spin heal him to full every cast."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He draws nearby enemies while spinning — Stoneplate's bonus scales with attackers around him."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always in melee spinning — Sunfire burns add even more to his natural AoE spin damage."
+      }
+    ]
   },
   {
     "id": "kaisa",
@@ -1801,7 +2599,21 @@
       "nickname": "The Void Symbiote Hunter",
       "unlockTip": "She dashes AWAY from enemies first — keep her in back so her dash doesn't waste movement",
       "kidExplain": "Kai'Sa has a living void armor suit. She dashes AWAY from all enemies first (safety first!), then fires 15 missiles split between the 4 nearest enemies. Each missile does physical damage. She's a hit-and-run missile launcher who retreats to safety before opening fire!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "15 missiles can each crit — IE makes each missile hit harder and enables spell crits."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "She fires physical missiles — Last Whisper strips armor so every missile hits harder."
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "She dashes away before firing — Edge of Night stops CC from interrupting her missile barrage."
+      }
+    ]
   },
   {
     "id": "kalista",
@@ -1832,7 +2644,21 @@
       "nickname": "The Spear of Vengeance",
       "unlockTip": "She gets more spears from the Souls stacks — more Shadow Isles champions = more spears!",
       "kidExplain": "Kalista is a ghost warrior with infinite spears. She summons 25 spears that split among the 4 nearest enemies. After a brief delay, ALL spears impale their targets simultaneously! Each impale also reduces armor permanently. Imagine 25 spears flying at 4 people at the same time. Ouch."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "last_whisper",
+        "reason": "Her 25 spears each reduce armor by 1 — Last Whisper stacks more reduction on top."
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "ADAP scaling spears can crit — IE makes each impale a potential critical strike."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "She impales multiple high-HP enemies — Giant Slayer bonus damage applies to every spear."
+      }
+    ]
   },
   {
     "id": "lissandra",
@@ -1863,7 +2689,21 @@
       "nickname": "The Ice Witch",
       "unlockTip": "Pair with Ashe for Chill synergy — Chilled enemies take 12% more damage from her!",
       "kidExplain": "Lissandra encases her target in a GIANT ICE CUBE, stunning them and dealing massive damage. Nearby enemies also take damage from the cold. If the frozen enemy DIES, ice shards fly out and damage 2 more enemies! She's a walking deep freeze who chains explosions of cold."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her Frozen Tomb can crit — Gauntlet removes the crit penalty and turns her burst into a one-shot."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her primary and AoE damage both scale with AP — Deathcap pushes both into instant-kill territory."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "65 mana — Blue Buff means she's freezing enemies far more frequently."
+      }
+    ]
   },
   {
     "id": "lux",
@@ -1894,7 +2734,21 @@
       "nickname": "The Lady of Luminosity",
       "unlockTip": "She fires a ball then a beam — the beam does way more damage to targets the ball hit",
       "kidExplain": "Lux fires a ball of light that Roots (stops movement) 2 enemies. Then she fires a GIANT LASER BEAM at those enemies and everything in the line. If you were hit by the ball, the beam hits you extra hard. It's a combo: ball pins you, beam blasts you!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her beam deals magic damage and can crit — Gauntlet makes the beam hit tagged enemies for critical damage."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her ball and beam both scale with AP — Deathcap makes the beam devastate everything in the line."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "50 mana — Blue Buff fires her ball-beam combo much more frequently."
+      }
+    ]
   },
   {
     "id": "missfortune",
@@ -1925,7 +2779,21 @@
       "nickname": "The Bounty Hunter",
       "unlockTip": "Every 3rd cast she fires more waves — she gets scarier and scarier as the fight goes on",
       "kidExplain": "Miss Fortune has two guns and no chill. Her attacks RICOCHET to the highest-health enemy (so tanks can't protect squishies!). When she casts, she fires WAVES of bullets at nearby enemies. Every 3rd cast she adds another wave. She scales up all fight — the longer it goes, the more bullets fly!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her bullets deal ADAP damage and can crit — IE makes every wave of bullets deal critical damage."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "She ricochets to the highest-HP target — Giant Slayer bonus damage punishes those exact targets."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Multiple bullets per wave — Last Whisper strips armor so each bullet in every wave hits harder."
+      }
+    ]
   },
   {
     "id": "nasus",
@@ -1955,7 +2823,21 @@
       "nickname": "The Jackal God of Sands",
       "unlockTip": "He steals health from up to 8 enemies — the more enemies, the more HP he absorbs",
       "kidExplain": "Nasus is a giant jackal god who steals health — literally rips HP from enemies and adds it to himself. For 8 seconds after, he gains bonus armor AND damages everyone adjacent to him every second. He's a health vampire who becomes a walking aura of pain!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He steals health AND his aura damage scales with HP — Warmog's amplifies both."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "His aura deals AoE damage while he tanks — Stoneplate keeps him alive to keep pulsing."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He deals adjacent damage for 8 seconds — Sunfire adds more burn on top of his natural aura."
+      }
+    ]
   },
   {
     "id": "nidalee",
@@ -1986,7 +2868,21 @@
       "nickname": "The Bestial Huntress",
       "unlockTip": "Tanks take 60% more damage from her — she's specifically built to delete tanks!",
       "kidExplain": "Nidalee lives in the jungle and fights like a wild animal. She POUNCES on the lowest-health enemy, deals damage to them and nearby enemies, and if any die, she pounces AGAIN doing 70% damage. She loves targeting tanks (60% bonus damage!) and keeps pouncing until everyone is dead!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her pounce deals magic damage and she can chain-cast — Gauntlet makes each pounce crit."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Pounce damage and AoE damage both scale with AP — Deathcap amplifies every bounce."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "40 mana — Blue Buff lets her pounce more often, especially useful in large clusters."
+      }
+    ]
   },
   {
     "id": "renekton",
@@ -2016,7 +2912,21 @@
       "nickname": "The Angry Crocodile",
       "unlockTip": "Each cast adds 1 more slash — the longer the fight, the more hits he does each cast!",
       "kidExplain": "Renekton is an angry crocodile with a giant curved blade. He dashes in, then slashes 4 times rapidly. Every subsequent cast adds 1 more slash. So cast 1 = 4 slashes, cast 2 = 5 slashes, cast 3 = 6 slashes... He gets scarier with every cast. An angry croc who learns new ways to slice you!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "He slashes multiple times per cast and scales up — Titan's stacks fast for permanent damage."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal or damage bonus; both help sustain him as he slashes through enemies."
+      },
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "He wants to cast early and often to build slash stacks — Shojin accelerates the whole cycle."
+      }
+    ]
   },
   {
     "id": "riftherald",
@@ -2047,7 +2957,21 @@
       "nickname": "The Growing Void Boss",
       "unlockTip": "He gains HP when he grows — tank items amplify his durability bonus enormously",
       "kidExplain": "The Rift Herald is a giant purple void creature that literally GROWS BIGGER when it casts. It gains max HP and increases in size, then slams in a wide circle. The more enemies are targeting it, the more damage resistance it gets! He's the 'come get me' big boy who loves getting hit."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He gains HP when he grows — Warmog's adds even more HP that gets boosted by his growth."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He forces enemies to attack him — Stoneplate scales with number of attackers, which is always maximum for him."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's a stationary tank in melee — Sunfire burns every enemy attacking him passively."
+      }
+    ]
   },
   {
     "id": "seraphine",
@@ -2078,7 +3002,21 @@
       "nickname": "The Starry-Eyed Songstress",
       "unlockTip": "Building 12 notes unleashes her big wave — the wave heals allies AND damages enemies!",
       "kidExplain": "Seraphine is a pop star who builds notes over time. She starts small — each cast hits a few enemies with musical energy. When she collects 12 notes, she fires a MASSIVE WAVE that heals ALL allies AND damages all enemies it passes through. She's literally becoming more powerful the more she performs!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "20 mana — Blue Buff fires notes almost every attack, building her 12-note stack incredibly fast."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her note damage and wave damage both scale with AP — Deathcap makes her wave devastating."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "She casts constantly — Archangel's keeps building AP every fight for a stronger wave."
+      }
+    ]
   },
   {
     "id": "singed",
@@ -2109,7 +3047,21 @@
       "nickname": "The Mad Chemist",
       "unlockTip": "Keep him running — his poison trail appears automatically as he moves around",
       "kidExplain": "Singed is a crazy scientist who runs around the battlefield dragging a giant poisonous gas cloud behind him. Any enemy who walks through his trail takes damage. When he casts, he runs even faster, heals every second, and gains bonus armor. He doesn't attack — he just runs and lets the poison do the work!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He stays alive by running — Warmog's gives him HP so the poison trail damage time is maximized."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He draws hits while running — Stoneplate keeps him alive for longer poison trail coverage."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He's always touching enemies while running — Sunfire adds burn on top of his poison trail."
+      }
+    ]
   },
   {
     "id": "skarner",
@@ -2139,7 +3091,21 @@
       "nickname": "The Crystal Scorpion",
       "unlockTip": "He stuns up to 3 enemies in a line — position him to catch multiple enemies at once",
       "kidExplain": "Skarner is a giant crystal scorpion. His passive gives ALL your allies bonus armor just by being on your team. When he casts, he gains a MASSIVE shield AND grabs up to 3 enemies in a line with his claws, STUNNING them all for 1.5 seconds. He's the team armor booster and the best stun machine!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "His shield is massive — Stoneplate makes him virtually unkillable while holding the line."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP amplifies his massive shield and makes him survive the entire fight frontlining."
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "He stuns enemies and they attack him — Bramble Vest reflects damage to every attacker."
+      }
+    ]
   },
   {
     "id": "swain",
@@ -2171,7 +3137,21 @@
       "nickname": "The Demon Bird Warlord",
       "unlockTip": "He heals passively every second — give him AP to increase healing and burst damage",
       "kidExplain": "Swain has a demon bird trapped in his arm. The bird constantly reaches out and damages nearby enemies while healing Swain. When he casts, he opens a demonic eye that STUNS the biggest group of enemies! He's a self-healing area mage who constantly drains life while preparing to blast everyone at once."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His passive heal and AoE stun damage both scale with AP — Deathcap amplifies all of it."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "His passive hits adjacent enemies constantly — Morello spreads Grievous Wounds to all of them."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He has a very high mana pool — Archangel's builds massive AP from his frequent casting."
+      }
+    ]
   },
   {
     "id": "taric",
@@ -2201,7 +3181,21 @@
       "nickname": "The Gem Shield Knight",
       "unlockTip": "He boosts Magic Resist for the WHOLE team passively — great support champion",
       "kidExplain": "Taric is a knight who is obsessed with gems and protecting others. He gives ALL allies extra Magic Resist just by being on your board (passive!). He heals himself when near death. When he casts, he puts huge shields on himself AND the 2 lowest-health allies. He's the ultimate team-protector in shiny gem armor!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means bigger shields for himself and allies when he casts."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's frontline with shields — Stoneplate adds more armor/MR to complement his already-high resistances."
+      },
+      {
+        "itemId": "spirit_visage",
+        "reason": "He heals himself when near death — Spirit Visage amplifies that healing significantly."
+      }
+    ]
   },
   {
     "id": "veigar",
@@ -2232,7 +3226,21 @@
       "nickname": "The Tiny Master of Evil",
       "unlockTip": "He gains permanent AP from kills — he snowballs exponentially in late game",
       "kidExplain": "Veigar is a tiny Yordle who desperately wants to be taken seriously as an evil villain. He gets 50% more ability power from items than anyone else! When he casts, meteors rain down on the whole battlefield. Every meteor that KILLS an enemy gives Veigar PERMANENT bonus AP. More kills = more power forever. He's the snowball champion of doom!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His meteors can innately crit — Gauntlet plus his 50% AP bonus = insane crit damage."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "He gains 50% more AP from all sources — Deathcap is literally 50% stronger on him than on anyone else."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He casts often and gets permanent AP from kills — Archangel's stacks add to his ever-growing power."
+      }
+    ]
   },
   {
     "id": "warwick",
@@ -2263,7 +3271,21 @@
       "nickname": "The Uncaged Werewolf",
       "unlockTip": "He triggers a team-wide attack speed boost on kills — pair him with Jinx and Vi!",
       "kidExplain": "Warwick is a werewolf-like experiment gone wrong. When he casts, he gets massive attack speed, life-steal, movement speed, and bonus damage — ALL FOR THE REST OF COMBAT permanently. Every kill also gives attack speed to Jinx and Vi. He permanently transforms into a killing machine after one cast!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "His permanent 100%+ attack speed bonus gets even higher with Rageblade — absurd attack speed."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Hundreds of fast attacks stack Titan's almost instantly for permanent compounding damage."
+      },
+      {
+        "itemId": "bloodthirster",
+        "reason": "He has 15% Omnivamp after casting — Bloodthirster's additional life-steal makes him unkillable."
+      }
+    ]
   },
   {
     "id": "wukong",
@@ -2294,7 +3316,21 @@
       "nickname": "The Monkey King",
       "unlockTip": "His stone clone fights with all his items — don't underestimate it as extra free damage!",
       "kidExplain": "Wukong is a magical monkey king with a staff. He gains bonus armor and magic resist, then spins his staff hitting everyone nearby. The BEST part: when he DIES, a stone clone of him spawns with all his items and some HP and keeps fighting! He literally comes back from the dead as a statue!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "His passive gains armor/MR before spinning — Stoneplate adds more and his clone copies it all."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His stone clone spawns with some HP — Warmog's gives the original more HP to make the clone more durable."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks fast before spinning — Titan's stacks carry over to both him and his clone."
+      }
+    ]
   },
   {
     "id": "yone",
@@ -2325,7 +3361,21 @@
       "nickname": "The Unforgotten Brother",
       "unlockTip": "Pair with Yasuo — Yone's casts teleport Yasuo to every enemy Yone hits for free bonus hits!",
       "kidExplain": "Yone fights with two swords: one deals physical damage, one deals magic damage. He alternates between them with every attack. When he casts, he hits through multiple enemies in a line, knocking them ALL up. Yasuo then teleports to every enemy Yone hit and does bonus damage. Two brothers, one devastating combo!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "He alternates physical and magic hits rapidly — Titan's stacks build fast for permanent power."
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "More attack speed means more alternating hits and more Yasuo Blade Brothers procs."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal keeps him alive through sustained melee combat where he's always attacking."
+      }
+    ]
   },
   {
     "id": "yunara",
@@ -2356,7 +3406,21 @@
       "nickname": "The Ionian Laser Blade",
       "unlockTip": "She gains infinite range while casting — keep her in the back row",
       "kidExplain": "Yunara is a new Ionian warrior with a high-tech weapon. When she casts, she enters Transcendent State: insane attack speed + INFINITE RANGE + every attack becomes a laser that shoots through enemies in a line! The lasers can even critically strike for bonus true damage. She becomes an Ionian laser machine!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her lasers can crit and deal bonus true damage when they do — IE makes every laser crit for massive true damage."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Lasers deal physical damage in a line — Last Whisper strips armor so every target in the line takes more damage."
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "Her Transcendent State attacks fire rapidly — Rageblade adds even more attack speed to her already insane burst."
+      }
+    ]
   },
   {
     "id": "aatrox",
@@ -2388,7 +3452,21 @@
       "nickname": "The World Ender",
       "unlockTip": "He cycles through 3 different attacks — line, cone, and circle with execute",
       "kidExplain": "Aatrox IS the ancient sword — the darkin weapon that fights on its own. He cycles through 3 big attacks: a Slash in a line, a Swipe in a cone, and a Slam on one target. If any enemy is below 15% health during the slam, they get instantly EXECUTED! An ancient weapon cycling through a beautiful destructive pattern."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "He casts very fast and attacks in melee — Titan's stacks up quickly for growing permanent damage."
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "His execute kills enemies and he cycles attacks — Deathblade stacks permanent AD from every kill."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal sustains him through the constant 3-hit combat cycle and keeps him alive to execute."
+      }
+    ]
   },
   {
     "id": "annie",
@@ -2419,7 +3497,21 @@
       "nickname": "The Fire Child with Tibbers",
       "unlockTip": "Her first cast sets the battlefield on FIRE permanently — position her to cast early!",
       "kidExplain": "Annie is a 6-year-old girl with terrifying fire magic. Her first cast sets the ENTIRE BATTLEFIELD ablaze — every single enemy burns and bleeds for 45 full seconds. After that, she just throws fireballs at specific targets. She's a tiny child who sets the whole map permanently on fire and then calmly throws more fireballs. Absolutely terrifying."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Her repeated fireballs can crit — Gauntlet makes each fireball after the first cast a critical hit."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her Burn deals % max HP damage — more AP means bigger Burn ticks and bigger fireballs."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "She Burns every enemy for 45 seconds — Morello's Wound stacks on top to shut down enemy healing entirely."
+      }
+    ]
   },
   {
     "id": "aurelionsol",
@@ -2450,7 +3542,21 @@
       "nickname": "The Star Forger",
       "unlockTip": "He gets stronger as he deals damage — in long games he eventually creates a black hole!",
       "kidExplain": "Aurelion Sol is a massive space dragon who forges actual stars. He collects Stardust by dealing damage in player combats. As Stardust grows, his star crashes become more powerful: bigger radius, extra shockwave, knockups, meteor storms... and eventually a BLACK HOLE that instantly kills enemies. He's the final boss who scales with time!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His star crash and shockwave both scale with AP — Deathcap makes each upgrade threshold hit way harder."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His star crashes can crit — Gauntlet makes the critical crashing star deal even more burst."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He deals massive damage every cast — Archangel's builds huge AP as Stardust accumulates."
+      }
+    ]
   },
   {
     "id": "azir",
@@ -2482,7 +3588,21 @@
       "nickname": "The Sand Emperor",
       "unlockTip": "If 2 soldiers are already out when he casts, they all strike simultaneously for huge burst!",
       "kidExplain": "Azir summons Sand Soldiers — magical warrior statues made of sand. He summons them near enemies and they poke. When 2 soldiers are already out, casting makes ALL of them strike at once for massive damage. Imagine having 2 bodyguards who wait patiently then simultaneously attack the same target!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His Sand Soldiers deal AP damage — Deathcap makes each soldier strike much harder."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "40 mana — Blue Buff lets him summon soldiers and trigger simultaneous strikes far more often."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Sand Soldier strikes can crit — Gauntlet makes every soldier poke deal critical magic damage."
+      }
+    ]
   },
   {
     "id": "baronnashor",
@@ -2513,7 +3633,21 @@
       "nickname": "The Immortal Void Bastion",
       "unlockTip": "He's IMMUNE to all crowd control — stuns, slows, nothing stops him",
       "kidExplain": "Baron Nashor is THE boss monster from regular League of Legends and he's enormous. He's IMMUNE to ALL crowd control — can't be stunned or slowed by anything! His attacks go in a line. He slams and creates spikes, spits acid, and randomly erupts tentacles from the ground under random enemies. He's the unstoppable ancient monster!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "3000 HP already — Warmog's pushes him to ridiculous health totals that make him nearly immortal."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He draws all hits with his massive presence — Stoneplate scales to max power immediately."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks constantly in melee — Titan's stacks quickly for permanent bonus physical damage."
+      }
+    ]
   },
   {
     "id": "brock",
@@ -2543,7 +3677,21 @@
       "nickname": "The Living Mountain",
       "unlockTip": "He hits ALL enemies with one slam — position him in the center vs. clustered teams",
       "kidExplain": "Brock is an enormous Ixtal golem — basically a walking mountain. IMMUNE to crowd control. His attacks knock enemies up and damage nearby units. When he casts, he SLAMS THE GROUND and damages EVERY SINGLE ENEMY on the board (reduced by distance). Then rocks fall everywhere for extra damage. He's the 'punish everyone' champion!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His slam damage scales with max HP — Warmog's directly increases his board-wide nuke damage."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's melee, immune to CC, and always surrounded — Stoneplate hits maximum value every fight."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "He stands in the middle of enemies — Sunfire burns everyone around him passively."
+      }
+    ]
   },
   {
     "id": "fiddlesticks",
@@ -2574,7 +3722,21 @@
       "nickname": "The Ancient Fear",
       "unlockTip": "He teleports into the largest group of enemies — position-read the enemy team first",
       "kidExplain": "Fiddlesticks is a TERRIFYING scarecrow from nightmares. He teleports directly into the biggest group of enemies and STUNS THEM ALL. Then he starts channeling and deals damage every second to everyone nearby. The longer he channels, the more damage he deals. He's the surprise jump-scare champion!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "morellonomicon",
+        "reason": "He deals magic damage per second to everyone — Morello's Grievous Wounds spreads to all of them."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His channeling damage scales with AP — Deathcap makes each second of channeling hit twice as hard."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "He channels for multiple seconds losing mana — Archangel's lets him sustain mana and grow AP simultaneously."
+      }
+    ]
   },
   {
     "id": "galio",
@@ -2605,7 +3767,21 @@
       "nickname": "The Stone Guardian",
       "unlockTip": "Every 3rd attack is a free AoE attack — attack speed items help him hit that 3rd faster",
       "kidExplain": "Galio is a giant stone guardian of Demacia. Every 3rd attack hits everyone in a circle (free!). When he casts, he dashes into the biggest group of enemies and gives shields to all his nearby allies, then crashes down and damages all nearby enemies. He's the stone giant who says 'I got you!' to friends and 'catch this!' to enemies!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He dashes into enemies and gives shields — Stoneplate makes him tankier as enemies surround him."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "His shield scales with AP — Warmog's keeps him alive longer to give more shields to allies."
+      },
+      {
+        "itemId": "ionic_spark",
+        "reason": "Every 3rd attack hits in a circle — Ionic Spark adds magic damage to all of those AoE attacks."
+      }
+    ]
   },
   {
     "id": "kindred",
@@ -2636,7 +3812,21 @@
       "nickname": "The Eternal Hunters",
       "unlockTip": "Her zone heals for % of damage dealt inside it — pair with high-damage allies!",
       "kidExplain": "Kindred is actually TWO spirits — Lamb (who you see) and Wolf (who runs alongside). Lamb dashes and creates a magical zone. Inside the zone: Kindred attacks twice as fast and fires bonus arrows at nearby enemies. When the zone ends, ALL allies heal based on damage dealt inside. A burst damage dealer who heals the whole team afterwards!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "She doubles attack speed in her zone — Rageblade on top means inhuman attack speed during the window."
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "Her bonus arrows and attacks deal physical damage and can crit — IE makes every arrow critical."
+      },
+      {
+        "itemId": "bloodthirster",
+        "reason": "She heals the team from damage dealt in the zone — Bloodthirster adds more personal sustain on top."
+      }
+    ]
   },
   {
     "id": "lucian",
@@ -2667,7 +3857,21 @@
       "nickname": "The Power Couple Gunners",
       "unlockTip": "He fires more shots with higher attack speed — stack AD and attack speed items",
       "kidExplain": "Lucian and Senna are married hunters who fight as one. Lucian runs and shoots while Senna empowers him. When he casts, he fires 12 shots at a target. Each shot EXPLODES on impact, damaging all nearby enemies too. That's 12 individual explosions. At one target. They're the power couple of destruction!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "12 shots each explode — IE makes every explosion a potential critical hit for massive AoE burst."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Physical damage explosions — Last Whisper strips armor so every detonation hits harder."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "He hits multiple enemies per shot — Giant Slayer bonus damage applies to every explosion hitting high-HP targets."
+      }
+    ]
   },
   {
     "id": "mel",
@@ -2698,7 +3902,21 @@
       "nickname": "The Radiant Mana Drainer",
       "unlockTip": "She drains mana from enemies — after 235 mana drained, she earns a FREE Radiant Item!",
       "kidExplain": "Mel is Noxus's most powerful mage who wields golden radiant magic. She summons orbiting balls of light that damage nearby enemies AND drain their mana (making it harder for them to cast abilities). After draining enough mana from enemies, she earns a RANDOM RADIANT ITEM for free! When she casts, all the orbs explode for massive area damage. She literally earns items in combat!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Her orbs, detonation, and mana drain all scale with AP — Deathcap amplifies everything she does."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "200 mana is a lot — Blue Buff recovers mana faster so she reaches her big detonation sooner."
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "She casts frequently — Archangel's builds AP continuously, making each detonation bigger."
+      }
+    ]
   },
   {
     "id": "ornn",
@@ -2729,7 +3947,21 @@
       "nickname": "The Forge Ram",
       "unlockTip": "He headbutts his own elemental to redirect it — great for hitting back-row enemies",
       "kidExplain": "Ornn is a cranky mountain ram god who makes things in his forge. He summons an elemental from behind the FARTHEST enemy (it Chills and damages everything it passes through). When it arrives, Ornn HEADBUTTS it, sending it bouncing back toward another distant enemy! He uses his own creature as a ping-pong ball of destruction!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's the tankiest frontliner — Stoneplate's resistances stack with his naturally high base stats."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "More HP means he survives longer to keep headbutting his elemental for repositioned damage."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "His elemental passes through enemies — Sunfire burns enemies in his path too."
+      }
+    ]
   },
   {
     "id": "ryze",
@@ -2759,7 +3991,21 @@
       "nickname": "The Splitting Rune Wizard",
       "unlockTip": "His ability splits multiple times — great for hitting spread-out teams across the board",
       "kidExplain": "Ryze is an old blue wizard covered in glowing rune tattoos. He fires a runic blast. It splits into 2. Each of THOSE splits again. Each of THOSE splits again! It's a chain reaction of magic bolts spreading across the battlefield. The farther they spread, the weaker each gets — but the coverage is incredible!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His splitting blasts all scale with AP — Deathcap makes even the weakest split deal significant damage."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His runic blasts can crit — Gauntlet makes the main blast and splits all deal critical damage."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "45 mana — Blue Buff fires splitting runic blasts much more frequently for coverage."
+      }
+    ]
   },
   {
     "id": "sett",
@@ -2790,7 +4036,21 @@
       "nickname": "The Boss",
       "unlockTip": "He deals % max HP damage — he's best against high-health tanky champions",
       "kidExplain": "Sett is the boss of underground fighting pits. He grabs an enemy with his bare hands, lifts them up, and SLAMS them into the ground. The damage is based on the enemy's MAX HEALTH — so the tankier they are, the harder they get slammed! Everyone within 3 hexes takes 50% of that damage. The bigger you are, the harder you fall!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He deals % max HP damage — the more HP Sett has, the higher the total damage from the slam."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's frontline and takes hits — Stoneplate keeps him alive to grab and slam repeatedly."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "He attacks fast and frequently — Titan's stacks build quickly for permanent bonus damage."
+      }
+    ]
   },
   {
     "id": "shyvana",
@@ -2821,7 +4081,21 @@
       "nickname": "The Half-Dragon",
       "unlockTip": "She transforms permanently on cast — give her HP items for the dragon form bonus health",
       "kidExplain": "Shyvana is half-human, half-dragon — and when she casts, she goes FULL DRAGON permanently! She gains 600-1000 extra health and dive-bombs into the biggest group of enemies. Then she breathes FIRE in a cone for 3 straight seconds. She's a one-way button: press it, become a dragon, breathe fire forever!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "She gains 600-1000 HP on transformation — Warmog's gives even more HP to scale that gain."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "She's melee in dragon form breathing fire — Stoneplate keeps her alive while she breathes."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Dragon form has high attack speed — Titan's stacks accumulate rapidly in her transformed state."
+      }
+    ]
   },
   {
     "id": "sylas",
@@ -2853,7 +4127,21 @@
       "nickname": "The Ability Thief",
       "unlockTip": "He cycles between 3 stolen spells — each has a different use (stun, execute, shield+line)",
       "kidExplain": "Sylas is an escaped prisoner who can steal magic powers. In TFT, he cycles through 3 different stolen abilities each cast: Cataclysm (leap + big stun), Demacian Justice (giant blast that executes low-health enemies), or Final Spark (shield + line damage). Every cast is a DIFFERENT spell — you never know which is coming next!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "All three stolen spells deal magic damage and can crit — Gauntlet makes every spell a potential one-shot."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His spells deal 200-950 AP magic damage — Deathcap takes all three abilities into one-shot territory."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "30 mana — Blue Buff means he cycles through his stolen spells constantly."
+      }
+    ]
   },
   {
     "id": "thex",
@@ -2885,7 +4173,21 @@
       "nickname": "The HexTech Colossus",
       "unlockTip": "He fires 4 bullets per attack passively — attack speed scales his passive extremely well",
       "kidExplain": "T-Hex is a giant HexTech battle mech (a massive armored robot). His attacks fire 4 bullets instead of 1! When he casts, he gains a huge shield AND fires a laser that deals damage, plus 4 missiles every second for continuous fire. He's a walking weapons platform — a mech that shoots everything at once!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "4 bullets per attack can all crit — IE makes each bullet barrage deal critical physical damage."
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "His laser and missiles deal physical damage — Last Whisper strips armor for all of them."
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "His missiles and laser hit high-HP targets — Giant Slayer adds 45% more damage vs. anything above 1600 HP."
+      }
+    ]
   },
   {
     "id": "tahmkench",
@@ -2917,7 +4219,21 @@
       "nickname": "The Hungry River Catfish",
       "unlockTip": "If the devoured enemy dies inside him, it might drop their component items — timing matters!",
       "kidExplain": "Tahm Kench is a giant catfish monster who EATS enemies whole. He literally swallows them for 2.5 seconds of sustained damage. If they die inside him, he might spit out their GOLD or ITEMS! If they survive, he spits them like a cannon toward the farthest enemy, stunning everything in the way. He's both a disposal unit and a living catapult!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He deals AP damage based on HP — Warmog's makes his Devour deal more total damage."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He gains 30% Durability during Devour — Stoneplate adds more, making him effectively immortal while eating."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "He spits enemies after eating — Morello's Grievous Wounds applies on contact to the projectile target."
+      }
+    ]
   },
   {
     "id": "thresh",
@@ -2948,7 +4264,21 @@
       "nickname": "The Chain Warden",
       "unlockTip": "The Box drags enemies inside — combine with his passive AoE for free sustained damage",
       "kidExplain": "Thresh is a ghost who carries a magical lantern and chains. His passive damages ALL nearby enemies every second AND heals himself from that damage. When he casts, he creates a Box — a ghost prison of walls. Enemies that touch the walls take damage. If fewer than 2 enemies are inside... he DRAGS another one in. He's the jailer who makes his own prisoners!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "He heals from his passive damage — Warmog's HP means he heals more total from each pulse."
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "He's frontline and builds Souls — Stoneplate stacks armor/MR as enemies attack him in his Box."
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "His passive already damages nearby enemies — Sunfire adds a second burn layer to the same area."
+      }
+    ]
   },
   {
     "id": "volibear",
@@ -2979,7 +4309,21 @@
       "nickname": "The Thunder Bear God",
       "unlockTip": "After 5 casts he transforms — fights are often won or lost at the Stormbringer moment",
       "kidExplain": "Volibear is a giant divine bear god with lightning powers. He starts by biting enemies and marking them (extra damage on marked targets). After 5 casts, he LEAPS into battle and TRANSFORMS: gaining 400+ health, 50% attack speed, and summoning lightning bolts on nearby enemies every 2 seconds. He starts strong and becomes a storm god midway through every fight!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "After transformation he has 50%+ attack speed — Rageblade pushes it to obscene levels."
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "His lightning bolts in Stormbringer proc on nearby enemies — Titan's stacks accumulate rapidly."
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Stormbringer gives him 400 HP — Warmog's adds more HP that compounds with the growth bonus."
+      }
+    ]
   },
   {
     "id": "xerath",
@@ -3010,7 +4354,21 @@
       "nickname": "The Ascended Artillery",
       "unlockTip": "He fires 10 blasts between only 4 targets — they get hit multiple times each",
       "kidExplain": "Xerath transformed himself into pure arcane energy — he's literally a floating being of power. He fires 10 arcane blasts split between the 4 closest enemies. Each blast does big damage. 10 blasts, 4 targets, they just keep getting blasted over and over with pure magic! He's pure artillery made of lightning."
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "10 arcane blasts each scale with AP — Deathcap makes the total 10-blast combo devastating."
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His blasts can crit — Gauntlet removes the crit penalty and makes each blast potentially critical."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "135 mana is a huge bar — Blue Buff meaningfully accelerates how often he fires his 10-blast volley."
+      }
+    ]
   },
   {
     "id": "zaahen",
@@ -3041,7 +4399,21 @@
       "nickname": "The Endless Slasher",
       "unlockTip": "If he casts 22 times in a row without dying, he instantly kills the target — keep him alive!",
       "kidExplain": "Zaahen is a Darkin — a corrupted warrior-weapon. He dashes around a target and slashes in a circle. If the target doesn't die, he IMMEDIATELY casts AGAIN. And again. And again. After 22 consecutive casts on the same target, he stops slashing and INSTANTLY KILLS THEM regardless of HP. He's the 'never stop attacking ever' champion!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "He casts 22+ times in a row attacking melee — Titan's stacks to max almost instantly for permanent power."
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Life-steal keeps him alive through 22 consecutive cast cycles to reach the instant-kill threshold."
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "He kills enemies with his 22-cast execute — Deathblade stacks permanent AD from every kill."
+      }
+    ]
   },
   {
     "id": "ziggs",
@@ -3073,7 +4445,21 @@
       "nickname": "The Hexplosives Expert",
       "unlockTip": "His mega bomb targets the largest group of enemies — cluster them for maximum damage",
       "kidExplain": "Ziggs is a Yordle absolutely obsessed with explosions. His regular attacks are BOUNCING BOMBS (not arrows!). When he casts, he throws his MEGA INFERNO BOMB at the largest cluster of enemies. Enemies right at the center take maximum damage; farther away = less damage. He's the party planner whose parties involve everyone getting blown up!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "His mega bomb can crit — Gauntlet makes the central explosion deal critical magic damage for massive burst."
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Both his passive bombs and mega bomb scale with AP — Deathcap amplifies every explosive."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "140 mana is high — Blue Buff meaningfully reduces his cooldown between mega bomb throws."
+      }
+    ]
   },
   {
     "id": "zilean",
@@ -3104,6 +4490,20 @@
       "nickname": "The Chronokeeper",
       "unlockTip": "Time Bombs that sit for 18 seconds INSTANTLY kill the target — Zilean must stay alive!",
       "kidExplain": "Zilean is an old man who mastered time travel — he's seen every possible future. He plants Time Bombs on enemies that tick down while dealing damage per second. When the target dies from any cause, the bomb EXPLODES and damages nearby enemies AND gives Zilean mana back. If a bomb sits on someone for 18 whole seconds while Zilean is alive... they instantly die. He's the patient death clock!"
-    }
+    },
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "His Time Bomb ticks and explosions both scale with AP — Deathcap makes the 18-second execute trigger far more damage while ticking."
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "35 mana — Blue Buff means he plants Time Bombs almost every attack for rapid coverage."
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "His bombs tick damage every second — Morello's Grievous Wounds applies from each tick to shut down healing."
+      }
+    ]
   }
 ]

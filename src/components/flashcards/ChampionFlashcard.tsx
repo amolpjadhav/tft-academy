@@ -1,4 +1,12 @@
 import type { Champion, ChampionRole } from "@/types/champion";
+import type { Item } from "@/types/item";
+
+const TIER_COLOR: Record<string, string> = {
+  S: "text-amber-300 border-amber-400/40 bg-amber-400/10",
+  A: "text-violet-300 border-violet-400/40 bg-violet-400/10",
+  B: "text-blue-300  border-blue-400/40  bg-blue-400/10",
+  C: "text-slate-300 border-slate-400/40 bg-slate-400/10",
+};
 
 // ── Utility helpers ──────────────────────────────────────────────────────────
 
@@ -126,9 +134,10 @@ interface Props {
   champion: Champion;
   isFlipped: boolean;
   onFlip: () => void;
+  itemMap: Record<string, Item>;
 }
 
-export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props) {
+export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap }: Props) {
   const { stars, color: starColor } = COST_STARS[champion.cost];
   const costBadge  = COST_BADGE[champion.cost];
   const roleMeta   = ROLE_META[champion.role];
@@ -292,6 +301,47 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip }: Props
                 <StatRow icon="🎯" label="Range" value={champion.stats.range === 1 ? "Melee" : `${champion.stats.range} hexes`} />
               </div>
             </div>
+
+            {/* Ideal Items */}
+            {champion.idealItems && champion.idealItems.length > 0 && (
+              <div className="bg-bg-surface rounded-xl p-3 border border-white/8">
+                <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold mb-2">
+                  🏆 Ideal Items
+                </p>
+                <div className="space-y-2.5">
+                  {champion.idealItems.map(({ itemId, reason }) => {
+                    const item = itemMap[itemId];
+                    if (!item) return null;
+                    return (
+                      <div key={itemId} className="flex gap-2.5">
+                        {/* Icon */}
+                        <div className="relative shrink-0">
+                          <img
+                            src={item.icon}
+                            alt={item.name}
+                            className="w-9 h-9 rounded-lg border border-white/15 object-cover"
+                          />
+                          <span
+                            className={`absolute -top-1 -right-1 text-[9px] font-bold px-1 rounded border leading-none py-px ${TIER_COLOR[item.tier] ?? TIER_COLOR.B}`}
+                          >
+                            {item.tier}
+                          </span>
+                        </div>
+                        {/* Name + reason */}
+                        <div className="min-w-0">
+                          <p className="text-text-primary text-xs font-semibold leading-tight truncate">
+                            {item.name}
+                          </p>
+                          <p className="text-text-muted text-[10px] leading-relaxed mt-0.5">
+                            {reason}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Traits */}
             <div className="bg-bg-surface rounded-xl p-3 border border-white/8">

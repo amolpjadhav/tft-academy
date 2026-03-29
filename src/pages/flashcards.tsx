@@ -1,12 +1,15 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { GetStaticProps } from "next";
 import type { Champion, ChampionRole } from "@/types/champion";
+import type { Item, ItemsData } from "@/types/item";
 import PageShell from "@/components/layout/PageShell";
 import ChampionFlashcard from "@/components/flashcards/ChampionFlashcard";
 import championsData from "../../data/champions.json";
+import itemsData from "../../data/items.json";
 
 interface Props {
   champions: Champion[];
+  itemMap: Record<string, Item>;
 }
 
 type CostFilter = "all" | 1 | 2 | 3 | 4 | 5;
@@ -28,7 +31,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function FlashcardsPage({ champions }: Props) {
+export default function FlashcardsPage({ champions, itemMap }: Props) {
   const [costFilter, setCostFilter] = useState<CostFilter>("all");
   const [roleFilter, setRoleFilter] = useState<RoleFilter>("all");
   const [isShuffled, setIsShuffled]   = useState(false);
@@ -226,6 +229,7 @@ export default function FlashcardsPage({ champions }: Props) {
             onFlip={() => {
               if (!didSwipe.current) setIsFlipped((v) => !v);
             }}
+            itemMap={itemMap}
           />
 
           {/* Swipe direction hint — fades in as user drags */}
@@ -267,9 +271,12 @@ export default function FlashcardsPage({ champions }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data = itemsData as ItemsData;
+  const itemMap = Object.fromEntries(data.items.map((item) => [item.id, item]));
   return {
     props: {
       champions: championsData as Champion[],
+      itemMap,
     },
   };
 };
