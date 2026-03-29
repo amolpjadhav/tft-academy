@@ -50,8 +50,13 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="px-5 py-4 border-t border-white/5">
+      {/* Footer links */}
+      <div className="px-5 py-4 border-t border-white/5 space-y-2">
+        <div className="flex gap-3 flex-wrap">
+          <Link href="/about" className="text-text-muted text-[10px] hover:text-text-secondary transition-colors">About</Link>
+          <Link href="/guide" className="text-text-muted text-[10px] hover:text-text-secondary transition-colors">Guide</Link>
+          <Link href="/privacy" className="text-text-muted text-[10px] hover:text-text-secondary transition-colors">Privacy</Link>
+        </div>
         <p className="text-text-muted text-xs">Set 16 · Patch 16.7b</p>
       </div>
     </aside>

@@ -329,9 +329,19 @@ export default function LandingPage() {
         </section>
 
         {/* ── Footer ─────────────────────────────────────────────────── */}
-        <footer className="relative z-10 text-center py-6 border-t border-white/5">
+        <footer className="relative z-10 text-center py-8 border-t border-white/5 space-y-3 px-6">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link href="/about" className="text-text-muted text-xs hover:text-text-secondary transition-colors">About</Link>
+            <span className="text-white/15 text-xs">·</span>
+            <Link href="/guide" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Beginner's Guide</Link>
+            <span className="text-white/15 text-xs">·</span>
+            <Link href="/privacy" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Privacy Policy</Link>
+          </div>
           <p className="text-text-muted text-xs tracking-wider">
-            TFT SCHOOL &nbsp;·&nbsp; Set 16 · Patch 16.7b &nbsp;·&nbsp; Not affiliated with Riot Games
+            TFT SCHOOL &nbsp;·&nbsp; Set 16 · Patch 16.7b
+          </p>
+          <p className="text-white/25 text-[10px] leading-relaxed max-w-xl mx-auto">
+            © 2026 TFT SCHOOL. TFT School isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
           </p>
         </footer>
       </div>
