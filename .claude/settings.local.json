@@ -18,7 +18,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/14.1.1/img/champion/Aatrox.png\")",
       "Bash(curl -s \"https://ddragon.leagueoflegends.com/api/versions.json\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Aatrox.png\")",
-      "WebFetch(domain:op.gg)"
+      "WebFetch(domain:op.gg)",
+      "Bash(grep -v \"^$\")"
     ]
   }
 }

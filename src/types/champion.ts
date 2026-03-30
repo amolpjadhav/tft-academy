@@ -37,7 +37,7 @@ export interface Champion {
     name: string;
     description: string;
   };
-  beginnerTip?: BeginnerTip;
+  beginnerTip?: BeginnerTip | null;
   idealItems?: IdealItem[];
 }
 

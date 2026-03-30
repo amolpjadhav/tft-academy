@@ -149,7 +149,7 @@ function makeTraitBreakpoint(
       .flatMap((t) => t.breakpoints.map((b) => `${b.minUnits} units`))
       .filter((v) => v !== correctAnswer)
   );
-  const unique = [...new Set(otherCounts)].slice(0, 3);
+  const unique = Array.from(new Set(otherCounts)).slice(0, 3);
   if (unique.length < 3) return null;
 
   return {
