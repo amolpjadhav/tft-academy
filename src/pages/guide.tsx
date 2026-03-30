@@ -13,7 +13,7 @@ The basic idea is simple: eight players compete in the same lobby, building team
 
 Every player starts with full health (typically 100 HP in standard mode). When you lose a round, you lose some HP. The last player standing wins. A full game usually takes 30–45 minutes.
 
-TFT is updated every two weeks with balance patches, and every few months Riot releases an entirely new "Set" with new champions, items, and mechanics. This guide covers Set 16: Lore & Legends.
+TFT is updated every two weeks with balance patches, and every few months Riot releases an entirely new "Set" with new champions, items, and mechanics. This guide covers Set 17: Space Gods.
     `.trim(),
   },
   {
@@ -189,7 +189,7 @@ export default function GuidePage() {
         <title>TFT Beginner's Guide — Learn Teamfight Tactics | TFT School</title>
         <meta
           name="description"
-          content="Complete beginner's guide to Teamfight Tactics (TFT) Set 16. Learn how the game works, understand gold and economy, champions, items, traits, augments, and tips for your first games."
+          content="Complete beginner's guide to Teamfight Tactics (TFT) Set 17: Space Gods. Learn how the game works, understand gold and economy, champions, items, traits, augments, and tips for your first games."
         />
       </Head>
       <PageShell

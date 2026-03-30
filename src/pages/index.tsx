@@ -24,8 +24,8 @@ const FEATURES = [
   {
     href: "/flashcards",
     icon: "🃏",
-    title: "Champion Flashcards",
-    description: "Flip through all 100 champions. Learn abilities, roles, traits, and key stats interactively.",
+    title: "Flashcards",
+    description: "Flip through all champions and traits. Learn abilities, breakpoints, roles, and key stats interactively.",
     border: "border-violet-500/30",
     glow: "group-hover:shadow-[0_0_24px_rgba(124,58,237,0.25)]",
     accent: "text-violet-400",
@@ -155,7 +155,7 @@ export default function LandingPage() {
         <title>TFT School — Master Teamfight Tactics</title>
         <meta
           name="description"
-          content="The ultimate learning companion for TFT Set 16. Flashcards, quizzes, item catalog, champion simulator, and more."
+          content="The ultimate learning companion for TFT Set 17. Flashcards, quizzes, item catalog, champion simulator, and more."
         />
       </Head>
 
@@ -179,7 +179,7 @@ export default function LandingPage() {
               <span className="font-heading text-accent-gold text-base tracking-widest leading-none">
                 TFT SCHOOL
               </span>
-              <p className="text-text-muted text-[10px] tracking-wider">SET 16 · LORE &amp; LEGENDS</p>
+              <p className="text-text-muted text-[10px] tracking-wider">SET 17 · SPACE GODS</p>
             </div>
           </div>
           <Link
@@ -207,7 +207,7 @@ export default function LandingPage() {
               <div className="flex items-center justify-center gap-2 mt-2">
                 <div className="h-px w-12 bg-accent-gold/30" />
                 <span className="text-text-muted text-xs tracking-[0.25em] font-medium uppercase">
-                  Set 16 · Lore &amp; Legends
+                  Set 17 · Space Gods
                 </span>
                 <div className="h-px w-12 bg-accent-gold/30" />
               </div>
@@ -338,7 +338,7 @@ export default function LandingPage() {
             <Link href="/privacy" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Privacy Policy</Link>
           </div>
           <p className="text-text-muted text-xs tracking-wider">
-            TFT SCHOOL &nbsp;·&nbsp; Set 16 · Patch 16.7b
+            TFT SCHOOL &nbsp;·&nbsp; Set 17 · Patch 17.1
           </p>
           <p className="text-white/25 text-[10px] leading-relaxed max-w-xl mx-auto">
             © 2026 TFT SCHOOL. TFT School isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.

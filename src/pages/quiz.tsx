@@ -10,20 +10,24 @@ import { buildQuiz } from "@/utils/quiz";
 import { buildChampionQuiz } from "@/utils/championQuiz";
 import { buildItemQuiz } from "@/utils/itemQuiz";
 import { buildItemKnowledgeQuiz } from "@/utils/itemKnowledgeQuiz";
+import { buildTraitQuiz } from "@/utils/traitQuiz";
 import type { QuizCategory, QuestionCount, QuizQuestion, QuizResult as QResult } from "@/utils/quiz";
+import type { Trait } from "@/types/trait";
 import championsData from "../../data/champions.json";
 import itemsData from "../../data/items.json";
+import traitsData from "../../data/traits.json";
 
 interface Props {
   champions: Champion[];
   items: Item[];
   itemMap: Record<string, Item>;
   components: Component[];
+  traits: Trait[];
 }
 
 type Screen = "setup" | "question" | "result";
 
-export default function QuizPage({ champions, items, itemMap, components }: Props) {
+export default function QuizPage({ champions, items, itemMap, components, traits }: Props) {
   const [screen, setScreen]         = useState<Screen>("setup");
   const [questions, setQuestions]   = useState<QuizQuestion[]>([]);
   const [current, setCurrent]       = useState(0);
@@ -48,6 +52,9 @@ export default function QuizPage({ champions, items, itemMap, components }: Prop
       } else if (category === "items") {
         const n = count === "all" ? items.length : Math.min(count as number, items.length);
         qs = buildItemKnowledgeQuiz(items, components, n);
+      } else if (category === "trait_quiz") {
+        const n = count === "all" ? traits.length : Math.min(count as number, traits.length);
+        qs = buildTraitQuiz(traits, champions, n);
       } else {
         qs = buildQuiz(category, count);
       }
@@ -59,7 +66,7 @@ export default function QuizPage({ champions, items, itemMap, components }: Prop
       setBestStreak(0);
       setScreen("question");
     },
-    [champions, items, itemMap, components]
+    [champions, items, itemMap, components, traits]
   );
 
   const handleAnswer = useCallback(
@@ -104,7 +111,7 @@ export default function QuizPage({ champions, items, itemMap, components }: Prop
       }
     >
       {screen === "setup" && (
-        <QuizSetup onStart={startQuiz} championsCount={champions.length} itemsCount={items.length} />
+        <QuizSetup onStart={startQuiz} championsCount={champions.length} itemsCount={items.length} traitsCount={traits.length} />
       )}
 
       {screen === "question" && questions[current] && (
@@ -139,6 +146,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       items: data.items,
       itemMap,
       components: data.components,
+      traits: traitsData as Trait[],
     },
   };
 };

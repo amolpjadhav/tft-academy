@@ -21,10 +21,10 @@ export default function AboutPage() {
               What is TFT School?
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-3">
-              TFT School is a free, community-built learning companion for <strong className="text-text-primary">Teamfight Tactics (TFT)</strong> — the auto-battler strategy game by Riot Games. Whether you just played your first game and have no idea what's happening, or you're a seasoned player looking to sharpen your knowledge of Set 16: Lore &amp; Legends, TFT School is built for you.
+              TFT School is a free, community-built learning companion for <strong className="text-text-primary">Teamfight Tactics (TFT)</strong> — the auto-battler strategy game by Riot Games. Whether you just played your first game and have no idea what's happening, or you're a seasoned player looking to sharpen your knowledge of Set 17: Space Gods, TFT School is built for you.
             </p>
             <p className="text-text-secondary text-sm leading-relaxed">
-              TFT can feel overwhelming at first. There are over 100 champions, dozens of items, 20+ traits, and a whole vocabulary of terms like "econ", "reroll", "capping", and "augments" that beginners have never heard of. We built TFT School to remove that barrier and make learning the game genuinely enjoyable.
+              TFT can feel overwhelming at first. There are 60 champions, dozens of items, 30+ traits, and a whole vocabulary of terms like "econ", "reroll", "capping", and "augments" that beginners have never heard of. We built TFT School to remove that barrier and make learning the game genuinely enjoyable.
             </p>
           </section>
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
                 {
                   icon: "🃏",
                   title: "Champion Flashcards",
-                  body: "Flip through every champion in Set 16. Each card shows their ability explained in plain English (no jargon), a beginner-friendly breakdown of what they actually do in a fight, their ideal items with reasons why, and key stats. We even explain unique terms like Meeps, Fuemigos, Stardust, and Stormbringer so you're never confused.",
+                  body: "Flip through every champion in Set 17: Space Gods. Each card shows their ability explained in plain English (no jargon), a beginner-friendly breakdown of what they actually do in a fight, their ideal items with reasons why, and key stats. We even explain unique mechanics like Meeps, the Groove, Anima Weapons, and the Realm of the Gods system.",
                 },
                 {
                   icon: "🧠",
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 {
                   icon: "⚔️",
                   title: "Item Catalog",
-                  body: "Browse all 36 completed items in Set 16, filtered by role (AD Carry, AP Carry, Melee Carry, Tank). Each item shows its stats, its passive ability explained clearly, why it matters in the current meta, and which champion archetypes benefit most.",
+                  body: "Browse all completed items in Set 17, filtered by role (AD Carry, AP Carry, Melee Carry, Tank). Each item shows its stats, its passive ability explained clearly, why it matters in the current meta, and which champion archetypes benefit most.",
                 },
                 {
                   icon: "🔨",
@@ -101,13 +101,13 @@ export default function AboutPage() {
           {/* About the set */}
           <section className="bg-bg-surface rounded-2xl border border-white/8 p-6">
             <h2 className="font-heading text-xl text-accent-gold tracking-wide mb-3">
-              About TFT Set 16: Lore &amp; Legends
+              About TFT Set 17: Space Gods
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-3">
-              All content on TFT School is current for <strong className="text-text-primary">Set 16: Lore &amp; Legends</strong>. This set brings 100 champions from across the League of Legends universe, grouped into regional traits like Noxus, Demacia, Freljord, Bilgewater, Ionia, Piltover, Zaun, and more — as well as thematic traits like Slayer, Juggernaut, Arcanist, Invoker, and Quickstriker.
+              All content on TFT School is current for <strong className="text-text-primary">Set 17: Space Gods</strong>. This set brings 60 champions from across the League of Legends universe grouped into cosmic-themed traits like Dark Star, Space Groove, Stargazer, Meeple, N.O.V.A., and more — plus class traits like Bastion, Challenger, Rogue, Sniper, and Vanguard.
             </p>
             <p className="text-text-secondary text-sm leading-relaxed mb-3">
-              Set 16 also introduces unique 5-cost legendary champions such as Aurelion Sol, who grows more powerful through Stardust collected across multiple fights; Zilean, who can instantly kill enemies with a patience-based Time Bomb mechanic; and Tahm Kench, who can literally eat enemies and spit them across the board.
+              Set 17 introduces the <strong className="text-text-primary">Realm of the Gods</strong> mechanic — each game you choose between 9 powerful god patrons (Ahri, Aurelion Sol, Ekko, Evelynn, Kayle, Soraka, Thresh, Varus, and Yasuo) who grant unique blessings and loot throughout the match. Choosing the same god twice makes them your Favoured God. Other highlights include transforming Mecha units, the Groove system, Meeplords, and unique 5-cost legends like Zed, Bard, and Fiora.
             </p>
             <p className="text-text-secondary text-sm leading-relaxed">
               We aim to keep all data accurate to the latest patch. If you spot an error or outdated information, please reach out.

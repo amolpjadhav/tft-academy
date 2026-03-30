@@ -2,7 +2,23 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "WebFetch(domain:lolchess.gg)",
+      "WebFetch(domain:esports.gg)",
+      "WebFetch(domain:eloboost24.eu)",
+      "WebFetch(domain:www.tacter.com)",
+      "Bash(sed -i '' 's/Set 16 · Lore \\\\&amp; Legends/Set 17 · Space Gods/g' src/components/layout/Sidebar.tsx)",
+      "Bash(sed -i '' 's/Set 16 · Patch 16\\\\.7b/Set 17 · Patch 17.1/g' src/components/layout/Sidebar.tsx)",
+      "Bash(sed -i '' 's/Set 16 · Lore \\\\& Legends/Set 17 · Space Gods/g' src/pages/items.tsx)",
+      "Bash(sed -i '' 's/Set 16 · Patch 16\\\\.7b/Set 17 · Patch 17.1/g' src/pages/index.tsx)",
+      "Bash(sed -i '' 's/TFT Set 16\\\\. Flashcards/TFT Set 17. Flashcards/g' src/pages/index.tsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://raw.communitydragon.org/latest/game/assets/characters/aatrox/hud/aatrox_square.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://raw.communitydragon.org/latest/game/assets/characters/aatrox/skins/base/images/aatrox_splash_tile_0.jpg\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/14.1.1/img/champion/Aatrox.png\")",
+      "Bash(curl -s \"https://ddragon.leagueoflegends.com/api/versions.json\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Aatrox.png\")",
+      "WebFetch(domain:op.gg)"
     ]
   }
 }

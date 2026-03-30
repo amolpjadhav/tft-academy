@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GLOSSARY, CATEGORY_META } from "@/data/glossary";
 import type { QuizCategory, QuestionCount } from "@/utils/quiz";
 
-type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge";
+type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge" | "traits";
 
 const GLOSSARY_CATEGORIES: { id: QuizCategory; emoji: string }[] = [
   { id: "all",       emoji: "📖" },
@@ -42,13 +42,22 @@ const ITEM_KNOWLEDGE_Q_TYPES = [
   { emoji: "🏅", label: "What tier rating an item has" },
 ];
 
+const TRAIT_Q_TYPES = [
+  { emoji: "🎯", label: "Which trait does a champion belong to?" },
+  { emoji: "🏆", label: "Which champion is part of a trait?" },
+  { emoji: "💡", label: "What does a trait do?" },
+  { emoji: "📊", label: "How many units activate a breakpoint?" },
+  { emoji: "🏷️", label: "What type is a trait? (Damage/Tank/etc.)" },
+];
+
 interface QuizSetupProps {
   onStart: (category: QuizCategory, count: QuestionCount) => void;
   championsCount: number;
   itemsCount: number;
+  traitsCount: number;
 }
 
-export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizSetupProps) {
+export default function QuizSetup({ onStart, championsCount, itemsCount, traitsCount }: QuizSetupProps) {
   const [mode, setMode]         = useState<QuizMode>("knowledge");
   const [category, setCategory] = useState<QuizCategory>("all");
   const [count, setCount]       = useState<QuestionCount>(10);
@@ -60,6 +69,8 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
       ? championsCount
       : mode === "item_knowledge"
       ? itemsCount
+      : mode === "traits"
+      ? traitsCount
       : category === "all"
       ? GLOSSARY.length
       : GLOSSARY.filter((t) => t.category === category).length;
@@ -71,6 +82,7 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
     if (mode === "champions") onStart("champions", count);
     else if (mode === "items") onStart("item_quiz", count);
     else if (mode === "item_knowledge") onStart("items", count);
+    else if (mode === "traits") onStart("trait_quiz", count);
     else onStart(category, count);
   }
 
@@ -160,6 +172,23 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
               <p className="text-xs text-text-muted mt-0.5">Champion builds</p>
             </div>
           </button>
+
+          <button
+            onClick={() => setMode("traits")}
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all col-span-2 ${
+              mode === "traits"
+                ? "bg-teal-500/15 border-teal-500/50"
+                : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
+            }`}
+          >
+            <span className="text-3xl">🌟</span>
+            <div className="text-center">
+              <p className={`text-sm font-semibold ${mode === "traits" ? "text-teal-400" : "text-text-primary"}`}>
+                Traits
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">Breakpoints, effects & champions</p>
+            </div>
+          </button>
         </div>
       </div>
 
@@ -217,7 +246,7 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
               ))}
             </div>
             <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
-              Questions are randomly drawn from all {championsCount} Set 16 champions.
+              Questions are randomly drawn from all {championsCount} Set 17 champions.
             </p>
           </div>
         </div>
@@ -239,7 +268,7 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
               ))}
             </div>
             <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
-              Questions cover all {itemsCount} completed items in Set 16.
+              Questions cover all {itemsCount} completed items in Set 17.
             </p>
           </div>
         </div>
@@ -261,7 +290,29 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
               ))}
             </div>
             <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
-              Questions are drawn from ideal item builds across all {championsCount} Set 16 champions.
+              Questions are drawn from ideal item builds across all {championsCount} Set 17 champions.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Traits quiz info */}
+      {mode === "traits" && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            What you&apos;ll be tested on
+          </p>
+          <div className="bg-bg-surface border border-teal-500/20 rounded-xl p-4">
+            <div className="grid grid-cols-1 gap-2">
+              {TRAIT_Q_TYPES.map(({ emoji, label }) => (
+                <div key={label} className="flex items-center gap-3">
+                  <span className="text-base">{emoji}</span>
+                  <span className="text-sm text-text-secondary">{label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
+              Questions cover all {traitsCount} Set 17 traits across Origins, Classes, and Uniques.
             </p>
           </div>
         </div>
@@ -307,10 +358,12 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
             ? "bg-gradient-to-r from-emerald-600 to-emerald-400 hover:from-emerald-500 hover:to-emerald-300 text-white shadow-lg"
             : mode === "item_knowledge"
             ? "bg-gradient-to-r from-sky-600 to-sky-400 hover:from-sky-500 hover:to-sky-300 text-white shadow-lg"
+            : mode === "traits"
+            ? "bg-gradient-to-r from-teal-600 to-teal-400 hover:from-teal-500 hover:to-teal-300 text-white shadow-lg"
             : "bg-accent-purple hover:bg-accent-purple/80 text-white shadow-glow"
         }`}
       >
-        {mode === "champions" ? "🏆" : mode === "items" ? "⚔️" : mode === "item_knowledge" ? "🛡️" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
+        {mode === "champions" ? "🏆" : mode === "items" ? "⚔️" : mode === "item_knowledge" ? "🛡️" : mode === "traits" ? "🌟" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
       </button>
     </div>
   );

@@ -157,7 +157,7 @@ function makeItemToTier(
   return {
     id: `iknow_i2t_${item.id}_${index}`,
     type: "item_to_tier",
-    prompt: `What tier rating does ${item.name} have in Set 16?`,
+    prompt: `What tier rating does ${item.name} have in Set 17?`,
     promptLabel: "Rate the item",
     correctAnswer,
     options: shuffle([correctAnswer, ...distractors]),

@@ -1,245 +1,188 @@
 /**
- * Beginner-friendly one-liner for each Set 16 trait.
+ * Beginner-friendly one-liner for each Set 17: Space Gods trait.
  * Keyed by trait name exactly as it appears in traits.json.
  */
 export const TRAIT_EXPLAINERS: Record<string, { beginner: string; tip: string }> = {
   // ── Origin traits ──────────────────────────────────────────────────────────
-  Bilgewater: {
-    beginner: "Earn Silver Serpents (bonus gold) to spend on powerful upgrades in your shop.",
-    tip: "Great for economy-focused players — the extra gold lets you level up and roll faster.",
+  Anima: {
+    beginner: "After every loss, your Anima units gain 15 Tech + 5 more per loss-streak length. Anima takedowns give 2 Tech each. Hit 100 Tech to prototype Anima Weapons — grab them now or save up for something stronger.",
+    tip: "Loss-streak hard to get 6 Anima online. The longer your streak, the more Tech you bank per fight. At 6 units you get a loot orb on wins too, giving you value from both outcomes.",
   },
-  Demacia: {
-    beginner: "When your team takes enough damage, Demacians rally together and regenerate HP — making them very hard to kill.",
-    tip: "Stack Demacian champions to survive long fights and outlast bursty enemy comps.",
+  Arcana: {
+    beginner: "Unique to Tahm Kench — every 3 rounds he gifts you a reward. Just keep him alive and he'll keep paying out.",
+    tip: "Tahm Kench is already a strong frontline Brawler. Arcana is a free bonus on top — no extra cost, just don't let him die before the 3-round mark.",
   },
-  Freljord: {
-    beginner: "Summons a Frozen Tower that heals nearby allies and slows enemy attacks.",
-    tip: "Place your frontline in front of the tower to protect your backline from enemy attackers.",
+  Arbiter: {
+    beginner: "Arbiters let you write your own divine law — pick a cause (something that happens in combat) and an effect (a bonus that triggers). At 2 units your law activates; at 3 it hits harder.",
+    tip: "You only need 3 units for max power. Mix Arbiter into almost any comp as a flex 2-3 unit splash since you design the law to fit your win condition.",
   },
-  Ionia: {
-    beginner: "Ionians gain shields, AD, and AP. The more unique Ionian traits you activate, the bigger the bonus.",
-    tip: "Mix Ionian champions with other origins — every new trait you activate makes the Ionians stronger.",
+  "Dark Star": {
+    beginner: "Dark Stars summon a black hole that executes enemies at 10% HP. At 4 they gain 30% AD & AP. At 6 the strongest Dark Star goes supermassive — double effectiveness and 2 extra black holes. At 9, all are supermassive, and at level 10 they consume EVERYONE.",
+    tip: "6 Dark Star is the sweet spot — supermassive plus the AD/AP boost. The 9-unit payoff is a high-roll late-game fantasy but devastating if you hit it.",
   },
-  Noxus: {
-    beginner: "Once the enemy team has taken enough damage, a powerful Atakhan warrior appears to fight for you.",
-    tip: "The higher your Noxus count, the stronger Atakhan becomes — great for snowballing winning fights.",
+  Mecha: {
+    beginner: "Innate: Mechas can transform into their Ultimate form mid-combat — their ability upgrades and they gain 60% Health. A transformed Mecha takes up 2 team slots but counts twice for the trait. At 6 Mecha, you get +1 max team size.",
+    tip: "Transformed Mechas counting twice means 3 Mechas can reach 4-unit bonus thresholds. At 6 Mecha the +1 team size is huge — you effectively run an 8-unit board.",
   },
-  Piltover: {
-    beginner: "Builds an invention on your board. Win or lose fights to level it up and unlock powerful bonuses.",
-    tip: "Piltover rewards consistency — even losing rounds help you power up the invention.",
+  Meeple: {
+    beginner: "Meeps empower Astronaut abilities in wacky ways. They also gain bonus Health (up to +1000 at 10 units). At 7, a Cloning Slot lets you clone a champion — time equals their cost in rounds. At 10, SUMMON THE FOUR MEEPLORDS!",
+    tip: "The Cloning Slot at 7 Meeple is a massive tempo tool — clone your 5-cost carry for a free copy over time. The Four Meeplords at 10 units is one of the most powerful board states in the game.",
   },
-  Shurima: {
-    beginner: "Shurimans ramp up Attack Speed and restore Health every second during combat.",
-    tip: "The longer a fight lasts, the stronger your Shurimans get — pair with tanky champions to keep them alive.",
+  "N.O.V.A.": {
+    beginner: "6 seconds into combat, N.O.V.A. triggers a power surge for all allies. The surge effect depends on which N.O.V.A. champions you have: Caitlyn gives 20% AS, Aatrox shreds/sunders, Maokai heals, Kindred shields your tank, Akali gives Precision. At 5 units, you pick a Striker to activate during the surge.",
+    tip: "Mix N.O.V.A. champions to stack multiple surge effects simultaneously. At 5 units the Striker selector lets you double up on your most needed surge effect — pick Caitlyn for attack speed or Aatrox for shred.",
   },
-  Targon: {
-    beginner: "Targonians are traitless — they don't activate other traits. But they have bonus stats to compensate.",
-    tip: "Use Targon champions as fillers when you need a specific stat but don't want to break a trait threshold.",
+  Primordian: {
+    beginner: "Dealing damage spawns Swarmlings based on star level — tiny creatures that fight for you. Primordians also convert 8% of all damage they take into bonus damage dealt. At 3 units, you gain a free 1 or 2-cost champion every round.",
+    tip: "The free champion every round at 3 Primordians is huge econ. Higher star-level Primordians spawn more Swarmlings — prioritize 2-starring them for swarm volume.",
   },
-  Void: {
-    beginner: "Unlock Mutations — powerful bonus effects that only Void champions can equip.",
-    tip: "Void at 4+ units unlocks multiple mutation slots, dramatically boosting your whole comp.",
+  Psionic: {
+    beginner: "Psionic units craft special Psionic items you can equip on any ally. At 4 units you get a second item, and both gain extra effects when equipped on Psionic champions.",
+    tip: "Put Psionic items on your strongest Psionic champion to get the bonus effects. Viktor and Master Yi benefit most — they're already strong and the extra Psionic effects push them over the top.",
   },
-  Yordle: {
-    beginner: "Each unique Yordle on your board gives ALL Yordles bonus HP and Attack Speed. More Yordles = more power.",
-    tip: "Try to get as many different Yordle champions as possible — the scaling is exponential.",
+  "Space Groove": {
+    beginner: "Groovians can enter 'the Groove' gaining Attack Speed and Health Regen. At 3, all Groovians start combat in the Groove for free. At 5, every second in the Groove stacks 3% more AD and AP. At 7, all effects are 20% stronger.",
+    tip: "The stacking AD/AP at 5 Space Groove snowballs hard in long fights. Position Groove champions to survive as long as possible — each second in the Groove compounds. Blitzcrank's Party Animal makes him naturally re-enter the Groove.",
   },
-  Zaun: {
-    beginner: "After a few seconds of combat, Zaunites become Shimmer-Fused and gain powerful stat bonuses.",
-    tip: "Zaun rewards surviving the early seconds of a fight — items that keep your champions alive help a lot.",
+  Stargazer: {
+    beginner: "Every game a different constellation is charted, revealing special hexes on your board that buff units inside them. The bonuses scale with Stargazer count — up to +40% AD/AP and more gold at 6 units. More hexes unlock as your player level increases.",
+    tip: "Place your most important carries and tanks in the empowered hexes. The constellation changes each game so adapt your positioning every match. Higher Stargazer counts reveal more hexes at lower levels.",
   },
-  Ixtal: {
-    beginner: "Complete quests during combat to earn Sunshards and unlock escalating bonuses.",
-    tip: "Ixtal champions get stronger as you complete more quests — the longer you play the comp, the more value you get.",
-  },
-  "Shadow Isles": {
-    beginner: "Each time any champion dies, you gain Souls. Spend Souls on bonuses between combats.",
-    tip: "Shadow Isles benefits from high-death rounds — great against aggressive enemy comps.",
+  Timebreaker: {
+    beginner: "On loss, gain free rerolls to find better champions. On win, store XP in a Temporal Core for free leveling. At 3 units your whole team gets +15% Attack Speed. At 4 units, Timebreakers themselves gain an extra +50% Attack Speed.",
+    tip: "Timebreaker rewards you for both winning and losing, making it perfect for flexible early-game strategies. The +50% AS at 4 units on top of the team 15% makes Timebreaker carries attack extremely fast.",
   },
 
   // ── Class traits ───────────────────────────────────────────────────────────
-  Arcanist: {
-    beginner: "Gives your whole team bonus Ability Power. Arcanist champions themselves get even more AP.",
-    tip: "Stack AP items on your Arcanist carry — the trait multiplies all that AP into huge damage.",
+  Bastion: {
+    beginner: "Your whole team gets 12 Armor & Magic Resist for free. Bastions themselves get 16/35/55 at each breakpoint, and all those values double in the first 10 seconds of combat. At 6, even non-Bastions gain an extra 20 Armor & MR.",
+    tip: "The first-10s doubling is huge — enemies with burst damage or early casters will bounce off your board. At 6 Bastion, your entire team becomes tanky, so you can run squishy carries without fear.",
   },
-  Bruiser: {
-    beginner: "Gives your whole team bonus max Health. Great for making your frontline nearly unkillable.",
-    tip: "Pair Bruisers with Warmog's Armor or Dragon's Claw — the extra HP scales with percentage items.",
+  Brawler: {
+    beginner: "Everyone on your team gets a free 7% Health bump. Brawlers themselves get much more — up to +65% max HP at 6 units. They become massive health sponges that soak damage for your carries.",
+    tip: "Stack Brawler with HP-scaling items like Warmog's Armor — a +65% HP Brawler heals enormous amounts. At 4 Brawlers the 45% bonus already makes them hard to kill; 6 is a serious commitment but turns your frontline into a wall.",
   },
-  Darkin: {
-    beginner: "Darkin champions heal from damage they deal (Omnivamp), and share that healing with you.",
-    tip: "The more Darkin you run, the more sustain your team gets — strong against poke-heavy comps.",
+  Challenger: {
+    beginner: "Your whole team gets 10% Attack Speed for free. Challengers themselves get up to 40% AS at 5 units. On top of that, every time a Challenger kills their target, they dash to a new enemy and get a 50% AS burst for 2.5 seconds.",
+    tip: "Challengers chain kills — each takedown refreshes the 50% AS burst. They shred through teams with lots of units. At 5 Challengers the 40% base AS plus the kill burst makes them extremely fast.",
   },
-  Defender: {
-    beginner: "Gives your whole team bonus Armor and Magic Resist. Defenders get the most.",
-    tip: "Use Defenders to absorb damage from strong enemy carries — they're the backbone of a tanky comp.",
+  Channeler: {
+    beginner: "Channelers innately gain 20% more Mana from all sources, so they cast faster. On top of that, the trait gives your whole team Mana Regen (up to 2%/s) and Channelers themselves get up to 7%/s — they barely stop casting.",
+    tip: "Mana Regen stacks with Blue Buff and Tear items. At 4-5 Channelers, high-mana casters like Aurelion Sol and Viktor cast almost on cooldown. Pair with Channeler-friendly carries for maximum uptime.",
   },
-  Disruptor: {
-    beginner: "Disruptors' abilities 'Dazzle' (briefly stun) enemies they hit, interrupting enemy casts.",
-    tip: "Disruptors are great against AP-heavy comps — staggering enemy casts buys your team precious seconds.",
+  Fateweaver: {
+    beginner: "Innate: all Fateweavers have Precision (abilities can crit). At 2 units, chance effects on abilities are Lucky. At 4, they gain +20% Crit Chance and +10% Crit Damage — and critical strikes themselves become Lucky too.",
+    tip: "Lucky effects roll twice and take the better result. Stacking Lucky crits at 4 Fateweavers makes every crit hit even harder. Jeweled Gauntlet pairs perfectly here.",
   },
-  Gunslinger: {
-    beginner: "Every few attacks, Gunslingers fire bonus projectiles at ALL enemies — like a mini AoE attack.",
-    tip: "Gunslingers shred clustered enemy teams. Put them in the back row and watch them spray everything.",
+  Marauder: {
+    beginner: "Your whole team gets 5% free Omnivamp (heal from damage). Marauders themselves get up to 10% Omnivamp and 40% bonus AD. Best of all, any overheal converts into a shield — capped at 25% max HP — making them self-sustaining tanks.",
+    tip: "At 6 Marauders the 40% AD bonus is enormous for physical carries like Fiora and Master Yi. The overheal shield makes them nearly immortal in sustained fights.",
   },
-  Invoker: {
-    beginner: "Your whole team regenerates Mana faster, so champions cast their abilities much more often.",
-    tip: "Stack Invoker with AP items and Blue Buff — your mages will cast constantly.",
+  Replicator: {
+    beginner: "Replicators fire their ability a second time automatically — for free. At 2 units the echo deals 25% strength; at 4 units it deals 50%. Every cast is effectively 1.25x or 1.5x value.",
+    tip: "AoE casters like Nami and Lulu hit the most targets with both casts. At 4 Replicators the 50% echo is nearly a full second ability — one of the strongest damage multipliers in the game.",
   },
-  Juggernaut: {
-    beginner: "Juggernauts are very hard to kill — they gain Durability (damage reduction) especially when healthy.",
-    tip: "Use Juggernauts as your main frontline. They become more efficient at tanking the longer they stay alive.",
+  Rogue: {
+    beginner: "Rogues gain up to 60% bonus AD and AP at 5 units. The first time any Rogue drops below 50% HP, they slip into shadows — all enemies targeting them get redirected to a nearby unit (preferring tanks) instead.",
+    tip: "The shadow dodge can save your carry from a focused burst combo. At 5 Rogues the 60% AD/AP is massive — pair with carries who can exploit both stats like Kai'Sa or Akali.",
   },
-  Longshot: {
-    beginner: "Longshots deal more damage the farther away their target is — reward backline snipers.",
-    tip: "Place Longshot carries in the back corners. The more distance between them and enemies, the more damage.",
+  Shepherd: {
+    beginner: "Shepherds summon Bia (at 3 units) and Bayin (at 5 units) — powerful ally creatures that fight for you. At 7 units their bond grows deeper. Both get stronger the higher the combined star levels of your Shepherd champions.",
+    tip: "3-starring your Shepherd units scales Bia and Bayin dramatically. Prioritize 3-starring cheap Shepherds like Teemo first for strong summon power at low investment.",
   },
-  Quickstriker: {
-    beginner: "Your whole team gets bonus Attack Speed. Quickstrikers also gain bonus Attack Damage when they crit.",
-    tip: "Stack crit items like Infinity Edge — Quickstrikers chain crit into explosive attack speed and damage.",
+  Sniper: {
+    beginner: "Snipers deal bonus Damage Amp that increases per hex of distance to their target. At 5 units they get 32% base amp plus 5% extra per hex — from the back row against a frontline enemy that's over 50% bonus damage.",
+    tip: "Place Snipers in the farthest back row and let enemies come to them. At 4-5 Snipers, every additional hex of distance massively amplifies their output. Jhin, Xayah, and Ezreal are all devastating in backline positions.",
   },
-  Slayer: {
-    beginner: "Slayers heal from damage they deal (Omnivamp) and deal more damage as their HP gets lower.",
-    tip: "Slayers snowball hard once they start healing — let them get hit, then watch them kill everything.",
+  Vanguard: {
+    beginner: "Vanguards gain 5% Durability while shielded and get a big max HP Shield twice per combat — at the start and again at 50% HP. At 6 units the shield is 40% max HP and they get 10% damage reduction while it's active.",
+    tip: "The double-proc shield (combat start + 50% HP) means Vanguards have two big defensive windows every fight. At 6 units that 10% DR stacked with shield makes them the tankiest frontline possible.",
   },
-  Vanquisher: {
-    beginner: "Vanquishers' abilities can critically strike, and they gain bonus Crit Damage.",
-    tip: "Build Infinity Edge and Jeweled Gauntlet on Vanquisher carries to multiply their spell crits.",
-  },
-  Warden: {
-    beginner: "When Wardens drop below 75% and 50% HP, they gain a powerful shield — giving them two second lives.",
-    tip: "Wardens stall for your backline longer than almost any other frontline unit in the game.",
+  Voyager: {
+    beginner: "At combat start, tanks and fighters get a shield (up to 700 HP at 6 units) and other allies get Damage Amp (up to 27%). Voyagers themselves get double both benefits — making them excellent in hybrid tank/carry roles.",
+    tip: "Voyager scales hard into 5-6 units. At 6, tanks get a 700 HP shield and carries get 27% DA — both doubled for Voyagers themselves. Great for mixed comps with strong frontlines and backline carries.",
   },
 
   // ── Unique (1-champion) traits ─────────────────────────────────────────────
-  Ascendant: {
-    beginner: "After each combat, a special Ascendant charm appears in your shop with a bonus upgrade.",
-    tip: "Always check the shop for the Ascendant charm — even small bonuses compound over a full game.",
+  Bulwark: {
+    beginner: "Unique to Shen — he summons a placeable relic you position on the board. When combat starts, it gives all adjacent allies an 18% max HP shield and 20% Attack Speed.",
+    tip: "Position the relic between your frontline tanks and your carries to spread the shield across the most important units. The 20% Attack Speed buff makes it excellent next to fast-attacking carries too.",
   },
-  Assimilator: {
-    beginner: "Kai'Sa changes her ability based on her strongest stat — AD or AP — so she adapts to your items.",
-    tip: "Build whichever damage type fits your comp. Kai'Sa automatically picks the right spell.",
+  Commander: {
+    beginner: "Unique to Sona — every 2 rounds she hands you a random Command Mod you can equip on any ally to change how they fight in combat. Mods persist for 2 combats even if you don't equip them.",
+    tip: "Bank mods if the current one doesn't fit your comp — they last 2 combats unequipped. Best used on your carry or a key frontline unit to surprise opponents.",
   },
-  Blacksmith: {
-    beginner: "Ornn forges powerful Artifact items for your team after each combat — items not normally available.",
-    tip: "Ornn's artifacts are some of the strongest items in the game. Protect him so he keeps forging.",
+  "Dark Lady": {
+    beginner: "Unique to Morgana — your whole team takes 5% less damage from abilities. When Morgana shifts into her Dark Form during combat, that doubles to 10% for everyone.",
+    tip: "Morgana is already a strong 5-cost caster. The 10% ability DR in Dark Form effectively makes your whole team tankier against AP-heavy comps — great insurance against mages.",
   },
-  Caretaker: {
-    beginner: "After winning player combat, gain a random unit from Runeterra — free champions to strengthen your board.",
-    tip: "Win streaking with Caretaker lets you snowball a huge army of free champions.",
+  "Divine Duelist": {
+    beginner: "Unique to Fiora — you heal for 15% of all player combat damage you deal. And Fiora herself always wins a one-on-one duel against any single enemy, no matter what.",
+    tip: "The player healing makes Fiora a great HP sustain unit in close lobbies. Her guaranteed 1v1 win makes her nearly unkillable in small fights — stack AD and crit to maximize her output.",
   },
-  Chainbreaker: {
-    beginner: "Sylas rotates between 3 different abilities, making him unpredictable and versatile.",
-    tip: "Sylas adapts to whatever your team needs — he's a flexible carry that never feels stale.",
+  Doomer: {
+    beginner: "Unique to Vex — at the start of combat, every enemy is marked with Doom. The first time each enemy takes any damage, their Doom is consumed — stealing 8% of their AD and AP and giving it all to Vex.",
+    tip: "Against a full 8-unit board, Vex steals from all 8 enemies at once on the first hit. She snowballs harder the bigger the enemy team is — great against high-cost comps.",
   },
-  Chronokeeper: {
-    beginner: "Zilean stores XP every few casts and can level up your bench or board automatically.",
-    tip: "Keep Zilean alive and casting — his XP generation can give you free levels throughout the game.",
+  Eradicator: {
+    beginner: "Unique to Jhin — while he's on your board, every single enemy has 14% less Armor and Magic Resist. Your whole team hits harder through this debuff.",
+    tip: "Eradicator is a passive team buff — every physical and magic damage source benefits. Pair Jhin with other strong carries to amplify the whole board's damage output.",
   },
-  "Dark Child": {
-    beginner: "Annie summons Tibbers (a giant fire bear) on your bench. Tibbers can fight on your board.",
-    tip: "Tibbers is essentially a free bonus unit — put him in your comp for an extra body.",
+  "Factory New": {
+    beginner: "Unique to Graves — after each combat he participated in, an armory opens where you buy a permanent upgrade for him. He gets stronger every round. Every 3 upgrades, future ones take an extra round to arrive.",
+    tip: "Prioritize upgrades that fit your comp early. The pacing slows after every 3 upgrades, so make sure early picks are impactful.",
   },
-  Dragonborn: {
-    beginner: "Shyvana replaces her normal ability with Flame Breath after casting a few times.",
-    tip: "Shyvana's true power unlocks after a few casts — keep her healthy to see the transformation.",
+  "Galaxy Hunter": {
+    beginner: "Unique to Zed — only obtainable via the 'Invader Zed' augment. While at least one of his clones is alive, Zed gains 40% bonus Attack Damage. His clones both protect him and buff him.",
+    tip: "Protect Zed's clones to keep the 40% AD bonus active as long as possible. Stack AD items on him — the bonus multiplies with every item he carries.",
   },
-  Emperor: {
-    beginner: "Azir deploys two Sand Soldier Guards that fight for you and can be placed anywhere on the board.",
-    tip: "Position Azir's guards near your carry to protect them, or use them to block enemy assassins.",
+  "Gun Goddess": {
+    beginner: "Unique to Miss Fortune — before combat you choose her mode: Channeler (more mana/casts), Challenger (more attack speed + on-kill dash), or Replicator (abilities fire twice). She gains that trait's bonuses and a unique ability for that mode.",
+    tip: "Choose based on your comp's needs. Channeler mode fills trait breakpoints. Challenger mode makes her an attack-speed machine. Replicator mode doubles her ability impact — great for her AoE ults.",
   },
-  Eternal: {
-    beginner: "Every 3rd attack on the same target, Kindred deals massive bonus damage.",
-    tip: "Focus Kindred's attacks on a single target — her every-3rd-hit damage gets devastating fast.",
+  Oracle: {
+    beginner: "Every 3 rounds, Tahm Kench gives you a surprise random reward — could be gold, items, or champions. He's your team's lucky cat!",
+    tip: "Oracle rewards are random but consistent. Running Tahm Kench for 10 rounds can generate significant bonus value. His 4-cost Brawler/tank stats also make him a natural frontline anchor.",
   },
-  Glutton: {
-    beginner: "You can feed Tahm Kench a champion each round to grant him their stats.",
-    tip: "Feed Tahm Kench a high-cost champion you don't need — he gains their power permanently.",
+  "Party Animal": {
+    beginner: "Unique to Blitzcrank — once per combat, when he drops below 45% HP, he becomes untargetable and repairs 15% max HP per second. If he fully heals, he enters The Groove for the rest of the fight and his Party Crasher passive fires bolts 4x as fast.",
+    tip: "Getting Blitzcrank to full health from the repair triggers both Groove (massive speed boost) and quadruple bolt speed. Stack HP and shields to help him survive to the 45% threshold and maximize the proc.",
   },
-  Harvester: {
-    beginner: "Each time an enemy dies, gain Mana. When Fiddlesticks casts, restore 30% of that stored Mana.",
-    tip: "Fiddlesticks gets stronger as the round goes on — he's best in long fights with many deaths.",
-  },
-  Heroic: {
-    beginner: "Galio sits off the board but his traits still count. He cheers from the sidelines, boosting your active traits.",
-    tip: "Galio is a free trait slot — put him on your bench and he'll activate his traits without taking a board spot.",
-  },
-  HexMech: {
-    beginner: "A unit on your bench automatically pilots a mech that jumps into battle at the start of combat.",
-    tip: "The mech is essentially a free frontline unit — use it to soak damage while your main units deal damage.",
-  },
-  Huntress: {
-    beginner: "While Neeko is alive, Nidalee transforms into a more powerful form.",
-    tip: "Keep both Neeko and Nidalee alive — Nidalee's transformed state is significantly stronger.",
-  },
-  Immortal: {
-    beginner: "If Xin Zhao is not on your board, Zaahen gains Xin Zhao's traits — giving you bonus trait activations.",
-    tip: "Run Zaahen when you don't have Xin Zhao — he inherits Xin's identity for free.",
-  },
-  Riftscourge: {
-    beginner: "Baron Nashor is a massive unit that takes up 2 team slots but gives bonus Void trait stacks.",
-    tip: "Baron boosts your Void count — if you're running Void, he's worth the 2-slot cost.",
-  },
-  "Rune Mage": {
-    beginner: "Ryze benefits from ALL active region traits on your board — the more origins you run, the stronger he gets.",
-    tip: "Build a wide roster of different origins, then put Ryze in the comp to amplify all of them.",
-  },
-  Soulbound: {
-    beginner: "Lucian and Senna fight as a duo — they swap places when either casts, making them nearly impossible to burst down.",
-    tip: "They share their destiny: if one dies, the other fights twice as hard. Keep them both alive.",
-  },
-  "Star Forger": {
-    beginner: "Aurelion Sol gains Stardust for each other Aurelion Sol in your team (or stacked via Duplicators) — more copies = more power.",
-    tip: "3-staring Aurelion Sol or using duplicators gives him massive Stardust and an insane power spike.",
-  },
-  "The Boss": {
-    beginner: "When Sett first drops below 50% HP, he leaves the fight to recharge — then returns fully refreshed.",
-    tip: "Don't panic when Sett leaves — he comes back much stronger. Keep enemies off him when he returns.",
-  },
-  "World Ender": {
-    beginner: "Aatrox converts his Omnivamp into pure Attack Damage, making him a self-healing damage monster.",
-    tip: "Stack Omnivamp and lifesteal items on Aatrox — his passive turns all that healing into raw damage.",
-  },
-  "Chosen Wolves": {
-    beginner: "A special unique trait that changes each game — check the trait description in-game for the current effect.",
-    tip: "This trait offers random bonuses — adapt your comp based on what it offers that game.",
-  },
-  Timewinders: {
-    beginner: "A special unique trait that changes each game — check the trait description in-game for the current effect.",
-    tip: "This trait offers random bonuses — adapt your comp based on what it offers that game.",
+  Redeemer: {
+    beginner: "Unique to Rhaast — your whole team gains Attack Speed, Armor, and MR for each non-unique trait you have active. The more diverse your board, the bigger the buff.",
+    tip: "Rhaast rewards 'wide' comps. Running many 2-unit trait splashes stacks his bonus fast — at 8+ active non-unique traits the team-wide stats are significant.",
   },
 };
 
-/** Short category description for the filter tabs */
-export const TYPE_META: Record<string, { label: string; color: string; icon: string; desc: string }> = {
+export const TYPE_META: Record<string, { label: string; icon: string; color: string; description: string }> = {
   damage: {
     label: "Damage",
-    color: "text-red-400",
     icon: "⚔️",
-    desc: "Boost Attack Damage, Crit, or Omnivamp",
+    color: "text-red-400",
+    description: "Boosts attack damage, ability power, or crit for your champions.",
   },
   magic: {
     label: "Magic",
+    icon: "✨",
     color: "text-blue-400",
-    icon: "🔮",
-    desc: "Boost Ability Power and Mana",
+    description: "Enhances mana, spell frequency, or ability effects.",
   },
   tank: {
     label: "Tank",
-    color: "text-green-400",
     icon: "🛡️",
-    desc: "Boost Armor, Magic Resist, and HP",
+    color: "text-slate-300",
+    description: "Increases armor, magic resist, health, or shields.",
   },
   economy: {
     label: "Economy",
-    color: "text-accent-gold",
     icon: "💰",
-    desc: "Generate gold, XP, or items",
+    color: "text-yellow-400",
+    description: "Generates gold, XP, rerolls, or item advantages.",
   },
   utility: {
     label: "Utility",
-    color: "text-purple-400",
-    icon: "⚡",
-    desc: "Crowd control, board effects, and more",
+    icon: "⚙️",
+    color: "text-purple-300",
+    description: "Provides summons, flexibility, or unique board mechanics.",
   },
 };

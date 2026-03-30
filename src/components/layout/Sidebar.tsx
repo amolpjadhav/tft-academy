@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 import TFTLogo from "@/components/brand/TFTLogo";
 
 export const NAV_ITEMS = [
-  { href: "/items",      label: "Items",      icon: "⚔️" },
-  { href: "/combinator", label: "Combinator", icon: "🔨" },
-  { href: "/simulator",  label: "Simulator",  icon: "🎮" },
-  { href: "/traits",     label: "Traits",     icon: "🌟" },
-  { href: "/glossary",   label: "Glossary",   icon: "📖" },
-  { href: "/quiz",       label: "Quiz",       icon: "🧠" },
-  { href: "/flashcards", label: "Flashcards", icon: "🃏" },
+  { href: "/items",            label: "Items",            icon: "⚔️" },
+  { href: "/combinator",       label: "Combinator",       icon: "🔨" },
+  { href: "/simulator",        label: "Simulator",        icon: "🎮" },
+  { href: "/traits",           label: "Traits",           icon: "🌟" },
+  { href: "/glossary",         label: "Glossary",         icon: "📖" },
+  { href: "/quiz",             label: "Quiz",             icon: "🧠" },
+  { href: "/flashcards",       label: "Flashcards",       icon: "🃏" },
 ];
 
 /** Desktop-only fixed left sidebar (hidden on mobile) */
@@ -25,7 +25,7 @@ export default function Sidebar() {
           <span className="font-heading text-accent-gold text-base leading-tight tracking-wide group-hover:text-accent-gold-light transition-colors">
             TFT School
           </span>
-          <p className="text-text-muted text-[10px] mt-0.5">Set 16 · Lore &amp; Legends</p>
+          <p className="text-text-muted text-[10px] mt-0.5">Set 17 · Space Gods</p>
         </div>
       </Link>
 
@@ -57,7 +57,7 @@ export default function Sidebar() {
           <Link href="/guide" className="text-text-muted text-[10px] hover:text-text-secondary transition-colors">Guide</Link>
           <Link href="/privacy" className="text-text-muted text-[10px] hover:text-text-secondary transition-colors">Privacy</Link>
         </div>
-        <p className="text-text-muted text-xs">Set 16 · Patch 16.7b</p>
+        <p className="text-text-muted text-xs">Set 17 · Patch 17.1</p>
       </div>
     </aside>
   );

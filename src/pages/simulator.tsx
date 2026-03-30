@@ -205,7 +205,7 @@ export default function SimulatorPage({ champions, items }: Props) {
           >
             <div className="px-4 py-3 border-b border-white/8">
               <h3 className="text-text-primary font-semibold text-sm">Champions</h3>
-              <p className="text-text-muted text-[11px]">Set 16 · {champions.length} champions</p>
+              <p className="text-text-muted text-[11px]">Set 17 · {champions.length} champions</p>
             </div>
             <div className="flex-1 min-h-0">
               <ChampionPicker

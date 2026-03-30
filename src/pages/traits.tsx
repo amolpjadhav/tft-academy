@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import type { GetStaticProps } from "next";
 import type { Trait } from "@/types/trait";
-import { TRAIT_EXPLAINERS, TYPE_META } from "@/data/traitExplainers";
+import { TRAIT_EXPLAINERS } from "@/data/traitExplainers";
 import PageShell from "@/components/layout/PageShell";
 import traitsData from "../../data/traits.json";
 
@@ -9,8 +9,7 @@ interface Props {
   traits: Trait[];
 }
 
-type TypeFilter = "all" | "damage" | "magic" | "tank" | "economy" | "utility";
-type UniqueFilter = "all" | "multi" | "unique";
+type CategoryFilter = "all" | "origin" | "class" | "unique";
 
 const STYLE_COLORS = ["", "text-amber-700", "text-slate-300", "text-yellow-300", "text-purple-300"];
 const STYLE_BG = ["", "bg-amber-800/30", "bg-slate-500/20", "bg-yellow-500/20", "bg-purple-500/20"];
@@ -26,8 +25,17 @@ const COST_COLORS: Record<number, string> = {
 
 function TraitCard({ trait }: { trait: Trait }) {
   const [expanded, setExpanded] = useState(false);
+  const [imgErrored, setImgErrored] = useState(false);
   const explainer = TRAIT_EXPLAINERS[trait.name];
-  const typeMeta = TYPE_META[trait.type];
+
+  const categoryBadge =
+    trait.isUnique
+      ? { label: "Unique", cls: "bg-accent-purple/15 text-accent-purple-light border-accent-purple/25" }
+      : trait.category === "origin"
+      ? { label: "Origin", cls: "bg-sky-500/15 text-sky-300 border-sky-500/25" }
+      : { label: "Class", cls: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25" };
+
+  const fallbackIcon = trait.isUnique ? "⭐" : trait.category === "origin" ? "🌌" : "⚔️";
 
   return (
     <div
@@ -42,33 +50,24 @@ function TraitCard({ trait }: { trait: Trait }) {
       >
         {/* Trait icon */}
         <div className="w-10 h-10 shrink-0 rounded-xl overflow-hidden bg-bg-elevated border border-white/10 flex items-center justify-center">
-          {trait.icon ? (
+          {trait.icon && !imgErrored ? (
             <img
               src={trait.icon}
               alt={trait.name}
               className="w-full h-full object-contain p-1"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
+              onError={() => setImgErrored(true)}
             />
           ) : (
-            <span className="text-lg">{typeMeta?.icon ?? "⚡"}</span>
+            <span className="text-lg">{fallbackIcon}</span>
           )}
         </div>
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-text-primary font-semibold text-sm leading-tight">{trait.name}</h3>
-            {trait.isUnique && (
-              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent-purple/15 text-accent-purple-light border border-accent-purple/25 font-medium">
-                Unique
-              </span>
-            )}
-            {typeMeta && (
-              <span className={`text-[10px] px-1.5 py-0.5 rounded-full bg-white/5 border border-white/8 font-medium ${typeMeta.color}`}>
-                {typeMeta.icon} {typeMeta.label}
-              </span>
-            )}
+            <span className={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${categoryBadge.cls}`}>
+              {categoryBadge.label}
+            </span>
           </div>
 
           {/* Breakpoints */}
@@ -126,7 +125,11 @@ function TraitCard({ trait }: { trait: Trait }) {
                       <p className={`text-[10px] font-bold leading-none ${STYLE_COLORS[bp.style]}`}>
                         {STYLE_LABEL[bp.style]}
                       </p>
-                      <p className="text-text-muted text-[10px]">units</p>
+                      {bp.effect ? (
+                        <p className="text-text-muted text-[10px] max-w-[120px] leading-tight mt-0.5">{bp.effect}</p>
+                      ) : (
+                        <p className="text-text-muted text-[10px]">units</p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -169,58 +172,64 @@ function TraitCard({ trait }: { trait: Trait }) {
   );
 }
 
-const TYPE_TABS: { id: TypeFilter; label: string; icon: string }[] = [
-  { id: "all", label: "All", icon: "🎯" },
-  { id: "damage", label: "Damage", icon: "⚔️" },
-  { id: "magic", label: "Magic", icon: "🔮" },
-  { id: "tank", label: "Tank", icon: "🛡️" },
-  { id: "economy", label: "Economy", icon: "💰" },
-  { id: "utility", label: "Utility", icon: "⚡" },
+const CATEGORY_TABS: { id: CategoryFilter; label: string; desc: string }[] = [
+  { id: "all", label: "All", desc: "" },
+  { id: "origin", label: "Origins", desc: "Thematic groups" },
+  { id: "class", label: "Classes", desc: "Combat roles" },
+  { id: "unique", label: "Unique", desc: "1-champion traits" },
 ];
 
 export default function TraitsPage({ traits }: Props) {
   const [query, setQuery] = useState("");
-  const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
-  const [uniqueFilter, setUniqueFilter] = useState<UniqueFilter>("all");
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
+
+  const originCount = traits.filter((t) => !t.isUnique && t.category === "origin").length;
+  const classCount = traits.filter((t) => !t.isUnique && t.category === "class").length;
+  const uniqueCount = traits.filter((t) => t.isUnique).length;
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
     return traits.filter((t) => {
-      const matchType = typeFilter === "all" || t.type === typeFilter;
-      const matchUnique =
-        uniqueFilter === "all" ||
-        (uniqueFilter === "unique" ? t.isUnique : !t.isUnique);
+      let matchCat = true;
+      if (categoryFilter === "unique") matchCat = t.isUnique;
+      else if (categoryFilter === "origin") matchCat = !t.isUnique && t.category === "origin";
+      else if (categoryFilter === "class") matchCat = !t.isUnique && t.category === "class";
+
       const matchQuery =
         !q ||
         t.name.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q) ||
         t.champions.some((c) => c.name.toLowerCase().includes(q));
-      return matchType && matchUnique && matchQuery;
-    });
-  }, [traits, query, typeFilter, uniqueFilter]);
 
-  const multiCount = traits.filter((t) => !t.isUnique).length;
-  const uniqueCount = traits.filter((t) => t.isUnique).length;
+      return matchCat && matchQuery;
+    });
+  }, [traits, query, categoryFilter]);
+
+  const counts: Record<CategoryFilter, number> = {
+    all: traits.length,
+    origin: originCount,
+    class: classCount,
+    unique: uniqueCount,
+  };
 
   return (
     <PageShell
-      title="Set 16 Traits"
+      title="Set 17 Traits"
       subtitle={`${filtered.length} of ${traits.length} traits · Lore & Legends`}
     >
       {/* Intro banner */}
       <div className="bg-accent-purple/8 border border-accent-purple/15 rounded-2xl p-4 mb-5">
         <h2 className="text-text-primary font-semibold text-sm mb-1">What are Traits?</h2>
         <p className="text-text-secondary text-xs leading-relaxed">
-          Traits activate when you field enough champions sharing the same origin or class.
-          Each trait gives your team a unique bonus — from dealing more damage to generating gold.
-          The more champions you have in a trait, the stronger the bonus gets.
-          <span className="text-accent-gold ml-1 font-medium">
-            Bronze → Silver → Gold → Prismatic.
-          </span>
+          Field multiple champions sharing the same <span className="text-sky-300 font-medium">Origin</span> or{" "}
+          <span className="text-emerald-300 font-medium">Class</span> to unlock bonuses.
+          <span className="text-accent-purple-light ml-1 font-medium">Unique</span> traits belong to a single 5-cost champion and are always active.
+          Stack thresholds for stronger effects —{" "}
+          <span className="text-accent-gold font-medium">Bronze → Silver → Gold → Prismatic.</span>
         </p>
       </div>
 
-      {/* Search + filters */}
+      {/* Search */}
       <div className="flex flex-col gap-3 mb-5">
         <input
           type="text"
@@ -230,48 +239,73 @@ export default function TraitsPage({ traits }: Props) {
           className="w-full bg-bg-surface border border-white/10 rounded-xl px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple/50 transition"
         />
 
-        {/* Type tabs */}
-        <div className="overflow-x-auto scrollbar-none">
-          <div className="flex gap-1 bg-bg-surface rounded-xl p-1 border border-white/5 w-max min-w-full">
-            {TYPE_TABS.map(({ id, label, icon }) => (
+        {/* Category tabs */}
+        <div className="grid grid-cols-4 gap-1 bg-bg-surface rounded-xl p-1 border border-white/5">
+          {CATEGORY_TABS.map(({ id, label, desc }) => {
+            const active = categoryFilter === id;
+            const badgeColor =
+              id === "origin" ? "text-sky-300" :
+              id === "class" ? "text-emerald-300" :
+              id === "unique" ? "text-accent-purple-light" :
+              "text-text-muted";
+            return (
               <button
                 key={id}
-                onClick={() => setTypeFilter(id)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all shrink-0 ${
-                  typeFilter === id
+                onClick={() => setCategoryFilter(id)}
+                className={`flex flex-col items-center px-2 py-2 rounded-lg text-xs font-medium transition-all ${
+                  active
                     ? "bg-bg-elevated shadow text-text-primary"
                     : "text-text-secondary hover:text-text-primary hover:bg-white/5"
                 }`}
               >
-                <span>{icon}</span>
-                {label}
+                <span className={active ? "text-text-primary" : badgeColor}>
+                  {label}
+                </span>
+                {id !== "all" && (
+                  <span className={`text-[10px] font-normal mt-0.5 ${active ? "text-text-muted" : "text-text-muted/60"}`}>
+                    {counts[id]}
+                  </span>
+                )}
               </button>
-            ))}
-          </div>
+            );
+          })}
         </div>
 
-        {/* Multi / Unique toggle */}
-        <div className="flex gap-2">
-          {(
-            [
-              { id: "all", label: `All (${traits.length})` },
-              { id: "multi", label: `Multi-Champion (${multiCount})` },
-              { id: "unique", label: `Unique (${uniqueCount})` },
-            ] as const
-          ).map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => setUniqueFilter(id)}
-              className={`text-xs px-3 py-1 rounded-full border transition-all ${
-                uniqueFilter === id
-                  ? "bg-bg-elevated border-white/20 text-text-primary"
-                  : "border-white/8 text-text-muted hover:text-text-secondary hover:border-white/15"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        {/* Category description */}
+        {categoryFilter === "all" && (
+          <div className="grid grid-cols-3 gap-2">
+            <div className="bg-sky-500/8 border border-sky-500/20 rounded-xl p-3">
+              <p className="text-sky-300 text-[11px] font-semibold mb-1">Origins</p>
+              <p className="text-text-muted text-[10px] leading-relaxed">Where your champions come from — their lore, faction, or world. Stack them to unlock powerful themed bonuses.</p>
+            </div>
+            <div className="bg-emerald-500/8 border border-emerald-500/20 rounded-xl p-3">
+              <p className="text-emerald-300 text-[11px] font-semibold mb-1">Classes</p>
+              <p className="text-text-muted text-[10px] leading-relaxed">What your champions do in battle — their combat role. Mix classes to build a well-rounded team.</p>
+            </div>
+            <div className="bg-accent-purple/8 border border-accent-purple/20 rounded-xl p-3">
+              <p className="text-accent-purple-light text-[11px] font-semibold mb-1">Unique</p>
+              <p className="text-text-muted text-[10px] leading-relaxed">Special traits tied to one champion only. Always active when that champion is on your board.</p>
+            </div>
+          </div>
+        )}
+        {categoryFilter === "origin" && (
+          <div className="bg-sky-500/8 border border-sky-500/20 rounded-xl p-3">
+            <p className="text-sky-300 text-[11px] font-semibold mb-1">What are Origins?</p>
+            <p className="text-text-muted text-[10px] leading-relaxed">Origins represent where a champion comes from — their faction, world, or lore group. For example, all Meeple champions are Astronauts, and all Dark Star champions are tied to the same cosmic theme. You don't choose an Origin; it's baked into the champion. Put enough of them together and you unlock the trait bonus.</p>
+          </div>
+        )}
+        {categoryFilter === "class" && (
+          <div className="bg-emerald-500/8 border border-emerald-500/20 rounded-xl p-3">
+            <p className="text-emerald-300 text-[11px] font-semibold mb-1">What are Classes?</p>
+            <p className="text-text-muted text-[10px] leading-relaxed">Classes define what role a champion plays in combat — tanks soak damage (Bastion, Vanguard, Brawler), carries deal it (Sniper, Rogue, Challenger), and supports empower the team (Channeler, Shepherd). A champion can have one Origin and one Class, so building both at once is how strong compositions come together.</p>
+          </div>
+        )}
+        {categoryFilter === "unique" && (
+          <div className="bg-accent-purple/8 border border-accent-purple/20 rounded-xl p-3">
+            <p className="text-accent-purple-light text-[11px] font-semibold mb-1">What are Unique traits?</p>
+            <p className="text-text-muted text-[10px] leading-relaxed">Unique traits belong to a single champion and activate the moment you field them — no stacking required. They're usually reserved for powerful 5-cost champions and give your team a distinct edge. You can only have one copy of each unique champion, so these traits can't be doubled up.</p>
+          </div>
+        )}
       </div>
 
       {/* Grid */}

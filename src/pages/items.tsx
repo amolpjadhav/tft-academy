@@ -38,7 +38,7 @@ export default function CatalogPage({ items, components }: Props) {
     <>
       <PageShell
         title="Item Catalog"
-        subtitle={`${filtered.length} of ${items.length} items · Set 16 · Lore & Legends`}
+        subtitle={`${filtered.length} of ${items.length} items · Set 17 · Space Gods`}
       >
         {/* Controls */}
         <div className="flex flex-col gap-3 mb-5">
