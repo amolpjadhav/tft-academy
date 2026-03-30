@@ -171,12 +171,12 @@ export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizS
           </p>
           <div className="grid grid-cols-2 gap-2">
             {GLOSSARY_CATEGORIES.map(({ id, emoji }) => {
-              const label = id === "all" ? "All Topics" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions">].label;
+              const label = id === "all" ? "All Topics" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items">].label;
               const cnt = id === "all"
                 ? GLOSSARY.length
                 : GLOSSARY.filter((t) => t.category === id).length;
               const active = category === id;
-              const color = id === "all" ? "text-text-primary" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions">].color;
+              const color = id === "all" ? "text-text-primary" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items">].color;
               return (
                 <button
                   key={id}
