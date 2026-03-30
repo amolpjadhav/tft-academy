@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GLOSSARY, CATEGORY_META } from "@/data/glossary";
 import type { QuizCategory, QuestionCount } from "@/utils/quiz";
 
-type QuizMode = "knowledge" | "champions";
+type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge";
 
 const GLOSSARY_CATEGORIES: { id: QuizCategory; emoji: string }[] = [
   { id: "all",       emoji: "📖" },
@@ -28,12 +28,27 @@ const CHAMPION_Q_TYPES = [
   { emoji: "🌟", label: "Champion traits" },
 ];
 
+const ITEM_Q_TYPES = [
+  { emoji: "🏆", label: "Which item is ideal for a champion?" },
+  { emoji: "🎯", label: "Which champion benefits from an item?" },
+  { emoji: "💡", label: "Match the reason an item is chosen" },
+];
+
+const ITEM_KNOWLEDGE_Q_TYPES = [
+  { emoji: "📜", label: "Identify an item by its passive" },
+  { emoji: "⚙️", label: "Match what an item's passive does" },
+  { emoji: "🔨", label: "Which item two components combine into" },
+  { emoji: "🎭", label: "Which role an item is built for" },
+  { emoji: "🏅", label: "What tier rating an item has" },
+];
+
 interface QuizSetupProps {
   onStart: (category: QuizCategory, count: QuestionCount) => void;
   championsCount: number;
+  itemsCount: number;
 }
 
-export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
+export default function QuizSetup({ onStart, championsCount, itemsCount }: QuizSetupProps) {
   const [mode, setMode]         = useState<QuizMode>("knowledge");
   const [category, setCategory] = useState<QuizCategory>("all");
   const [count, setCount]       = useState<QuestionCount>(10);
@@ -41,6 +56,10 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
   const poolSize =
     mode === "champions"
       ? championsCount
+      : mode === "items"
+      ? championsCount
+      : mode === "item_knowledge"
+      ? itemsCount
       : category === "all"
       ? GLOSSARY.length
       : GLOSSARY.filter((t) => t.category === category).length;
@@ -49,7 +68,10 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
     count === "all" ? poolSize : Math.min(count as number, poolSize);
 
   function handleStart() {
-    onStart(mode === "champions" ? "champions" : category, count);
+    if (mode === "champions") onStart("champions", count);
+    else if (mode === "items") onStart("item_quiz", count);
+    else if (mode === "item_knowledge") onStart("items", count);
+    else onStart(category, count);
   }
 
   return (
@@ -73,7 +95,7 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => { setMode("knowledge"); setCategory("all"); }}
-            className={`flex flex-col items-center gap-2 px-4 py-4 rounded-xl border text-left transition-all ${
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
               mode === "knowledge"
                 ? "bg-accent-purple/20 border-accent-purple/50 shadow-glow"
                 : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
@@ -89,8 +111,8 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
           </button>
 
           <button
-            onClick={() => { setMode("champions"); }}
-            className={`flex flex-col items-center gap-2 px-4 py-4 rounded-xl border text-left transition-all ${
+            onClick={() => setMode("champions")}
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
               mode === "champions"
                 ? "bg-accent-gold/15 border-accent-gold/50"
                 : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
@@ -102,6 +124,40 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
                 Champions
               </p>
               <p className="text-xs text-text-muted mt-0.5">Abilities, roles & traits</p>
+            </div>
+          </button>
+
+          <button
+            onClick={() => setMode("item_knowledge")}
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
+              mode === "item_knowledge"
+                ? "bg-sky-500/15 border-sky-500/50"
+                : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
+            }`}
+          >
+            <span className="text-3xl">🛡️</span>
+            <div className="text-center">
+              <p className={`text-sm font-semibold ${mode === "item_knowledge" ? "text-sky-400" : "text-text-primary"}`}>
+                Item Knowledge
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">Passives, components & tiers</p>
+            </div>
+          </button>
+
+          <button
+            onClick={() => setMode("items")}
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
+              mode === "items"
+                ? "bg-emerald-500/15 border-emerald-500/50"
+                : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
+            }`}
+          >
+            <span className="text-3xl">⚔️</span>
+            <div className="text-center">
+              <p className={`text-sm font-semibold ${mode === "items" ? "text-emerald-400" : "text-text-primary"}`}>
+                Ideal Items
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">Champion builds</p>
             </div>
           </button>
         </div>
@@ -167,6 +223,50 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
         </div>
       )}
 
+      {/* Item knowledge info */}
+      {mode === "item_knowledge" && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            What you&apos;ll be tested on
+          </p>
+          <div className="bg-bg-surface border border-sky-500/20 rounded-xl p-4">
+            <div className="grid grid-cols-1 gap-2">
+              {ITEM_KNOWLEDGE_Q_TYPES.map(({ emoji, label }) => (
+                <div key={label} className="flex items-center gap-3">
+                  <span className="text-base">{emoji}</span>
+                  <span className="text-sm text-text-secondary">{label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
+              Questions cover all {itemsCount} completed items in Set 16.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Item quiz info (only for items mode) */}
+      {mode === "items" && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            What you&apos;ll be tested on
+          </p>
+          <div className="bg-bg-surface border border-emerald-500/20 rounded-xl p-4">
+            <div className="grid grid-cols-1 gap-2">
+              {ITEM_Q_TYPES.map(({ emoji, label }) => (
+                <div key={label} className="flex items-center gap-3">
+                  <span className="text-base">{emoji}</span>
+                  <span className="text-sm text-text-secondary">{label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
+              Questions are drawn from ideal item builds across all {championsCount} Set 16 champions.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Question count */}
       <div className="mb-10">
         <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
@@ -200,13 +300,17 @@ export default function QuizSetup({ onStart, championsCount }: QuizSetupProps) {
       {/* Start button */}
       <button
         onClick={handleStart}
-        className={`w-full py-4 rounded-xl text-white font-semibold text-base transition-all active:scale-95 ${
+        className={`w-full py-4 rounded-xl font-semibold text-base transition-all active:scale-95 ${
           mode === "champions"
             ? "bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-black shadow-lg"
-            : "bg-accent-purple hover:bg-accent-purple/80 shadow-glow"
+            : mode === "items"
+            ? "bg-gradient-to-r from-emerald-600 to-emerald-400 hover:from-emerald-500 hover:to-emerald-300 text-white shadow-lg"
+            : mode === "item_knowledge"
+            ? "bg-gradient-to-r from-sky-600 to-sky-400 hover:from-sky-500 hover:to-sky-300 text-white shadow-lg"
+            : "bg-accent-purple hover:bg-accent-purple/80 text-white shadow-glow"
         }`}
       >
-        {mode === "champions" ? "🏆" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
+        {mode === "champions" ? "🏆" : mode === "items" ? "⚔️" : mode === "item_knowledge" ? "🛡️" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
       </button>
     </div>
   );
