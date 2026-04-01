@@ -5,7 +5,7 @@ import TFTLogo from "@/components/brand/TFTLogo";
 export const NAV_ITEMS = [
   { href: "/items",            label: "Items",            icon: "⚔️" },
   { href: "/combinator",       label: "Combinator",       icon: "🔨" },
-  { href: "/simulator",        label: "Simulator",        icon: "🎮" },
+  { href: "/team-builder",     label: "Team Builder",     icon: "🏗️" },
   { href: "/traits",           label: "Traits",           icon: "🌟" },
   { href: "/glossary",         label: "Glossary",         icon: "📖" },
   { href: "/quiz",             label: "Quiz",             icon: "🧠" },
