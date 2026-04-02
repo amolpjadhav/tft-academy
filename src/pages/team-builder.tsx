@@ -126,6 +126,7 @@ function calcPower(activeTraits: ActiveTrait[], champCount: number): number {
 function HexCell({
   hexKey, champion, cell, isDragOver,
   onDragStart, onDragOver, onDragLeave, onDrop, onClick,
+  onTouchStart, onTouchMove, onTouchEnd,
 }: {
   hexKey: string;
   champion: Champion | null;
@@ -136,12 +137,16 @@ function HexCell({
   onDragLeave: () => void;
   onDrop: (k: string) => void;
   onClick: (k: string) => void;
+  onTouchStart?: (k: string, c: Champion, e: React.TouchEvent) => void;
+  onTouchMove?: (e: React.TouchEvent) => void;
+  onTouchEnd?: (e: React.TouchEvent) => void;
 }) {
   const fontSize = Math.max(8, Math.round(cell * 0.135));
   const badgePad = Math.max(1, Math.round(cell * 0.04));
 
   return (
     <div
+      data-hex-key={hexKey}
       style={{ width: cell, height: cell, flexShrink: 0 }}
       draggable={!!champion}
       onDragStart={() => champion && onDragStart(hexKey, champion)}
@@ -149,6 +154,9 @@ function HexCell({
       onDragLeave={onDragLeave}
       onDrop={(e) => { e.preventDefault(); onDrop(hexKey); }}
       onClick={() => onClick(hexKey)}
+      onTouchStart={champion && onTouchStart ? (e) => onTouchStart(hexKey, champion, e) : undefined}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
       className="relative cursor-pointer select-none group"
     >
       {/* Base hex */}
@@ -200,7 +208,7 @@ function HexCell({
         </div>
       )}
 
-      {/* Role badge — top centre, above the clip path so always visible */}
+      {/* Role badge */}
       {champion && (() => {
         const role = ROLE_META[champion.role];
         const fs = Math.max(7, Math.round(cell * 0.095));
@@ -234,11 +242,9 @@ function HexCell({
         </div>
       )}
 
-      {/* Champion name tooltip on hover */}
+      {/* Tooltip (desktop hover only) */}
       {champion && (
-        <div
-          className="absolute -top-7 left-1/2 -translate-x-1/2 bg-bg-surface border border-white/10 text-text-primary rounded-md px-2 py-0.5 text-[10px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20"
-        >
+        <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-bg-surface border border-white/10 text-text-primary rounded-md px-2 py-0.5 text-[10px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
           {champion.name}
         </div>
       )}
@@ -366,15 +372,20 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
   const [selectedChamp, setSelectedChamp] = useState<Champion | null>(null);
   const [dragOverKey, setDragOverKey] = useState<string | null>(null);
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>("pool");
+  const [sheetOpen, setSheetOpen] = useState(true);
   const [cell, setCell] = useState(72);
+  const [mobileCell, setMobileCell] = useState(44);
 
   // Board area ref — ResizeObserver scales hexes to fill available space
   const boardAreaRef = useRef<HTMLDivElement>(null);
+  const mobileBoardRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<
     | { from: "pool"; champ: Champion }
     | { from: "board"; key: string; champ: Champion }
     | null
   >(null);
+  // Touch drag state
+  const touchDragRef = useRef<{ fromKey: string; champ: Champion } | null>(null);
 
   useEffect(() => {
     const el = boardAreaRef.current;
@@ -393,6 +404,52 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  // Mobile board sizing
+  useEffect(() => {
+    const el = mobileBoardRef.current;
+    if (!el) return;
+    const compute = () => {
+      const w = el.clientWidth - 16;
+      const computed = Math.floor((w - 6.5 * GAP) / 7.5);
+      setMobileCell(Math.max(36, Math.min(60, computed)));
+    };
+    compute();
+    const obs = new ResizeObserver(compute);
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  // ── Touch drag handlers (board → board) ──────────────────────────────────
+  const handleHexTouchStart = useCallback((key: string, champ: Champion, e: React.TouchEvent) => {
+    e.preventDefault();
+    touchDragRef.current = { fromKey: key, champ };
+  }, []);
+
+  const handleHexTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!touchDragRef.current) return;
+    e.preventDefault();
+    const touch = e.touches[0];
+    const el = document.elementFromPoint(touch.clientX, touch.clientY);
+    const hexKey = el?.closest("[data-hex-key]")?.getAttribute("data-hex-key") ?? null;
+    setDragOverKey(hexKey);
+  }, []);
+
+  const handleHexTouchEnd = useCallback((e: React.TouchEvent) => {
+    e.preventDefault();
+    const drag = touchDragRef.current;
+    touchDragRef.current = null;
+    const targetKey = dragOverKey;
+    setDragOverKey(null);
+    if (!drag || !targetKey || targetKey === drag.fromKey) return;
+    setBoard((prev) => {
+      const next = { ...prev };
+      const tmp = prev[targetKey];
+      next[targetKey] = prev[drag.fromKey];
+      next[drag.fromKey] = tmp;
+      return next;
+    });
+  }, [dragOverKey]);
 
   // ── Derived ────────────────────────────────────────────────────────────────
   const placed = useMemo(() => getPlaced(board), [board]);
@@ -716,78 +773,194 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
         </div>
       </div>
 
-      {/* ── Mobile: stacked layout ────────────────────────────────────────── */}
-      <div className="lg:hidden flex flex-col gap-4">
-        {/* Board */}
-        <div className="bg-bg-surface rounded-2xl border border-white/8">
-          <div className="px-4 py-3 border-b border-white/5 flex items-center justify-between">
-            <p className="text-sm font-medium text-text-primary">{placed.length} / 9 units</p>
-            <div className="flex gap-2">
-              {selectedChamp && (
-                <div className="flex items-center gap-1.5 bg-accent-gold/10 border border-accent-gold/20 rounded-lg px-2.5 py-1 text-xs text-accent-gold">
-                  <img src={selectedChamp.icon} className="w-4 h-4 rounded-full object-cover" alt="" draggable={false} />
-                  {selectedChamp.name}
-                  <button onClick={() => setSelectedChamp(null)} className="ml-0.5 opacity-60">×</button>
-                </div>
-              )}
-              {placed.length > 0 && (
-                <button onClick={clearBoard} className="text-xs text-text-muted border border-white/8 rounded-lg px-2.5 py-1">
-                  Clear
-                </button>
-              )}
-            </div>
+      {/* ── Mobile layout ─────────────────────────────────────────────────── */}
+      <div className="lg:hidden flex flex-col" style={{ minHeight: "calc(100vh - 8rem)" }}>
+
+        {/* Power strip */}
+        <div className="flex items-center gap-3 px-1 mb-3 shrink-0">
+          <div className="flex-1 h-2.5 bg-white/8 rounded-full overflow-hidden">
+            <div
+              className={`h-full rounded-full transition-all duration-500 ${powerBarCls}`}
+              style={{ width: `${score}%` }}
+            />
           </div>
-          <div className="overflow-x-auto p-4">
-            <div style={{ width: boardW }}>
-              {Array.from({ length: ROWS }, (_, r) => (
-                <div
-                  key={r}
-                  style={{
-                    display: "flex",
-                    gap: GAP,
-                    marginLeft: r % 2 === 1 ? (cell + GAP) / 2 : 0,
-                    marginBottom: r < ROWS - 1 ? GAP : 0,
-                  }}
+          <span className={`text-base font-black tabular-nums ${
+            score >= 80 ? "text-purple-300" : score >= 60 ? "text-yellow-300" : score >= 40 ? "text-blue-300" : "text-text-muted"
+          }`}>{score}</span>
+          <span className="text-xs text-text-muted">{placed.length}/9 · {activeSynCount} syn</span>
+          {placed.length > 0 && (
+            <button onClick={clearBoard} className="text-[11px] text-text-muted border border-white/8 rounded-lg px-2 py-1">
+              Clear
+            </button>
+          )}
+        </div>
+
+        {/* Hex board — auto-scales to width, no horizontal scroll */}
+        <div ref={mobileBoardRef} className="px-1 mb-3 shrink-0">
+          {(() => {
+            const mBoardW = COLS * mobileCell + (COLS - 1) * GAP + Math.ceil((mobileCell + GAP) / 2);
+            return (
+              <div style={{ width: mBoardW, margin: "0 auto" }}>
+                {Array.from({ length: ROWS }, (_, r) => (
+                  <div
+                    key={r}
+                    style={{
+                      display: "flex",
+                      gap: GAP,
+                      marginLeft: r % 2 === 1 ? (mobileCell + GAP) / 2 : 0,
+                      marginBottom: r < ROWS - 1 ? GAP : 0,
+                    }}
+                  >
+                    {Array.from({ length: COLS }, (_, c) => {
+                      const k = `${r}-${c}`;
+                      return (
+                        <HexCell
+                          key={k}
+                          hexKey={k}
+                          champion={board[k]}
+                          cell={mobileCell}
+                          isDragOver={dragOverKey === k}
+                          onDragStart={handleBoardDragStart}
+                          onDragOver={setDragOverKey}
+                          onDragLeave={() => setDragOverKey(null)}
+                          onDrop={handleDrop}
+                          onClick={handleHexClick}
+                          onTouchStart={handleHexTouchStart}
+                          onTouchMove={handleHexTouchMove}
+                          onTouchEnd={handleHexTouchEnd}
+                        />
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
+        </div>
+
+        {/* Bottom sheet */}
+        <div className="flex-1 flex flex-col min-h-0 bg-bg-surface rounded-t-2xl border-t border-x border-white/8 overflow-hidden">
+          {/* Sheet handle + tabs */}
+          <div className="shrink-0">
+            <div className="flex justify-center pt-2.5 pb-1">
+              <button
+                onClick={() => setSheetOpen(v => !v)}
+                className="w-10 h-1 bg-white/20 rounded-full"
+              />
+            </div>
+            <div className="flex gap-1 px-3 pb-2">
+              {(["pool", "synergies"] as MobilePanel[]).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => { setMobilePanel(p); setSheetOpen(true); }}
+                  className={`flex-1 text-xs font-semibold py-2 rounded-xl transition ${
+                    mobilePanel === p && sheetOpen
+                      ? "bg-bg-elevated text-text-primary"
+                      : "text-text-muted"
+                  }`}
                 >
-                  {Array.from({ length: COLS }, (_, c) => {
-                    const k = `${r}-${c}`;
-                    return (
-                      <HexCell
-                        key={k}
-                        hexKey={k}
-                        champion={board[k]}
-                        cell={cell}
-                        isDragOver={dragOverKey === k}
-                        onDragStart={handleBoardDragStart}
-                        onDragOver={setDragOverKey}
-                        onDragLeave={() => setDragOverKey(null)}
-                        onDrop={handleDrop}
-                        onClick={handleHexClick}
-                      />
-                    );
-                  })}
-                </div>
+                  {p === "pool" ? `🎯 Pool (${filteredPool.length})` : `⚡ Synergies (${activeSynCount})`}
+                </button>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Mobile panel tabs */}
-        <div className="flex gap-1 bg-bg-surface rounded-xl p-1 border border-white/5">
-          {(["pool", "synergies"] as MobilePanel[]).map((p) => (
-            <button
-              key={p}
-              onClick={() => setMobilePanel(p)}
-              className={`flex-1 text-sm font-medium py-2.5 rounded-lg transition ${
-                mobilePanel === p ? "bg-bg-elevated text-text-primary shadow" : "text-text-muted"
-              }`}
-            >
-              {p === "pool" ? "🎯 Champion Pool" : "⚡ Synergies"}
-            </button>
-          ))}
-        </div>
-        <div className="bg-bg-surface rounded-2xl border border-white/8 p-4" style={{ minHeight: 480 }}>
-          {mobilePanel === "pool" ? poolPanel : synPanel}
+          {/* Sheet content */}
+          {sheetOpen && (
+            <div className="flex-1 overflow-y-auto min-h-0 px-3 pb-4">
+              {mobilePanel === "pool" ? (
+                <div className="flex flex-col gap-3">
+                  {/* Search + trait filter */}
+                  <input
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search champion…"
+                    className="w-full bg-bg-elevated border border-white/10 rounded-xl px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple/40"
+                  />
+                  <div className="flex flex-wrap gap-1.5">
+                    <button
+                      onClick={() => setTraitFilter("all")}
+                      className={`text-[11px] font-medium px-2.5 py-1 rounded-full border transition ${
+                        traitFilter === "all"
+                          ? "bg-accent-purple/20 border-accent-purple/40 text-accent-purple-light"
+                          : "bg-white/5 border-white/8 text-text-muted"
+                      }`}
+                    >All</button>
+                    {allTraitNames.map((t) => (
+                      <button
+                        key={t}
+                        onClick={() => setTraitFilter(traitFilter === t ? "all" : t)}
+                        className={`text-[11px] font-medium px-2.5 py-1 rounded-full border transition ${
+                          traitFilter === t
+                            ? "bg-accent-purple/20 border-accent-purple/40 text-accent-purple-light"
+                            : "bg-white/5 border-white/8 text-text-muted"
+                        }`}
+                      >{t}</button>
+                    ))}
+                  </div>
+                  {/* 3-col compact cards — bigger touch targets */}
+                  <div className="grid grid-cols-3 gap-2">
+                    {filteredPool.map((c) => (
+                      <button
+                        key={c.id}
+                        onClick={() => handlePoolClick(c)}
+                        className={`relative flex flex-col items-center gap-1.5 p-2.5 rounded-xl transition-all ${
+                          boardCounts[c.id] ? "opacity-50 bg-white/4" : "bg-bg-elevated active:scale-95"
+                        }`}
+                      >
+                        <div className="w-14 h-14 rounded-full overflow-hidden bg-bg-surface">
+                          <img src={c.icon} alt={c.name} className="w-full h-full object-cover"
+                            onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = "0"; }} />
+                        </div>
+                        <span className="text-[11px] text-text-primary font-semibold text-center leading-tight break-words w-full">{c.name}</span>
+                        <div className="flex flex-wrap gap-0.5 justify-center">
+                          {c.traits.slice(0, 2).map((t) => (
+                            <span key={t} className="text-[8px] text-text-muted bg-white/5 rounded px-1">{t}</span>
+                          ))}
+                        </div>
+                        {/* Cost pip */}
+                        <div
+                          style={{ background: COST_RING[c.cost]?.bg, color: COST_RING[c.cost]?.text }}
+                          className="absolute top-2 left-2 text-[9px] font-black px-1.5 rounded-full leading-tight"
+                        >{c.cost}g</div>
+                        {boardCounts[c.id] ? (
+                          <div className="absolute top-2 right-2 bg-accent-gold text-bg-base text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center">
+                            {boardCounts[c.id]}
+                          </div>
+                        ) : null}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                /* Synergies */
+                <div className="flex flex-col gap-2.5 pt-1">
+                  {/* Compact power card */}
+                  <div className="bg-bg-elevated rounded-xl border border-white/8 px-4 py-3 flex items-center gap-4">
+                    <div>
+                      <p className="text-[9px] text-text-muted uppercase tracking-widest">Power</p>
+                      <p className="text-3xl font-black text-text-primary leading-none">{score}</p>
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-1.5 bg-white/8 rounded-full overflow-hidden mb-1.5">
+                        <div className={`h-full rounded-full transition-all duration-500 ${powerBarCls}`} style={{ width: `${score}%` }} />
+                      </div>
+                      <p className="text-[11px] text-text-muted">{powerLabel}</p>
+                    </div>
+                    <div className="text-right shrink-0">
+                      <p className="text-xs text-text-muted">{placed.length} units</p>
+                      <p className="text-xs text-text-secondary">{activeSynCount} syn.</p>
+                    </div>
+                  </div>
+                  {activeTraits.length > 0
+                    ? activeTraits.map((at) => <TraitRow key={at.trait.id} at={at} />)
+                    : <p className="text-center text-text-muted text-sm py-8">Add champions to see synergies</p>
+                  }
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </PageShell>
