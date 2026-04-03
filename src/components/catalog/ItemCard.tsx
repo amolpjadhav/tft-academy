@@ -26,7 +26,7 @@ export default function ItemCard({ item, onClick }: ItemCardProps) {
   return (
     <button
       onClick={() => onClick(item)}
-      className={`group relative w-full text-left bg-bg-surface rounded-xl border transition-all duration-200 p-4 hover:bg-bg-elevated hover:shadow-glow hover:-translate-y-0.5 ${CATEGORY_ACCENT[item.category]}`}
+      className={`card-hover group relative w-full text-left bg-bg-surface rounded-xl border transition-all duration-200 p-4 hover:bg-bg-elevated hover:shadow-glow ${CATEGORY_ACCENT[item.category]}`}
     >
       {/* Tier badge */}
       <span

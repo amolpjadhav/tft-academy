@@ -15,6 +15,21 @@ const STYLE_COLORS = ["", "text-amber-700", "text-slate-300", "text-yellow-300",
 const STYLE_BG = ["", "bg-amber-800/30", "bg-slate-500/20", "bg-yellow-500/20", "bg-purple-500/20"];
 const STYLE_LABEL = ["", "Bronze", "Silver", "Gold", "Prismatic"];
 
+// Shared icon component used in both the strip and the cards
+function TraitIconDisplay({ trait }: { trait: Trait }) {
+  const [errored, setErrored] = useState(false);
+  const fallback = trait.isUnique ? "⭐" : trait.category === "origin" ? "🌌" : "⚔️";
+  if (!trait.icon || errored) return <span className="text-xl">{fallback}</span>;
+  return (
+    <img
+      src={trait.icon}
+      alt={trait.name}
+      className="w-full h-full object-contain p-0.5"
+      onError={() => setErrored(true)}
+    />
+  );
+}
+
 const COST_COLORS: Record<number, string> = {
   1: "bg-neutral-500/30 text-neutral-300",
   2: "bg-green-600/30 text-green-300",
@@ -25,7 +40,6 @@ const COST_COLORS: Record<number, string> = {
 
 function TraitCard({ trait }: { trait: Trait }) {
   const [expanded, setExpanded] = useState(false);
-  const [imgErrored, setImgErrored] = useState(false);
   const explainer = TRAIT_EXPLAINERS[trait.name];
 
   const categoryBadge =
@@ -35,11 +49,9 @@ function TraitCard({ trait }: { trait: Trait }) {
       ? { label: "Origin", cls: "bg-sky-500/15 text-sky-300 border-sky-500/25" }
       : { label: "Class", cls: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25" };
 
-  const fallbackIcon = trait.isUnique ? "⭐" : trait.category === "origin" ? "🌌" : "⚔️";
-
   return (
     <div
-      className={`bg-bg-surface rounded-2xl border border-white/8 overflow-hidden transition-all duration-200 ${
+      className={`card-hover bg-bg-surface rounded-2xl border border-white/8 overflow-hidden transition-all duration-200 ${
         expanded ? "border-white/15" : "hover:border-white/12"
       }`}
     >
@@ -50,16 +62,7 @@ function TraitCard({ trait }: { trait: Trait }) {
       >
         {/* Trait icon */}
         <div className="w-10 h-10 shrink-0 rounded-xl overflow-hidden bg-bg-elevated border border-white/10 flex items-center justify-center">
-          {trait.icon && !imgErrored ? (
-            <img
-              src={trait.icon}
-              alt={trait.name}
-              className="w-full h-full object-contain p-1"
-              onError={() => setImgErrored(true)}
-            />
-          ) : (
-            <span className="text-lg">{fallbackIcon}</span>
-          )}
+          <TraitIconDisplay trait={trait} />
         </div>
 
         <div className="flex-1 min-w-0">
@@ -229,6 +232,31 @@ export default function TraitsPage({ traits }: Props) {
         </p>
       </div>
 
+      {/* Trait icon strip — click to jump to trait */}
+      <div className="mb-5">
+        <p className="text-[10px] text-text-muted font-semibold uppercase tracking-widest mb-2.5 px-0.5">All Traits</p>
+        <div className="flex flex-wrap gap-2">
+          {traits.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => {
+                setQuery(t.name);
+                setCategoryFilter("all");
+              }}
+              title={t.name}
+              className="group flex flex-col items-center gap-1.5 p-2 rounded-xl bg-bg-surface border border-white/6 hover:border-white/15 hover:bg-bg-elevated transition-all w-16"
+            >
+              <div className="w-9 h-9 rounded-lg overflow-hidden bg-bg-elevated border border-white/8 flex items-center justify-center shrink-0">
+                <TraitIconDisplay trait={t} />
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 700 }} className="text-text-secondary group-hover:text-text-primary leading-tight text-center line-clamp-2 w-full transition-colors">
+                {t.name}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Search */}
       <div className="flex flex-col gap-3 mb-5">
         <input
@@ -310,8 +338,10 @@ export default function TraitsPage({ traits }: Props) {
 
       {/* Grid */}
       <div className="flex flex-col gap-2">
-        {filtered.map((trait) => (
-          <TraitCard key={trait.id} trait={trait} />
+        {filtered.map((trait, i) => (
+          <div key={trait.id} className="animate-card-in" style={{ animationDelay: `${i * 35}ms` }}>
+            <TraitCard trait={trait} />
+          </div>
         ))}
         {filtered.length === 0 && (
           <p className="text-center text-text-muted text-sm py-12">No traits found</p>

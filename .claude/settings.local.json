@@ -20,7 +20,9 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Aatrox.png\")",
       "WebFetch(domain:op.gg)",
       "Bash(grep -v \"^$\")",
-      "Bash(curl -s \"https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/\")"
+      "Bash(curl -s \"https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/\")",
+      "Bash(node -e \"const t = require\\('./data/traits.json'\\); t.forEach\\(x => console.log\\(x.name, '|', x.category, '|', x.isUnique ? 'UNIQUE' : 'normal'\\)\\)\")",
+      "Bash(node -e \"const t = require\\('./data/traits.json'\\); const r = t.find\\(x => x.id === 'replicator'\\); console.log\\(r.icon\\)\")"
     ]
   }
 }

@@ -25,7 +25,8 @@ export default function QuizQuestionCard({
   const [hintOpen, setHintOpen] = useState(false);
 
   const progress = (index / total) * 100;
-  const isChampionQ = question.term.category === "champions";
+  const isChampionQ  = question.term.category === "champions";
+  const isEmblemQ    = question.term.category === "emblem_quiz";
 
   function handleSelect(option: string) {
     if (state !== "idle") return;
@@ -77,7 +78,7 @@ export default function QuizQuestionCard({
           <div className="h-2 bg-white/5 rounded-full overflow-hidden">
             <div
               className={`h-full rounded-full transition-all duration-500 ${
-                isChampionQ ? "bg-accent-gold" : "bg-accent-purple"
+                isChampionQ ? "bg-accent-gold" : isEmblemQ ? "bg-indigo-500" : "bg-accent-purple"
               }`}
               style={{ width: `${progress}%` }}
             />
@@ -95,23 +96,48 @@ export default function QuizQuestionCard({
       <div className={`border rounded-2xl p-7 mb-5 animate-slide-up ${
         isChampionQ
           ? "bg-bg-surface border-accent-gold/20"
+          : isEmblemQ
+          ? "bg-bg-surface border-indigo-500/25"
           : "bg-bg-surface border-white/10"
       }`}>
 
-        {/* Champion portrait */}
+        {/* Icon / portrait */}
         {question.term.image && (
           <div className="flex justify-center mb-5">
-            <div className="relative">
-              <img
-                src={question.term.image}
-                alt={question.term.term}
-                className="w-20 h-20 rounded-2xl object-cover border-2 border-white/20 shadow-lg"
-              />
-              {/* Cost badge */}
-              <div className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full bg-bg-base border border-white/20 flex items-center justify-center text-xs leading-none">
-                {question.term.emoji}
+            {isEmblemQ ? (
+              /* Emblem: large icon, no badge — the icon IS the question */
+              <div
+                className="w-28 h-28 rounded-2xl bg-bg-elevated border-2 border-indigo-500/40 shadow-lg shadow-indigo-500/20 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src={question.term.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const el = e.currentTarget as HTMLImageElement;
+                    el.style.display = "none";
+                    const parent = el.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<span style="font-size:3rem">💠</span>`;
+                    }
+                  }}
+                />
               </div>
-            </div>
+            ) : (
+              <div className="relative">
+                <img
+                  src={question.term.image}
+                  alt={question.term.term}
+                  className="w-20 h-20 rounded-2xl object-cover border-2 border-white/20 shadow-lg"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <div className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full bg-bg-base border border-white/20 flex items-center justify-center text-xs leading-none">
+                  {question.term.emoji}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -129,11 +155,15 @@ export default function QuizQuestionCard({
           {!question.term.image && (
             <span className="text-lg">{question.term.emoji}</span>
           )}
-          <span className={`text-xs capitalize ${isChampionQ ? "text-accent-gold/60" : "text-text-muted"}`}>
+          <span className={`text-xs capitalize ${isChampionQ ? "text-accent-gold/60" : isEmblemQ ? "text-indigo-400/70" : "text-text-muted"}`}>
             {question.term.category === "tft"
               ? "TFT Basics"
               : question.term.category === "champions"
               ? "Champions"
+              : question.term.category === "emblem_quiz"
+              ? "Emblems"
+              : question.term.category === "trait_quiz"
+              ? "Traits"
               : question.term.category}
           </span>
         </div>

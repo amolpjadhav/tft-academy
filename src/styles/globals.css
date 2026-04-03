@@ -84,6 +84,99 @@
 .animate-word-in     { animation: word-in 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards; }
 .animate-reveal-up   { animation: reveal-up 0.6s ease-out forwards; }
 
+/* ── Page transition ── */
+@keyframes page-in {
+  0%   { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-page-in {
+  animation: page-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Sidebar nav item entrance ── */
+@keyframes nav-slide-in {
+  0%   { opacity: 0; transform: translateX(-16px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-nav-item {
+  animation: nav-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Active nav item glow pulse ── */
+@keyframes nav-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(139, 92, 246, 0.3), inset 0 0 12px rgba(139, 92, 246, 0.08); }
+  50%       { box-shadow: 0 0 18px rgba(139, 92, 246, 0.55), inset 0 0 20px rgba(139, 92, 246, 0.15); }
+}
+.animate-nav-glow {
+  animation: nav-glow 2.5s ease-in-out infinite;
+}
+
+/* ── Sidebar star particles ── */
+@keyframes star-drift {
+  0%   { transform: translateY(0) scale(1);   opacity: 0; }
+  15%  { opacity: 0.7; }
+  85%  { opacity: 0.4; }
+  100% { transform: translateY(-60px) scale(0.5); opacity: 0; }
+}
+.animate-star { animation: star-drift linear infinite; }
+
+/* ── Logo shimmer ── */
+@keyframes logo-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.animate-logo-shimmer {
+  background: linear-gradient(90deg, #f59e0b 0%, #fde68a 40%, #f59e0b 60%, #b45309 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logo-shimmer 4s linear infinite;
+}
+
+/* ── Icon bounce on hover ── */
+@keyframes icon-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  30%       { transform: translateY(-4px) rotate(-8deg) scale(1.2); }
+  60%       { transform: translateY(-2px) rotate(4deg) scale(1.1); }
+}
+.group:hover .nav-icon {
+  animation: icon-bounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Card entrance (staggered) ── */
+@keyframes card-in {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-card-in {
+  animation: card-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Subtle card hover lift ── */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* ── Button press ── */
+.btn-press:active {
+  transform: scale(0.96);
+}
+
+/* ── Sidebar active indicator slide ── */
+@keyframes indicator-in {
+  0%   { transform: scaleY(0); opacity: 0; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+.animate-indicator {
+  animation: indicator-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: center;
+}
+
 /* ── Flashcard flip animation ── */
 .flashcard-scene {
   perspective: 1200px;

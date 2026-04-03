@@ -19,8 +19,10 @@ export default function ItemGrid({ items, onSelect }: ItemGridProps) {
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-      {items.map((item) => (
-        <ItemCard key={item.id} item={item} onClick={onSelect} />
+      {items.map((item, i) => (
+        <div key={item.id} className="animate-card-in" style={{ animationDelay: `${i * 25}ms` }}>
+          <ItemCard item={item} onClick={onSelect} />
+        </div>
       ))}
     </div>
   );

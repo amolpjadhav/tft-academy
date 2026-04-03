@@ -47,7 +47,7 @@ export default function PageShell({ children, title, subtitle }: PageShellProps)
           </div>
         )}
 
-        <div className="px-4 md:px-6 lg:px-8 py-4 md:py-6">{children}</div>
+        <div className="animate-page-in px-4 md:px-6 lg:px-8 py-4 md:py-6">{children}</div>
       </main>
 
       {/* Mobile bottom nav */}

@@ -11,6 +11,7 @@ import { buildChampionQuiz } from "@/utils/championQuiz";
 import { buildItemQuiz } from "@/utils/itemQuiz";
 import { buildItemKnowledgeQuiz } from "@/utils/itemKnowledgeQuiz";
 import { buildTraitQuiz } from "@/utils/traitQuiz";
+import { buildEmblemQuiz } from "@/utils/emblemQuiz";
 import type { QuizCategory, QuestionCount, QuizQuestion, QuizResult as QResult } from "@/utils/quiz";
 import type { Trait } from "@/types/trait";
 import championsData from "../../data/champions.json";
@@ -55,6 +56,10 @@ export default function QuizPage({ champions, items, itemMap, components, traits
       } else if (category === "trait_quiz") {
         const n = count === "all" ? traits.length : Math.min(count as number, traits.length);
         qs = buildTraitQuiz(traits, champions, n);
+      } else if (category === "emblem_quiz") {
+        const emblemTraits = traits.filter((t) => !t.isUnique);
+        const n = count === "all" ? emblemTraits.length : Math.min(count as number, emblemTraits.length);
+        qs = buildEmblemQuiz(traits, n);
       } else {
         qs = buildQuiz(category, count);
       }
@@ -111,7 +116,7 @@ export default function QuizPage({ champions, items, itemMap, components, traits
       }
     >
       {screen === "setup" && (
-        <QuizSetup onStart={startQuiz} championsCount={champions.length} itemsCount={items.length} traitsCount={traits.length} />
+        <QuizSetup onStart={startQuiz} championsCount={champions.length} itemsCount={items.length} traitsCount={traits.length} emblemCount={traits.filter((t) => !t.isUnique).length} />
       )}
 
       {screen === "question" && questions[current] && (

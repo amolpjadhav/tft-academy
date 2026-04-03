@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GLOSSARY, CATEGORY_META } from "@/data/glossary";
 import type { QuizCategory, QuestionCount } from "@/utils/quiz";
 
-type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge" | "traits";
+type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge" | "traits" | "emblems";
 
 const GLOSSARY_CATEGORIES: { id: QuizCategory; emoji: string }[] = [
   { id: "all",       emoji: "📖" },
@@ -50,14 +50,21 @@ const TRAIT_Q_TYPES = [
   { emoji: "🏷️", label: "What type is a trait? (Damage/Tank/etc.)" },
 ];
 
+const EMBLEM_Q_TYPES = [
+  { emoji: "🏷️", label: "Is this emblem's trait an Origin or Class?" },
+  { emoji: "📊", label: "How many units (incl. emblem) hit the first breakpoint?" },
+  { emoji: "🚫", label: "Which trait does NOT have a craftable emblem?" },
+];
+
 interface QuizSetupProps {
   onStart: (category: QuizCategory, count: QuestionCount) => void;
   championsCount: number;
   itemsCount: number;
   traitsCount: number;
+  emblemCount: number;
 }
 
-export default function QuizSetup({ onStart, championsCount, itemsCount, traitsCount }: QuizSetupProps) {
+export default function QuizSetup({ onStart, championsCount, itemsCount, traitsCount, emblemCount }: QuizSetupProps) {
   const [mode, setMode]         = useState<QuizMode>("knowledge");
   const [category, setCategory] = useState<QuizCategory>("all");
   const [count, setCount]       = useState<QuestionCount>(10);
@@ -71,6 +78,8 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
       ? itemsCount
       : mode === "traits"
       ? traitsCount
+      : mode === "emblems"
+      ? emblemCount
       : category === "all"
       ? GLOSSARY.length
       : GLOSSARY.filter((t) => t.category === category).length;
@@ -83,6 +92,7 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
     else if (mode === "items") onStart("item_quiz", count);
     else if (mode === "item_knowledge") onStart("items", count);
     else if (mode === "traits") onStart("trait_quiz", count);
+    else if (mode === "emblems") onStart("emblem_quiz", count);
     else onStart(category, count);
   }
 
@@ -175,7 +185,7 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
 
           <button
             onClick={() => setMode("traits")}
-            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all col-span-2 ${
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
               mode === "traits"
                 ? "bg-teal-500/15 border-teal-500/50"
                 : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
@@ -189,6 +199,23 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
               <p className="text-xs text-text-muted mt-0.5">Breakpoints, effects & champions</p>
             </div>
           </button>
+
+          <button
+            onClick={() => setMode("emblems")}
+            className={`flex flex-col items-center gap-2 px-3 py-4 rounded-xl border transition-all ${
+              mode === "emblems"
+                ? "bg-indigo-500/15 border-indigo-500/50"
+                : "bg-bg-surface border-white/10 hover:border-white/25 hover:bg-bg-elevated"
+            }`}
+          >
+            <span className="text-3xl">💠</span>
+            <div className="text-center">
+              <p className={`text-sm font-semibold ${mode === "emblems" ? "text-indigo-400" : "text-text-primary"}`}>
+                Emblems
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">Emblem traits & synergies</p>
+            </div>
+          </button>
         </div>
       </div>
 
@@ -200,12 +227,12 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
           </p>
           <div className="grid grid-cols-2 gap-2">
             {GLOSSARY_CATEGORIES.map(({ id, emoji }) => {
-              const label = id === "all" ? "All Topics" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items" | "trait_quiz">].label;
+              const label = id === "all" ? "All Topics" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items" | "trait_quiz" | "emblem_quiz">].label;
               const cnt = id === "all"
                 ? GLOSSARY.length
                 : GLOSSARY.filter((t) => t.category === id).length;
               const active = category === id;
-              const color = id === "all" ? "text-text-primary" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items" | "trait_quiz">].color;
+              const color = id === "all" ? "text-text-primary" : CATEGORY_META[id as Exclude<typeof id, "all" | "champions" | "item_quiz" | "items" | "trait_quiz" | "emblem_quiz">].color;
               return (
                 <button
                   key={id}
@@ -318,6 +345,28 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
         </div>
       )}
 
+      {/* Emblems quiz info */}
+      {mode === "emblems" && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            What you&apos;ll be tested on
+          </p>
+          <div className="bg-bg-surface border border-indigo-500/20 rounded-xl p-4">
+            <div className="grid grid-cols-1 gap-2">
+              {EMBLEM_Q_TYPES.map(({ emoji, label }) => (
+                <div key={label} className="flex items-center gap-3">
+                  <span className="text-base">{emoji}</span>
+                  <span className="text-sm text-text-secondary">{label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-text-muted mt-3 pt-3 border-t border-white/5">
+              Covers all {emblemCount} craftable emblems in Set 17. Unique traits (which have no emblem) are used as distractors to test your knowledge.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Question count */}
       <div className="mb-10">
         <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
@@ -360,10 +409,12 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
             ? "bg-gradient-to-r from-sky-600 to-sky-400 hover:from-sky-500 hover:to-sky-300 text-white shadow-lg"
             : mode === "traits"
             ? "bg-gradient-to-r from-teal-600 to-teal-400 hover:from-teal-500 hover:to-teal-300 text-white shadow-lg"
+            : mode === "emblems"
+            ? "bg-gradient-to-r from-indigo-600 to-violet-500 hover:from-indigo-500 hover:to-violet-400 text-white shadow-lg"
             : "bg-accent-purple hover:bg-accent-purple/80 text-white shadow-glow"
         }`}
       >
-        {mode === "champions" ? "🏆" : mode === "items" ? "⚔️" : mode === "item_knowledge" ? "🛡️" : mode === "traits" ? "🌟" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
+        {mode === "champions" ? "🏆" : mode === "items" ? "⚔️" : mode === "item_knowledge" ? "🛡️" : mode === "traits" ? "🌟" : mode === "emblems" ? "💠" : "🚀"} Start Quiz — {actualCount} question{actualCount !== 1 ? "s" : ""}
       </button>
     </div>
   );

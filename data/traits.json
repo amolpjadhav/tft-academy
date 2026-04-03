@@ -1379,7 +1379,7 @@
   {
     "id": "gun_goddess",
     "name": "Gun Goddess",
-    "icon": "/icons/traits/Gun Godess.webp",
+    "icon": "/icons/traits/Gun Goddess.webp",
     "description": "When you field Miss Fortune, choose between Channeler Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
     "type": "utility",
     "category": "origin",

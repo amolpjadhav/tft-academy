@@ -284,19 +284,13 @@ export default function LandingPage() {
           </div>
 
           {/* ── Feature grid ───────────────────────────────────────────── */}
-          <div
-            className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-            style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s",
-            }}
-          >
-            {FEATURES.map((f) => (
+          <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {FEATURES.map((f, fi) => (
               <Link
                 key={f.href}
                 href={f.href}
-                className={`group relative flex flex-col gap-2 bg-bg-surface/80 border ${f.border} rounded-2xl p-5 text-left hover:bg-bg-elevated transition-all duration-300 hover:-translate-y-1 ${f.glow} overflow-hidden`}
+                className={`animate-card-in card-hover group relative flex flex-col gap-2 bg-bg-surface/80 border ${f.border} rounded-2xl p-5 text-left hover:bg-bg-elevated transition-all duration-300 hover:-translate-y-1 ${f.glow} overflow-hidden`}
+                style={{ animationDelay: `${fi * 80}ms` }}
               >
                 {/* Scan shimmer on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-2xl">

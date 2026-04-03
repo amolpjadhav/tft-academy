@@ -1,7 +1,7 @@
 import { GLOSSARY } from "@/data/glossary";
 import type { GlossaryCategory, GlossaryTerm } from "@/data/glossary";
 
-export type QuizCategory = GlossaryCategory | "all" | "champions" | "item_quiz" | "items" | "trait_quiz";
+export type QuizCategory = GlossaryCategory | "all" | "champions" | "item_quiz" | "items" | "trait_quiz" | "emblem_quiz";
 export type QuestionCount = 5 | 10 | 15 | "all";
 
 export type QuestionType = "term_to_definition" | "definition_to_term" | string;
