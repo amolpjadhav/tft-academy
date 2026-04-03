@@ -19,7 +19,8 @@
       "Bash(curl -s \"https://ddragon.leagueoflegends.com/api/versions.json\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Aatrox.png\")",
       "WebFetch(domain:op.gg)",
-      "Bash(grep -v \"^$\")"
+      "Bash(grep -v \"^$\")",
+      "Bash(curl -s \"https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/\")"
     ]
   }
 }

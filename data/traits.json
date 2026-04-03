@@ -2,20 +2,43 @@
   {
     "id": "anima",
     "name": "Anima",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_anima.png",
-    "description": "After losing a player combat, gain 15 Tech, plus 5 Tech per loss-streak length. Gain 2 Tech per Anima takedown. Each time Animas reach 100 Tech, prototype new Anima Weapons — take them now or save Tech for more powerful ones.\n\n(3) Start Researching!\n(6) Gain a loot Orb upon win",
+    "icon": "/icons/traits/anima.png",
+    "description": "After losing a player combat, gain 15 Tech, plus 5 Tech per loss-streak length. Gain 2 Tech per Anima takedown. Each time Animas reach 100 Tech, prototype new Anima Weapons \u2014 take them now or save Tech for more powerful ones.\n\n(3) Start Researching!\n(5) Gain a loot Orb upon win",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 3, "style": 1, "effect": "Start Researching!" },
-      { "minUnits": 6, "style": 3, "effect": "Gain a loot Orb upon win" }
+      {
+        "minUnits": 3,
+        "style": 1,
+        "effect": "Start Researching!"
+      },
+      {
+        "minUnits": 5,
+        "style": 3,
+        "effect": "Gain a loot Orb upon win"
+      }
     ],
     "champions": [
-      { "name": "Briar", "cost": 1 },
-      { "name": "Jinx", "cost": 2 },
-      { "name": "Illaoi", "cost": 3 },
-      { "name": "Aurora", "cost": 3 },
-      { "name": "Fiora", "cost": 5 }
+      {
+        "name": "Briar",
+        "cost": 1
+      },
+      {
+        "name": "Jinx",
+        "cost": 2
+      },
+      {
+        "name": "Illaoi",
+        "cost": 3
+      },
+      {
+        "name": "Aurora",
+        "cost": 3
+      },
+      {
+        "name": "Fiora",
+        "cost": 5
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -23,19 +46,39 @@
   {
     "id": "arbiter",
     "name": "Arbiter",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_arbiter.png",
+    "icon": "/icons/traits/arbiter.webp",
     "description": "Scribe a unique divine law, allowing you to choose an effect to apply to Arbiters when a chosen cause occurs.\n\n(2) Choose a cause and effect for your law\n(3) Effects are stronger.",
     "type": "utility",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Choose a cause and effect for your law" },
-      { "minUnits": 3, "style": 3, "effect": "Effects are stronger" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Choose a cause and effect for your law"
+      },
+      {
+        "minUnits": 3,
+        "style": 3,
+        "effect": "Effects are stronger"
+      }
     ],
     "champions": [
-      { "name": "Leona", "cost": 1 },
-      { "name": "Zoe", "cost": 2 },
-      { "name": "Diana", "cost": 3 },
-      { "name": "LeBlanc", "cost": 4 }
+      {
+        "name": "Leona",
+        "cost": 1
+      },
+      {
+        "name": "Zoe",
+        "cost": 2
+      },
+      {
+        "name": "Diana",
+        "cost": 3
+      },
+      {
+        "name": "LeBlanc",
+        "cost": 4
+      }
     ],
     "championCount": 4,
     "isUnique": false
@@ -43,15 +86,22 @@
   {
     "id": "arcana",
     "name": "Arcana",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_arcana.png",
+    "icon": "/icons/traits/Oracle.webp",
     "description": "Every 3 rounds, Tahm Kench grants a reward!",
     "type": "economy",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Every 3 rounds, Tahm Kench grants a reward!" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Every 3 rounds, Tahm Kench grants a reward!"
+      }
     ],
     "champions": [
-      { "name": "Tahm Kench", "cost": 4 }
+      {
+        "name": "Tahm Kench",
+        "cost": 4
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -59,23 +109,57 @@
   {
     "id": "dark_star",
     "name": "Dark Star",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_darkstar.png",
+    "icon": "/icons/traits/dark start.webp",
     "description": "Dark Stars create a black hole that consumes enemies at 10% max health.\n\n(2) Create a black hole that consumes enemies at 10% max health\n(4) AND Dark Stars gain 30% AD & AP\n(6) AND the strongest Dark Star goes supermassive: 100% effectiveness and creates 2 minor Black Holes\n(9) All Dark Stars are supermassive. At level 10, CONSUME EVERYONE.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Black hole consumes enemies at 10% HP" },
-      { "minUnits": 4, "style": 2, "effect": "+30% AD & AP to Dark Stars" },
-      { "minUnits": 6, "style": 3, "effect": "Strongest Dark Star goes supermassive + 2 minor Black Holes" },
-      { "minUnits": 9, "style": 4, "effect": "All Dark Stars supermassive; at lvl 10 consume everyone" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Black hole consumes enemies at 10% HP"
+      },
+      {
+        "minUnits": 4,
+        "style": 2,
+        "effect": "+30% AD & AP to Dark Stars"
+      },
+      {
+        "minUnits": 6,
+        "style": 3,
+        "effect": "Strongest Dark Star goes supermassive + 2 minor Black Holes"
+      },
+      {
+        "minUnits": 9,
+        "style": 4,
+        "effect": "All Dark Stars supermassive; at lvl 10 consume everyone"
+      }
     ],
     "champions": [
-      { "name": "Cho'Gath", "cost": 1 },
-      { "name": "Lissandra", "cost": 1 },
-      { "name": "Mordekaiser", "cost": 2 },
-      { "name": "Kai'Sa", "cost": 3 },
-      { "name": "Karma", "cost": 4 },
-      { "name": "Jhin", "cost": 5 }
+      {
+        "name": "Cho'Gath",
+        "cost": 1
+      },
+      {
+        "name": "Lissandra",
+        "cost": 1
+      },
+      {
+        "name": "Mordekaiser",
+        "cost": 2
+      },
+      {
+        "name": "Kai'Sa",
+        "cost": 3
+      },
+      {
+        "name": "Karma",
+        "cost": 4
+      },
+      {
+        "name": "Jhin",
+        "cost": 5
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -83,19 +167,40 @@
   {
     "id": "mecha",
     "name": "Mecha",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_mecha.png",
+    "icon": "/icons/traits/Mecha.webp",
     "description": "Innate: Mecha units can transform into their Ultimate form, upgrading their ability and gaining 60% Health. Transformed Mechas take up two team slots and count twice for the Mecha trait.\n\n(3) Energy Cells: Mechas gain 20% AD & AP\n(4) Overclocked Cells: Increased to 35% AD & AP\n(6) Precision Engineering: +1 max team size",
     "type": "tank",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 3, "style": 1, "effect": "Energy Cells: Mechas gain 20% AD & AP" },
-      { "minUnits": 4, "style": 2, "effect": "Overclocked Cells: 35% AD & AP" },
-      { "minUnits": 6, "style": 3, "effect": "Precision Engineering: +1 max team size" }
+      {
+        "minUnits": 3,
+        "style": 1,
+        "effect": "Energy Cells: Mechas gain 20% AD & AP"
+      },
+      {
+        "minUnits": 4,
+        "style": 2,
+        "effect": "Overclocked Cells: 35% AD & AP"
+      },
+      {
+        "minUnits": 6,
+        "style": 3,
+        "effect": "Precision Engineering: +1 max team size"
+      }
     ],
     "champions": [
-      { "name": "Urgot", "cost": 3 },
-      { "name": "Aurelion Sol", "cost": 4 },
-      { "name": "The Mighty Mech", "cost": 4 }
+      {
+        "name": "Urgot",
+        "cost": 3
+      },
+      {
+        "name": "Aurelion Sol",
+        "cost": 4
+      },
+      {
+        "name": "The Mighty Mech",
+        "cost": 4
+      }
     ],
     "championCount": 3,
     "isUnique": false
@@ -103,25 +208,65 @@
   {
     "id": "meeple",
     "name": "Meeple",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_meeple.png",
+    "icon": "/icons/traits/Meeple.webp",
     "description": "Astronauts attract Meeps that empower Astronaut abilities in meepy ways. They also gain bonus Health.\n\n(3) 2% Mana Regen, 125 Health\n(5) 3% Mana Regen, 250 Health\n(7) 4% Mana Regen, 400 Health. Create a Cloning Slot. Gain gold and a 1-star copy when cloning completes.\n(10) 6% Mana Regen, 1000 Health. SUMMON THE FOUR MEEPLORDS!\n\nCloning time = Champion cost",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 3, "style": 1, "effect": "2% Mana Regen, +125 Health" },
-      { "minUnits": 5, "style": 2, "effect": "3% Mana Regen, +250 Health" },
-      { "minUnits": 7, "style": 3, "effect": "4% Mana Regen, +400 Health + Cloning Slot" },
-      { "minUnits": 10, "style": 4, "effect": "6% Mana Regen, +1000 Health. SUMMON THE FOUR MEEPLORDS!" }
+      {
+        "minUnits": 3,
+        "style": 1,
+        "effect": "2% Mana Regen, +125 Health"
+      },
+      {
+        "minUnits": 5,
+        "style": 2,
+        "effect": "3% Mana Regen, +250 Health"
+      },
+      {
+        "minUnits": 7,
+        "style": 3,
+        "effect": "4% Mana Regen, +400 Health + Cloning Slot"
+      },
+      {
+        "minUnits": 10,
+        "style": 4,
+        "effect": "6% Mana Regen, +1000 Health. SUMMON THE FOUR MEEPLORDS!"
+      }
     ],
     "champions": [
-      { "name": "Poppy", "cost": 1 },
-      { "name": "Veigar", "cost": 1 },
-      { "name": "Gnar", "cost": 2 },
-      { "name": "Meepsie", "cost": 2 },
-      { "name": "Fizz", "cost": 3 },
-      { "name": "Rammus", "cost": 4 },
-      { "name": "Corki", "cost": 4 },
-      { "name": "Bard", "cost": 5 }
+      {
+        "name": "Poppy",
+        "cost": 1
+      },
+      {
+        "name": "Veigar",
+        "cost": 1
+      },
+      {
+        "name": "Gnar",
+        "cost": 2
+      },
+      {
+        "name": "Meepsie",
+        "cost": 2
+      },
+      {
+        "name": "Fizz",
+        "cost": 3
+      },
+      {
+        "name": "Rammus",
+        "cost": 4
+      },
+      {
+        "name": "Corki",
+        "cost": 4
+      },
+      {
+        "name": "Bard",
+        "cost": 5
+      }
     ],
     "championCount": 8,
     "isUnique": false
@@ -129,20 +274,43 @@
   {
     "id": "nova",
     "name": "N.O.V.A.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_nova.png",
-    "description": "6 seconds into combat, N.O.V.A. grant a power surge to allies based on champions.\n\n(2) Power surge based on your N.O.V.A. champions:\n• Aatrox: Ally Damage 30% Shred and Sunder enemies\n• Caitlyn: Grant allies 20% Attack Speed\n• Akali: Allies gain Precision\n• Maokai: Allies heal 15% max Health\n• Kindred: Shield the strongest Tank for 800\n• Emblem: Allies deal 10% stacking bonus true damage\n\n(5) Gain a Striker selector — chosen N.O.V.A. activates their Strike during the power surge.",
+    "icon": "/icons/traits/Nova.webp",
+    "description": "6 seconds into combat, N.O.V.A. grant a power surge to allies based on champions.\n\n(2) Power surge based on your N.O.V.A. champions:\n\u2022 Aatrox: Ally Damage 30% Shred and Sunder enemies\n\u2022 Caitlyn: Grant allies 20% Attack Speed\n\u2022 Akali: Allies gain Precision\n\u2022 Maokai: Allies heal 15% max Health\n\u2022 Kindred: Shield the strongest Tank for 800\n\u2022 Emblem: Allies deal 10% stacking bonus true damage\n\n(5) Gain a Striker selector \u2014 chosen N.O.V.A. activates their Strike during the power surge.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Power surge based on N.O.V.A. champions on board" },
-      { "minUnits": 5, "style": 3, "effect": "Gain Striker selector; chosen N.O.V.A. activates Strike in surge" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Power surge based on N.O.V.A. champions on board"
+      },
+      {
+        "minUnits": 5,
+        "style": 3,
+        "effect": "Gain Striker selector; chosen N.O.V.A. activates Strike in surge"
+      }
     ],
     "champions": [
-      { "name": "Aatrox", "cost": 1 },
-      { "name": "Caitlyn", "cost": 1 },
-      { "name": "Akali", "cost": 2 },
-      { "name": "Maokai", "cost": 3 },
-      { "name": "Kindred", "cost": 4 }
+      {
+        "name": "Aatrox",
+        "cost": 1
+      },
+      {
+        "name": "Caitlyn",
+        "cost": 1
+      },
+      {
+        "name": "Akali",
+        "cost": 2
+      },
+      {
+        "name": "Maokai",
+        "cost": 3
+      },
+      {
+        "name": "Kindred",
+        "cost": 4
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -150,18 +318,35 @@
   {
     "id": "primordian",
     "name": "Primordian",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_primordian.png",
+    "icon": "/icons/traits/Primordian.webp",
     "description": "Dealing damage spawns Swarmlings based on Primordian star level. 8% of damage taken contributes to damage dealt.\n\n(2) Spawn Swarmlings based on star level\n(3) Spawn even more Swarmlings! Each round, gain a random 1 or 2-cost champion.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Spawn Swarmlings on damage; 8% dmg taken → dmg dealt" },
-      { "minUnits": 3, "style": 3, "effect": "More Swarmlings + gain a free 1 or 2-cost champion each round" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Spawn Swarmlings on damage; 8% dmg taken \u2192 dmg dealt"
+      },
+      {
+        "minUnits": 3,
+        "style": 3,
+        "effect": "More Swarmlings + gain a free 1 or 2-cost champion each round"
+      }
     ],
     "champions": [
-      { "name": "Briar", "cost": 1 },
-      { "name": "Rek'Sai", "cost": 1 },
-      { "name": "Bel'Veth", "cost": 2 }
+      {
+        "name": "Briar",
+        "cost": 1
+      },
+      {
+        "name": "Rek'Sai",
+        "cost": 1
+      },
+      {
+        "name": "Bel'Veth",
+        "cost": 2
+      }
     ],
     "championCount": 3,
     "isUnique": false
@@ -169,20 +354,43 @@
   {
     "id": "psionic",
     "name": "Psionic",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_psionic.png",
+    "icon": "/icons/traits/Psionic.webp",
     "description": "Gain Psionic items that can be equipped to any ally.\n\n(2) Gain Psionic item 1\n(4) Gain Psionic item 2; Psionic items gain extra effects on Psionic units.",
     "type": "utility",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Gain Psionic item 1 (equip on any ally)" },
-      { "minUnits": 4, "style": 3, "effect": "Gain Psionic item 2; bonus effects on Psionic units" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Gain Psionic item 1 (equip on any ally)"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "Gain Psionic item 2; bonus effects on Psionic units"
+      }
     ],
     "champions": [
-      { "name": "Gragas", "cost": 2 },
-      { "name": "Pyke", "cost": 2 },
-      { "name": "Viktor", "cost": 3 },
-      { "name": "Master Yi", "cost": 4 },
-      { "name": "Sona", "cost": 5 }
+      {
+        "name": "Gragas",
+        "cost": 2
+      },
+      {
+        "name": "Pyke",
+        "cost": 2
+      },
+      {
+        "name": "Viktor",
+        "cost": 3
+      },
+      {
+        "name": "Master Yi",
+        "cost": 4
+      },
+      {
+        "name": "Sona",
+        "cost": 5
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -190,25 +398,66 @@
   {
     "id": "space_groove",
     "name": "Space Groove",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_spacegroove.png",
+    "icon": "/icons/traits/Space Groove .webp",
     "description": "Groovians can enter the Groove. While in it, they gain Attack Speed and max Health Regen, increased per Groovian on your team.\n\n(1) Groovians can enter the Groove\n(3) All Groovians start combat in the Groove for 3 seconds\n(5) Each second in the Groove grants 3% stacking AD & AP\n(7) Increase these effects by 20%!\n(10) The Groove",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 1, "effect": "Groovians can enter the Groove (AS + HP Regen)" },
-      { "minUnits": 3, "style": 2, "effect": "All Groovians start combat in the Groove for 3s" },
-      { "minUnits": 5, "style": 3, "effect": "+3% stacking AD & AP per second in the Groove" },
-      { "minUnits": 7, "style": 4, "effect": "All Groove effects +20%" },
-      { "minUnits": 10, "style": 4, "effect": "THE GROOVE" }
+      {
+        "minUnits": 1,
+        "style": 1,
+        "effect": "Groovians can enter the Groove (AS + HP Regen)"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "All Groovians start combat in the Groove for 3s"
+      },
+      {
+        "minUnits": 5,
+        "style": 3,
+        "effect": "+3% stacking AD & AP per second in the Groove"
+      },
+      {
+        "minUnits": 7,
+        "style": 4,
+        "effect": "All Groove effects +20%"
+      },
+      {
+        "minUnits": 10,
+        "style": 4,
+        "effect": "THE GROOVE"
+      }
     ],
     "champions": [
-      { "name": "Nasus", "cost": 1 },
-      { "name": "Teemo", "cost": 1 },
-      { "name": "Gwen", "cost": 2 },
-      { "name": "Ornn", "cost": 3 },
-      { "name": "Samira", "cost": 3 },
-      { "name": "Nami", "cost": 4 },
-      { "name": "Blitzcrank", "cost": 5 }
+      {
+        "name": "Nasus",
+        "cost": 1
+      },
+      {
+        "name": "Teemo",
+        "cost": 1
+      },
+      {
+        "name": "Gwen",
+        "cost": 2
+      },
+      {
+        "name": "Ornn",
+        "cost": 3
+      },
+      {
+        "name": "Samira",
+        "cost": 3
+      },
+      {
+        "name": "Nami",
+        "cost": 4
+      },
+      {
+        "name": "Blitzcrank",
+        "cost": 5
+      }
     ],
     "championCount": 7,
     "isUnique": false
@@ -216,23 +465,52 @@
   {
     "id": "stargazer",
     "name": "Stargazer",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_stargazer.png",
-    "description": "Stargazers chart a different constellation every game. Allies in empowered hexes gain 8% Health, AD, and AP. Stargazers gain more. More hexes reveal at each player level.\n\nExample constellation (The Boar): Gain gold on win.\n(3) 1 gold, 10% Health, 18% AD & AP\n(4) 2 gold, 15% Health, 25% AD & AP\n(5) 3 gold, 20% Health, 33% AD & AP\n(6) 5 gold, 25% Health, 40% AD & AP\n\nExample constellation (The Mountain): Every 5 combats, gain a Stargazer emblem.\n(3) +15% Health\n(4) AND +15% AD & AP\n(5) AND +15 Armor & MR\n(6) AND +15% AS\n(7) AND +12% Durability\n(8) AND all bonuses +20%\n(9-11) Ascending towards the summit…",
+    "icon": "/icons/traits/Stargazer.webp",
+    "description": "Stargazers chart a different constellation every game \u2014 there are 7 to discover. Allies in empowered hexes gain bonuses based on the active constellation. Stargazers gain more. More hexes reveal at each player level.\n\nExample: The Serpent \u2014 allies in empowered hexes gain Durability; Stargazers gain more and poison enemies, repeating a portion of damage dealt as magic damage over 3 seconds.",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 3, "style": 1, "effect": "Empowered hex bonuses activate (varies by constellation)" },
-      { "minUnits": 4, "style": 2, "effect": "Enhanced bonuses (varies by constellation)" },
-      { "minUnits": 5, "style": 3, "effect": "Greater bonuses (varies by constellation)" },
-      { "minUnits": 6, "style": 4, "effect": "Maximum bonuses (varies by constellation)" }
+      {
+        "minUnits": 3,
+        "style": 1,
+        "effect": "Constellation bonuses activate (3 empowered hexes)"
+      },
+      {
+        "minUnits": 5,
+        "style": 3,
+        "effect": "Stronger constellation bonuses (5 empowered hexes)"
+      },
+      {
+        "minUnits": 7,
+        "style": 4,
+        "effect": "Maximum constellation power (7 empowered hexes)"
+      }
     ],
     "champions": [
-      { "name": "Talon", "cost": 1 },
-      { "name": "Twisted Fate", "cost": 1 },
-      { "name": "Jax", "cost": 2 },
-      { "name": "Lulu", "cost": 3 },
-      { "name": "Xayah", "cost": 4 },
-      { "name": "Nunu", "cost": 4 }
+      {
+        "name": "Talon",
+        "cost": 1
+      },
+      {
+        "name": "Twisted Fate",
+        "cost": 1
+      },
+      {
+        "name": "Jax",
+        "cost": 2
+      },
+      {
+        "name": "Lulu",
+        "cost": 3
+      },
+      {
+        "name": "Xayah",
+        "cost": 4
+      },
+      {
+        "name": "Nunu",
+        "cost": 4
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -240,20 +518,44 @@
   {
     "id": "timebreaker",
     "name": "Timebreaker",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_timebreaker.png",
+    "icon": "/icons/traits/Timebreaker.webp",
     "description": "When you lose, gain free rerolls. When you win, store XP in a Temporal Core (scales with stage).\n\n(2) Free rerolls on loss; XP stored on win\n(3) AND Allies gain 15% Attack Speed\n(4) AND Timebreakers gain an additional 50% Attack Speed",
     "type": "economy",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Free rerolls on loss; store XP on win" },
-      { "minUnits": 3, "style": 2, "effect": "AND allies gain 15% Attack Speed" },
-      { "minUnits": 4, "style": 3, "effect": "AND Timebreakers gain +50% additional Attack Speed" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Free rerolls on loss; store XP on win"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "AND allies gain 15% Attack Speed"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "AND Timebreakers gain +50% additional Attack Speed"
+      }
     ],
     "champions": [
-      { "name": "Ezreal", "cost": 1 },
-      { "name": "Milio", "cost": 2 },
-      { "name": "Pantheon", "cost": 2 },
-      { "name": "Riven", "cost": 4 }
+      {
+        "name": "Ezreal",
+        "cost": 1
+      },
+      {
+        "name": "Milio",
+        "cost": 2
+      },
+      {
+        "name": "Pantheon",
+        "cost": 2
+      },
+      {
+        "name": "Riven",
+        "cost": 4
+      }
     ],
     "championCount": 4,
     "isUnique": false
@@ -261,22 +563,52 @@
   {
     "id": "bastion",
     "name": "Bastion",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_bastion.png",
+    "icon": "/icons/traits/Bastion.webp",
     "description": "Your team gains 12 Armor and Magic Resist. Bastions gain more, and the value doubles in the first 10 seconds of combat.\n\n(2) 16 Armor & MR\n(4) 35 Armor & MR\n(6) 55 Armor & MR; Non-Bastions gain an additional 20 Armor & MR.",
     "type": "tank",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "16 Armor & MR to Bastions (doubles first 10s)" },
-      { "minUnits": 4, "style": 3, "effect": "35 Armor & MR to Bastions (doubles first 10s)" },
-      { "minUnits": 6, "style": 4, "effect": "55 Armor & MR; Non-Bastions gain +20 Armor & MR too" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "16 Armor & MR to Bastions (doubles first 10s)"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "35 Armor & MR to Bastions (doubles first 10s)"
+      },
+      {
+        "minUnits": 6,
+        "style": 4,
+        "effect": "55 Armor & MR; Non-Bastions gain +20 Armor & MR too"
+      }
     ],
     "champions": [
-      { "name": "Aatrox", "cost": 1 },
-      { "name": "Poppy", "cost": 1 },
-      { "name": "Jax", "cost": 2 },
-      { "name": "Ornn", "cost": 3 },
-      { "name": "Rammus", "cost": 4 },
-      { "name": "Shen", "cost": 5 }
+      {
+        "name": "Aatrox",
+        "cost": 1
+      },
+      {
+        "name": "Poppy",
+        "cost": 1
+      },
+      {
+        "name": "Jax",
+        "cost": 2
+      },
+      {
+        "name": "Ornn",
+        "cost": 3
+      },
+      {
+        "name": "Rammus",
+        "cost": 4
+      },
+      {
+        "name": "Shen",
+        "cost": 5
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -284,23 +616,56 @@
   {
     "id": "brawler",
     "name": "Brawler",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_brawler.png",
+    "icon": "/icons/traits/Brawler.webp",
     "description": "Your team gains 7% Health. Brawlers gain more.\n\n(2) +25% maximum Health\n(4) +45% maximum Health\n(6) +65% maximum Health",
     "type": "tank",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "+25% max Health to Brawlers (+7% team)" },
-      { "minUnits": 4, "style": 3, "effect": "+45% max Health to Brawlers (+7% team)" },
-      { "minUnits": 6, "style": 4, "effect": "+65% max Health to Brawlers (+7% team)" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "+25% max Health to Brawlers (+7% team)"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "+45% max Health to Brawlers (+7% team)"
+      },
+      {
+        "minUnits": 6,
+        "style": 4,
+        "effect": "+65% max Health to Brawlers (+7% team)"
+      }
     ],
     "champions": [
-      { "name": "Cho'Gath", "cost": 1 },
-      { "name": "Rek'Sai", "cost": 1 },
-      { "name": "Gragas", "cost": 2 },
-      { "name": "Pantheon", "cost": 2 },
-      { "name": "Maokai", "cost": 3 },
-      { "name": "Urgot", "cost": 3 },
-      { "name": "Tahm Kench", "cost": 4 }
+      {
+        "name": "Cho'Gath",
+        "cost": 1
+      },
+      {
+        "name": "Rek'Sai",
+        "cost": 1
+      },
+      {
+        "name": "Gragas",
+        "cost": 2
+      },
+      {
+        "name": "Pantheon",
+        "cost": 2
+      },
+      {
+        "name": "Maokai",
+        "cost": 3
+      },
+      {
+        "name": "Urgot",
+        "cost": 3
+      },
+      {
+        "name": "Tahm Kench",
+        "cost": 4
+      }
     ],
     "championCount": 7,
     "isUnique": false
@@ -308,21 +673,49 @@
   {
     "id": "challenger",
     "name": "Challenger",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_challenger.png",
+    "icon": "/icons/traits/Challenger.webp",
     "description": "Your team gains 10% Attack Speed. Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.50 seconds.\n\n(2) 15% AS\n(3) 22% AS\n(4) 30% AS\n(5) 40% AS",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "15% AS (50% more on kill for 2.5s)" },
-      { "minUnits": 3, "style": 2, "effect": "22% AS (50% more on kill for 2.5s)" },
-      { "minUnits": 4, "style": 3, "effect": "30% AS (50% more on kill for 2.5s)" },
-      { "minUnits": 5, "style": 4, "effect": "40% AS (50% more on kill for 2.5s)" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "15% AS (50% more on kill for 2.5s)"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "22% AS (50% more on kill for 2.5s)"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "30% AS (50% more on kill for 2.5s)"
+      },
+      {
+        "minUnits": 5,
+        "style": 4,
+        "effect": "40% AS (50% more on kill for 2.5s)"
+      }
     ],
     "champions": [
-      { "name": "Bel'Veth", "cost": 2 },
-      { "name": "Jinx", "cost": 2 },
-      { "name": "Diana", "cost": 3 },
-      { "name": "Kindred", "cost": 4 }
+      {
+        "name": "Bel'Veth",
+        "cost": 2
+      },
+      {
+        "name": "Jinx",
+        "cost": 2
+      },
+      {
+        "name": "Diana",
+        "cost": 3
+      },
+      {
+        "name": "Kindred",
+        "cost": 4
+      }
     ],
     "championCount": 4,
     "isUnique": false
@@ -330,24 +723,61 @@
   {
     "id": "channeler",
     "name": "Channeler",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_channeler.png",
+    "icon": "/icons/traits/Channeler.webp",
     "description": "Innate: Channelers gain 20% additional Mana from all sources.\n\nYour team gains Mana Regen, increased for Channelers.\n\n(2) 1% Mana Regen | 3% for Channelers\n(3) 1% Mana Regen | 4% for Channelers\n(4) 2% Mana Regen | 6% for Channelers\n(5) 2% Mana Regen | 7% for Channelers",
     "type": "magic",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "1% team Mana Regen | 3% for Channelers" },
-      { "minUnits": 3, "style": 2, "effect": "1% team Mana Regen | 4% for Channelers" },
-      { "minUnits": 4, "style": 3, "effect": "2% team Mana Regen | 6% for Channelers" },
-      { "minUnits": 5, "style": 4, "effect": "2% team Mana Regen | 7% for Channelers" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "1% team Mana Regen | 3% for Channelers"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "1% team Mana Regen | 4% for Channelers"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "2% team Mana Regen | 6% for Channelers"
+      },
+      {
+        "minUnits": 5,
+        "style": 4,
+        "effect": "2% team Mana Regen | 7% for Channelers"
+      }
     ],
     "champions": [
-      { "name": "Lissandra", "cost": 1 },
-      { "name": "Mordekaiser", "cost": 2 },
-      { "name": "Zoe", "cost": 2 },
-      { "name": "Viktor", "cost": 3 },
-      { "name": "Aurelion Sol", "cost": 4 },
-      { "name": "Bard", "cost": 5 },
-      { "name": "Sona", "cost": 5 }
+      {
+        "name": "Lissandra",
+        "cost": 1
+      },
+      {
+        "name": "Mordekaiser",
+        "cost": 2
+      },
+      {
+        "name": "Zoe",
+        "cost": 2
+      },
+      {
+        "name": "Viktor",
+        "cost": 3
+      },
+      {
+        "name": "Aurelion Sol",
+        "cost": 4
+      },
+      {
+        "name": "Bard",
+        "cost": 5
+      },
+      {
+        "name": "Sona",
+        "cost": 5
+      }
     ],
     "championCount": 7,
     "isUnique": false
@@ -355,19 +785,39 @@
   {
     "id": "fateweaver",
     "name": "Fateweaver",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_fateweaver.png",
+    "icon": "/icons/traits/Fateweaver.webp",
     "description": "Innate: Fateweavers have Precision.\n\n(2) Chance effects on abilities are Lucky.\n(4) Gain 20% Crit Chance and 10% Crit Damage. Critical strikes are also Lucky.",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Chance effects on abilities are Lucky" },
-      { "minUnits": 4, "style": 3, "effect": "+20% Crit Chance, +10% Crit Dmg; crits are also Lucky" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Chance effects on abilities are Lucky"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "+20% Crit Chance, +10% Crit Dmg; crits are also Lucky"
+      }
     ],
     "champions": [
-      { "name": "Caitlyn", "cost": 1 },
-      { "name": "Twisted Fate", "cost": 1 },
-      { "name": "Milio", "cost": 2 },
-      { "name": "Corki", "cost": 4 }
+      {
+        "name": "Caitlyn",
+        "cost": 1
+      },
+      {
+        "name": "Twisted Fate",
+        "cost": 1
+      },
+      {
+        "name": "Milio",
+        "cost": 2
+      },
+      {
+        "name": "Corki",
+        "cost": 4
+      }
     ],
     "championCount": 4,
     "isUnique": false
@@ -375,21 +825,48 @@
   {
     "id": "marauder",
     "name": "Marauder",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_marauder.png",
+    "icon": "/icons/traits/Marauder.png",
     "description": "Your team gains 5% Omnivamp. Marauders gain more Omnivamp, Attack Damage, and their Omnivamp overhealing is converted into Shield (up to 25% max Health).\n\n(2) 5% Omnivamp, 20% AD\n(4) 7% Omnivamp, 30% AD\n(6) 10% Omnivamp, 40% AD",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "5% Omnivamp, 20% AD; overheal → Shield (max 25% HP)" },
-      { "minUnits": 4, "style": 3, "effect": "7% Omnivamp, 30% AD; overheal → Shield (max 25% HP)" },
-      { "minUnits": 6, "style": 4, "effect": "10% Omnivamp, 40% AD; overheal → Shield (max 25% HP)" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "5% Omnivamp, 20% AD; overheal \u2192 Shield (max 25% HP)"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "7% Omnivamp, 30% AD; overheal \u2192 Shield (max 25% HP)"
+      },
+      {
+        "minUnits": 6,
+        "style": 4,
+        "effect": "10% Omnivamp, 40% AD; overheal \u2192 Shield (max 25% HP)"
+      }
     ],
     "champions": [
-      { "name": "Akali", "cost": 2 },
-      { "name": "Bel'Veth", "cost": 2 },
-      { "name": "Urgot", "cost": 3 },
-      { "name": "Master Yi", "cost": 4 },
-      { "name": "Fiora", "cost": 5 }
+      {
+        "name": "Akali",
+        "cost": 2
+      },
+      {
+        "name": "Bel'Veth",
+        "cost": 2
+      },
+      {
+        "name": "Urgot",
+        "cost": 3
+      },
+      {
+        "name": "Master Yi",
+        "cost": 4
+      },
+      {
+        "name": "Fiora",
+        "cost": 5
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -402,15 +879,38 @@
     "type": "magic",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "Abilities fire a second time at 25% strength" },
-      { "minUnits": 4, "style": 3, "effect": "Abilities fire a second time at 50% strength" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "Abilities fire a second time at 25% strength"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "Abilities fire a second time at 50% strength"
+      }
     ],
     "champions": [
-      { "name": "Lissandra", "cost": 1 },
-      { "name": "Veigar", "cost": 1 },
-      { "name": "Pantheon", "cost": 2 },
-      { "name": "Lulu", "cost": 3 },
-      { "name": "Nami", "cost": 4 }
+      {
+        "name": "Lissandra",
+        "cost": 1
+      },
+      {
+        "name": "Veigar",
+        "cost": 1
+      },
+      {
+        "name": "Pantheon",
+        "cost": 2
+      },
+      {
+        "name": "Lulu",
+        "cost": 3
+      },
+      {
+        "name": "Nami",
+        "cost": 4
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -418,23 +918,57 @@
   {
     "id": "rogue",
     "name": "Rogue",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_rogue.png",
+    "icon": "/icons/traits/Rogue.webp",
     "description": "Rogues gain Attack Damage and Ability Power. The first time they fall below 50% health, they slip into shadows. Enemies targeting them are redirected to a nearby unit, preferring Tanks.\n\n(2) 15% AD & AP\n(3) 30% AD & AP\n(4) 45% AD & AP\n(5) 60% AD & AP",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "15% AD & AP; 1st time below 50% HP → slip into shadows" },
-      { "minUnits": 3, "style": 2, "effect": "30% AD & AP" },
-      { "minUnits": 4, "style": 3, "effect": "45% AD & AP" },
-      { "minUnits": 5, "style": 4, "effect": "60% AD & AP" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "15% AD & AP; 1st time below 50% HP \u2192 slip into shadows"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "30% AD & AP"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "45% AD & AP"
+      },
+      {
+        "minUnits": 5,
+        "style": 4,
+        "effect": "60% AD & AP"
+      }
     ],
     "champions": [
-      { "name": "Briar", "cost": 1 },
-      { "name": "Talon", "cost": 1 },
-      { "name": "Gwen", "cost": 2 },
-      { "name": "Fizz", "cost": 3 },
-      { "name": "Kai'Sa", "cost": 3 },
-      { "name": "Riven", "cost": 4 }
+      {
+        "name": "Briar",
+        "cost": 1
+      },
+      {
+        "name": "Talon",
+        "cost": 1
+      },
+      {
+        "name": "Gwen",
+        "cost": 2
+      },
+      {
+        "name": "Fizz",
+        "cost": 3
+      },
+      {
+        "name": "Kai'Sa",
+        "cost": 3
+      },
+      {
+        "name": "Riven",
+        "cost": 4
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -442,22 +976,52 @@
   {
     "id": "shepherd",
     "name": "Shepherd",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_shepherd.png",
+    "icon": "/icons/traits/Shepherd.webp",
     "description": "Shepherds summon the Bond of the Stars to aid them in battle. Bia and Bayin's power is increased by the total star level of Shepherd champions.\n\n(3) Summon Bia\n(5) Summon Bayin\n(7) Bia and Bayin's bond grows deeper",
     "type": "utility",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 3, "style": 1, "effect": "Summon Bia (power scales with Shepherd star levels)" },
-      { "minUnits": 5, "style": 3, "effect": "Summon Bayin" },
-      { "minUnits": 7, "style": 4, "effect": "Bia and Bayin's bond grows deeper" }
+      {
+        "minUnits": 3,
+        "style": 1,
+        "effect": "Summon Bia (power scales with Shepherd star levels)"
+      },
+      {
+        "minUnits": 5,
+        "style": 3,
+        "effect": "Summon Bayin"
+      },
+      {
+        "minUnits": 7,
+        "style": 4,
+        "effect": "Bia and Bayin's bond grows deeper"
+      }
     ],
     "champions": [
-      { "name": "Teemo", "cost": 1 },
-      { "name": "Lissandra", "cost": 1 },
-      { "name": "Meepsie", "cost": 2 },
-      { "name": "Illaoi", "cost": 3 },
-      { "name": "LeBlanc", "cost": 4 },
-      { "name": "Sona", "cost": 5 }
+      {
+        "name": "Teemo",
+        "cost": 1
+      },
+      {
+        "name": "Lissandra",
+        "cost": 1
+      },
+      {
+        "name": "Meepsie",
+        "cost": 2
+      },
+      {
+        "name": "Illaoi",
+        "cost": 3
+      },
+      {
+        "name": "LeBlanc",
+        "cost": 4
+      },
+      {
+        "name": "Sona",
+        "cost": 5
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -465,22 +1029,53 @@
   {
     "id": "sniper",
     "name": "Sniper",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_sniper.png",
+    "icon": "/icons/traits/Sniper.webp",
     "description": "Snipers gain Damage Amp, increased against targets farther away.\n\n(2) 18% DA; +2% DA per hex\n(3) 24% DA; +3% DA per hex\n(4) 28% DA; +4% DA per hex\n(5) 32% DA; +5% DA per hex",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "18% Damage Amp; +2% per hex distance" },
-      { "minUnits": 3, "style": 2, "effect": "24% Damage Amp; +3% per hex distance" },
-      { "minUnits": 4, "style": 3, "effect": "28% Damage Amp; +4% per hex distance" },
-      { "minUnits": 5, "style": 4, "effect": "32% Damage Amp; +5% per hex distance" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "18% Damage Amp; +2% per hex distance"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "24% Damage Amp; +3% per hex distance"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "28% Damage Amp; +4% per hex distance"
+      },
+      {
+        "minUnits": 5,
+        "style": 4,
+        "effect": "32% Damage Amp; +5% per hex distance"
+      }
     ],
     "champions": [
-      { "name": "Ezreal", "cost": 1 },
-      { "name": "Gnar", "cost": 2 },
-      { "name": "Samira", "cost": 3 },
-      { "name": "Xayah", "cost": 4 },
-      { "name": "Jhin", "cost": 5 }
+      {
+        "name": "Ezreal",
+        "cost": 1
+      },
+      {
+        "name": "Gnar",
+        "cost": 2
+      },
+      {
+        "name": "Samira",
+        "cost": 3
+      },
+      {
+        "name": "Xayah",
+        "cost": 4
+      },
+      {
+        "name": "Jhin",
+        "cost": 5
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -488,22 +1083,52 @@
   {
     "id": "vanguard",
     "name": "Vanguard",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_vanguard.png",
+    "icon": "/icons/traits/Vanguard.webp",
     "description": "Vanguards gain 5% Durability while Shielded. At combat start and at 50% Health, gain a max Health Shield for 10 seconds.\n\n(2) 16% max Health Shield\n(4) 28% max Health Shield\n(6) 40% max Health Shield; 10% DR while Shielded",
     "type": "tank",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "16% max HP Shield at combat start & 50% HP" },
-      { "minUnits": 4, "style": 3, "effect": "28% max HP Shield" },
-      { "minUnits": 6, "style": 4, "effect": "40% max HP Shield + 10% DR while Shielded" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "16% max HP Shield at combat start & 50% HP"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "28% max HP Shield"
+      },
+      {
+        "minUnits": 6,
+        "style": 4,
+        "effect": "40% max HP Shield + 10% DR while Shielded"
+      }
     ],
     "champions": [
-      { "name": "Leona", "cost": 1 },
-      { "name": "Nasus", "cost": 1 },
-      { "name": "Mordekaiser", "cost": 2 },
-      { "name": "Illaoi", "cost": 3 },
-      { "name": "Nunu", "cost": 4 },
-      { "name": "Blitzcrank", "cost": 5 }
+      {
+        "name": "Leona",
+        "cost": 1
+      },
+      {
+        "name": "Nasus",
+        "cost": 1
+      },
+      {
+        "name": "Mordekaiser",
+        "cost": 2
+      },
+      {
+        "name": "Illaoi",
+        "cost": 3
+      },
+      {
+        "name": "Nunu",
+        "cost": 4
+      },
+      {
+        "name": "Blitzcrank",
+        "cost": 5
+      }
     ],
     "championCount": 6,
     "isUnique": false
@@ -511,23 +1136,58 @@
   {
     "id": "voyager",
     "name": "Voyager",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_voyager.png",
+    "icon": "/icons/traits/Voyager.webp",
     "description": "Combat Start: Your Tanks and Fighters gain a Shield for 15 seconds. Your other allies gain Damage Amp. Voyagers gain double.\n\n(2) 175 Shield; 9% DA\n(3) 250 Shield; 15% DA\n(4) 350 Shield; 18% DA\n(5) 500 Shield; 22% DA\n(6) 700 Shield; 27% DA",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 2, "style": 1, "effect": "175 Shield (tanks) / 9% DA (carries); Voyagers get 2×" },
-      { "minUnits": 3, "style": 2, "effect": "250 Shield / 15% DA" },
-      { "minUnits": 4, "style": 3, "effect": "350 Shield / 18% DA" },
-      { "minUnits": 5, "style": 4, "effect": "500 Shield / 22% DA" },
-      { "minUnits": 6, "style": 4, "effect": "700 Shield / 27% DA" }
+      {
+        "minUnits": 2,
+        "style": 1,
+        "effect": "175 Shield (tanks) / 9% DA (carries); Voyagers get 2\u00d7"
+      },
+      {
+        "minUnits": 3,
+        "style": 2,
+        "effect": "250 Shield / 15% DA"
+      },
+      {
+        "minUnits": 4,
+        "style": 3,
+        "effect": "350 Shield / 18% DA"
+      },
+      {
+        "minUnits": 5,
+        "style": 4,
+        "effect": "500 Shield / 22% DA"
+      },
+      {
+        "minUnits": 6,
+        "style": 4,
+        "effect": "700 Shield / 27% DA"
+      }
     ],
     "champions": [
-      { "name": "Meepsie", "cost": 2 },
-      { "name": "Pyke", "cost": 2 },
-      { "name": "Aurora", "cost": 3 },
-      { "name": "The Mighty Mech", "cost": 4 },
-      { "name": "Karma", "cost": 4 }
+      {
+        "name": "Meepsie",
+        "cost": 2
+      },
+      {
+        "name": "Pyke",
+        "cost": 2
+      },
+      {
+        "name": "Aurora",
+        "cost": 3
+      },
+      {
+        "name": "The Mighty Mech",
+        "cost": 4
+      },
+      {
+        "name": "Karma",
+        "cost": 4
+      }
     ],
     "championCount": 5,
     "isUnique": false
@@ -535,15 +1195,22 @@
   {
     "id": "bulwark",
     "name": "Bulwark",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_bulwark.png",
+    "icon": "/icons/traits/bulwark.webp",
     "description": "Summon a placeable relic. At the start of combat, it grants adjacent allies a 18% max Health shield and 20% Attack Speed.",
     "type": "tank",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "18% max Health shield + 20% Attack Speed to adjacent allies" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "18% max Health shield + 20% Attack Speed to adjacent allies"
+      }
     ],
     "champions": [
-      { "name": "Shen", "cost": 5 }
+      {
+        "name": "Shen",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -551,15 +1218,22 @@
   {
     "id": "commander",
     "name": "Commander",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_commander.png",
+    "icon": "/icons/traits/commander.webp",
     "description": "Sona gives you a random Command Mod every 2 rounds which allows you to alter the way an ally behaves during combat. Command Mods last 2 player combats even if they are not equipped.",
     "type": "utility",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Random Command Mod every 2 rounds; lasts 2 combats unequipped" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Random Command Mod every 2 rounds; lasts 2 combats unequipped"
+      }
     ],
     "champions": [
-      { "name": "Sona", "cost": 5 }
+      {
+        "name": "Sona",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -567,15 +1241,22 @@
   {
     "id": "dark_lady",
     "name": "Dark Lady",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_darklady.png",
+    "icon": "/icons/traits/dark lady.webp",
     "description": "Allies take 5% less damage from abilities, increased to 10% while Morgana is in Dark Form.",
     "type": "tank",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "5% ability dmg reduction (10% in Morgana's Dark Form)" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "5% ability dmg reduction (10% in Morgana's Dark Form)"
+      }
     ],
     "champions": [
-      { "name": "Morgana", "cost": 5 }
+      {
+        "name": "Morgana",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -583,15 +1264,22 @@
   {
     "id": "divine_duelist",
     "name": "Divine Duelist",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_divineduelist.png",
+    "icon": "/icons/traits/Divine Duelist.webp",
     "description": "You heal for 15% of player damage you deal. Fiora always wins a one on one duel.",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Heal 15% of player dmg dealt; Fiora wins every 1v1" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Heal 15% of player dmg dealt; Fiora wins every 1v1"
+      }
     ],
     "champions": [
-      { "name": "Fiora", "cost": 5 }
+      {
+        "name": "Fiora",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -599,15 +1287,22 @@
   {
     "id": "doomer",
     "name": "Doomer",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_doomer.png",
+    "icon": "/icons/traits/Doomer.webp",
     "description": "Combat Start: Mark all enemies with Doom. The first time enemies are damaged each combat, their Doom is consumed, stealing 8% Attack Damage and Ability Power from them and granting it to your strongest Vex.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Steal 8% AD & AP from all enemies on first hit → Vex" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Steal 8% AD & AP from all enemies on first hit \u2192 Vex"
+      }
     ],
     "champions": [
-      { "name": "Vex", "cost": 5 }
+      {
+        "name": "Vex",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -615,15 +1310,22 @@
   {
     "id": "eradicator",
     "name": "Eradicator",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_eradicator.png",
+    "icon": "/icons/traits/Eradictor.webp",
     "description": "Enemies have 14% less Armor and Magic Resist.",
     "type": "damage",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "All enemies have 14% less Armor & Magic Resist" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "All enemies have 14% less Armor & Magic Resist"
+      }
     ],
     "champions": [
-      { "name": "Jhin", "cost": 5 }
+      {
+        "name": "Jhin",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -631,15 +1333,22 @@
   {
     "id": "factory_new",
     "name": "Factory New",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_factorynew.png",
+    "icon": "/icons/traits/Factory New.webp",
     "description": "After participating in combat, open an armory to purchase a permanent upgrade for your strongest Graves. Every 3 upgrades, future upgrades will take an additional round.",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "After each combat, armory opens for a permanent Graves upgrade" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "After each combat, armory opens for a permanent Graves upgrade"
+      }
     ],
     "champions": [
-      { "name": "Graves", "cost": 5 }
+      {
+        "name": "Graves",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -647,15 +1356,22 @@
   {
     "id": "galaxy_hunter",
     "name": "Galaxy Hunter",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_galaxyhunter.png",
+    "icon": "/icons/traits/Galaxy Hunter.webp",
     "description": "Zed is obtained from the Invader Zed augment. While at least one clone is alive, Zed gains 40% bonus Attack Damage.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "+40% AD while at least one clone is alive" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "+40% AD while at least one clone is alive"
+      }
     ],
     "champions": [
-      { "name": "Zed", "cost": 5 }
+      {
+        "name": "Zed",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -663,31 +1379,22 @@
   {
     "id": "gun_goddess",
     "name": "Gun Goddess",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_gungoddess.png",
+    "icon": "/icons/traits/Gun Godess.webp",
     "description": "When you field Miss Fortune, choose between Channeler Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Choose Channeler / Challenger / Replicator Mode" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Choose Channeler / Challenger / Replicator Mode"
+      }
     ],
     "champions": [
-      { "name": "Miss Fortune", "cost": 3 }
-    ],
-    "championCount": 1,
-    "isUnique": true
-  },
-  {
-    "id": "oracle",
-    "name": "Oracle",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_oracle.png",
-    "description": "Every 3 rounds, Tahm Kench grants a random reward to your team.",
-    "type": "economy",
-    "category": "origin",
-    "breakpoints": [
-      { "minUnits": 1, "style": 3 }
-    ],
-    "champions": [
-      { "name": "Tahm Kench", "cost": 4 }
+      {
+        "name": "Miss Fortune",
+        "cost": 3
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -695,15 +1402,22 @@
   {
     "id": "party_animal",
     "name": "Party Animal",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_partyanimal.png",
+    "icon": "/icons/traits/Party Amimal.webp",
     "description": "Once per combat, after falling below 45% Health, Blitzcrank becomes untargetable and repairs 15% max Health per second. Upon reaching full Health, or when no other allies remain, he returns to combat. If fully healed, he enters The Groove for the rest of combat and Party Crasher's passive fires bolts four times as fast.",
     "type": "tank",
     "category": "origin",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "Below 45% HP: untargetable, repair 15% HP/s; if full → The Groove + 4x bolt speed" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "Below 45% HP: untargetable, repair 15% HP/s; if full \u2192 The Groove + 4x bolt speed"
+      }
     ],
     "champions": [
-      { "name": "Blitzcrank", "cost": 5 }
+      {
+        "name": "Blitzcrank",
+        "cost": 5
+      }
     ],
     "championCount": 1,
     "isUnique": true
@@ -711,15 +1425,22 @@
   {
     "id": "redeemer",
     "name": "Redeemer",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_redeemer.png",
+    "icon": "/icons/traits/Redeemer.webp",
     "description": "For each non-unique trait you have active, your team gains 2%/3%/4% Attack Speed and 2/3/4 Armor and Magic Resist.",
     "type": "utility",
     "category": "class",
     "breakpoints": [
-      { "minUnits": 1, "style": 3, "effect": "+2%/3%/4% AS and +2/3/4 Armor & MR per active non-unique trait" }
+      {
+        "minUnits": 1,
+        "style": 3,
+        "effect": "+2%/3%/4% AS and +2/3/4 Armor & MR per active non-unique trait"
+      }
     ],
     "champions": [
-      { "name": "Rhaast", "cost": 3 }
+      {
+        "name": "Rhaast",
+        "cost": 3
+      }
     ],
     "championCount": 1,
     "isUnique": true
