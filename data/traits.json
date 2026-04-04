@@ -110,7 +110,7 @@
     "id": "dark_star",
     "name": "Dark Star",
     "icon": "/icons/traits/dark start.webp",
-    "description": "Dark Stars create a black hole that consumes enemies at 10% max health.\n\n(2) Create a black hole that consumes enemies at 10% max health\n(4) AND Dark Stars gain 30% AD & AP\n(6) AND the strongest Dark Star goes supermassive: 100% effectiveness and creates 2 minor Black Holes\n(9) All Dark Stars are supermassive. At level 10, CONSUME EVERYONE.",
+    "description": "(2) Dark Stars create a black hole that consumes enemies at 10% max health.\n(4) AND they gain 33% Attack Damage & Ability Power.\n(6) AND the strongest Dark Star unit goes supermassive, gaining 100% effectiveness from Dark Star, and creates 2 minor Black Holes.\n(9) All Dark Stars are supermassive. At level 10, CONSUME EVERYONE.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
@@ -122,7 +122,7 @@
       {
         "minUnits": 4,
         "style": 2,
-        "effect": "+30% AD & AP to Dark Stars"
+        "effect": "+33% AD & AP to Dark Stars"
       },
       {
         "minUnits": 6,
@@ -209,29 +209,29 @@
     "id": "meeple",
     "name": "Meeple",
     "icon": "/icons/traits/Meeple.webp",
-    "description": "Astronauts attract Meeps that empower Astronaut abilities in meepy ways. They also gain bonus Health.\n\n(3) 2% Mana Regen, 125 Health\n(5) 3% Mana Regen, 250 Health\n(7) 4% Mana Regen, 400 Health. Create a Cloning Slot. Gain gold and a 1-star copy when cloning completes.\n(10) 6% Mana Regen, 1000 Health. SUMMON THE FOUR MEEPLORDS!\n\nCloning time = Champion cost",
+    "description": "Meeple attract Meeps that empower Meeple abilities in meepy ways. They also gain bonus Health.\n\n(3) 2 Potential, 100 Health\n(5) 3 Potential, 300 Health\n(7) 4 Potential, 300 Health. Create a Cloning Slot on your bench. Gain gold and a 1-star copy of the champion placed there when cloning completes.\n(10) 6 Potential, 500 Health. SUMMON THE FOUR MEEPLORDS!\n\nCloning time = Champion cost",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
       {
         "minUnits": 3,
         "style": 1,
-        "effect": "2% Mana Regen, +125 Health"
+        "effect": "2 Potential, +100 Health"
       },
       {
         "minUnits": 5,
         "style": 2,
-        "effect": "3% Mana Regen, +250 Health"
+        "effect": "3 Potential, +300 Health"
       },
       {
         "minUnits": 7,
         "style": 3,
-        "effect": "4% Mana Regen, +400 Health + Cloning Slot"
+        "effect": "4 Potential, +300 Health + Cloning Slot"
       },
       {
         "minUnits": 10,
         "style": 4,
-        "effect": "6% Mana Regen, +1000 Health. SUMMON THE FOUR MEEPLORDS!"
+        "effect": "6 Potential, +500 Health. SUMMON THE FOUR MEEPLORDS!"
       }
     ],
     "champions": [
@@ -399,7 +399,7 @@
     "id": "space_groove",
     "name": "Space Groove",
     "icon": "/icons/traits/Space Groove .webp",
-    "description": "Groovians can enter the Groove. While in it, they gain Attack Speed and max Health Regen, increased per Groovian on your team.\n\n(1) Groovians can enter the Groove\n(3) All Groovians start combat in the Groove for 3 seconds\n(5) Each second in the Groove grants 3% stacking AD & AP\n(7) Increase these effects by 20%!\n(10) The Groove",
+    "description": "(1) Groovians can enter The Groove. While in it, they gain Attack Speed and max Health Regen, increased per Groovian on your team.\n(3) All Groovians start combat in The Groove for 3 seconds.\n(5) Each second spent in The Groove grants 3% stacking Attack Damage and Ability Power.\n(7) Increase these effects by 10%!\n(10) Get your Groove on!",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
@@ -421,7 +421,7 @@
       {
         "minUnits": 7,
         "style": 4,
-        "effect": "All Groove effects +20%"
+        "effect": "All Groove effects +10%"
       },
       {
         "minUnits": 10,
@@ -466,7 +466,7 @@
     "id": "stargazer",
     "name": "Stargazer",
     "icon": "/icons/traits/Stargazer.webp",
-    "description": "Stargazers chart a different constellation every game \u2014 there are 7 to discover. Allies in empowered hexes gain bonuses based on the active constellation. Stargazers gain more. More hexes reveal at each player level.\n\nExample: The Serpent \u2014 allies in empowered hexes gain Durability; Stargazers gain more and poison enemies, repeating a portion of damage dealt as magic damage over 3 seconds.",
+    "description": "Stargazers chart a different constellation every game. Stargazers in empowered hexes gain various bonuses, starting at (3) units. More hexes reveal at each player level.",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
@@ -617,24 +617,24 @@
     "id": "brawler",
     "name": "Brawler",
     "icon": "/icons/traits/Brawler.webp",
-    "description": "Your team gains 7% Health. Brawlers gain more.\n\n(2) +25% maximum Health\n(4) +45% maximum Health\n(6) +65% maximum Health",
+    "description": "Your team gains 5% Health. Brawlers gain more.\n\n(2) +20% maximum Health\n(4) +40% maximum Health\n(6) +60% maximum Health",
     "type": "tank",
     "category": "class",
     "breakpoints": [
       {
         "minUnits": 2,
         "style": 1,
-        "effect": "+25% max Health to Brawlers (+7% team)"
+        "effect": "+20% max Health to Brawlers (+5% team)"
       },
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "+45% max Health to Brawlers (+7% team)"
+        "effect": "+40% max Health to Brawlers (+5% team)"
       },
       {
         "minUnits": 6,
         "style": 4,
-        "effect": "+65% max Health to Brawlers (+7% team)"
+        "effect": "+60% max Health to Brawlers (+5% team)"
       }
     ],
     "champions": [
@@ -875,19 +875,19 @@
     "id": "replicator",
     "name": "Replicator",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_set17_replicator.png",
-    "description": "Replicator abilities occur a second time at reduced effectiveness.\n\n(2) 25% strength\n(4) 50% strength",
+    "description": "Replicator abilities occur a second time at reduced effectiveness.\n\n(2) 22% strength\n(4) 45% strength",
     "type": "magic",
     "category": "class",
     "breakpoints": [
       {
         "minUnits": 2,
         "style": 1,
-        "effect": "Abilities fire a second time at 25% strength"
+        "effect": "Abilities fire a second time at 22% strength"
       },
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "Abilities fire a second time at 50% strength"
+        "effect": "Abilities fire a second time at 45% strength"
       }
     ],
     "champions": [
@@ -977,7 +977,7 @@
     "id": "shepherd",
     "name": "Shepherd",
     "icon": "/icons/traits/Shepherd.webp",
-    "description": "Shepherds summon the Bond of the Stars to aid them in battle. Bia and Bayin's power is increased by the total star level of Shepherd champions.\n\n(3) Summon Bia\n(5) Summon Bayin\n(7) Bia and Bayin's bond grows deeper",
+    "description": "Shepherds summon the Bond of the Stars to aid them in battle.\n\n(3) Summon Bia\n(5) Summon Bayin\n(7) Bia and Bayin's bond grows deeper\n\nBia and Bayin's power are increased by the total star level of all Shepherds.",
     "type": "utility",
     "category": "class",
     "breakpoints": [
@@ -1030,7 +1030,7 @@
     "id": "sniper",
     "name": "Sniper",
     "icon": "/icons/traits/Sniper.webp",
-    "description": "Snipers gain Damage Amp, increased against targets farther away.\n\n(2) 18% DA; +2% DA per hex\n(3) 24% DA; +3% DA per hex\n(4) 28% DA; +4% DA per hex\n(5) 32% DA; +5% DA per hex",
+    "description": "Snipers gain Damage Amplification, increased against targets farther away.\n\n(2) 18% Damage Amplification; +2% Damage Amplification per hex\n(3) 24% Damage Amplification; +3% Damage Amplification per hex\n(4) 28% Damage Amplification; +4% Damage Amplification per hex",
     "type": "damage",
     "category": "class",
     "breakpoints": [
@@ -1084,7 +1084,7 @@
     "id": "vanguard",
     "name": "Vanguard",
     "icon": "/icons/traits/Vanguard.webp",
-    "description": "Vanguards gain 5% Durability while Shielded. At combat start and at 50% Health, gain a max Health Shield for 10 seconds.\n\n(2) 16% max Health Shield\n(4) 28% max Health Shield\n(6) 40% max Health Shield; 10% DR while Shielded",
+    "description": "Vanguards gain 5% Durability while Shielded. Combat start and 50% Health: Gain a max Health Shield for 10 seconds.\n\n(2) 16% max Health\n(4) 30% max Health\n(6) 40% max Health; 10% Damage Reduction while Shielded",
     "type": "tank",
     "category": "class",
     "breakpoints": [
@@ -1096,7 +1096,7 @@
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "28% max HP Shield"
+        "effect": "30% max HP Shield"
       },
       {
         "minUnits": 6,

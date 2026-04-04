@@ -23,7 +23,13 @@
       "Bash(curl -s \"https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/\")",
       "Bash(node -e \"const t = require\\('./data/traits.json'\\); t.forEach\\(x => console.log\\(x.name, '|', x.category, '|', x.isUnique ? 'UNIQUE' : 'normal'\\)\\)\")",
       "Bash(node -e \"const t = require\\('./data/traits.json'\\); const r = t.find\\(x => x.id === 'replicator'\\); console.log\\(r.icon\\)\")",
-      "Bash(node -e \"const t = require\\('./data/traits.json'\\); console.log\\(JSON.stringify\\(t[0].champions.slice\\(0,2\\)\\)\\)\")"
+      "Bash(node -e \"const t = require\\('./data/traits.json'\\); console.log\\(JSON.stringify\\(t[0].champions.slice\\(0,2\\)\\)\\)\")",
+      "Bash(sed -n '520,570p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(sed -n '1031,1075p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(sed -n '876,920p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(sed -n '978,1025p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(sed -n '210,270p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(sed -n '565,615p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)"
     ]
   }
 }

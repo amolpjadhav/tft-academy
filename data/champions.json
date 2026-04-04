@@ -205,18 +205,38 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Chogath.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg",
     "stats": {
-      "hp": 800,
-      "maxMana": 90,
-      "initialMana": 0,
-      "armor": 45,
-      "magicResist": 45,
+      "hp": 650,
+      "maxMana": 70,
+      "initialMana": 30,
+      "armor": 35,
+      "magicResist": 35,
       "attackSpeed": 0.6,
-      "attackDamage": 50,
+      "attackDamage": 45,
       "range": 1
+    },
+    "starValues": {
+      "hp": "650/1170/2106",
+      "attackDamage": "45/68/101",
+      "dps": "27/41/61"
     },
     "ability": {
       "name": "Accretion",
-      "description": "Deal magic damage to nearby enemies and permanently gain max Health for each enemy hit."
+      "description": "Deal 262/384/588 (HP+AP) magic damage to the lowest Health enemy in range and permanently gain 12/18/33 maximum Health. If this kills them, permanently gain 25/35/65 maximum Health instead.",
+      "scalingNotes": [
+        {
+          "label": "Health Per Cast",
+          "values": "[12/18/33]"
+        },
+        {
+          "label": "Health On Kill",
+          "values": "[25/35/65]"
+        },
+        {
+          "label": "Damage (HP+AP)",
+          "values": "[262/384/588]",
+          "formula": "384 = 8% Health + 290% AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -247,18 +267,39 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Ezreal.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg",
     "stats": {
-      "hp": 500,
-      "maxMana": 50,
+      "hp": 450,
+      "maxMana": 30,
       "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
-      "attackSpeed": 0.75,
+      "armor": 15,
+      "magicResist": 15,
+      "attackSpeed": 0.7,
       "attackDamage": 40,
       "range": 4
     },
+    "starValues": {
+      "hp": "450/810/1458",
+      "attackDamage": "40/60/90",
+      "dps": "28/42/63"
+    },
     "ability": {
       "name": "Temporal Shot",
-      "description": "Fire a Temporal Blast at the farthest enemy, dealing magic damage and generating a drone on hit."
+      "description": "Active: Fire a blast at the current target that deals 150/225/340 (AD+AP) physical damage. Every 8 takedowns, gain a drone that deals 8/12/18 (AD) physical damage to the current target on cast.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[10/15/25]"
+        },
+        {
+          "label": "Damage (AD+AP)",
+          "values": "[150/225/340]",
+          "formula": "225 = 210 AD + 15 AP"
+        },
+        {
+          "label": "Drone Damage (AD)",
+          "values": "[8/12/18]",
+          "formula": "12 AD"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -289,18 +330,44 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Leona.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg",
     "stats": {
-      "hp": 750,
-      "maxMana": 70,
-      "initialMana": 0,
+      "hp": 700,
+      "maxMana": 100,
+      "initialMana": 40,
       "armor": 45,
       "magicResist": 45,
-      "attackSpeed": 0.65,
-      "attackDamage": 45,
+      "attackSpeed": 0.6,
+      "attackDamage": 50,
       "range": 1
+    },
+    "starValues": {
+      "hp": "700/1260/2268",
+      "attackDamage": "50/75/113",
+      "dps": "30/45/68"
     },
     "ability": {
       "name": "Shield of Daybreak",
-      "description": "Gain a shield and stun the nearest enemy on her next basic attack."
+      "description": "Gain 400/475/625 (AP) Shield for 4 seconds. Bash the current target, dealing 226/339/509 (Armor+MR) magic damage and stunning them for 1.75/1.75/2 seconds.",
+      "scalingNotes": [
+        {
+          "label": "Shield (AP)",
+          "values": "[400/475/625]",
+          "formula": "475 AP"
+        },
+        {
+          "label": "Base Damage",
+          "values": "[100/150/225]",
+          "formula": "150"
+        },
+        {
+          "label": "Damage (Armor+MR)",
+          "values": "[226/339/509]",
+          "formula": "339 = 150 + 210% Armor + 210% MR"
+        },
+        {
+          "label": "Stun Duration",
+          "values": "[1.75/1.75/2]"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -332,18 +399,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Lissandra.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg",
     "stats": {
-      "hp": 500,
-      "maxMana": 40,
+      "hp": 450,
+      "maxMana": 30,
       "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
+      "armor": 15,
+      "magicResist": 15,
       "attackSpeed": 0.7,
       "attackDamage": 30,
       "range": 4
     },
+    "starValues": {
+      "hp": "450/810/1458",
+      "attackDamage": "30/45/68",
+      "dps": "21/31/47"
+    },
     "ability": {
       "name": "Dark Matter",
-      "description": "Hurl an enchanted dagger that explodes on impact, dealing magic damage in an area."
+      "description": "Hurl a shard towards the current target, dealing 215/325/490 (AP) magic damage to the first target it hits. After hitting its initial target or at its final destination, the dagger explodes dealing 40/60/90 (AP) magic damage to nearby targets.",
+      "scalingNotes": [
+        {
+          "label": "Primary Damage (AP)",
+          "values": "[215/325/490]",
+          "formula": "325 AP"
+        },
+        {
+          "label": "Explosion Damage (AP)",
+          "values": "[40/60/90]",
+          "formula": "60 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -374,18 +458,34 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Nasus.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nasus_0.jpg",
     "stats": {
-      "hp": 750,
-      "maxMana": 80,
-      "initialMana": 0,
-      "armor": 40,
-      "magicResist": 40,
+      "hp": 700,
+      "maxMana": 120,
+      "initialMana": 60,
+      "armor": 45,
+      "magicResist": 45,
       "attackSpeed": 0.65,
-      "attackDamage": 50,
+      "attackDamage": 40,
       "range": 1
+    },
+    "starValues": {
+      "hp": "700/1260/2268",
+      "attackDamage": "40/60/90",
+      "dps": "26/39/59"
     },
     "ability": {
       "name": "Groovin' Susan",
-      "description": "Transform into a funky dog warrior, gaining bonus Health and dealing magic damage to nearby enemies."
+      "description": "Transform for 6 seconds, temporarily gaining 250/325/425 max Health, and dealing 44/70/115 (HP+AP) magic damage to adjacent enemies each second.",
+      "scalingNotes": [
+        {
+          "label": "Bonus Health",
+          "values": "[250/325/425]"
+        },
+        {
+          "label": "Damage per Second (HP+AP)",
+          "values": "[44/70/115]",
+          "formula": "70 = 2% max Health + 45 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -417,17 +517,43 @@
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg",
     "stats": {
       "hp": 700,
-      "maxMana": 70,
-      "initialMana": 0,
+      "maxMana": 100,
+      "initialMana": 30,
       "armor": 45,
       "magicResist": 45,
       "attackSpeed": 0.65,
-      "attackDamage": 45,
+      "attackDamage": 60,
       "range": 1
+    },
+    "starValues": {
+      "hp": "700/1260/2268",
+      "attackDamage": "60/90/135",
+      "dps": "39/59/88"
     },
     "ability": {
       "name": "Huddle Up!",
-      "description": "Grant nearby allies a group shield and bonus Armor and Magic Resist for several seconds."
+      "description": "Gain 400/475/575 (AP) Shield for 4 seconds. For the duration, allies within two hexes gain 15/25/60 (AP) Armor and Magic Resistance.\n\nMeep Bonus: Meeps grant 125/160/210 (AP) Shield to the nearest 1 (Potential) allies for 4 seconds.",
+      "scalingNotes": [
+        {
+          "label": "Shield (AP)",
+          "values": "[400/475/575]",
+          "formula": "475 AP"
+        },
+        {
+          "label": "Defenses (AP)",
+          "values": "[15/25/60]",
+          "formula": "25 AP"
+        },
+        {
+          "label": "Meep Shield (AP)",
+          "values": "[125/160/210]",
+          "formula": "160 AP"
+        },
+        {
+          "label": "Allies Shielded",
+          "values": "1 per Potential"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -458,18 +584,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/RekSai.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/RekSai_0.jpg",
     "stats": {
-      "hp": 750,
-      "maxMana": 80,
-      "initialMana": 0,
-      "armor": 40,
-      "magicResist": 40,
-      "attackSpeed": 0.65,
+      "hp": 700,
+      "maxMana": 110,
+      "initialMana": 50,
+      "armor": 45,
+      "magicResist": 45,
+      "attackSpeed": 0.6,
       "attackDamage": 50,
       "range": 1
     },
+    "starValues": {
+      "hp": "700/1260/2268",
+      "attackDamage": "50/75/113",
+      "dps": "30/45/68"
+    },
     "ability": {
       "name": "Upheaval",
-      "description": "Heal, then burst from underground knocking up and damaging nearby enemies."
+      "description": "Heal 227/276/351 (HP+AP), then briefly knock up adjacent enemies and deal 80/120/180 (AP) magic damage.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[80/120/180]",
+          "formula": "120 AP"
+        },
+        {
+          "label": "Heal (HP+AP)",
+          "values": "[227/276/351]",
+          "formula": "276 = 6% Health + 200 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -500,18 +643,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Talon.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg",
     "stats": {
-      "hp": 550,
-      "maxMana": 60,
+      "hp": 650,
+      "maxMana": 30,
       "initialMana": 0,
-      "armor": 25,
-      "magicResist": 25,
-      "attackSpeed": 0.75,
-      "attackDamage": 45,
+      "armor": 35,
+      "magicResist": 35,
+      "attackSpeed": 0.8,
+      "attackDamage": 35,
       "range": 1
     },
+    "starValues": {
+      "hp": "650/1170/2106",
+      "attackDamage": "35/53/79",
+      "dps": "28/42/63"
+    },
     "ability": {
-      "name": "Diviner's Judgement",
-      "description": "Apply a bleed to the target, then leap to the healthiest enemy and deal physical damage."
+      "name": "Diviner's Judgment",
+      "description": "Stab the target, causing them to bleed for 520/780/1170 (AD+AP) physical damage over 18 seconds. After the attack, leap to the highest percent Health enemy within 3 hexes.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[60/90/135]",
+          "formula": "90 AP"
+        },
+        {
+          "label": "Damage (AD+AP)",
+          "values": "[520/780/1170]",
+          "formula": "780 = 690 AD + 90 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -542,18 +702,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Teemo.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg",
     "stats": {
-      "hp": 500,
-      "maxMana": 40,
+      "hp": 450,
+      "maxMana": 50,
       "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
-      "attackSpeed": 0.8,
-      "attackDamage": 30,
+      "armor": 15,
+      "magicResist": 15,
+      "attackSpeed": 0.7,
+      "attackDamage": 15,
       "range": 4
+    },
+    "starValues": {
+      "hp": "450/810/1458",
+      "attackDamage": "15/23/34",
+      "dps": "11/16/24"
     },
     "ability": {
       "name": "Double Time",
-      "description": "Scatter mushroom traps that stack poison damage on enemies who step on them."
+      "description": "Passive: Attacks deal 30/45/90 (AP) bonus magic damage and an additional 70/105/165 (AP) stacking magic damage over 6 seconds. While an enemy has 5 or more stacks, Teemo is in The Groove.\n\nActive: Gain 150% Attack Speed for 3 attacks.",
+      "scalingNotes": [
+        {
+          "label": "Bonus Damage (AP)",
+          "values": "[30/45/90]",
+          "formula": "45 AP"
+        },
+        {
+          "label": "Poison Damage (AP)",
+          "values": "[70/105/165]",
+          "formula": "105 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -585,17 +762,34 @@
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_0.jpg",
     "stats": {
       "hp": 500,
-      "maxMana": 40,
+      "maxMana": 50,
       "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
+      "armor": 15,
+      "magicResist": 15,
       "attackSpeed": 0.7,
       "attackDamage": 30,
       "range": 4
     },
+    "starValues": {
+      "hp": "500/900/1620",
+      "attackDamage": "30/45/68",
+      "dps": "21/31/47"
+    },
     "ability": {
       "name": "Fate's Gambit",
-      "description": "Throw a card at the target dealing variable magic damage based on the card drawn \u2014 Red, Blue, or Gold."
+      "description": "Draw a card with a value between 1 and 9 by Lucky chance, then throw it at the target. Based on the card drawn, deal between 200/300/510 (AP) and 400/600/1020 (AP) magic damage. Overkill damage bounces to the nearest enemy.\n\n3-Star Bonus: If a 9 is thrown, generate 1 gold.\nLucky: Check twice and take the better outcome.",
+      "scalingNotes": [
+        {
+          "label": "Min Damage (AP)",
+          "values": "[200/300/510]",
+          "formula": "300 AP"
+        },
+        {
+          "label": "Max Damage (AP)",
+          "values": "[400/600/1020]",
+          "formula": "600 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -627,17 +821,38 @@
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg",
     "stats": {
       "hp": 500,
-      "maxMana": 40,
-      "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
+      "maxMana": 50,
+      "initialMana": 10,
+      "armor": 15,
+      "magicResist": 15,
       "attackSpeed": 0.7,
       "attackDamage": 30,
       "range": 4
     },
+    "starValues": {
+      "hp": "500/900/1620",
+      "attackDamage": "30/45/68",
+      "dps": "21/31/47"
+    },
     "ability": {
       "name": "Meepteor Shower",
-      "description": "Summon Meep-powered meteors that crash down in an area, dealing magic damage to enemies hit."
+      "description": "Call down a Meepteor on the target that deals 350/525/790 (AP) magic damage.\n\nMeep Bonus: An additional 2 (Potential) mini Meepteors are called down on nearby targets dealing 35/50/80 (AP) magic damage each.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[350/525/790]",
+          "formula": "525 AP"
+        },
+        {
+          "label": "Mini Meeps",
+          "values": "2 per Potential"
+        },
+        {
+          "label": "Mini Damage (AP)",
+          "values": "[35/50/80]",
+          "formula": "50 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
