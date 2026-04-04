@@ -12,21 +12,59 @@
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
     "stats": {
       "hp": 700,
-      "maxMana": 80,
-      "initialMana": 0,
-      "armor": 40,
-      "magicResist": 40,
-      "attackSpeed": 0.65,
-      "attackDamage": 45,
+      "maxMana": 90,
+      "initialMana": 30,
+      "armor": 45,
+      "magicResist": 45,
+      "attackSpeed": 0.6,
+      "attackDamage": 50,
       "range": 1
     },
     "ability": {
       "name": "Stellar Slash",
-      "description": "Heal and deal AD + Armor-scaling damage to nearby enemies in a sweeping slash."
+      "description": "Heal 300/375/575 (AP), then deal 161/242/362 (AD+Armor) physical damage to the current target.\n\nN.O.V.A. Strike: Cleave the battlefield, briefly knocking up all enemies and dealing 81/121/181 (AD+Armor) physical damage.",
+      "scalingNotes": [
+        {
+          "label": "Heal (AP)",
+          "values": "[300/375/575]"
+        },
+        {
+          "label": "Damage (Armor)",
+          "values": "[180/270/405]"
+        },
+        {
+          "label": "Damage",
+          "values": "[80/120/180]",
+          "formula": "242 = 120 AD + 270% Armor"
+        },
+        {
+          "label": "N.O.V.A. Damage",
+          "values": "50% of main",
+          "formula": "121 = 50% of 242 (AD+Armor)"
+        }
+      ]
     },
     "beginnerTip": null,
-    "idealItems": [],
-    "championType": "Attack Tank"
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Sustains through burst damage"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Defence scales with attackers"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Passive AoE pressure on frontline"
+      }
+    ],
+    "championType": "Attack Tank",
+    "starValues": {
+      "hp": "700/1260/2268",
+      "attackDamage": "50/75/113",
+      "dps": "30/45/68"
+    }
   },
   {
     "id": "briar",
@@ -41,22 +79,56 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Briar.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Briar_0.jpg",
     "stats": {
-      "hp": 600,
-      "maxMana": 60,
+      "hp": 650,
+      "maxMana": 40,
       "initialMana": 0,
-      "armor": 30,
-      "magicResist": 30,
-      "attackSpeed": 0.8,
-      "attackDamage": 50,
+      "armor": 35,
+      "magicResist": 35,
+      "attackSpeed": 0.75,
+      "attackDamage": 40,
       "range": 1
     },
     "ability": {
       "name": "Fish Frenzy",
-      "description": "Passive: Gain stacking Attack Speed. Active: Leap and deal physical damage to nearby enemies."
+      "description": "Passive: For every 1% missing Health, gain 2% (AS) Attack Speed.\n\nActive: Deal 110/165/250 (AD) physical damage to the target, increased by 50% if they're a tank.",
+      "scalingNotes": [
+        {
+          "label": "Attack Speed",
+          "values": "[2/2/2]"
+        },
+        {
+          "label": "Damage (AD)",
+          "values": "[110/165/250]",
+          "formula": "165 (AD)"
+        },
+        {
+          "label": "Bonus Tank Damage",
+          "values": "50% of main",
+          "formula": "= 50% of 165 (AD)"
+        }
+      ]
     },
     "beginnerTip": null,
-    "idealItems": [],
-    "championType": "Attack Fighter"
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Stacks attack damage and defense as HP drops"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Stacking AD for extended fights"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield and AD burst for duelling"
+      }
+    ],
+    "championType": "Attack Fighter",
+    "starValues": {
+      "hp": "650/1170/2106",
+      "attackDamage": "40/60/90",
+      "dps": "30/45/68"
+    }
   },
   {
     "id": "caitlyn",
@@ -71,20 +143,54 @@
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
     "stats": {
       "hp": 500,
-      "maxMana": 40,
+      "maxMana": 0,
       "initialMana": 0,
-      "armor": 20,
-      "magicResist": 20,
-      "attackSpeed": 0.75,
-      "attackDamage": 35,
-      "range": 5
+      "armor": 15,
+      "magicResist": 15,
+      "attackSpeed": 0.55,
+      "attackDamage": 65,
+      "range": 4
+    },
+    "starValues": {
+      "hp": "500/900/1620",
+      "attackDamage": "65/98/146",
+      "dps": "36/54/80"
     },
     "ability": {
-      "name": "Aim for the Head",
-      "description": "Passive: Every few attacks, fire a headshot that deals bonus damage and has a chance to critically strike."
+      "name": "Aim For The Head",
+      "description": "Passive: Attacks have a 15% Lucky chance to fire an empowered Headshot, dealing 190/285/555 (AD+AP) physical damage.\n\nN.O.V.A. Strike: Mark all enemies, increasing damage taken by 10%. The first time marked targets drop below 50% Health, Headshot them for 76/114/222 (AD+AP) physical damage.\n\nLucky: Check twice and take the better outcome.",
+      "scalingNotes": [
+        {
+          "label": "Headshot Damage (AP)",
+          "values": "[20/30/45]"
+        },
+        {
+          "label": "Headshot Damage (AD+AP)",
+          "values": "[190/285/555]",
+          "formula": "285 = 255 AD + 30 AP"
+        },
+        {
+          "label": "N.O.V.A. Damage (AD+AP)",
+          "values": "[76/114/222]",
+          "formula": "114 = 40% of 285 (AD+AP)"
+        }
+      ]
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "edge_of_night",
+        "reason": "Spell shield on first sniper shot"
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "Critical headshots"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred on crits"
+      }
+    ],
     "championType": "Attack Specialist"
   },
   {
@@ -113,7 +219,20 @@
       "description": "Deal magic damage to nearby enemies and permanently gain max Health for each enemy hit."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -142,7 +261,20 @@
       "description": "Fire a Temporal Blast at the farthest enemy, dealing magic damage and generating a drone on hit."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "Attack-driven mana for drone spam"
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Stay healthy while kiting"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Flex stat scaling"
+      }
+    ],
     "championType": "Attack Caster"
   },
   {
@@ -171,7 +303,20 @@
       "description": "Gain a shield and stun the nearest enemy on her next basic attack."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -201,7 +346,20 @@
       "description": "Hurl an enchanted dagger that explodes on impact, dealing magic damage in an area."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Immediate re-cast of Dark Matter"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Burst the frontline on first cast"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical shards for one-shots"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -230,7 +388,20 @@
       "description": "Transform into a funky dog warrior, gaining bonus Health and dealing magic damage to nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -259,7 +430,20 @@
       "description": "Grant nearby allies a group shield and bonus Armor and Magic Resist for several seconds."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -288,7 +472,20 @@
       "description": "Heal, then burst from underground knocking up and damaging nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -317,7 +514,20 @@
       "description": "Apply a bleed to the target, then leap to the healthiest enemy and deal physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "edge_of_night",
+        "reason": "First-hit spell shield for safe engage"
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "One-shot crits on bleed target"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Stacks AD on kills"
+      }
+    ],
     "championType": "Attack Assassin"
   },
   {
@@ -346,7 +556,20 @@
       "description": "Scatter mushroom traps that stack poison damage on enemies who step on them."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Huge bonus shroom damage"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical poison clouds"
+      },
+      {
+        "itemId": "nashors_tooth",
+        "reason": "Attack-speed synergy with passive stacks"
+      }
+    ],
     "championType": "Magic Marksman"
   },
   {
@@ -375,7 +598,20 @@
       "description": "Throw a card at the target dealing variable magic damage based on the card drawn \u2014 Red, Blue, or Gold."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Draw a card every cast for gold/damage"
+      },
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "Faster card throws with mana on attack"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Amplifies gold-card magic damage"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -404,7 +640,20 @@
       "description": "Summon Meep-powered meteors that crash down in an area, dealing magic damage to enemies hit."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Veigar needs constant ability spam"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Exponential AP scaling"
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "Applies Grievous Wounds on AoE"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -433,7 +682,20 @@
       "description": "Reposition to a flanking position and hurl a piercing kunai that shreds enemy Armor."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "edge_of_night",
+        "reason": "Protects reposition dash"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Stacks AD on kunai hits"
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Defense while in range"
+      }
+    ],
     "championType": "Attack Fighter"
   },
   {
@@ -463,7 +725,20 @@
       "description": "Unleash a rapid barrage of multi-directional slashes, dealing physical damage to surrounding enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Stacks attack damage and defense as HP drops"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Stacking AD for extended fights"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield and AD burst for duelling"
+      }
+    ],
     "championType": "Attack Fighter"
   },
   {
@@ -492,7 +767,20 @@
       "description": "Fling a boomerang at enemies in a line. Meeps also fly out and attack on impact."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Critting the boomerang return"
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Punishes tanky frontlines"
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "Attack-speed synergy with Meep bonus"
+      }
+    ],
     "championType": "Attack Specialist"
   },
   {
@@ -521,7 +809,20 @@
       "description": "Guzzle his brew to heal and apply a chilling effect to nearby enemies, slowing their attacks."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -550,7 +851,20 @@
       "description": "Dance into the Groove and snip enemies with her enchanted scissors, dealing magic damage with reset potential."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical snip damage"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Full AP scaling on scissors"
+      },
+      {
+        "itemId": "hextech_gunblade",
+        "reason": "Lifesteal in melee skirmishes"
+      }
+    ],
     "championType": "Magic Assassin"
   },
   {
@@ -579,7 +893,20 @@
       "description": "Enter a defensive counter stance, then follow up with a stunning overhead strike."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Dodge + damage stacking synergy"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield when low HP"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Adaptive scaling with magic damage"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -608,7 +935,20 @@
       "description": "Switch to her rocket launcher and fire a cone barrage of explosive shots at the target area."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "Stacks attack speed for rocket mode"
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "Critical rockets shred everyone"
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Bypasses high-HP tanks"
+      }
+    ],
     "championType": "Attack Marksman"
   },
   {
@@ -638,7 +978,20 @@
       "description": "Slam the ground with healing energy, sending out Meep waves that damage and slow nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Massive HP pool for frontline bulk"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales defense with nearby enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn damage and constant AoE pressure"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -667,7 +1020,20 @@
       "description": "Launch a bouncing magic ball with probability-based outcomes, dealing magic damage to enemies hit."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "More Mega Time Kicks"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Amplifies bounce damage"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critting bounce targets"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -697,7 +1063,20 @@
       "description": "Stack a massive shield and convert excess shielding into healing for himself."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Vanguard bulk in center"
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Channels take time \u2014 needs HP"
+      },
+      {
+        "itemId": "dragons_claw",
+        "reason": "Magic resist vs mirror comps"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -727,7 +1106,20 @@
       "description": "Raise his shield for bonus Durability, then crash it forward in a cone dealing physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Sustains through burst damage"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Defence scales with attackers"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Passive AoE pressure on frontline"
+      }
+    ],
     "championType": "Attack Tank"
   },
   {
@@ -756,7 +1148,20 @@
       "description": "Hurl a harpoon to pull and stun an enemy, then teleport behind them for a cleaving slash."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "edge_of_night",
+        "reason": "Shield before engaging"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Resets on harpoon kills"
+      },
+      {
+        "itemId": "quicksilver",
+        "reason": "Immune to CC while repositioning"
+      }
+    ],
     "championType": "Attack Assassin"
   },
   {
@@ -785,7 +1190,20 @@
       "description": "Launch a star projectile that changes direction mid-flight for massive magic damage on the final target."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Rapid paddle-star spam"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Maximum redirect damage"
+      },
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "More casts per fight"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -814,7 +1232,20 @@
       "description": "Hack reality open with a rift, storing incoming damage and releasing it as a burst of magic damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "AP burst on ability chain"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical hacked-ability damage"
+      },
+      {
+        "itemId": "archangels_staff",
+        "reason": "Scales through long fights"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -843,7 +1274,20 @@
       "description": "Summon orbiting moonlight orbs that create a shield and burst on contact with enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "ionic_spark",
+        "reason": "AoE MR shred on orb spin"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical ability strikes"
+      },
+      {
+        "itemId": "hextech_gunblade",
+        "reason": "Omnivamp in frontline range"
+      }
+    ],
     "championType": "Magic Fighter"
   },
   {
@@ -872,7 +1316,20 @@
       "description": "Dash through enemies and bait them toward a spot where a gang of mega Meeps erupts to deal magic damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical Meep bait chomp"
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "Spam dash-attacks on backline"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Burst single targets"
+      }
+    ],
     "championType": "Magic Assassin"
   },
   {
@@ -902,7 +1359,20 @@
       "description": "Raise a shield, drain an enemy's spirit to deal damage, then slam the ground in an area."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Tentacles scale with HP"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Defense while draining"
+      },
+      {
+        "itemId": "spirit_visage",
+        "reason": "Healing amplified by drain"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -931,7 +1401,20 @@
       "description": "Fire a volley of missiles at the target area. Killing enemies resets her mana."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "Attack-speed ramp for missile spam"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Scales with bullet count"
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "Stay alive in range"
+      }
+    ],
     "championType": "Attack Caster"
   },
   {
@@ -960,7 +1443,20 @@
       "description": "Call down a constellation effect dealing magic damage with variable outcomes based on the stars drawn."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "More raining stars"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "AoE amplification"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical star rain"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -989,7 +1485,20 @@
       "description": "Fling vines to root and stun a cluster of nearby enemies, dealing magic damage scaling with his health."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Vines scale off max HP"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn while rooting"
+      },
+      {
+        "itemId": "bramble_vest",
+        "reason": "Anti-crit frontline presence"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -1017,7 +1526,20 @@
       "description": "Choose your mode before combat: Channeler, Challenger, or Replicator. Each mode grants a unique ability and that trait."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Core for Channeler Gun Goddess mode"
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "Grievous Wounds on all three modes"
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "Faster mode swaps via mana"
+      }
+    ],
     "championType": "Attack Caster"
   },
   {
@@ -1046,7 +1568,20 @@
       "description": "Temporarily forge a Radiant item for an ally, enter the Groove, and charge through enemies dealing magic damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Core tank scaling"
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Sustain through Space Groove"
+      },
+      {
+        "itemId": "steadfast_heart",
+        "reason": "Critical damage immunity"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -1074,7 +1609,20 @@
       "description": "Gain Durability then heal, followed by a sweeping knockup slash that deals physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Scythe healing scales with HP"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield during dash"
+      },
+      {
+        "itemId": "titans_resolve",
+        "reason": "AD stacking on attacks"
+      }
+    ],
     "championType": "Attack Tank"
   },
   {
@@ -1103,7 +1651,20 @@
       "description": "Knock up nearby enemies with a stylish maneuver, enter the Groove, then unload with rapid gunfire."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Crits apply to Style ability"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred on volley"
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Protects opening dash"
+      }
+    ],
     "championType": "Attack Caster"
   },
   {
@@ -1133,7 +1694,20 @@
       "description": "Fire proximity blasts at all nearby enemies then dash forward, gaining a temporary shield."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Stacks with Proximity Blast resets"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield burst on engage"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred for physical comp"
+      }
+    ],
     "championType": "Attack Fighter"
   },
   {
@@ -1162,7 +1736,20 @@
       "description": "Channel a growing psionic storm that deals increasing magic damage, tapering as it widens."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Psionic storm channels constantly"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Multiplies storm damage"
+      },
+      {
+        "itemId": "void_staff",
+        "reason": "Penetrates MR on sustained beam"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1191,7 +1778,20 @@
       "description": "Channel a massive cosmic beam down a line, dealing enormous magic damage while ignoring Magic Resist."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Continuous Deathbeam channeling"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Amplifies each beam segment"
+      },
+      {
+        "itemId": "void_staff",
+        "reason": "Deathbeam ignores MR \u2014 stack it"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1220,7 +1820,20 @@
       "description": "Strafe missiles across the board and occasionally launch a mega-blast that ignites Meep explosives."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "Rapid missile reload"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Flex AD/AP for missile scaling"
+      },
+      {
+        "itemId": "rageblade",
+        "reason": "Attack speed for frequent Meep missiles"
+      }
+    ],
     "championType": "Attack Caster"
   },
   {
@@ -1249,7 +1862,20 @@
       "description": "Create a black hole that splits into gravitational shards dealing magic damage to all enemies caught inside."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Maximum black hole damage"
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "AoE Grievous Wounds on singularity"
+      },
+      {
+        "itemId": "void_staff",
+        "reason": "Penetrate MR in tanky metas"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1278,7 +1904,20 @@
       "description": "Mark a target for death. Consume the mark with an arrow jump that deals massive physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Crits on Wolf mark attacks"
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Penetrates bulky frontlines"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred on mark procs"
+      }
+    ],
     "championType": "Attack Marksman"
   },
   {
@@ -1307,7 +1946,20 @@
       "description": "Summon clones that distract enemies, then fire homing bolts at each that erupt on final impact."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Fracture Reality clones burst harder"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical clone bolts"
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "Constant bolt barrage"
+      }
+    ],
     "championType": "Magic Marksman"
   },
   {
@@ -1336,7 +1988,20 @@
       "description": "Meditate then unleash three psionic strikes, projecting a psi-state image of himself to deal bonus damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rageblade",
+        "reason": "Attack speed synergy with doubletap passive"
+      },
+      {
+        "itemId": "deathblade",
+        "reason": "Stacking AD after kills"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Adaptive on Psi-Strike meditation"
+      }
+    ],
     "championType": "Attack Fighter"
   },
   {
@@ -1365,7 +2030,20 @@
       "description": "Attract all enemy projectiles toward itself, then release a shockwave dealing magic damage to nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Sustains through burst damage"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Defence scales with attackers"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Passive AoE pressure on frontline"
+      }
+    ],
     "championType": "Attack Tank"
   },
   {
@@ -1394,7 +2072,20 @@
       "description": "Launch a bouncing disco bubble that knocks up enemies on contact, spraying healing globs at allies."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Constant bubble bouncing"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "AoE bounce amplification"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical bubbles for burst"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1423,7 +2114,20 @@
       "description": "Raise a massive shield, then summon an astrolabe that knocks enemies away from Nunu."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Calamity astrolabe crashing into big HP"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Tank while falling"
+      },
+      {
+        "itemId": "ionic_spark",
+        "reason": "AoE MR shred on landing"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -1452,7 +2156,20 @@
       "description": "Spin into a shield then roll forward, knocking enemies into a line and reducing Meep damage taken."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "bramble_vest",
+        "reason": "Gravitational spin returns crits"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Scales tankiness with enemies"
+      },
+      {
+        "itemId": "sunfire_cape",
+        "reason": "Burn inside the spin radius"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -1481,7 +2198,20 @@
       "description": "Dash through time and release an adaptive wave \u2014 deals AD or AP damage based on her highest stat."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Hybrid scales perfectly"
+      },
+      {
+        "itemId": "hand_of_justice",
+        "reason": "Random AD/AP bonus fits Hybrid"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield for Time Warp engage"
+      }
+    ],
     "championType": "Hybrid Fighter"
   },
   {
@@ -1510,7 +2240,20 @@
       "description": "At low health, gain a massive shield and heal. Then lash out with his tongue, dealing magic damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Tongue lash scales off HP"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Oracle Brawler bulk"
+      },
+      {
+        "itemId": "spirit_visage",
+        "reason": "Amplifies heal after tongue lash"
+      }
+    ],
     "championType": "Magic Tank"
   },
   {
@@ -1539,7 +2282,20 @@
       "description": "Bounce attacks off multiple enemies, leaving feathers that all snap back dealing physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Recalls feathers for crit burst"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred on feather waves"
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Cuts through armored backlines"
+      }
+    ],
     "championType": "Attack Marksman"
   },
   {
@@ -1568,7 +2324,20 @@
       "description": "Summon a UFO that abducts and removes enemies on kill. Meep astronauts provide bonus empowerment."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Sustained saucer DPS"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Amplifies saucer chain"
+      },
+      {
+        "itemId": "spear_of_shojin",
+        "reason": "More abductions with faster casts"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1598,7 +2367,20 @@
       "description": "Passively fire rapid electric bolts. When low on health, become untargetable to repair, then unleash a disco ball uppercut on return. Enters the Groove."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "ionic_spark",
+        "reason": "MR shred on party crasher area"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Space Groove frontline bulk"
+      },
+      {
+        "itemId": "warmogs_armor",
+        "reason": "Survive long enough to disco"
+      }
+    ],
     "championType": "Magic Fighter"
   },
   {
@@ -1628,7 +2410,20 @@
       "description": "Reveal enemy vitals and deal True Damage, healing on hit. Grants her team a powerful aura."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "titans_resolve",
+        "reason": "Blade stacks defense as HP drops"
+      },
+      {
+        "itemId": "steraks_gage",
+        "reason": "Shield on Vital transfer"
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Spell-shield the first CC attempt"
+      }
+    ],
     "championType": "Attack Fighter"
   },
   {
@@ -1656,7 +2451,20 @@
       "description": "Passively fires cone projectiles on each attack. Active: unload an explosive shell dealing massive physical damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "infinity_edge",
+        "reason": "Shotgun scatter crits"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred on cone shots"
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Shield for aggressive engage"
+      }
+    ],
     "championType": "Attack Marksman"
   },
   {
@@ -1686,7 +2494,20 @@
       "description": "Attack at a fixed rate. Spectral hands reach from the void to hold enemies, and every 4th shot is a piercing finale."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "edge_of_night",
+        "reason": "Protects fourth-shot setup"
+      },
+      {
+        "itemId": "infinity_edge",
+        "reason": "4th bullet guaranteed crit"
+      },
+      {
+        "itemId": "giant_slayer",
+        "reason": "Penetrates HP-stacking tanks"
+      }
+    ],
     "championType": "Attack Marksman"
   },
   {
@@ -1714,7 +2535,20 @@
       "description": "Transform into her Dark Form and tether drain multiple enemies, then erupt in a final dark burst."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical Dark Form damage"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Maximise transformation burst"
+      },
+      {
+        "itemId": "ionic_spark",
+        "reason": "MR shred while channelling"
+      }
+    ],
     "championType": "Magic Fighter"
   },
   {
@@ -1743,7 +2577,20 @@
       "description": "Build stacking True Damage on each attack, then open a rift that shields allies and grants them bonus speed."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "ionic_spark",
+        "reason": "AoE MR reduction around Reality Tear"
+      },
+      {
+        "itemId": "gargoyle_stoneplate",
+        "reason": "Bulwark Bastion core item"
+      },
+      {
+        "itemId": "evenshroud",
+        "reason": "Armor reduction aura for AD backline"
+      }
+    ],
     "championType": "Magic Fighter"
   },
   {
@@ -1773,7 +2620,20 @@
       "description": "Attach psionic debris to multiple enemies, then slam them together for massive magic damage and a stun."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "blue_buff",
+        "reason": "Psionic Crush spam"
+      },
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "AoE magnetic debris amplification"
+      },
+      {
+        "itemId": "morellonomicon",
+        "reason": "Grievous Wounds on entire team"
+      }
+    ],
     "championType": "Magic Caster"
   },
   {
@@ -1801,7 +2661,20 @@
       "description": "Shadow hands passively mark enemies. Active: empower the hands to erupt on all marked targets simultaneously."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "rabadons_deathcap",
+        "reason": "Shadow Strike chain burst"
+      },
+      {
+        "itemId": "jeweled_gauntlet",
+        "reason": "Critical empowered strikes"
+      },
+      {
+        "itemId": "blue_buff",
+        "reason": "Constant Lend me a Hand casts"
+      }
+    ],
     "championType": "Magic Marksman"
   },
   {
@@ -1829,7 +2702,20 @@
       "description": "Create item-inheriting clones of himself. While any clone is alive, gain 40% bonus Attack Damage."
     },
     "beginnerTip": null,
-    "idealItems": [],
+    "idealItems": [
+      {
+        "itemId": "deathblade",
+        "reason": "Clone inherits full AD"
+      },
+      {
+        "itemId": "edge_of_night",
+        "reason": "Spell shield on clone spawn"
+      },
+      {
+        "itemId": "last_whisper",
+        "reason": "Armor shred for physical comp"
+      }
+    ],
     "championType": "Attack Fighter"
   }
 ]

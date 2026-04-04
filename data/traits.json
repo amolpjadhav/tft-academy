@@ -3,7 +3,7 @@
     "id": "anima",
     "name": "Anima",
     "icon": "/icons/traits/anima.png",
-    "description": "After losing a player combat, gain 15 Tech, plus 5 Tech per loss-streak length. Gain 2 Tech per Anima takedown. Each time Animas reach 100 Tech, prototype new Anima Weapons \u2014 take them now or save Tech for more powerful ones.\n\n(3) Start Researching!\n(5) Gain a loot Orb upon win",
+    "description": "After losing a player combat, gain 15 Tech, plus 5 Tech per loss-streak length. Gain 2 Tech per Anima takedown. Each time Animas reach 100 Tech, prototype new Anima Weapons \u2014 take them now or save Tech for more powerful ones.\n\n(3) Start Researching!\n(6) After winning, gain a loot Orb!",
     "type": "utility",
     "category": "origin",
     "breakpoints": [
@@ -13,9 +13,9 @@
         "effect": "Start Researching!"
       },
       {
-        "minUnits": 5,
+        "minUnits": 6,
         "style": 3,
-        "effect": "Gain a loot Orb upon win"
+        "effect": "After winning, gain a loot Orb!"
       }
     ],
     "champions": [
@@ -275,7 +275,7 @@
     "id": "nova",
     "name": "N.O.V.A.",
     "icon": "/icons/traits/Nova.webp",
-    "description": "6 seconds into combat, N.O.V.A. grant a power surge to allies based on champions.\n\n(2) Power surge based on your N.O.V.A. champions:\n\u2022 Aatrox: Ally Damage 30% Shred and Sunder enemies\n\u2022 Caitlyn: Grant allies 20% Attack Speed\n\u2022 Akali: Allies gain Precision\n\u2022 Maokai: Allies heal 15% max Health\n\u2022 Kindred: Shield the strongest Tank for 800\n\u2022 Emblem: Allies deal 10% stacking bonus true damage\n\n(5) Gain a Striker selector \u2014 chosen N.O.V.A. activates their Strike during the power surge.",
+    "description": "(2) 6 seconds into combat, N.O.V.A. grant a power surge to allies based on champions.\n\u2022 Aatrox: Ally Damage 30% Shred and Sunder enemies\n\u2022 Caitlyn: Grant allies 20% Attack Speed\n\u2022 Akali: Allies gain Precision\n\u2022 Maokai: Allies heal 15% max Health\n\u2022 Kindred: Shield the strongest Tank for 800\n\u2022 Emblem: Allies deal 10% stacking bonus true damage\n\n(5) Gain a Striker selector. The chosen N.O.V.A. activates their Strike during the power surge.",
     "type": "damage",
     "category": "origin",
     "breakpoints": [
@@ -564,7 +564,7 @@
     "id": "bastion",
     "name": "Bastion",
     "icon": "/icons/traits/Bastion.webp",
-    "description": "Your team gains 12 Armor and Magic Resist. Bastions gain more, and the value doubles in the first 10 seconds of combat.\n\n(2) 16 Armor & MR\n(4) 35 Armor & MR\n(6) 55 Armor & MR; Non-Bastions gain an additional 20 Armor & MR.",
+    "description": "Your team gains 15 Armor and Magic Resist. Bastions gain more, and the value doubles in the first 10 seconds of combat.\n\n(2) 16 Armor & MR\n(4) 40 Armor & MR\n(6) 60 Armor & MR; Non-Bastions gain an additional 20 Armor & MR.",
     "type": "tank",
     "category": "class",
     "breakpoints": [
@@ -576,12 +576,12 @@
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "35 Armor & MR to Bastions (doubles first 10s)"
+        "effect": "40 Armor & MR to Bastions (doubles first 10s)"
       },
       {
         "minUnits": 6,
         "style": 4,
-        "effect": "55 Armor & MR; Non-Bastions gain +20 Armor & MR too"
+        "effect": "60 Armor & MR; Non-Bastions gain +20 Armor & MR too"
       }
     ],
     "champions": [
@@ -786,7 +786,7 @@
     "id": "fateweaver",
     "name": "Fateweaver",
     "icon": "/icons/traits/Fateweaver.webp",
-    "description": "Innate: Fateweavers have Precision.\n\n(2) Chance effects on abilities are Lucky.\n(4) Gain 20% Crit Chance and 10% Crit Damage. Critical strikes are also Lucky.",
+    "description": "Innate: Fateweavers have Precision.\n\n(2) Chance effects on abilities are Lucky.\n(4) Gain 20% Crit Chance and 20% Crit Damage. Critical strikes are also Lucky.\n\nPrecision: Ability damage can critically strike. Additional Precision grants 10% Critical Strike Damage.\nLucky: Check twice and take the better outcome.",
     "type": "damage",
     "category": "class",
     "breakpoints": [
@@ -798,7 +798,7 @@
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "+20% Crit Chance, +10% Crit Dmg; crits are also Lucky"
+        "effect": "+20% Crit Chance, +20% Crit Dmg; crits are also Lucky"
       }
     ],
     "champions": [

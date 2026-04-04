@@ -2,11 +2,13 @@ import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import type { GetStaticProps } from "next";
 import type { Champion } from "@/types/champion";
 import type { Trait } from "@/types/trait";
+import type { Item, ItemsData } from "@/types/item";
 import PageShell from "@/components/layout/PageShell";
 import Sidebar from "@/components/layout/Sidebar";
 import MobileNav from "@/components/layout/MobileNav";
 import championsData from "../../data/champions.json";
 import traitsData from "../../data/traits.json";
+import itemsData from "../../data/items.json";
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 type BoardMap = Record<string, Champion | null>;
@@ -24,6 +26,7 @@ interface ActiveTrait {
 interface Props {
   champions: Champion[];
   traits: Trait[];
+  itemMap: Record<string, Item>;
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────────
@@ -152,63 +155,78 @@ function calcPower(activeTraits: ActiveTrait[], champCount: number): number {
 }
 
 
-// ── Team Composition ──────────────────────────────────────────────────────────
-interface TeamComposition {
-  physical:  number; // 0-100
-  magic:     number;
-  defense:   number;
-  mobility:  number;
-  sustain:   number;
+// ── Board Metrics (3 pillars: Tankiness, AD, AP) ─────────────────────────────
+interface BoardMetrics {
+  tankinessScore: number;  // 0-100
+  adScore:        number;  // 0-100
+  apScore:        number;  // 0-100
+  tankCount:      number;
+  adCount:        number;
+  apCount:        number;
 }
 
-const TYPE_WEIGHTS: Record<string, TeamComposition> = {
-  "Attack Caster":      { physical: 1.5, magic: 0.5, defense: 0.2, mobility: 0.5, sustain: 0.2 },
-  "Attack Fighter":     { physical: 1.5, magic: 0,   defense: 1,   mobility: 0.8, sustain: 0.5 },
-  "Attack Tank":        { physical: 0.5, magic: 0,   defense: 2,   mobility: 0.2, sustain: 1.5 },
-  "Attack Marksman":    { physical: 2,   magic: 0,   defense: 0.1, mobility: 1,   sustain: 0.1 },
-  "Attack Specialist":  { physical: 1.5, magic: 0.3, defense: 0.2, mobility: 0.5, sustain: 0.2 },
-  "Attack Assassin":    { physical: 2,   magic: 0,   defense: 0.1, mobility: 2,   sustain: 0.1 },
-  "Magic Caster":       { physical: 0,   magic: 2,   defense: 0.2, mobility: 0.3, sustain: 0.3 },
-  "Magic Fighter":      { physical: 0.3, magic: 1.5, defense: 1,   mobility: 0.8, sustain: 0.5 },
-  "Magic Tank":         { physical: 0,   magic: 0.5, defense: 2,   mobility: 0.2, sustain: 2   },
-  "Magic Marksman":     { physical: 0,   magic: 2,   defense: 0.1, mobility: 1,   sustain: 0.1 },
-  "Magic Assassin":     { physical: 0,   magic: 2,   defense: 0.1, mobility: 2,   sustain: 0.1 },
-  "Hybrid Fighter":     { physical: 1,   magic: 1,   defense: 0.8, mobility: 0.8, sustain: 0.5 },
-};
+const AD_TYPES = new Set([
+  "Attack Caster","Attack Fighter","Attack Tank",
+  "Attack Marksman","Attack Specialist","Attack Assassin",
+]);
+const AP_TYPES = new Set([
+  "Magic Caster","Magic Fighter","Magic Tank",
+  "Magic Marksman","Magic Assassin",
+]);
+const TANK_ROLES = new Set(["tank"]);
 
-const COMP_MAX = 12; // normalise: 6 top-tier contributors = 100%
-
-function calcTeamComposition(board: BoardMap): TeamComposition {
-  const totals: TeamComposition = { physical: 0, magic: 0, defense: 0, mobility: 0, sustain: 0 };
+function calcBoardMetrics(board: BoardMap, _traits: Trait[]): BoardMetrics {
   const seen = new Set<string>();
-  getPlaced(board).forEach((ch) => {
-    if (seen.has(ch.id)) return;
-    seen.add(ch.id);
-    const w = ch.championType ? (TYPE_WEIGHTS[ch.championType] ?? null) : null;
-    if (!w) {
-      // Fallback: use raw stats to approximate
-      const ad = ch.stats.attackDamage / 80;
-      totals.physical += ad;
-      totals.defense  += (ch.stats.hp / 800) * 2;
-      totals.sustain  += ch.stats.hp / 1000;
-    } else {
-      (Object.keys(totals) as (keyof TeamComposition)[]).forEach((k) => {
-        totals[k] += w[k];
-      });
-    }
+  const champs: Champion[] = [];
+
+  Object.values(board).forEach((champ) => {
+    if (!champ || seen.has(champ.id)) return;
+    seen.add(champ.id);
+    champs.push(champ);
   });
+
+  const zero: BoardMetrics = { tankinessScore: 0, adScore: 0, apScore: 0, tankCount: 0, adCount: 0, apCount: 0 };
+  if (champs.length === 0) return zero;
+
+  let tankCount = 0, adCount = 0, apCount = 0;
+  let totalTankHP = 0, totalAD = 0, totalAP = 0;
+
+  champs.forEach((c) => {
+    const type = c.championType ?? "";
+    const isTank = TANK_ROLES.has(c.role) || type.includes("Tank");
+    const isAD   = AD_TYPES.has(type) && !isTank;
+    const isAP   = AP_TYPES.has(type) && !isTank;
+
+    if (isTank) {
+      tankCount++;
+      // effective HP: HP × (1 + armor/100 + mr/100) as a rough durability score
+      totalTankHP += c.stats.hp * (1 + c.stats.armor / 100 + c.stats.magicResist / 100);
+    }
+    if (isAD) { adCount++; totalAD += c.stats.attackDamage * c.stats.attackSpeed; }
+    if (isAP) { apCount++; }
+  });
+
+  // Normalize to 0-100
+  // Tankiness: 3 well-statted tanks ≈ 100 (reference ~7500 eff HP per tank × 3 = 22500)
+  const tankinessScore = Math.min(100, Math.round((totalTankHP / 22500) * 100));
+  // AD Power: 4 carries at ~60 AD × 0.9 AS = 54 DPS each × 4 = 216 reference → 100
+  const adPowerScore   = Math.min(100, Math.round((totalAD / 216) * 100));
+  // AP Power: 4 AP units = 100 (25 per unit)
+  const apPowerScore   = Math.min(100, Math.round((apCount / 4) * 100));
+
   return {
-    physical: Math.min(100, Math.round((totals.physical / COMP_MAX) * 100)),
-    magic:    Math.min(100, Math.round((totals.magic    / COMP_MAX) * 100)),
-    defense:  Math.min(100, Math.round((totals.defense  / COMP_MAX) * 100)),
-    mobility: Math.min(100, Math.round((totals.mobility / COMP_MAX) * 100)),
-    sustain:  Math.min(100, Math.round((totals.sustain  / COMP_MAX) * 100)),
+    tankinessScore,
+    adScore: adPowerScore,
+    apScore: apPowerScore,
+    tankCount,
+    adCount,
+    apCount,
   };
 }
 
 // ── BoardCard — floating portrait card replacing the hex cell ──────────────────
 function HexCell({
-  hexKey, champion, cell, isDragOver,
+  hexKey, champion, cell, isDragOver, itemMap,
   onDragStart, onDragOver, onDragLeave, onDrop, onClick,
   onTouchStart, onTouchMove, onTouchEnd,
 }: {
@@ -216,6 +234,7 @@ function HexCell({
   champion: Champion | null;
   cell: number;
   isDragOver: boolean;
+  itemMap: Record<string, Item>;
   onDragStart: (k: string, c: Champion) => void;
   onDragOver: (k: string) => void;
   onDragLeave: () => void;
@@ -334,6 +353,45 @@ function HexCell({
           >
             {champion.cost}
           </div>
+
+          {/* Recommended item icons — shown at ≥72px, max 3 icons */}
+          {cell >= 72 && champion.idealItems && champion.idealItems.length > 0 && (
+            <div style={{
+              position: "absolute",
+              bottom: cell >= 90 ? 36 : 30,
+              left: 0, right: 0,
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
+              pointerEvents: "none",
+              zIndex: 3,
+            }}>
+              {champion.idealItems.slice(0, 3).map(({ itemId }) => {
+                const item = itemMap[itemId];
+                if (!item) return null;
+                const iconSize = Math.max(14, Math.round(cell * 0.195));
+                return (
+                  <div
+                    key={itemId}
+                    style={{
+                      width: iconSize, height: iconSize,
+                      borderRadius: 3,
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.3)",
+                      background: "rgba(0,0,0,0.5)",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           {/* Name + type — bottom */}
           <div
@@ -642,7 +700,7 @@ function TraitRow({
 }
 
 // ── Main Page ──────────────────────────────────────────────────────────────────
-export default function TeamBuilderPage({ champions, traits }: Props) {
+export default function TeamBuilderPage({ champions, traits, itemMap }: Props) {
   const [board, setBoard] = useState<BoardMap>(makeBoard);
   const [traitFilter, setTraitFilter] = useState<TraitFilter>("all");
   const [costFilter, setCostFilter] = useState<number | "all">("all");
@@ -741,7 +799,7 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
 
   const activeTraits = useMemo(() => calcActiveTraits(board, traits), [board, traits]);
   const score = useMemo(() => calcPower(activeTraits, placed.length), [activeTraits, placed.length]);
-  const teamComp = useMemo(() => calcTeamComposition(board), [board]);
+  const boardMetrics = useMemo(() => calcBoardMetrics(board, traits), [board, traits]);
 
   // Map champion name → full Champion object for the synergy panel
   const champByName = useMemo(() => {
@@ -867,6 +925,7 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
                     champion={board[k]}
                     cell={cellSize}
                     isDragOver={dragOverKey === k}
+                    itemMap={itemMap}
                     onDragStart={handleBoardDragStart}
                     onDragOver={setDragOverKey}
                     onDragLeave={() => setDragOverKey(null)}
@@ -985,59 +1044,92 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
           </div>
         </div>
 
-        {/* ── TEAM COMPOSITION STRIP ───────────────────────────────────────── */}
+        {/* ── COMPOSITION ANALYSIS STRIP (desktop) ────────────────────────── */}
         <div
           className="shrink-0 hidden lg:block"
           style={{
             borderBottom: "1px solid rgba(255,255,255,0.07)",
-            background: "rgba(0,0,0,0.25)",
+            background: "rgba(0,0,0,0.28)",
             padding: "10px 20px",
           }}
         >
           {placed.length === 0 ? (
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.2)", textAlign: "center", lineHeight: 1 }}>
-              Add champions to the board to see team composition
+              Place champions on the board to see composition analysis
             </p>
           ) : (
-            <div style={{ display: "flex", gap: 10 }}>
-              {(
-                [
-                  { key: "physical" as const, label: "Physical",  icon: "⚔️",  color: "#f97316", track: "rgba(249,115,22,0.15)"  },
-                  { key: "magic"    as const, label: "Magic",     icon: "✨",  color: "#a78bfa", track: "rgba(167,139,250,0.15)" },
-                  { key: "defense"  as const, label: "Defense",   icon: "🛡️", color: "#22d3ee", track: "rgba(34,211,238,0.15)"  },
-                  { key: "mobility" as const, label: "Mobility",  icon: "💨",  color: "#f87171", track: "rgba(248,113,113,0.15)" },
-                  { key: "sustain"  as const, label: "Sustain",   icon: "❤️",  color: "#4ade80", track: "rgba(74,222,128,0.15)"  },
-                ] as { key: keyof TeamComposition; label: string; icon: string; color: string; track: string }[]
-              ).map(({ key, label, icon, color, track }) => {
-                const pct = teamComp[key];
-                return (
-                  <div key={key} style={{ flex: 1, minWidth: 0 }}>
-                    {/* Label row */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 5 }}>
-                      <span style={{ fontSize: 10, fontWeight: 700, color: "rgba(255,255,255,0.5)", display: "flex", alignItems: "center", gap: 4 }}>
-                        <span>{icon}</span>
-                        <span style={{ letterSpacing: "0.06em", textTransform: "uppercase" }}>{label}</span>
-                      </span>
-                      <span style={{ fontSize: 11, fontWeight: 800, color: pct >= 60 ? color : "rgba(255,255,255,0.35)" }}>
-                        {pct}%
-                      </span>
-                    </div>
-                    {/* Bar */}
-                    <div style={{ height: 6, borderRadius: 9999, background: track, overflow: "hidden" }}>
-                      <div
-                        style={{
-                          height: "100%",
-                          width: `${pct}%`,
-                          borderRadius: 9999,
-                          background: color,
-                          transition: "width 0.4s ease",
-                          opacity: pct === 0 ? 0 : 1,
-                        }}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
+            <div style={{ display: "flex", gap: 12, alignItems: "stretch" }}>
+
+              {/* ── Panel 1: Tankiness ── */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 5 }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
+                    🛡️ Tankiness
+                  </span>
+                  <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>
+                    {boardMetrics.tankCount} tank{boardMetrics.tankCount !== 1 ? "s" : ""}
+                  </span>
+                </div>
+                <div style={{ height: 8, borderRadius: 9999, background: "rgba(34,211,238,0.12)", overflow: "hidden" }}>
+                  <div style={{
+                    height: "100%", width: `${boardMetrics.tankinessScore}%`, borderRadius: 9999,
+                    background: boardMetrics.tankinessScore >= 60 ? "#22d3ee" : boardMetrics.tankinessScore >= 30 ? "#fbbf24" : "#f87171",
+                    transition: "width 0.4s ease",
+                  }} />
+                </div>
+                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)", marginTop: 3, display: "block" }}>
+                  {boardMetrics.tankinessScore < 30 ? "Squishy — add tanks" : boardMetrics.tankinessScore < 60 ? "Moderate frontline" : "Durable frontline"}
+                </span>
+              </div>
+
+              <div style={{ width: 1, background: "rgba(255,255,255,0.07)", flexShrink: 0 }} />
+
+              {/* ── Panel 2: Attack Damage ── */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 5 }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
+                    ⚔️ Attack Damage
+                  </span>
+                  <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>
+                    {boardMetrics.adCount} AD unit{boardMetrics.adCount !== 1 ? "s" : ""}
+                  </span>
+                </div>
+                <div style={{ height: 8, borderRadius: 9999, background: "rgba(249,115,22,0.12)", overflow: "hidden" }}>
+                  <div style={{
+                    height: "100%", width: `${boardMetrics.adScore}%`, borderRadius: 9999,
+                    background: "#f97316",
+                    transition: "width 0.4s ease",
+                  }} />
+                </div>
+                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)", marginTop: 3, display: "block" }}>
+                  {boardMetrics.adScore < 25 ? "Weak AD output" : boardMetrics.adScore < 60 ? "Moderate AD" : "Strong AD carry"}
+                </span>
+              </div>
+
+              <div style={{ width: 1, background: "rgba(255,255,255,0.07)", flexShrink: 0 }} />
+
+              {/* ── Panel 3: Ability Power ── */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 5 }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
+                    ✨ Ability Power
+                  </span>
+                  <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>
+                    {boardMetrics.apCount} AP unit{boardMetrics.apCount !== 1 ? "s" : ""}
+                  </span>
+                </div>
+                <div style={{ height: 8, borderRadius: 9999, background: "rgba(167,139,250,0.12)", overflow: "hidden" }}>
+                  <div style={{
+                    height: "100%", width: `${boardMetrics.apScore}%`, borderRadius: 9999,
+                    background: "#a78bfa",
+                    transition: "width 0.4s ease",
+                  }} />
+                </div>
+                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)", marginTop: 3, display: "block" }}>
+                  {boardMetrics.apScore < 25 ? "Low magic damage" : boardMetrics.apScore < 60 ? "Moderate AP" : "Strong magic carry"}
+                </span>
+              </div>
+
             </div>
           )}
         </div>
@@ -1219,44 +1311,59 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
               )}
             </div>
 
-            {/* Team composition strip — mobile */}
+            {/* Composition analysis strip — mobile 2×2 grid */}
             {placed.length > 0 && (
               <div
-                className="shrink-0 mb-3 rounded-xl px-3 py-2"
+                className="shrink-0 mb-3 rounded-xl p-3"
                 style={{ background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.07)" }}
               >
-                <div style={{ display: "flex", gap: 8 }}>
-                  {(
-                    [
-                      { key: "physical" as const, label: "ATK",  icon: "⚔️",  color: "#f97316", track: "rgba(249,115,22,0.15)"  },
-                      { key: "magic"    as const, label: "MAG",  icon: "✨",  color: "#a78bfa", track: "rgba(167,139,250,0.15)" },
-                      { key: "defense"  as const, label: "DEF",  icon: "🛡️", color: "#22d3ee", track: "rgba(34,211,238,0.15)"  },
-                      { key: "mobility" as const, label: "MOB",  icon: "💨",  color: "#f87171", track: "rgba(248,113,113,0.15)" },
-                      { key: "sustain"  as const, label: "SUS",  icon: "❤️",  color: "#4ade80", track: "rgba(74,222,128,0.15)"  },
-                    ] as { key: keyof TeamComposition; label: string; icon: string; color: string; track: string }[]
-                  ).map(({ key, label, icon, color, track }) => {
-                    const pct = teamComp[key];
-                    return (
-                      <div key={key} style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
-                          <span style={{ fontSize: 9, fontWeight: 700, color: "rgba(255,255,255,0.45)", display: "flex", alignItems: "center", gap: 2 }}>
-                            <span style={{ fontSize: 10 }}>{icon}</span>
-                            <span style={{ letterSpacing: "0.05em", textTransform: "uppercase" }}>{label}</span>
-                          </span>
-                          <span style={{ fontSize: 10, fontWeight: 800, color: pct >= 60 ? color : "rgba(255,255,255,0.3)" }}>
-                            {pct}%
-                          </span>
-                        </div>
-                        <div style={{ height: 4, borderRadius: 9999, background: track, overflow: "hidden" }}>
-                          <div style={{
-                            height: "100%", width: `${pct}%`, borderRadius: 9999,
-                            background: color, transition: "width 0.4s ease",
-                            opacity: pct === 0 ? 0 : 1,
-                          }} />
-                        </div>
-                      </div>
-                    );
-                  })}
+                <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+
+                  {/* Row 1: Tankiness */}
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: "rgba(255,255,255,0.45)", textTransform: "uppercase", letterSpacing: "0.06em" }}>🛡️ Tankiness</span>
+                      <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>{boardMetrics.tankCount} tank{boardMetrics.tankCount !== 1 ? "s" : ""}</span>
+                    </div>
+                    <div style={{ height: 6, borderRadius: 9999, background: "rgba(34,211,238,0.12)", overflow: "hidden" }}>
+                      <div style={{
+                        height: "100%", width: `${boardMetrics.tankinessScore}%`, borderRadius: 9999,
+                        background: boardMetrics.tankinessScore >= 60 ? "#22d3ee" : boardMetrics.tankinessScore >= 30 ? "#fbbf24" : "#f87171",
+                        transition: "width 0.4s ease",
+                      }} />
+                    </div>
+                  </div>
+
+                  {/* Row 2: Attack Damage */}
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: "rgba(255,255,255,0.45)", textTransform: "uppercase", letterSpacing: "0.06em" }}>⚔️ Attack Damage</span>
+                      <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>{boardMetrics.adCount} AD unit{boardMetrics.adCount !== 1 ? "s" : ""}</span>
+                    </div>
+                    <div style={{ height: 6, borderRadius: 9999, background: "rgba(249,115,22,0.12)", overflow: "hidden" }}>
+                      <div style={{
+                        height: "100%", width: `${boardMetrics.adScore}%`, borderRadius: 9999,
+                        background: "#f97316",
+                        transition: "width 0.4s ease",
+                      }} />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Ability Power */}
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: "rgba(255,255,255,0.45)", textTransform: "uppercase", letterSpacing: "0.06em" }}>✨ Ability Power</span>
+                      <span style={{ fontSize: 9, color: "rgba(255,255,255,0.3)" }}>{boardMetrics.apCount} AP unit{boardMetrics.apCount !== 1 ? "s" : ""}</span>
+                    </div>
+                    <div style={{ height: 6, borderRadius: 9999, background: "rgba(167,139,250,0.12)", overflow: "hidden" }}>
+                      <div style={{
+                        height: "100%", width: `${boardMetrics.apScore}%`, borderRadius: 9999,
+                        background: "#a78bfa",
+                        transition: "width 0.4s ease",
+                      }} />
+                    </div>
+                  </div>
+
                 </div>
               </div>
             )}
@@ -1399,6 +1506,15 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
                                 className="w-full h-full object-cover"
                                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = "0"; }}
                               />
+                              {/* Champion type color bar — top edge */}
+                              {c.championType && CHAMP_TYPE_COLOR[c.championType] && (
+                                <div style={{
+                                  position: "absolute", top: 0, left: 0, right: 0,
+                                  height: 3,
+                                  background: CHAMP_TYPE_COLOR[c.championType],
+                                  opacity: 0.9,
+                                }} />
+                              )}
                             </div>
                             {boardCounts[c.id] ? (
                               <div
@@ -1457,9 +1573,14 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => ({
-  props: {
-    champions: championsData as unknown as Champion[],
-    traits: traitsData as Trait[],
-  },
-});
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data = itemsData as unknown as ItemsData;
+  const itemMap = Object.fromEntries(data.items.map((item) => [item.id, item]));
+  return {
+    props: {
+      champions: championsData as unknown as Champion[],
+      traits: traitsData as Trait[],
+      itemMap,
+    },
+  };
+};

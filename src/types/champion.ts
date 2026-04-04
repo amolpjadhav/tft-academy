@@ -38,6 +38,13 @@ export type ChampionType =
   | "Attack Assassin"
   | "Hybrid Fighter";
 
+/** Star-level scaling values shown as "1★/2★/3★" strings */
+export interface StarValues {
+  hp?: string;           // e.g. "700/1260/2268"
+  attackDamage?: string; // e.g. "50/75/113"
+  dps?: string;          // e.g. "30/45/68"
+}
+
 export interface Champion {
   id: string;
   name: string;
@@ -48,9 +55,13 @@ export interface Champion {
   icon: string;
   splashIcon: string;
   stats: ChampionStats;
+  /** Per-star scaling for display — overrides base stats in flashcard when present */
+  starValues?: StarValues;
   ability: {
     name: string;
     description: string;
+    /** Optional per-stat scaling rows shown below the description */
+    scalingNotes?: { label: string; values: string; formula?: string }[];
   };
   beginnerTip?: BeginnerTip | null;
   idealItems?: IdealItem[];

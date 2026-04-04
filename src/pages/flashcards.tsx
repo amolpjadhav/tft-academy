@@ -744,6 +744,7 @@ export default function FlashcardsPage({ champions, itemMap, items, components, 
               isFlipped={champFlipped}
               onFlip={() => { if (!didSwipe.current) setChampFlipped((v) => !v); }}
               itemMap={itemMap}
+              traitMap={Object.fromEntries(traits.map((t) => [t.name, t]))}
             />
             {dragX !== 0 && (
               <div className="absolute inset-0 pointer-events-none flex items-center rounded-2xl overflow-hidden" style={{ opacity: Math.min(1, Math.abs(dragX) / 80) }}>
