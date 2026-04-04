@@ -799,9 +799,13 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
 
   const handleHexClick = useCallback((key: string) => {
     if (selectedChamp) {
+      // Place selected champion; if something was already there, pick that up instead
+      const displaced = board[key];
       setBoard((prev) => ({ ...prev, [key]: selectedChamp }));
-      setSelectedChamp(null);
+      setSelectedChamp(displaced ?? null);
     } else if (board[key]) {
+      // Pick up the champion — select it and free the slot
+      setSelectedChamp(board[key]);
       setBoard((prev) => ({ ...prev, [key]: null }));
     }
   }, [selectedChamp, board]);
@@ -1215,13 +1219,79 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
               )}
             </div>
 
+            {/* Team composition strip — mobile */}
+            {placed.length > 0 && (
+              <div
+                className="shrink-0 mb-3 rounded-xl px-3 py-2"
+                style={{ background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <div style={{ display: "flex", gap: 8 }}>
+                  {(
+                    [
+                      { key: "physical" as const, label: "ATK",  icon: "⚔️",  color: "#f97316", track: "rgba(249,115,22,0.15)"  },
+                      { key: "magic"    as const, label: "MAG",  icon: "✨",  color: "#a78bfa", track: "rgba(167,139,250,0.15)" },
+                      { key: "defense"  as const, label: "DEF",  icon: "🛡️", color: "#22d3ee", track: "rgba(34,211,238,0.15)"  },
+                      { key: "mobility" as const, label: "MOB",  icon: "💨",  color: "#f87171", track: "rgba(248,113,113,0.15)" },
+                      { key: "sustain"  as const, label: "SUS",  icon: "❤️",  color: "#4ade80", track: "rgba(74,222,128,0.15)"  },
+                    ] as { key: keyof TeamComposition; label: string; icon: string; color: string; track: string }[]
+                  ).map(({ key, label, icon, color, track }) => {
+                    const pct = teamComp[key];
+                    return (
+                      <div key={key} style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+                          <span style={{ fontSize: 9, fontWeight: 700, color: "rgba(255,255,255,0.45)", display: "flex", alignItems: "center", gap: 2 }}>
+                            <span style={{ fontSize: 10 }}>{icon}</span>
+                            <span style={{ letterSpacing: "0.05em", textTransform: "uppercase" }}>{label}</span>
+                          </span>
+                          <span style={{ fontSize: 10, fontWeight: 800, color: pct >= 60 ? color : "rgba(255,255,255,0.3)" }}>
+                            {pct}%
+                          </span>
+                        </div>
+                        <div style={{ height: 4, borderRadius: 9999, background: track, overflow: "hidden" }}>
+                          <div style={{
+                            height: "100%", width: `${pct}%`, borderRadius: 9999,
+                            background: color, transition: "width 0.4s ease",
+                            opacity: pct === 0 ? 0 : 1,
+                          }} />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Selected champion banner */}
+            {selectedChamp ? (
+              <div
+                className="flex items-center gap-2 px-3 py-2 mb-2 rounded-xl shrink-0 animate-fade-in"
+                style={{ background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.35)" }}
+              >
+                <img src={selectedChamp.icon} className="w-7 h-7 rounded-lg object-cover" alt="" />
+                <span className="text-sm font-semibold text-amber-300 flex-1">{selectedChamp.name}</span>
+                <span className="text-[11px] text-amber-400/70">Tap a slot to place</span>
+                <button
+                  onClick={() => setSelectedChamp(null)}
+                  className="text-amber-400/60 hover:text-amber-300 text-base leading-none ml-1"
+                >×</button>
+              </div>
+            ) : placed.length > 0 ? (
+              <p className="text-[11px] text-white/25 text-center mb-2 shrink-0">
+                Tap a champion to pick it up · tap a slot to place
+              </p>
+            ) : (
+              <p className="text-[11px] text-white/25 text-center mb-2 shrink-0">
+                Tap champions below to add them to the board
+              </p>
+            )}
+
             {/* Hex board — auto-scales to width, no horizontal scroll */}
             <div
               ref={mobileBoardRef}
               className="px-1 mb-3 shrink-0"
               style={{ background: "#0a0a12", borderRadius: 12, padding: "12px 8px" }}
             >
-              {renderHexGrid(mobileCell, true)}
+              {renderHexGrid(mobileCell, false)}
             </div>
 
             {/* Bottom sheet */}
@@ -1301,28 +1371,6 @@ export default function TeamBuilderPage({ champions, traits }: Props) {
                             </button>
                           );
                         })}
-                      </div>
-                      {/* Trait filter pills */}
-                      <div className="flex flex-wrap gap-1.5">
-                        <button
-                          onClick={() => setTraitFilter("all")}
-                          className={`text-[11px] font-medium px-2.5 py-1 rounded-full border transition ${
-                            traitFilter === "all"
-                              ? "bg-accent-purple/20 border-accent-purple/40 text-accent-purple-light"
-                              : "bg-white/5 border-white/8 text-text-muted"
-                          }`}
-                        >All Traits</button>
-                        {allTraitNames.map((t) => (
-                          <button
-                            key={t}
-                            onClick={() => setTraitFilter(traitFilter === t ? "all" : t)}
-                            className={`text-[11px] font-medium px-2.5 py-1 rounded-full border transition ${
-                              traitFilter === t
-                                ? "bg-accent-purple/20 border-accent-purple/40 text-accent-purple-light"
-                                : "bg-white/5 border-white/8 text-text-muted"
-                            }`}
-                          >{t}</button>
-                        ))}
                       </div>
                       {/* Champion grid — compact portrait cards */}
                       <div
