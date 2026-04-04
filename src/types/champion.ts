@@ -24,12 +24,27 @@ export interface BeginnerTip {
   kidExplain: string;
 }
 
+export type ChampionType =
+  | "Magic Caster"
+  | "Magic Fighter"
+  | "Magic Tank"
+  | "Magic Marksman"
+  | "Magic Assassin"
+  | "Attack Caster"
+  | "Attack Fighter"
+  | "Attack Tank"
+  | "Attack Marksman"
+  | "Attack Specialist"
+  | "Attack Assassin"
+  | "Hybrid Fighter";
+
 export interface Champion {
   id: string;
   name: string;
   cost: 1 | 2 | 3 | 4 | 5;
   traits: string[];
   role: ChampionRole;
+  championType?: ChampionType;
   icon: string;
   splashIcon: string;
   stats: ChampionStats;

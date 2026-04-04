@@ -1,4 +1,4 @@
-import type { Champion, ChampionRole } from "@/types/champion";
+import type { Champion, ChampionRole, ChampionType } from "@/types/champion";
 import type { Item } from "@/types/item";
 
 const TIER_COLOR: Record<string, string> = {
@@ -31,6 +31,22 @@ const ROLE_META: Record<ChampionRole, { label: string; color: string }> = {
   ap_carry:    { label: "AP Carry",    color: "text-violet-300 bg-violet-500/20 border-violet-500/30" },
   melee_carry: { label: "Melee Carry", color: "text-orange-300 bg-orange-500/20 border-orange-500/30" },
   tank:        { label: "Tank",        color: "text-teal-300 bg-teal-500/20 border-teal-500/30" },
+};
+
+// Champion type display config
+const CHAMP_TYPE_META: Record<ChampionType, { color: string; bg: string; border: string; icon: string }> = {
+  "Magic Caster":      { color: "#c4b5fd", bg: "rgba(139,92,246,0.18)",  border: "rgba(139,92,246,0.4)",  icon: "✨" },
+  "Magic Fighter":     { color: "#a5b4fc", bg: "rgba(99,102,241,0.18)",  border: "rgba(99,102,241,0.4)",  icon: "🔮" },
+  "Magic Tank":        { color: "#67e8f9", bg: "rgba(6,182,212,0.18)",   border: "rgba(6,182,212,0.4)",   icon: "🧊" },
+  "Magic Marksman":    { color: "#e879f9", bg: "rgba(217,70,239,0.18)",  border: "rgba(217,70,239,0.4)",  icon: "💫" },
+  "Magic Assassin":    { color: "#f0abfc", bg: "rgba(168,85,247,0.18)",  border: "rgba(168,85,247,0.4)",  icon: "💜" },
+  "Attack Caster":     { color: "#fdba74", bg: "rgba(249,115,22,0.18)",  border: "rgba(249,115,22,0.4)",  icon: "🔥" },
+  "Attack Fighter":    { color: "#fca5a5", bg: "rgba(239,68,68,0.18)",   border: "rgba(239,68,68,0.4)",   icon: "⚔️" },
+  "Attack Tank":       { color: "#94a3b8", bg: "rgba(100,116,139,0.18)", border: "rgba(100,116,139,0.4)", icon: "🛡️" },
+  "Attack Marksman":   { color: "#fde047", bg: "rgba(234,179,8,0.18)",   border: "rgba(234,179,8,0.4)",   icon: "🏹" },
+  "Attack Specialist": { color: "#6ee7b7", bg: "rgba(16,185,129,0.18)",  border: "rgba(16,185,129,0.4)",  icon: "🎯" },
+  "Attack Assassin":   { color: "#fda4af", bg: "rgba(244,63,94,0.18)",   border: "rgba(244,63,94,0.4)",   icon: "🗡️" },
+  "Hybrid Fighter":    { color: "#86efac", bg: "rgba(34,197,94,0.18)",   border: "rgba(34,197,94,0.4)",   icon: "⚡" },
 };
 
 interface AbilityInfo {
@@ -141,6 +157,7 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
   const { stars, color: starColor } = COST_STARS[champion.cost];
   const costBadge  = COST_BADGE[champion.cost];
   const roleMeta   = ROLE_META[champion.role];
+  const typeMeta   = champion.championType ? CHAMP_TYPE_META[champion.championType] : null;
   const ability    = analyzeAbility(champion.ability);
 
   return (
@@ -187,6 +204,24 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
                 ))}
               </div>
 
+              {/* Champion type pill */}
+              {typeMeta && champion.championType && (
+                <div className="mb-2">
+                  <span
+                    style={{
+                      fontSize: 11, fontWeight: 600,
+                      padding: "2px 9px", borderRadius: 9999,
+                      background: typeMeta.bg,
+                      color: typeMeta.color,
+                      border: `1px solid ${typeMeta.border}`,
+                      display: "inline-flex", alignItems: "center", gap: 4,
+                    }}
+                  >
+                    {typeMeta.icon} {champion.championType}
+                  </span>
+                </div>
+              )}
+
               {/* Name */}
               <h2 className="font-heading text-3xl text-white tracking-wide leading-tight">
                 {champion.name}
@@ -229,9 +264,24 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
                 <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${costBadge}`}>
                   {champion.cost}-cost
                 </span>
-                <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${roleMeta.color}`}>
-                  {roleMeta.label}
-                </span>
+                {typeMeta && champion.championType ? (
+                  <span
+                    style={{
+                      fontSize: 11, fontWeight: 600,
+                      padding: "2px 8px", borderRadius: 9999,
+                      background: typeMeta.bg,
+                      color: typeMeta.color,
+                      border: `1px solid ${typeMeta.border}`,
+                      display: "inline-flex", alignItems: "center", gap: 3,
+                    }}
+                  >
+                    {typeMeta.icon} {champion.championType}
+                  </span>
+                ) : (
+                  <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${roleMeta.color}`}>
+                    {roleMeta.label}
+                  </span>
+                )}
               </div>
             </div>
           </div>

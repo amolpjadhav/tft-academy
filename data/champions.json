@@ -25,7 +25,8 @@
       "description": "Heal and deal AD + Armor-scaling damage to nearby enemies in a sweeping slash."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Tank"
   },
   {
     "id": "briar",
@@ -54,7 +55,8 @@
       "description": "Passive: Gain stacking Attack Speed. Active: Leap and deal physical damage to nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "caitlyn",
@@ -82,7 +84,8 @@
       "description": "Passive: Every few attacks, fire a headshot that deals bonus damage and has a chance to critically strike."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Specialist"
   },
   {
     "id": "chogath",
@@ -110,7 +113,8 @@
       "description": "Deal magic damage to nearby enemies and permanently gain max Health for each enemy hit."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "ezreal",
@@ -138,7 +142,8 @@
       "description": "Fire a Temporal Blast at the farthest enemy, dealing magic damage and generating a drone on hit."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Caster"
   },
   {
     "id": "leona",
@@ -166,7 +171,8 @@
       "description": "Gain a shield and stun the nearest enemy on her next basic attack."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "lissandra",
@@ -195,7 +201,8 @@
       "description": "Hurl an enchanted dagger that explodes on impact, dealing magic damage in an area."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "nasus",
@@ -223,7 +230,8 @@
       "description": "Transform into a funky dog warrior, gaining bonus Health and dealing magic damage to nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "poppy",
@@ -251,7 +259,8 @@
       "description": "Grant nearby allies a group shield and bonus Armor and Magic Resist for several seconds."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "reksai",
@@ -279,7 +288,8 @@
       "description": "Heal, then burst from underground knocking up and damaging nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "talon",
@@ -307,7 +317,8 @@
       "description": "Apply a bleed to the target, then leap to the healthiest enemy and deal physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Assassin"
   },
   {
     "id": "teemo",
@@ -335,7 +346,8 @@
       "description": "Scatter mushroom traps that stack poison damage on enemies who step on them."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Marksman"
   },
   {
     "id": "twisted_fate",
@@ -363,7 +375,8 @@
       "description": "Throw a card at the target dealing variable magic damage based on the card drawn \u2014 Red, Blue, or Gold."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "veigar",
@@ -391,7 +404,8 @@
       "description": "Summon Meep-powered meteors that crash down in an area, dealing magic damage to enemies hit."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "akali",
@@ -419,7 +433,8 @@
       "description": "Reposition to a flanking position and hurl a piercing kunai that shreds enemy Armor."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "belveth",
@@ -448,7 +463,8 @@
       "description": "Unleash a rapid barrage of multi-directional slashes, dealing physical damage to surrounding enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "gnar",
@@ -476,7 +492,8 @@
       "description": "Fling a boomerang at enemies in a line. Meeps also fly out and attack on impact."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Specialist"
   },
   {
     "id": "gragas",
@@ -504,7 +521,8 @@
       "description": "Guzzle his brew to heal and apply a chilling effect to nearby enemies, slowing their attacks."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "gwen",
@@ -532,7 +550,8 @@
       "description": "Dance into the Groove and snip enemies with her enchanted scissors, dealing magic damage with reset potential."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Assassin"
   },
   {
     "id": "jax",
@@ -560,7 +579,8 @@
       "description": "Enter a defensive counter stance, then follow up with a stunning overhead strike."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "jinx",
@@ -588,7 +608,8 @@
       "description": "Switch to her rocket launcher and fire a cone barrage of explosive shots at the target area."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Marksman"
   },
   {
     "id": "meepsie",
@@ -617,7 +638,8 @@
       "description": "Slam the ground with healing energy, sending out Meep waves that damage and slow nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "milio",
@@ -645,7 +667,8 @@
       "description": "Launch a bouncing magic ball with probability-based outcomes, dealing magic damage to enemies hit."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "mordekaiser",
@@ -674,7 +697,8 @@
       "description": "Stack a massive shield and convert excess shielding into healing for himself."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "pantheon",
@@ -703,7 +727,8 @@
       "description": "Raise his shield for bonus Durability, then crash it forward in a cone dealing physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Tank"
   },
   {
     "id": "pyke",
@@ -731,7 +756,8 @@
       "description": "Hurl a harpoon to pull and stun an enemy, then teleport behind them for a cleaving slash."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Assassin"
   },
   {
     "id": "zoe",
@@ -759,7 +785,8 @@
       "description": "Launch a star projectile that changes direction mid-flight for massive magic damage on the final target."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "aurora",
@@ -787,7 +814,8 @@
       "description": "Hack reality open with a rift, storing incoming damage and releasing it as a burst of magic damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "diana",
@@ -815,7 +843,8 @@
       "description": "Summon orbiting moonlight orbs that create a shield and burst on contact with enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Fighter"
   },
   {
     "id": "fizz",
@@ -843,7 +872,8 @@
       "description": "Dash through enemies and bait them toward a spot where a gang of mega Meeps erupts to deal magic damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Assassin"
   },
   {
     "id": "illaoi",
@@ -872,7 +902,8 @@
       "description": "Raise a shield, drain an enemy's spirit to deal damage, then slam the ground in an area."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "kaisa",
@@ -900,7 +931,8 @@
       "description": "Fire a volley of missiles at the target area. Killing enemies resets her mana."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Caster"
   },
   {
     "id": "lulu",
@@ -928,7 +960,8 @@
       "description": "Call down a constellation effect dealing magic damage with variable outcomes based on the stars drawn."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "maokai",
@@ -956,7 +989,8 @@
       "description": "Fling vines to root and stun a cluster of nearby enemies, dealing magic damage scaling with his health."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "miss_fortune",
@@ -983,7 +1017,8 @@
       "description": "Choose your mode before combat: Channeler, Challenger, or Replicator. Each mode grants a unique ability and that trait."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Caster"
   },
   {
     "id": "ornn",
@@ -1011,7 +1046,8 @@
       "description": "Temporarily forge a Radiant item for an ally, enter the Groove, and charge through enemies dealing magic damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "rhaast",
@@ -1038,7 +1074,8 @@
       "description": "Gain Durability then heal, followed by a sweeping knockup slash that deals physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Tank"
   },
   {
     "id": "samira",
@@ -1066,7 +1103,8 @@
       "description": "Knock up nearby enemies with a stylish maneuver, enter the Groove, then unload with rapid gunfire."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Caster"
   },
   {
     "id": "urgot",
@@ -1095,7 +1133,8 @@
       "description": "Fire proximity blasts at all nearby enemies then dash forward, gaining a temporary shield."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "viktor",
@@ -1123,7 +1162,8 @@
       "description": "Channel a growing psionic storm that deals increasing magic damage, tapering as it widens."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "aurelion_sol",
@@ -1151,7 +1191,8 @@
       "description": "Channel a massive cosmic beam down a line, dealing enormous magic damage while ignoring Magic Resist."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "corki",
@@ -1179,7 +1220,8 @@
       "description": "Strafe missiles across the board and occasionally launch a mega-blast that ignites Meep explosives."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Caster"
   },
   {
     "id": "karma",
@@ -1207,7 +1249,8 @@
       "description": "Create a black hole that splits into gravitational shards dealing magic damage to all enemies caught inside."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "kindred",
@@ -1235,7 +1278,8 @@
       "description": "Mark a target for death. Consume the mark with an arrow jump that deals massive physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Marksman"
   },
   {
     "id": "leblanc",
@@ -1263,7 +1307,8 @@
       "description": "Summon clones that distract enemies, then fire homing bolts at each that erupt on final impact."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Marksman"
   },
   {
     "id": "master_yi",
@@ -1291,7 +1336,8 @@
       "description": "Meditate then unleash three psionic strikes, projecting a psi-state image of himself to deal bonus damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "the_mighty_mech",
@@ -1319,7 +1365,8 @@
       "description": "Attract all enemy projectiles toward itself, then release a shockwave dealing magic damage to nearby enemies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Tank"
   },
   {
     "id": "nami",
@@ -1347,7 +1394,8 @@
       "description": "Launch a bouncing disco bubble that knocks up enemies on contact, spraying healing globs at allies."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "nunu",
@@ -1375,7 +1423,8 @@
       "description": "Raise a massive shield, then summon an astrolabe that knocks enemies away from Nunu."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "rammus",
@@ -1403,7 +1452,8 @@
       "description": "Spin into a shield then roll forward, knocking enemies into a line and reducing Meep damage taken."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "riven",
@@ -1431,7 +1481,8 @@
       "description": "Dash through time and release an adaptive wave \u2014 deals AD or AP damage based on her highest stat."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Hybrid Fighter"
   },
   {
     "id": "tahm_kench",
@@ -1459,7 +1510,8 @@
       "description": "At low health, gain a massive shield and heal. Then lash out with his tongue, dealing magic damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Tank"
   },
   {
     "id": "xayah",
@@ -1487,7 +1539,8 @@
       "description": "Bounce attacks off multiple enemies, leaving feathers that all snap back dealing physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Marksman"
   },
   {
     "id": "bard",
@@ -1515,7 +1568,8 @@
       "description": "Summon a UFO that abducts and removes enemies on kill. Meep astronauts provide bonus empowerment."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "blitzcrank",
@@ -1544,7 +1598,8 @@
       "description": "Passively fire rapid electric bolts. When low on health, become untargetable to repair, then unleash a disco ball uppercut on return. Enters the Groove."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Fighter"
   },
   {
     "id": "fiora",
@@ -1573,7 +1628,8 @@
       "description": "Reveal enemy vitals and deal True Damage, healing on hit. Grants her team a powerful aura."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   },
   {
     "id": "graves",
@@ -1600,7 +1656,8 @@
       "description": "Passively fires cone projectiles on each attack. Active: unload an explosive shell dealing massive physical damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Marksman"
   },
   {
     "id": "jhin",
@@ -1629,7 +1686,8 @@
       "description": "Attack at a fixed rate. Spectral hands reach from the void to hold enemies, and every 4th shot is a piercing finale."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Marksman"
   },
   {
     "id": "morgana",
@@ -1656,7 +1714,8 @@
       "description": "Transform into her Dark Form and tether drain multiple enemies, then erupt in a final dark burst."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Fighter"
   },
   {
     "id": "shen",
@@ -1684,7 +1743,8 @@
       "description": "Build stacking True Damage on each attack, then open a rift that shields allies and grants them bonus speed."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Fighter"
   },
   {
     "id": "sona",
@@ -1713,7 +1773,8 @@
       "description": "Attach psionic debris to multiple enemies, then slam them together for massive magic damage and a stun."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Caster"
   },
   {
     "id": "vex",
@@ -1740,7 +1801,8 @@
       "description": "Shadow hands passively mark enemies. Active: empower the hands to erupt on all marked targets simultaneously."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Magic Marksman"
   },
   {
     "id": "zed",
@@ -1767,6 +1829,7 @@
       "description": "Create item-inheriting clones of himself. While any clone is alive, gain 40% bonus Attack Damage."
     },
     "beginnerTip": null,
-    "idealItems": []
+    "idealItems": [],
+    "championType": "Attack Fighter"
   }
 ]
