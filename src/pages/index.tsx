@@ -174,7 +174,7 @@ export default function LandingPage() {
         {/* ── Top bar ────────────────────────────────────────────────── */}
         <header className="relative z-10 flex items-center justify-between px-6 md:px-10 py-5">
           <div className="flex items-center gap-3">
-            <TFTLogo size={36} />
+            <TFTLogo size={36} hero />
             <div>
               <span className="font-heading text-accent-gold text-base tracking-widest leading-none">
                 TFT SCHOOL
@@ -198,7 +198,7 @@ export default function LandingPage() {
             className="flex flex-col items-center gap-4 mb-8"
             style={{ opacity: mounted ? 1 : 0, transition: "opacity 0.6s ease" }}
           >
-            <TFTLogo size={96} />
+            <TFTLogo size={96} hero />
 
             <div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl tracking-[0.12em] text-transparent bg-clip-text bg-gradient-to-b from-amber-300 via-accent-gold to-amber-600 leading-none">
