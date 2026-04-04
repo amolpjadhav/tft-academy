@@ -883,18 +883,44 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Akali.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
     "stats": {
-      "hp": 650,
-      "maxMana": 60,
+      "hp": 750,
+      "maxMana": 30,
       "initialMana": 0,
-      "armor": 30,
-      "magicResist": 30,
+      "armor": 50,
+      "magicResist": 50,
       "attackSpeed": 0.8,
-      "attackDamage": 55,
+      "attackDamage": 45,
       "range": 1
+    },
+    "starValues": {
+      "hp": "750/1350/2430",
+      "attackDamage": "45/68/101",
+      "dps": "36/54/81"
     },
     "ability": {
       "name": "Star Strike",
-      "description": "Reposition to a flanking position and hurl a piercing kunai that shreds enemy Armor."
+      "description": "Reposition next to the target to strike the most enemies. Then throw 5 piercing kunai, each dealing 44/66/99 (AD) physical damage to the first enemy hit, reduced to 18/26/40 (AD) for each subsequent target. Kunai remove 1 Armor, 2 if they crit.\n\nN.O.V.A. Strike: Slice all enemies, applying Wound and a bleed that deals 10/14/18 (AD) physical damage each second. Kunai increase the damage of the bleed by 10%.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[4/6/9]"
+        },
+        {
+          "label": "Damage (AD+AP)",
+          "values": "[44/66/99]",
+          "formula": "66 = 60 AD + 6 AP"
+        },
+        {
+          "label": "Secondary Damage (AD)",
+          "values": "[18/26/40]",
+          "formula": "26 = 40% of 66 AD"
+        },
+        {
+          "label": "N.O.V.A. Damage (AD)",
+          "values": "[10/14/18]",
+          "formula": "14 AD"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -926,18 +952,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Belveth.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Belveth_0.jpg",
     "stats": {
-      "hp": 650,
-      "maxMana": 60,
+      "hp": 750,
+      "maxMana": 50,
       "initialMana": 0,
-      "armor": 30,
-      "magicResist": 30,
-      "attackSpeed": 0.9,
-      "attackDamage": 50,
-      "range": 1
+      "armor": 45,
+      "magicResist": 45,
+      "attackSpeed": 0.75,
+      "attackDamage": 45,
+      "range": 2
+    },
+    "starValues": {
+      "hp": "750/1350/2430",
+      "attackDamage": "45/68/101",
+      "dps": "34/51/76"
     },
     "ability": {
       "name": "Tidal Slashes",
-      "description": "Unleash a rapid barrage of multi-directional slashes, dealing physical damage to surrounding enemies."
+      "description": "Unleash a flurry of 12 (Attack Speed) slashes at the current target over 2 seconds, dealing 18/27/41 (AD+AP) physical damage each.\n\nNumber of Slashes: 12 = 12 + 1 per 25% bonus Attack Speed",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[2/3/5]",
+          "formula": "3 AP"
+        },
+        {
+          "label": "Damage per Slash (AD+AP)",
+          "values": "[18/27/41]",
+          "formula": "27 = 24 AD + 3 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -968,18 +1011,44 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Gnar.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_0.jpg",
     "stats": {
-      "hp": 600,
-      "maxMana": 50,
+      "hp": 550,
+      "maxMana": 5,
       "initialMana": 0,
-      "armor": 25,
-      "magicResist": 25,
-      "attackSpeed": 0.8,
+      "armor": 20,
+      "magicResist": 20,
+      "attackSpeed": 0.7,
       "attackDamage": 45,
       "range": 4
     },
+    "starValues": {
+      "hp": "550/990/1782",
+      "attackDamage": "45/68/101",
+      "dps": "31/47/71"
+    },
     "ability": {
-      "name": "Slingshot Mane",
-      "description": "Fling a boomerang at enemies in a line. Meeps also fly out and attack on impact."
+      "name": "Slingshot Maneuver",
+      "description": "Passive: Every 5th attack, launch a returning boomerang at the target that travels two hexes past the first enemy it hits. It deals 230/345/520 (AD+AP) physical damage, reduced by 60% per hit.\n\nMeep Bonus: 1 (Potential) Meeps attack alongside Gnar, dealing 12/18/27 (AD+AS) physical damage per second.",
+      "scalingNotes": [
+        {
+          "label": "Damage (AP)",
+          "values": "[20/30/45]",
+          "formula": "30 AP"
+        },
+        {
+          "label": "Damage (AD+AP)",
+          "values": "[230/345/520]",
+          "formula": "345 = 315 AD + 30 AP"
+        },
+        {
+          "label": "Meeps",
+          "values": "1 per Potential"
+        },
+        {
+          "label": "Meep Damage (AD+AS)",
+          "values": "[12/18/27]",
+          "formula": "18 = 27% of 68 Base AD × 40% Bonus AS"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [
@@ -1010,18 +1079,35 @@
     "icon": "https://ddragon.leagueoflegends.com/cdn/16.6.1/img/champion/Gragas.png",
     "splashIcon": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_0.jpg",
     "stats": {
-      "hp": 850,
+      "hp": 950,
       "maxMana": 80,
-      "initialMana": 0,
+      "initialMana": 30,
       "armor": 45,
       "magicResist": 45,
-      "attackSpeed": 0.65,
-      "attackDamage": 55,
+      "attackSpeed": 0.6,
+      "attackDamage": 50,
       "range": 1
+    },
+    "starValues": {
+      "hp": "950/1710/3078",
+      "attackDamage": "50/75/113",
+      "dps": "30/45/68"
     },
     "ability": {
       "name": "Chemical Rage",
-      "description": "Guzzle his brew to heal and apply a chilling effect to nearby enemies, slowing their attacks."
+      "description": "Heal 401/507/736 (HP+AP) over 2 seconds. Then, deal 200/300/450 (AP) magic damage to target and enemies adjacent to them and 30% Chill them for 2 seconds.",
+      "scalingNotes": [
+        {
+          "label": "Heal (HP+AP)",
+          "values": "[401/507/736]",
+          "formula": "507 = 8% Health + 370 AP"
+        },
+        {
+          "label": "Damage (AP)",
+          "values": "[200/300/450]",
+          "formula": "300 AP"
+        }
+      ]
     },
     "beginnerTip": null,
     "idealItems": [

@@ -674,7 +674,7 @@
     "id": "challenger",
     "name": "Challenger",
     "icon": "/icons/traits/Challenger.webp",
-    "description": "Your team gains 10% Attack Speed. Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.50 seconds.\n\n(2) 15% AS\n(3) 22% AS\n(4) 30% AS\n(5) 40% AS",
+    "description": "Your team gains 10% Attack Speed. Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.\n\n(2) 15% Attack Speed\n(3) 22% Attack Speed\n(4) 30% Attack Speed\n(5) 40% Attack Speed",
     "type": "damage",
     "category": "class",
     "breakpoints": [
@@ -826,7 +826,7 @@
     "id": "marauder",
     "name": "Marauder",
     "icon": "/icons/traits/Marauder.png",
-    "description": "Your team gains 5% Omnivamp. Marauders gain more Omnivamp, Attack Damage, and their Omnivamp overhealing is converted into Shield (up to 25% max Health).\n\n(2) 5% Omnivamp, 20% AD\n(4) 7% Omnivamp, 30% AD\n(6) 10% Omnivamp, 40% AD",
+    "description": "Your team gains 5% Omnivamp. Marauders gain more Omnivamp, Attack Damage, and their Omnivamp overhealing is converted into Shield (up to 25% max Health.)\n\n(2) 5% Omnivamp, 20% AD\n(4) 7% Omnivamp, 35% AD\n(6) 10% Omnivamp, 50% AD",
     "type": "damage",
     "category": "class",
     "breakpoints": [
@@ -838,12 +838,12 @@
       {
         "minUnits": 4,
         "style": 3,
-        "effect": "7% Omnivamp, 30% AD; overheal \u2192 Shield (max 25% HP)"
+        "effect": "7% Omnivamp, 35% AD; overheal → Shield (max 25% HP)"
       },
       {
         "minUnits": 6,
         "style": 4,
-        "effect": "10% Omnivamp, 40% AD; overheal \u2192 Shield (max 25% HP)"
+        "effect": "10% Omnivamp, 50% AD; overheal → Shield (max 25% HP)"
       }
     ],
     "champions": [
