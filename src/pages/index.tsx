@@ -88,6 +88,17 @@ const FEATURES = [
     tagColor: "bg-cyan-500/20 text-cyan-300",
   },
   {
+    href: "/simulator",
+    icon: "🧪",
+    title: "Champion Simulator",
+    description: "Pick a champion, set their star level, equip 3 items, and see every stat computed instantly.",
+    border: "border-teal-500/30",
+    glow: "group-hover:shadow-[0_0_24px_rgba(20,184,166,0.2)]",
+    accent: "text-teal-400",
+    tag: "New",
+    tagColor: "bg-teal-500/20 text-teal-300",
+  },
+  {
     href: "/glossary",
     icon: "📖",
     title: "TFT Glossary",

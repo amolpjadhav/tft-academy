@@ -4,6 +4,100 @@ import type { Item } from "@/types/item";
 export const STAR_HP_MULT: Record<1 | 2 | 3, number> = { 1: 1, 2: 1.8, 3: 3.24 };
 export const STAR_AD_MULT: Record<1 | 2 | 3, number> = { 1: 1, 2: 1.8, 3: 3.24 };
 
+// ── Trait stat bonuses ──────────────────────────────────────────────────────
+export interface TraitStatBonus {
+  hp?: number;            // flat HP
+  hpPct?: number;         // % of base star-scaled HP (e.g. Brawler)
+  armor?: number;         // flat Armor
+  magicResist?: number;   // flat MR
+  adPct?: number;         // % of base star-scaled AD (e.g. Marauder, Rogue)
+  ap?: number;            // flat AP
+  apPct?: number;         // % bonus applied to existing AP from items
+  attackSpeedPct?: number;// additive % AS (e.g. 15 = +15%)
+  critChance?: number;    // flat crit %
+  omnivamp?: number;      // flat omnivamp %
+  durability?: number;    // flat damage reduction %
+  damageAmp?: number;     // flat damage amp %
+}
+
+// Per-trait, per-breakpoint bonuses keyed by trait name → breakpoint display label
+export interface TraitBonusTier {
+  minUnits: number;
+  label: string;         // e.g. "(2)" or "(4)"
+  effectLabel: string;   // short human-readable e.g. "+20% HP"
+  bonus: TraitStatBonus;
+}
+
+// Traits with quantifiable per-champion stat bonuses
+// Only include traits where the bonus applies directly to the individual champion's stats
+export const TRAIT_BONUS_TIERS: Record<string, TraitBonusTier[]> = {
+  "Bastion": [
+    { minUnits: 2, label: "(2)", effectLabel: "+16 Armor & MR",  bonus: { armor: 16, magicResist: 16 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+40 Armor & MR",  bonus: { armor: 40, magicResist: 40 } },
+    { minUnits: 6, label: "(6)", effectLabel: "+60 Armor & MR",  bonus: { armor: 60, magicResist: 60 } },
+  ],
+  "Brawler": [
+    { minUnits: 2, label: "(2)", effectLabel: "+20% HP",  bonus: { hpPct: 20 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+40% HP",  bonus: { hpPct: 40 } },
+    { minUnits: 6, label: "(6)", effectLabel: "+60% HP",  bonus: { hpPct: 60 } },
+  ],
+  "Challenger": [
+    { minUnits: 2, label: "(2)", effectLabel: "+15% AS",  bonus: { attackSpeedPct: 15 } },
+    { minUnits: 3, label: "(3)", effectLabel: "+22% AS",  bonus: { attackSpeedPct: 22 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+30% AS",  bonus: { attackSpeedPct: 30 } },
+    { minUnits: 5, label: "(5)", effectLabel: "+40% AS",  bonus: { attackSpeedPct: 40 } },
+  ],
+  "Dark Star": [
+    { minUnits: 4, label: "(4)", effectLabel: "+33% AD & AP", bonus: { adPct: 33, apPct: 33 } },
+    { minUnits: 6, label: "(6)", effectLabel: "+33% AD & AP + Supermassive", bonus: { adPct: 33, apPct: 33 } },
+  ],
+  "Fateweaver": [
+    { minUnits: 4, label: "(4)", effectLabel: "+20% Crit", bonus: { critChance: 20 } },
+  ],
+  "Marauder": [
+    { minUnits: 2, label: "(2)", effectLabel: "+20% AD · 5% Vamp",  bonus: { adPct: 20, omnivamp: 5 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+35% AD · 7% Vamp",  bonus: { adPct: 35, omnivamp: 7 } },
+    { minUnits: 6, label: "(6)", effectLabel: "+50% AD · 10% Vamp", bonus: { adPct: 50, omnivamp: 10 } },
+  ],
+  "Meeple": [
+    { minUnits: 3,  label: "(3)",  effectLabel: "+100 HP",  bonus: { hp: 100 } },
+    { minUnits: 5,  label: "(5)",  effectLabel: "+300 HP",  bonus: { hp: 300 } },
+    { minUnits: 7,  label: "(7)",  effectLabel: "+300 HP",  bonus: { hp: 300 } },
+    { minUnits: 10, label: "(10)", effectLabel: "+500 HP",  bonus: { hp: 500 } },
+  ],
+  "Rogue": [
+    { minUnits: 2, label: "(2)", effectLabel: "+15% AD & AP", bonus: { adPct: 15, apPct: 15 } },
+    { minUnits: 3, label: "(3)", effectLabel: "+30% AD & AP", bonus: { adPct: 30, apPct: 30 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+45% AD & AP", bonus: { adPct: 45, apPct: 45 } },
+    { minUnits: 5, label: "(5)", effectLabel: "+60% AD & AP", bonus: { adPct: 60, apPct: 60 } },
+  ],
+  "Sniper": [
+    { minUnits: 2, label: "(2)", effectLabel: "+18% Damage Amp", bonus: { damageAmp: 18 } },
+    { minUnits: 3, label: "(3)", effectLabel: "+24% Damage Amp", bonus: { damageAmp: 24 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+28% Damage Amp", bonus: { damageAmp: 28 } },
+  ],
+  "N.O.V.A.": [
+    { minUnits: 2, label: "(2)", effectLabel: "Power surge (champion-specific)",  bonus: {} },
+    { minUnits: 5, label: "(5)", effectLabel: "Striker selector",                 bonus: {} },
+  ],
+  "Timebreaker": [
+    { minUnits: 3, label: "(3)", effectLabel: "+15% AS (team)",    bonus: { attackSpeedPct: 15 } },
+    { minUnits: 4, label: "(4)", effectLabel: "+15% AS +50% extra", bonus: { attackSpeedPct: 65 } },
+  ],
+  "Vanguard": [
+    { minUnits: 2, label: "(2)", effectLabel: "16% HP Shield",      bonus: {} },
+    { minUnits: 4, label: "(4)", effectLabel: "30% HP Shield",      bonus: {} },
+    { minUnits: 6, label: "(6)", effectLabel: "40% HP Shield +10% DR", bonus: { durability: 10 } },
+  ],
+};
+
+// Set of traits that have no direct per-champion stat bonus (mechanic/economy traits)
+export const MECHANIC_TRAITS = new Set([
+  "Anima", "Arbiter", "Primordian", "Psionic",
+  "Replicator", "Shepherd", "Stargazer", "Space Groove",
+  "Dark Star", "Timebreaker", "Fateweaver",
+]);
+
 export const STAR_LABELS: Record<1 | 2 | 3, string> = {
   1: "1★",
   2: "2★",
@@ -14,7 +108,8 @@ export function computeStats(
   champion: Champion,
   star: 1 | 2 | 3,
   slotIds: (string | null)[],
-  allItems: Item[]
+  allItems: Item[],
+  activeTraitBonuses?: TraitStatBonus[]
 ): ComputedStats {
   const baseHP = Math.round(champion.stats.hp * STAR_HP_MULT[star]);
   const baseAD = Math.round(champion.stats.attackDamage * STAR_AD_MULT[star]);
@@ -47,6 +142,25 @@ export function computeStats(
     omnivampBonus += s.omnivamp ?? 0;
     durabilityBonus += s.durability ?? 0;
     damageAmpBonus += s.damage_amp ?? 0;
+  }
+
+  // Apply trait bonuses after items so apPct multiplies the item AP
+  if (activeTraitBonuses && activeTraitBonuses.length > 0) {
+    const itemApBonus = apBonus; // snapshot before trait flat AP
+    for (const b of activeTraitBonuses) {
+      if (b.hp)             hpBonus     += b.hp;
+      if (b.hpPct)          hpBonus     += Math.round(baseHP * b.hpPct / 100);
+      if (b.armor)          armorBonus  += b.armor;
+      if (b.magicResist)    mrBonus     += b.magicResist;
+      if (b.adPct)          adBonus     += Math.round(baseAD * b.adPct / 100);
+      if (b.ap)             apBonus     += b.ap;
+      if (b.apPct)          apBonus     += Math.round(itemApBonus * b.apPct / 100);
+      if (b.attackSpeedPct) asBonus     += b.attackSpeedPct;
+      if (b.critChance)     critBonus   += b.critChance;
+      if (b.omnivamp)       omnivampBonus   += b.omnivamp;
+      if (b.durability)     durabilityBonus += b.durability;
+      if (b.damageAmp)      damageAmpBonus  += b.damageAmp;
+    }
   }
 
   const totalAS = Math.min(champion.stats.attackSpeed + asBonus / 100, 5.0);

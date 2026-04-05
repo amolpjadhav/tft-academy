@@ -29,7 +29,8 @@
       "Bash(sed -n '876,920p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
       "Bash(sed -n '978,1025p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
       "Bash(sed -n '210,270p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
-      "Bash(sed -n '565,615p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)"
+      "Bash(sed -n '565,615p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
+      "Bash(wc -l /Users/amoljadhav/Documents/workspace/tft-academy/src/components/simulator/*.tsx)"
     ]
   }
 }

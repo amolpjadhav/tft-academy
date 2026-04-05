@@ -1,6 +1,6 @@
 import type { Champion, ComputedStats } from "@/types/champion";
 import type { Tip } from "@/utils/simulator";
-import { calcPowerScore, getPowerTier, REF_STATS } from "@/utils/simulator";
+import { REF_STATS } from "@/utils/simulator";
 import type { Item } from "@/types/item";
 import type { StatDeltas } from "@/pages/simulator";
 
@@ -220,84 +220,13 @@ export default function StatsPanel({
   deltas,
   deltaKey,
 }: Props) {
-  const score = calcPowerScore(stats, champion);
-  const tier = getPowerTier(score);
-
   const starMult = [1, 1.8, 3.24][star - 1];
   const baseHP = Math.round(champion.stats.hp * starMult);
   const baseAD = Math.round(champion.stats.attackDamage * starMult);
-
-  const powerGradient =
-    score >= 88 ? "from-amber-400 to-yellow-300"
-    : score >= 72 ? "from-green-500 to-emerald-400"
-    : score >= 55 ? "from-blue-500 to-blue-400"
-    : score >= 38 ? "from-yellow-500 to-amber-400"
-    : "from-orange-500 to-red-400";
-
-  const scoreRingColor =
-    score >= 88 ? "#F59E0B"
-    : score >= 72 ? "#10B981"
-    : score >= 55 ? "#3B82F6"
-    : score >= 38 ? "#EAB308"
-    : "#F97316";
-
-  const RADIUS = 34;
-  const CIRC = 2 * Math.PI * RADIUS;
-  const dash = (score / 100) * CIRC;
-
   const starLabel = ["1★", "2★", "3★"][star - 1];
 
   return (
     <div className="flex flex-col gap-4">
-
-      {/* ── Power meter ── */}
-      <div className="bg-bg-elevated rounded-2xl border border-white/8 p-4">
-        <p className="text-text-muted text-[10px] font-semibold uppercase tracking-widest mb-3">
-          Power Level
-        </p>
-        <div className="flex items-center gap-4">
-          {/* Circular ring */}
-          <div className="relative shrink-0">
-            <svg width="88" height="88" viewBox="0 0 88 88">
-              <circle cx="44" cy="44" r={RADIUS} fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="7" />
-              <circle
-                cx="44" cy="44" r={RADIUS} fill="none"
-                stroke={scoreRingColor} strokeWidth="7" strokeLinecap="round"
-                strokeDasharray={`${dash} ${CIRC}`}
-                transform="rotate(-90 44 44)"
-                style={{ transition: "stroke-dasharray 0.7s cubic-bezier(0.4,0,0.2,1), stroke 0.5s" }}
-              />
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-2xl font-black tabular-nums leading-none" style={{ color: scoreRingColor }}>
-                {score}
-              </span>
-              <span className="text-[9px] text-text-muted leading-none mt-0.5">/ 100</span>
-            </div>
-            {deltas.score && (
-              <div
-                key={`score-${deltaKey}`}
-                className="animate-float-up absolute -top-2 -right-2 bg-green-500 text-white text-[10px] font-black rounded-full px-1.5 py-0.5 leading-none border border-green-400/50"
-              >
-                +{deltas.score}
-              </div>
-            )}
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <p className={`text-base font-black leading-tight ${tier.color}`}>
-              {tier.emoji} {tier.label}
-            </p>
-            <p className="text-text-muted text-[11px] leading-relaxed mt-1">{tier.description}</p>
-            <div className="h-1.5 bg-white/5 rounded-full overflow-hidden mt-2">
-              <div
-                className={`h-full bg-gradient-to-r ${powerGradient} rounded-full`}
-                style={{ width: `${score}%`, transition: "width 0.7s cubic-bezier(0.4,0,0.2,1)" }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* ── All stats ── */}
       <div className="bg-bg-elevated rounded-2xl border border-white/8 p-4 flex flex-col gap-2.5">

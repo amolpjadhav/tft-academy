@@ -3,11 +3,13 @@ import type { GetStaticProps } from "next";
 import type { Champion } from "@/types/champion";
 import type { ComputedStats } from "@/types/champion";
 import type { Item, ItemsData } from "@/types/item";
-import { computeStats, getSynergyTips, calcPowerScore } from "@/utils/simulator";
+import { computeStats, getSynergyTips, calcPowerScore, TRAIT_BONUS_TIERS } from "@/utils/simulator";
+import type { TraitBonusTier } from "@/utils/simulator";
 import PageShell from "@/components/layout/PageShell";
 import ChampionPicker from "@/components/simulator/ChampionPicker";
 import BuildPanel from "@/components/simulator/BuildPanel";
 import StatsPanel from "@/components/simulator/StatsPanel";
+import TraitSynergyPanel from "@/components/simulator/TraitSynergyPanel";
 import ItemPickerModal from "@/components/simulator/ItemPickerModal";
 import championsData from "../../data/champions.json";
 import itemsData from "../../data/items.json";
@@ -38,6 +40,7 @@ export default function SimulatorPage({ champions, items }: Props) {
   const [slots, setSlots] = useState<(string | null)[]>([null, null, null]);
   const [activeSlot, setActiveSlot] = useState<number | null>(null);
   const [mobileTab, setMobileTab] = useState<MobileTab>("pick");
+  const [traitOverrides, setTraitOverrides] = useState<Record<string, TraitBonusTier | null>>({});
 
   // Delta tracking
   const prevStatsRef = useRef<ComputedStats | null>(null);
@@ -50,9 +53,15 @@ export default function SimulatorPage({ champions, items }: Props) {
     [slots, items]
   );
 
+  const activeTraitBonuses = useMemo(() => {
+    return Object.values(traitOverrides)
+      .filter((t): t is TraitBonusTier => t !== null)
+      .map((t) => t.bonus);
+  }, [traitOverrides]);
+
   const stats = useMemo(
-    () => (champion ? computeStats(champion, star, slots, items) : null),
-    [champion, star, slots, items]
+    () => (champion ? computeStats(champion, star, slots, items, activeTraitBonuses) : null),
+    [champion, star, slots, items, activeTraitBonuses]
   );
 
   const score = useMemo(
@@ -148,7 +157,12 @@ export default function SimulatorPage({ champions, items }: Props) {
     prevStatsRef.current = null;
     prevScoreRef.current = 0;
     setDeltas({});
+    setTraitOverrides({});
     setMobileTab("build");
+  }, []);
+
+  const handleTraitToggle = useCallback((trait: string, tier: TraitBonusTier | null) => {
+    setTraitOverrides((prev) => ({ ...prev, [trait]: tier }));
   }, []);
 
   const handleRecommendItem = useCallback(
@@ -200,8 +214,8 @@ export default function SimulatorPage({ champions, items }: Props) {
           <div
             className={`${
               mobileTab === "pick" ? "flex" : "hidden md:flex"
-            } flex-col md:w-64 lg:w-72 shrink-0 bg-bg-surface rounded-2xl border border-white/8 overflow-hidden`}
-            style={{ height: "calc(100vh - 200px)", maxHeight: 680 }}
+            } flex-col md:w-72 lg:w-80 xl:w-88 shrink-0 bg-bg-surface rounded-2xl border border-white/8 overflow-hidden`}
+            style={{ height: "calc(100vh - 180px)", maxHeight: 760 }}
           >
             <div className="px-4 py-3 border-b border-white/8">
               <h3 className="text-text-primary font-semibold text-sm">Champions</h3>
@@ -216,22 +230,31 @@ export default function SimulatorPage({ champions, items }: Props) {
             </div>
           </div>
 
-          {/* Center: Build panel */}
-          <div className={`${mobileTab === "build" ? "block" : "hidden md:block"} flex-1 min-w-0`}>
+          {/* Center: Build panel + Trait synergy */}
+          <div className={`${mobileTab === "build" ? "flex" : "hidden md:flex"} flex-col gap-4 flex-1 min-w-0 md:max-w-sm lg:max-w-md`}>
             {champion ? (
-              <div className="bg-bg-surface rounded-2xl border border-white/8 p-4 md:p-6">
-                <BuildPanel
-                  champion={champion}
-                  star={star}
-                  onStarChange={setStar}
-                  slots={slots}
-                  equippedItems={equippedItems}
-                  onSlotClick={handleSlotClick}
-                  score={score}
-                  scoreDelta={deltas.score}
-                  deltaKey={deltaKey}
-                />
-              </div>
+              <>
+                <div className="bg-bg-surface rounded-2xl border border-white/8 p-4 md:p-5">
+                  <BuildPanel
+                    champion={champion}
+                    star={star}
+                    onStarChange={setStar}
+                    slots={slots}
+                    equippedItems={equippedItems}
+                    onSlotClick={handleSlotClick}
+                    score={score}
+                    scoreDelta={deltas.score}
+                    deltaKey={deltaKey}
+                  />
+                </div>
+                {champion.traits.some((t) => TRAIT_BONUS_TIERS[t]) && (
+                  <TraitSynergyPanel
+                    champion={champion}
+                    traitOverrides={traitOverrides}
+                    onToggle={handleTraitToggle}
+                  />
+                )}
+              </>
             ) : (
               <div className="bg-bg-surface rounded-2xl border border-white/8 p-8 flex flex-col items-center justify-center text-center min-h-72">
                 <span className="text-5xl mb-4">🎖️</span>
@@ -250,7 +273,7 @@ export default function SimulatorPage({ champions, items }: Props) {
           </div>
 
           {/* Right: Stats panel */}
-          <div className={`${mobileTab === "stats" ? "block" : "hidden md:block"} md:w-72 lg:w-80 shrink-0`}>
+          <div className={`${mobileTab === "stats" ? "block" : "hidden md:block"} md:w-72 lg:w-76 shrink-0`}>
             {champion && stats ? (
               <StatsPanel
                 champion={champion}
