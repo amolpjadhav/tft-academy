@@ -1,10 +1,13 @@
 import type { QuizResult } from "@/utils/quiz";
+import type { ProficiencyStore } from "@/utils/proficiency";
+import { getTopicKey, getProficiencyTier, getTotalMastered, getWeakestCategory } from "@/utils/proficiency";
 
 interface QuizResultProps {
   results: QuizResult[];
   bestStreak: number;
   onPlayAgain: () => void;
   onNewQuiz: () => void;
+  profStore?: ProficiencyStore;
 }
 
 function scoreGrade(pct: number): { label: string; emoji: string; color: string } {
@@ -20,6 +23,7 @@ export default function QuizResult({
   bestStreak,
   onPlayAgain,
   onNewQuiz,
+  profStore,
 }: QuizResultProps) {
   const correct = results.filter((r) => r.correct).length;
   const total   = results.length;
@@ -27,6 +31,8 @@ export default function QuizResult({
   const grade   = scoreGrade(pct);
   const wrong   = results.filter((r) => !r.correct);
   const isChampionQuiz = results.some((r) => r.question.term.category === "champions");
+  const mastered = profStore ? getTotalMastered(profStore) : null;
+  const weakest  = profStore ? getWeakestCategory(profStore) : null;
 
   return (
     <div className="max-w-xl mx-auto">
@@ -73,11 +79,31 @@ export default function QuizResult({
           </div>
           <div className="w-px bg-white/5" />
           <div className="text-center">
-            <p className="text-2xl font-bold text-accent-gold">🔥{bestStreak}</p>
-            <p className="text-xs text-text-muted">Best streak</p>
+            {mastered ? (
+              <p className="text-2xl font-bold text-accent-gold">
+                {mastered.mastered}<span className="text-base font-normal text-text-muted">/{mastered.total}</span>
+              </p>
+            ) : (
+              <p className="text-2xl font-bold text-accent-gold">—</p>
+            )}
+            <p className="text-xs text-text-muted">Mastered</p>
           </div>
         </div>
       </div>
+
+      {/* Weakest category callout */}
+      {weakest && (
+        <div className={`mb-8 flex items-center gap-2.5 px-4 py-3 rounded-xl border ${weakest.avg < 65 ? "bg-red-500/8 border-red-500/20" : "bg-emerald-500/8 border-emerald-500/20"}`}>
+          <span className="text-base">{weakest.avg < 65 ? "📉" : "✦"}</span>
+          <p className="text-sm text-text-muted">
+            {weakest.avg < 65 ? "Focus next on" : "Strongest area"}:{" "}
+            <span className={`font-semibold ${weakest.avg < 65 ? "text-red-300" : "text-emerald-300"}`}>
+              {weakest.label}
+            </span>
+            <span className="text-text-muted/50 ml-1.5 text-xs">({weakest.avg}% avg)</span>
+          </p>
+        </div>
+      )}
 
       {/* Wrong answers recap */}
       {wrong.length > 0 && (
@@ -132,6 +158,38 @@ export default function QuizResult({
                       </div>
                     </div>
                   </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Topics to Review — proficiency tiers for missed questions */}
+      {profStore && wrong.length > 0 && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            Proficiency — missed topics
+          </p>
+          <div className="bg-bg-surface border border-white/8 rounded-xl divide-y divide-white/5">
+            {wrong.map(({ question }) => {
+              const key = getTopicKey(question.term.category, question.term.term);
+              const record = profStore.topics[key];
+              const score = record?.score ?? 0;
+              const tier = getProficiencyTier(score);
+              return (
+                <div
+                  key={question.id}
+                  className="flex items-center justify-between px-4 py-2.5"
+                >
+                  <span className="text-sm text-text-secondary truncate mr-3">
+                    {question.term.term}
+                  </span>
+                  <span
+                    className={`shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full border ${tier.bg} ${tier.color}`}
+                  >
+                    {tier.label}
+                  </span>
                 </div>
               );
             })}

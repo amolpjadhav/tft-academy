@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { GLOSSARY, CATEGORY_META } from "@/data/glossary";
 import type { QuizCategory, QuestionCount } from "@/utils/quiz";
+import type { ProficiencyStore } from "@/utils/proficiency";
+import ProficiencyPanel from "@/components/quiz/ProficiencyPanel";
 
 type QuizMode = "knowledge" | "champions" | "items" | "item_knowledge" | "traits" | "emblems";
 
@@ -62,9 +64,11 @@ interface QuizSetupProps {
   itemsCount: number;
   traitsCount: number;
   emblemCount: number;
+  profStore: ProficiencyStore;
+  onResetProficiency: () => void;
 }
 
-export default function QuizSetup({ onStart, championsCount, itemsCount, traitsCount, emblemCount }: QuizSetupProps) {
+export default function QuizSetup({ onStart, championsCount, itemsCount, traitsCount, emblemCount, profStore, onResetProficiency }: QuizSetupProps) {
   const [mode, setMode]         = useState<QuizMode>("knowledge");
   const [category, setCategory] = useState<QuizCategory>("all");
   const [count, setCount]       = useState<QuestionCount>(10);
@@ -98,6 +102,9 @@ export default function QuizSetup({ onStart, championsCount, itemsCount, traitsC
 
   return (
     <div className="max-w-xl mx-auto w-full">
+      {/* Proficiency Panel */}
+      <ProficiencyPanel store={profStore} onReset={onResetProficiency} />
+
       {/* Hero */}
       <div className="text-center mb-10">
         <div className="text-6xl mb-4">🧠</div>

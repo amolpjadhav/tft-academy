@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import type { GetStaticProps } from "next";
 import type { Champion } from "@/types/champion";
 import type { Item, ItemsData, Component } from "@/types/item";
@@ -14,6 +14,8 @@ import { buildTraitQuiz } from "@/utils/traitQuiz";
 import { buildEmblemQuiz } from "@/utils/emblemQuiz";
 import type { QuizCategory, QuestionCount, QuizQuestion, QuizResult as QResult } from "@/utils/quiz";
 import type { Trait } from "@/types/trait";
+import { loadProficiency, saveProficiency, recordAnswer, getTopicKey, DEFAULT_STORE } from "@/utils/proficiency";
+import type { ProficiencyStore } from "@/utils/proficiency";
 import championsData from "../../data/champions.json";
 import itemsData from "../../data/items.json";
 import traitsData from "../../data/traits.json";
@@ -35,11 +37,21 @@ export default function QuizPage({ champions, items, itemMap, components, traits
   const [results, setResults]       = useState<QResult[]>([]);
   const [streak, setStreak]         = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [profStore, setProfStore]   = useState<ProficiencyStore>(DEFAULT_STORE);
 
   const [lastConfig, setLastConfig] = useState<{
     category: QuizCategory;
     count: QuestionCount;
   } | null>(null);
+
+  useEffect(() => {
+    setProfStore(loadProficiency());
+  }, []);
+
+  const handleResetProficiency = useCallback(() => {
+    saveProficiency(DEFAULT_STORE);
+    setProfStore(DEFAULT_STORE);
+  }, []);
 
   const startQuiz = useCallback(
     (category: QuizCategory, count: QuestionCount) => {
@@ -81,12 +93,35 @@ export default function QuizPage({ champions, items, itemMap, components, traits
 
       const newStreak = correct ? streak + 1 : 0;
       setStreak(newStreak);
-      setBestStreak((prev) => Math.max(prev, newStreak));
+      const sessionBestStreak = Math.max(bestStreak, newStreak);
+      setBestStreak(sessionBestStreak);
 
+      // Update proficiency per-topic answer
+      const topicKey = getTopicKey(question.term.category, question.term.term);
       const newResults: QResult[] = [...results, { question, chosen, correct }];
       setResults(newResults);
 
-      if (current + 1 >= questions.length) {
+      const isLastQuestion = current + 1 >= questions.length;
+
+      setProfStore((prev) => {
+        // Record per-topic score update
+        let updated = recordAnswer(prev, topicKey, correct);
+        // Only count the quiz and update longestStreak when all questions are answered
+        if (isLastQuestion) {
+          updated = {
+            ...updated,
+            overall: {
+              ...updated.overall,
+              quizzesTaken: updated.overall.quizzesTaken + 1,
+              longestStreak: Math.max(updated.overall.longestStreak, sessionBestStreak),
+            },
+          };
+        }
+        saveProficiency(updated);
+        return updated;
+      });
+
+      if (isLastQuestion) {
         setScreen("result");
       } else {
         setCurrent((c) => c + 1);
@@ -116,7 +151,15 @@ export default function QuizPage({ champions, items, itemMap, components, traits
       }
     >
       {screen === "setup" && (
-        <QuizSetup onStart={startQuiz} championsCount={champions.length} itemsCount={items.length} traitsCount={traits.length} emblemCount={traits.filter((t) => !t.isUnique).length} />
+        <QuizSetup
+          onStart={startQuiz}
+          championsCount={champions.length}
+          itemsCount={items.length}
+          traitsCount={traits.length}
+          emblemCount={traits.filter((t) => !t.isUnique).length}
+          profStore={profStore}
+          onResetProficiency={handleResetProficiency}
+        />
       )}
 
       {screen === "question" && questions[current] && (
@@ -136,6 +179,7 @@ export default function QuizPage({ champions, items, itemMap, components, traits
           bestStreak={bestStreak}
           onPlayAgain={playAgain}
           onNewQuiz={newQuiz}
+          profStore={profStore}
         />
       )}
     </PageShell>
