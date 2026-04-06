@@ -300,12 +300,20 @@ export default function LandingPage() {
               <p className="text-text-muted text-[10px] tracking-wider">SET 17 · SPACE GODS</p>
             </div>
           </div>
-          <Link
-            href="/flashcards"
-            className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-text-secondary border border-white/10 rounded-lg px-4 py-2 hover:bg-white/5 hover:text-text-primary transition-colors"
-          >
-            Enter App →
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/blog"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-primary transition-colors"
+            >
+              📝 Blog
+            </Link>
+            <Link
+              href="/flashcards"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-text-secondary border border-white/10 rounded-lg px-4 py-2 hover:bg-white/5 hover:text-text-primary transition-colors"
+            >
+              Enter App →
+            </Link>
+          </div>
         </header>
 
         {/* ── Hero ───────────────────────────────────────────────────── */}
@@ -448,7 +456,11 @@ export default function LandingPage() {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link href="/about" className="text-text-muted text-xs hover:text-text-secondary transition-colors">About</Link>
             <span className="text-white/15 text-xs">·</span>
+            <Link href="/blog" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Blog</Link>
+            <span className="text-white/15 text-xs">·</span>
             <Link href="/guide" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Beginner's Guide</Link>
+            <span className="text-white/15 text-xs">·</span>
+            <Link href="/contact" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Contact</Link>
             <span className="text-white/15 text-xs">·</span>
             <Link href="/privacy" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Privacy Policy</Link>
           </div>

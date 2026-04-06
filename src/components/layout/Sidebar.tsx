@@ -12,6 +12,7 @@ export const NAV_ITEMS = [
   { href: "/glossary",         label: "Glossary",         icon: "📖" },
   { href: "/quiz",             label: "Quiz",             icon: "🧠" },
   { href: "/flashcards",       label: "Flashcards",       icon: "🃏" },
+  { href: "/blog",             label: "Blog",             icon: "📝" },
 ];
 
 // Drifting star particle — pure CSS, no deps

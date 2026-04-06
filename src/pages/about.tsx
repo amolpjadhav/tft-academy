@@ -125,10 +125,10 @@ export default function AboutPage() {
             <p className="text-text-secondary text-sm leading-relaxed">
               For feedback, bug reports, or questions, please reach out at{" "}
               <a
-                href="mailto:hello@tftschool.com"
+                href="mailto:clickfixdev8@gmail.com"
                 className="text-accent-gold hover:text-accent-gold-light underline transition-colors"
               >
-                hello@tftschool.com
+                clickfixdev8@gmail.com
               </a>
               . We read every message and genuinely appreciate hearing from players.
             </p>

@@ -122,8 +122,8 @@ export default function PrivacyPage() {
               body: (
                 <p className="text-text-secondary text-sm leading-relaxed">
                   TFT School is intended for a general audience and does not knowingly collect personally identifiable information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at{" "}
-                  <a href="mailto:hello@tftschool.com" className="text-accent-gold underline hover:text-accent-gold-light">
-                    hello@tftschool.com
+                  <a href="mailto:clickfixdev8@gmail.com" className="text-accent-gold underline hover:text-accent-gold-light">
+                    clickfixdev8@gmail.com
                   </a>{" "}
                   and we will take steps to remove that information.
                 </p>
@@ -159,8 +159,8 @@ export default function PrivacyPage() {
                   </ul>
                   <p>
                     To exercise any of these rights, please contact us at{" "}
-                    <a href="mailto:hello@tftschool.com" className="text-accent-gold underline hover:text-accent-gold-light">
-                      hello@tftschool.com
+                    <a href="mailto:clickfixdev8@gmail.com" className="text-accent-gold underline hover:text-accent-gold-light">
+                      clickfixdev8@gmail.com
                     </a>.
                   </p>
                 </div>
@@ -179,8 +179,8 @@ export default function PrivacyPage() {
               body: (
                 <p className="text-text-secondary text-sm leading-relaxed">
                   If you have any questions about this Privacy Policy, please contact us at{" "}
-                  <a href="mailto:hello@tftschool.com" className="text-accent-gold underline hover:text-accent-gold-light">
-                    hello@tftschool.com
+                  <a href="mailto:clickfixdev8@gmail.com" className="text-accent-gold underline hover:text-accent-gold-light">
+                    clickfixdev8@gmail.com
                   </a>
                   . TFT School is an independent fan project and is not affiliated with Riot Games.
                 </p>
