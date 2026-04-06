@@ -789,7 +789,7 @@
         {
             "id": "red_buff",
             "name": "Red Buff",
-            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_redbuff.tft_set13.png",
+            "icon": "https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_rapidfirecannon.tft_set13.png",
             "category": "ad_carry",
             "tier": "B",
             "components": [
