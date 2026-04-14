@@ -99,6 +99,17 @@ const FEATURES = [
     tagColor: "bg-teal-500/20 text-teal-300",
   },
   {
+    href: "/roll-calculator",
+    icon: "🎲",
+    title: "Roll Calculator",
+    description: "Calculate the exact probability of hitting your target champion at any level. See 2★/3★ odds, gold thresholds, and a live probability curve.",
+    border: "border-lime-500/30",
+    glow: "group-hover:shadow-[0_0_24px_rgba(132,204,22,0.2)]",
+    accent: "text-lime-400",
+    tag: "New",
+    tagColor: "bg-lime-500/20 text-lime-300",
+  },
+  {
     href: "/glossary",
     icon: "📖",
     title: "TFT Glossary",
