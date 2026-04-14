@@ -256,37 +256,38 @@ export default function LandingPage() {
           </div>
 
           {/* ── Feature grid ───────────────────────────────────────────── */}
-          <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4">
             {FEATURES.map((f, fi) => (
               <Link
                 key={f.href}
                 href={f.href}
-                className={`animate-card-in card-hover group relative flex flex-col gap-2 bg-bg-surface/80 border ${f.border} rounded-2xl p-5 text-left hover:bg-bg-elevated transition-all duration-300 hover:-translate-y-1 ${f.glow} overflow-hidden`}
+                className={`animate-card-in card-hover group relative flex flex-col bg-bg-surface/80 border ${f.border} rounded-xl sm:rounded-2xl p-3 sm:p-5 text-left hover:bg-bg-elevated transition-all duration-300 hover:-translate-y-1 ${f.glow} overflow-hidden`}
                 style={{ animationDelay: `${fi * 80}ms` }}
               >
                 {/* Scan shimmer on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-xl sm:rounded-2xl">
                   <div
                     className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/4 to-transparent"
                     style={{ animation: "scan-line 1.2s ease-in-out" }}
                   />
                 </div>
 
-                <div className="flex items-start justify-between">
-                  <span className="text-2xl leading-none">{f.icon}</span>
+                <div className="flex items-center justify-between mb-2 sm:mb-0">
+                  <span className="text-xl sm:text-2xl leading-none">{f.icon}</span>
                   {f.tag && (
-                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${f.tagColor}`}>
+                    <span className={`text-[9px] sm:text-[10px] font-semibold px-1.5 sm:px-2 py-0.5 rounded-full ${f.tagColor}`}>
                       {f.tag}
                     </span>
                   )}
                 </div>
 
-                <h3 className={`font-heading text-sm font-semibold tracking-wide ${f.accent}`}>
+                <h3 className={`font-heading text-xs sm:text-sm font-semibold tracking-wide mt-1 sm:mt-2 ${f.accent}`}>
                   {f.title}
                 </h3>
-                <p className="text-text-muted text-xs leading-relaxed">{f.description}</p>
+                <p className="text-text-muted text-[11px] sm:text-xs leading-relaxed mt-1 hidden sm:block">{f.description}</p>
+                <p className="text-text-muted text-[11px] leading-snug mt-1 sm:hidden line-clamp-2">{f.description}</p>
 
-                <div className={`flex items-center gap-1 text-xs font-medium mt-auto pt-1 ${f.accent} opacity-0 group-hover:opacity-100 transition-opacity`}>
+                <div className={`flex items-center gap-1 text-[11px] sm:text-xs font-medium mt-auto pt-2 sm:pt-1 ${f.accent} sm:opacity-0 sm:group-hover:opacity-100 transition-opacity`}>
                   Open <span>→</span>
                 </div>
               </Link>
