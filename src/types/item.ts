@@ -29,6 +29,7 @@ export interface Item {
   components: [string, string];
   stats: ItemStats;
   passive: ItemPassive;
+  plain_english?: string;
   why_it_matters: string;
   best_on: string[];
   priority: number;

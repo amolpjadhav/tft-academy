@@ -89,6 +89,7 @@
                 "name": "Perfect Timing",
                 "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
             },
+            "plain_english": "This is the 'Big Damage Sword.' It makes your champion's special abilities able to land critical strikes (Super-Hits), just like their normal attacks. Give it to your hardest-hitting AD carry and watch every attack become a massive explosion of damage.",
             "why_it_matters": "Infinity Edge is the cornerstone crit item for AD carries. It unlocks spell crits and piles on damage, making it the default first item for snipers like Caitlyn or Jinx. Stack crit from other sources and every hit becomes massive.",
             "best_on": [
                 "Vanquisher carries",
@@ -142,6 +143,7 @@
                 "name": "Lifeline",
                 "description": "Once per combat at 40% max Health, gain a shield equal to 25% of max Health that decays over 3 seconds."
             },
+            "plain_english": "Bloodthirster is like a vampire sword — your champion heals themselves by dealing damage, so they stay alive longer in a fight. It also pops a big protective bubble when your champion gets low on health. Put it on your main attacker so they can keep swinging without dying.",
             "why_it_matters": "Bloodthirster is defensive insurance for your carry. The shield at 40% HP absorbs a burst of damage at the exact moment your carry is most vulnerable — often keeping them alive through an assassin's combo long enough to finish the fight.",
             "best_on": [
                 "AD carries",
@@ -169,6 +171,7 @@
                 "name": "Armor Shred",
                 "description": "Physical damage Sunders (reduces armor by 30%) the target for 3 seconds."
             },
+            "plain_english": "Last Whisper is like a can opener — every time your champion lands a critical hit, it rips through the enemy's armor so they take way more damage. It's not just good for your carry; the whole team hits the shredded target harder. Use it when enemies have a really tough, armored frontline.",
             "why_it_matters": "Last Whisper is a team amplifier disguised as a carry item. Every Sunder on the target means your entire team's physical damage is boosted against them. Essential when the enemy frontline is stacking Armor.",
             "best_on": [
                 "Fast-attacking AD carries",
@@ -193,6 +196,7 @@
                 "name": "Guinsoo's Rage",
                 "description": "Gain +6% Attack Speed per second in combat. Stacks have no cap."
             },
+            "plain_english": "Rageblade is like a car that gets faster the longer it drives — your champion attacks faster and faster as the fight goes on, with no limit. The longer a battle lasts, the deadlier your champion becomes. Put it on a champion who attacks a lot so they can reach crazy speeds.",
             "why_it_matters": "Rageblade turns any fast-attacking champion into a late-fight monster. The longer the combat goes, the faster they attack — snowballing into fights that drag on. Ideal on Quickstriker carries who already scale with attack speed.",
             "best_on": [
                 "Quickstriker carries",
@@ -217,6 +221,7 @@
                 "name": "Magical Mastery",
                 "description": "Grants +50 bonus Ability Power. Core item that amplifies every other AP source on the holder."
             },
+            "plain_english": "Rabadon's Deathcap is the 'Big Magic Hat' — it gives your champion a huge pile of extra spell power on top of everything else. Any other item that already gives spell power becomes even stronger because of it. Put it on your mage carry and their spells will hit like a truck.",
             "why_it_matters": "Rabadon's is a flat AP powerhouse. 80 AP from the item plus the bonus from the passive means your Arcanist carry starts nuking targets immediately. Every other AP item you build becomes stronger by proxy — it's always the first item to consider on any mage.",
             "best_on": [
                 "Arcanist carries",
@@ -243,6 +248,7 @@
                 "name": "Spell Crit",
                 "description": "Abilities can critically strike. If the holder can already critically strike with abilities, gain +10% Critical Strike Damage instead."
             },
+            "plain_english": "Normally, a mage's spells can NEVER land a Super-Hit (critical strike) — Jeweled Gauntlet changes that rule entirely. Now your mage's spells can randomly deal double damage, turning them into a one-shot machine. It's the most important item for any spell-casting carry.",
             "why_it_matters": "By default, TFT abilities cannot crit. Jeweled Gauntlet removes that ceiling entirely. Pair it with Rabadon's and your mage is suddenly one-shotting targets mid-fight. Currently the highest win-rate item in Set 16 — never skip it on Arcanist carries.",
             "best_on": [
                 "Arcanist carries",
@@ -269,6 +275,7 @@
                 "name": "Mana to Power",
                 "description": "Every 5 seconds in combat, gain +20 Ability Power. This effect stacks without limit."
             },
+            "plain_english": "Archangel's Staff is a slow-starter that grows stronger the longer the fight lasts — think of it like a snowball rolling downhill. Every few seconds, your mage gets more and more spell power during battle. Give it to a mage who can survive long fights and watch their damage climb to massive levels.",
             "why_it_matters": "Archangel's is the patience item — it rewards mages who stay alive long enough to ramp. In a 20-second fight, that's +80 bonus AP on top of the base stats. Pair with Invoker trait for extra mana regen and your mage reaches full ramp in seconds.",
             "best_on": [
                 "Tankier AP casters",
@@ -295,6 +302,7 @@
                 "name": "Empowered",
                 "description": "Grants +10% bonus Attack Damage and Ability Power from all sources. This amplification stacks with other sources of bonus AD and AP."
             },
+            "plain_english": "Blue Buff is like a turbocharger for all your other items — it makes every bit of bonus damage your champion already has work 10% better. You cast your ability, and then it's ready again almost immediately, so your champion keeps spamming their powerful move over and over. Great on any mage who needs to cast constantly.",
             "why_it_matters": "Blue Buff was reworked in Set 14 into a flat amplifier: all bonus AD and AP you receive is increased by 10%. It synergizes with every other item on the holder, making the items you already built stronger. Effectively a mini Rabadon's that works on both AD and AP.",
             "best_on": [
                 "AP carries with multiple AP items",
@@ -321,6 +329,7 @@
                 "name": "Grievous Wounds",
                 "description": "Attacks and abilities apply 1% Burn and 33% Wound for 10 seconds, reducing healing received by the target."
             },
+            "plain_english": "Morellonomicon is the 'anti-healing potion' item — it poisons enemies so their healing only works at half power. It also gives your mage extra spell power AND some extra health for toughness. Use it when the enemy team is healing a lot and staying alive way too long.",
             "why_it_matters": "Morellonomicon is a hard counter to healing-heavy comps. The 33% Wound effect cuts enemy heals dramatically — critical against Slayer carries who rely on Omnivamp or Bruiser frontlines with healing augments. Always build at least one on your team when you see heavy sustain.",
             "best_on": [
                 "AP casters vs healing comps",
@@ -345,6 +354,7 @@
                 "name": "Warmog's Heart",
                 "description": "Grants +12% bonus max Health."
             },
+            "plain_english": "Warmog's Armor is the 'giant HP sponge' — it gives your tank a mountain of extra health so they can soak up damage forever. The more health your tank has, the longer they stand in front protecting your team. Put it on your biggest frontline unit and watch enemies struggle to get through them.",
             "why_it_matters": "Warmog's is the simplest and most reliable tank item: a massive HP spike. The bonus max Health passive means every HP item you build afterward becomes slightly more effective too. Stack two on a Bruiser or Juggernaut and they become nearly unkillable.",
             "best_on": [
                 "Bruiser frontliners",
@@ -370,6 +380,7 @@
                 "name": "Wyrmguard",
                 "description": "Grants +9% bonus max Health. Heals 2.5% of max Health every 2 seconds in combat."
             },
+            "plain_english": "Dragon's Claw is a magic shield — it makes your tank very resistant to spells and also slowly heals them during the fight, like a regenerating force field. When the enemy team has lots of mages throwing spells, this item basically makes your tank immune to magic damage. Put it on your frontline unit to shut down enemy spellcasters.",
             "why_it_matters": "Dragon's Claw makes your frontline nearly immune to AP damage while also giving them constant healing. In Arcanist-heavy lobbies, one Dragon's Claw on your main tank can completely nullify the enemy carry's output while keeping that tank alive indefinitely.",
             "best_on": [
                 "Frontline tanks vs AP-heavy lobbies",
@@ -395,6 +406,7 @@
                 "name": "Stone Form",
                 "description": "Gain +10 Armor and +10 Magic Resist for each enemy targeting the holder."
             },
+            "plain_english": "Gargoyle Stoneplate is the 'the more enemies, the harder I am' item — your tank gets tougher for every enemy that attacks them at the same time. It's like a superhero whose armor gets stronger when surrounded. Put it on your main frontline tank and drop them right in the middle of enemy fire.",
             "why_it_matters": "Gargoyle Stoneplate is the best item for any tank that draws a lot of fire. The more enemies targeting your tank, the tankier they become — which also means they keep drawing fire even longer. Synergizes perfectly with Warden shields and Juggernaut durability.",
             "best_on": [
                 "Primary frontline tanks",
@@ -421,6 +433,7 @@
                 "name": "Immolate",
                 "description": "Grants +8% bonus max Health. Every 2 seconds in combat, applies 1% Burn and 33% Wound to a nearby enemy."
             },
+            "plain_english": "Sunfire Cape turns your tank into a walking campfire — anyone standing close to them slowly gets burned and heals less. Your tank doesn't have to do anything special; just standing near enemies automatically damages and weakens them. It's perfect for a tough frontline unit that charges into the middle of the enemy team.",
             "why_it_matters": "Sunfire Cape gives your frontline passive AoE damage and healing suppression without needing to be a damage dealer. Just having your tank stand near clustered enemies slowly melts them while countering their sustain — great against Bruiser or Slayer frontlines.",
             "best_on": [
                 "Central frontline tanks",
@@ -447,6 +460,7 @@
                 "name": "Thorns",
                 "description": "Grants +7% bonus max Health. Upon taking physical damage, deal 100 magic damage to nearby enemies. Applies 33% Wound for 3 seconds."
             },
+            "plain_english": "Bramble Vest is like a cactus suit — every time an enemy punches your tank, nearby enemies get zapped and their healing gets cut in half. Attackers are basically hurting themselves by attacking your frontline. It's great against teams that rely on fast-attacking damage dealers.",
             "why_it_matters": "Bramble Vest punishes auto-attack-heavy comps hard. Every hit on your tank deals splash damage to nearby enemies and Wounds them — meaning Gunslinger or Quickstriker carries are literally hurting themselves by attacking your frontline.",
             "best_on": [
                 "Frontline tanks vs AD-carry lobbies",
@@ -472,6 +486,7 @@
                 "name": "Zap",
                 "description": "Shreds the Magic Resist of enemies within 2 hexes by 30%. When a nearby enemy casts their ability, zap them for magic damage scaling with their mana spent."
             },
+            "plain_english": "Ionic Spark is like a lightning trap for enemies nearby — whenever an enemy uses their special ability, they get zapped with electricity for damage. It also weakens nearby enemies' magic armor so your whole team's spells hit them harder. Put it on a frontline tank that stands in the thick of things to punish enemy spellcasters.",
             "why_it_matters": "Ionic Spark is the frontline's answer to Arcanist-heavy lobbies. It shreds enemy MR on every nearby unit constantly — making your entire AP team hit harder — and punishes enemies for casting abilities. A single Ionic Spark tank can amplify your whole mage comp.",
             "best_on": [
                 "Frontline tanks in AP mage comps",
@@ -497,6 +512,7 @@
                 "name": "Blessed",
                 "description": "Heals the holder for 2.5% of missing Health every second in combat."
             },
+            "plain_english": "Spirit Visage is a self-healing vest that ticks like a health regen potion every second during combat. The more health your champion is missing, the faster it heals them back up — so it kicks into overdrive exactly when your champion needs it most. Put it on a tough tank to keep them stubbornly alive through long fights.",
             "why_it_matters": "Spirit Visage replaced Redemption as the go-to sustain item for tanks. The missing-HP scaling means it heals more when your tank is in danger — effectively acting as a regenerating safety net during long fights. Stack with Warmog's for maximum staying power.",
             "best_on": [
                 "Frontline tanks",
@@ -522,6 +538,7 @@
                 "name": "Blood Harvest",
                 "description": "Gain +5 bonus Attack Damage each time an ally or the holder scores a takedown. Stacks up to 10 times (max +50 bonus AD)."
             },
+            "plain_english": "Deathblade is the 'killing spree' sword — every time your team scores a kill, your champion gets stronger and hits even harder. It starts out powerful and can nearly double its own damage bonus if your team is winning big. Put it on your main carry so they keep snowballing out of control.",
             "why_it_matters": "Deathblade snowballs harder than any other AD item. It starts strong with +50 AD and keeps getting stronger every time someone on your team gets a kill. In a winning fight, it can double or triple its own damage bonus before the round is over — making it terrifying on carries who fight often.",
             "best_on": [
                 "AD carries in aggressive comps",
@@ -547,6 +564,7 @@
                 "name": "Spell Shield",
                 "description": "At the start of combat, gain a Spell Shield that absorbs the first crowd control effect. Refreshes every few seconds."
             },
+            "plain_english": "Quicksilver is like a 'get out of jail free' card — at the start of every fight, your champion gets a magic bubble that blocks the first stun, freeze, or knockup that would stop them from attacking. This means enemy teams that try to lock down your carry just get ignored. Give it to your most important attacker so they can keep fighting no matter what.",
             "why_it_matters": "Quicksilver is the carry's panic button against CC-heavy comps. If the enemy team has assassins or stuns that would stop your carry from attacking, Quicksilver automatically blocks the first one — keeping your carry fighting when it matters most. Essential if you keep losing your carry to crowd control.",
             "best_on": [
                 "AD and AP carries vs CC-heavy comps",
@@ -572,6 +590,7 @@
                 "name": "Adaptive",
                 "description": "Reduce the damage taken from the first ability that hits the holder each combat. Also reduces damage from subsequent casts of the same spell."
             },
+            "plain_english": "Adaptive Helm is like noise-cancelling headphones for your champion — the first time an enemy spell hits them it hurts a little less, and if that same spell keeps hitting them over and over, it hurts even less each time. It also boosts your champion's own spell power so they still hit hard. Great for a mage who keeps getting blasted by the same enemy spell repeatedly.",
             "why_it_matters": "Adaptive Helm is a defensive AP item — it gives your mage survivability against enemy casters while still adding Ability Power. When a single enemy spell is hitting your carry repeatedly, Adaptive Helm softens each repeated hit more and more.",
             "best_on": [
                 "Mage carries facing AP-heavy comps",
@@ -597,6 +616,7 @@
                 "name": "Crown",
                 "description": "At the start of combat, grant the holder a 350 HP shield that lasts until broken."
             },
+            "plain_english": "Crownguard gives your mage a big protective energy shield at the start of every fight — like a force field that has to be destroyed before enemies can hurt your actual health bar. This buys your champion time to cast spells before they start taking real damage. Put it on a fragile mage who needs a few extra seconds to get their damage going.",
             "why_it_matters": "Crownguard turns an AP carry into a sturdier caster. The upfront shield buys crucial seconds at the start of combat — especially against assassins who dive your mage immediately. Think of it as Bloodthirster for AP carries: safety insurance so your mage lives long enough to deal damage.",
             "best_on": [
                 "AP carries threatened by assassins",
@@ -622,6 +642,7 @@
                 "name": "Night's Edge",
                 "description": "At the start of combat, the holder becomes stealthed and gains a Spell Shield that blocks the first ability that hits them."
             },
+            "plain_english": "Edge of Night is a ninja cloak — at the start of every fight your champion turns invisible AND has a bubble that blocks the first enemy spell. Enemies literally cannot find or target your carry for those crucial opening seconds. Give it to your main damage dealer so they get to attack freely while everyone else is getting hit.",
             "why_it_matters": "Edge of Night is one of the strongest defensive carry items in Set 16. The stealth + spell shield combo means your carry is invisible AND immune to the first ability at the start of every fight — completely negating the enemy's burst setup. Essential against CC-heavy or assassin-heavy lobbies.",
             "best_on": [
                 "AD carries vs ability-based burst",
@@ -648,6 +669,7 @@
                 "name": "Spectral",
                 "description": "Enemies within 2 hexes have their Armor and Magic Resist reduced by 20% (Sundered and Shredded)."
             },
+            "plain_english": "Evenshroud is a team amplifier worn by your tank — any enemy standing near your tank gets their armor AND magic resist weakened by 20%, making your whole team hit them harder. It's like your tank is carrying a debuff aura that benefits every single teammate. Put it on a frontline unit that will be right next to lots of enemies.",
             "why_it_matters": "Evenshroud is a team multiplier on a tank. It permanently Sunders and Shreds nearby enemies — reducing both their Armor and MR — so every damage dealer on your team hits harder. Pair it with both AP and AD carries for maximum value since it helps both at once.",
             "best_on": [
                 "Central frontline tanks",
@@ -674,6 +696,7 @@
                 "name": "Crusher",
                 "description": "Attacks and abilities deal 20% bonus damage to enemies with a shield. After breaking a shield, the holder gains 30% Attack Speed for 3 seconds."
             },
+            "plain_english": "Striker's Flail is the 'shield buster' — it deals extra damage to enemies who have a protective shield, and once the shield pops, your champion gets a speed burst to finish the job fast. Think of it as a hammer that hits shields harder than anything else. Use it when the enemy team is hiding behind lots of shields.",
             "why_it_matters": "Striker's Flail (formerly Guardbreaker) shuts down defensive comps that rely on shields. Every shielded target takes extra damage, and breaking the shield gives your carry a burst of attack speed to follow up with. Essential when your opponent is stacking shields — like Warden, Crownguard, or Protector's Vow comps.",
             "best_on": [
                 "AD carries vs shield-heavy comps",
@@ -700,6 +723,7 @@
                 "name": "Justice Dealt",
                 "description": "At the start of each combat, randomly gain either +40% Attack Damage or +40 Ability Power for the entire round."
             },
+            "plain_english": "Hand of Justice is the mystery item — every round it flips a coin and gives your champion either a huge attack power boost OR a huge spell power boost, plus it heals them from all the damage they deal. It works great on champions who benefit from either stat. It's the perfect item when you're not sure which direction your team is heading.",
             "why_it_matters": "Hand of Justice is the ultimate flex item — it works on any carry. Each round it randomly gives a massive boost to either AD or AP, making it valuable on hybrid champions or when you don't know which carry you'll end up building. The mana bonus also helps cast more often.",
             "best_on": [
                 "Hybrid AD/AP carries",
@@ -727,6 +751,7 @@
                 "name": "Spellblade",
                 "description": "Dealing ability damage heals the holder for a portion of the damage dealt. Healing scales with both AD and AP."
             },
+            "plain_english": "Hextech Gunblade is the 'best of both worlds' item — it boosts both attack damage AND spell power, and your champion heals themselves every time they deal ability damage. It's perfect for champions that hit hard with both their regular attacks AND their special moves. Your carry basically becomes a self-sustaining damage machine.",
             "why_it_matters": "Hextech Gunblade is the best item for hybrid champions who deal both ability and physical damage. It gives significant boosts to both AD and AP, and the healing passive means your carry is constantly topping up their HP during combat — becoming harder and harder to kill the longer the fight goes.",
             "best_on": [
                 "Hybrid AD/AP champions",
@@ -753,6 +778,7 @@
                 "name": "Acidic Bite",
                 "description": "Attacks deal bonus magic damage on-hit equal to a percentage of the holder's Ability Power."
             },
+            "plain_english": "Nashor's Tooth is for champions who attack fast AND cast spells — every basic attack also deals extra magic damage based on how much spell power your champion has. The faster they attack, the more bonus magic damage they rack up. Give it to an AP champion who also does a lot of basic attacking.",
             "why_it_matters": "Nashor's Tooth bridges the gap between auto-attacking and ability damage. Champions that cast often AND attack quickly become dual threats — each basic attack deals extra magic damage scaled by their AP. It's the go-to item for AP champions in the Quickstriker or Arcanist class who also auto-attack frequently.",
             "best_on": [
                 "AP champions who also attack often",
@@ -779,6 +805,7 @@
                 "name": "Vow",
                 "description": "At the start of combat, grant the nearest ally a 250 HP shield that lasts until broken."
             },
+            "plain_english": "Protector's Vow is a selfless item — instead of helping the champion wearing it, it gives a free shield to the weakest ally nearby at the start of every fight. Think of it as your tank giving a protective hug to a fragile friend before the battle starts. Place your tank right next to your carry for free protection every round.",
             "why_it_matters": "Protector's Vow is positioned-based protection. Place it on a tank next to your carry and your carry starts every fight with a free 250 HP shield — absorbing early burst before their own HP is touched. It's like having Crownguard on your carry for free, applied from the adjacent tank.",
             "best_on": [
                 "Tanks directly adjacent to your main carry",
@@ -803,6 +830,7 @@
                 "name": "Cinder",
                 "description": "Attacks apply a 1% Burn and 33% Wound to the target for 3 seconds."
             },
+            "plain_english": "Red Buff is the 'anti-healer' item for fast attackers — every basic attack sets the target on fire (slowly burning them) and cuts their healing in half. The faster your champion attacks, the more often the burn and heal-reduction gets applied. Use it on a quick attacker when the enemy is healing way too much.",
             "why_it_matters": "Red Buff is a cheap, effective anti-sustain item for fast-attacking carries. Every auto-attack applies Burn damage over time and reduces enemy healing — making it especially strong against Slayer carries with Omnivamp or healing-heavy frontlines. The double Recurve Bow recipe also gives a big attack speed spike.",
             "best_on": [
                 "Fast-attacking AD carries vs sustain comps",
@@ -829,6 +857,7 @@
                 "name": "Kraken's Wrath",
                 "description": "Every 3rd attack deals bonus true damage equal to a percentage of the target's maximum Health, bypassing shields and armor."
             },
+            "plain_english": "Kraken's Fury is the 'tank destroyer' — every third attack deals true damage based on how much HP the target has, meaning it punishes fat, health-stacking tanks the most. True damage goes through armor and shields like they don't even exist. Put it on a fast-attacking carry when you're up against massive tanks that just won't die.",
             "why_it_matters": "Kraken's Fury is the definitive anti-tank item for AD carries in Set 16. Every third auto-attack rips through a portion of the target's max HP as true damage — shields and armor can't stop it. The harder the enemy tanks stack HP, the harder Kraken's punishes them. Essential in Bruiser or Juggernaut-heavy lobbies.",
             "best_on": [
                 "AD carries vs HP-stacking tanks",
@@ -855,6 +884,7 @@
                 "name": "Focus",
                 "description": "Attacks restore 5 bonus Mana, causing the holder to cast their ability much more frequently."
             },
+            "plain_english": "Spear of Shojin is a mana-charger — every basic attack your champion throws refills a bit of their special ability meter, so they use their power move way more often than normal. It's like giving them an energy drink for their abilities. Give it to a champion whose special move is incredibly powerful so they can spam it nonstop.",
             "why_it_matters": "Spear of Shojin is the bridge between auto-attacks and ability spam. Every basic attack refills mana faster, so carries who have strong abilities cast them far more often. It's especially powerful on AD carries whose abilities scale with Attack Damage — they hit hard with autos AND cast constantly.",
             "best_on": [
                 "AD carries with powerful ability casts",
@@ -881,6 +911,7 @@
                 "name": "Void Corruption",
                 "description": "Abilities deal bonus magic damage. The holder's spells also Shred enemy Magic Resist, making all magic damage against those targets stronger."
             },
+            "plain_english": "Void Staff is a magic-armor-ripper — it punches through 40% of enemy magic resistance so your mage's spells hit nearly as hard as if the enemy had no magic protection at all. Even when enemies build lots of magic defense, Void Staff makes it mostly irrelevant. Put it on your mage carry when enemies are stacking magic resist.",
             "why_it_matters": "Void Staff is a core AP carry item in Set 16 — it amplifies ability damage while shredding the target's Magic Resist. This means every other AP item on your carry (and your whole AP team) benefits from the MR reduction. Build it early on any mage carry to dramatically increase your AP comp's damage output.",
             "best_on": [
                 "AP carry mages",
@@ -908,6 +939,7 @@
                 "name": "Steadfast",
                 "description": "While above 50% Health, the holder takes 20% reduced damage from all sources."
             },
+            "plain_english": "Steadfast Heart is like a damage-absorbing shield that's always active as long as your champion is above half health — they take 20% less damage from everything while they're healthy. It's not flashy, but it quietly makes your frontline much harder to chew through in the early seconds of a fight. Put it on your toughest tank to keep them standing even longer.",
             "why_it_matters": "Steadfast Heart is passive damage reduction that requires no condition other than staying healthy. Above 50% HP your tank takes 20% less damage from everything — abilities, auto-attacks, true damage, all of it. This makes your frontline dramatically harder to burst down in the first half of combat.",
             "best_on": [
                 "Frontline tanks",
@@ -934,6 +966,7 @@
                 "name": "Primal Roar",
                 "description": "When the holder drops below 60% Health, gain a shield equal to 35% of max Health that decays over 4 seconds."
             },
+            "plain_english": "Sterak's Gage is a last-stand item — when your champion gets hurt enough to drop below 60% health, a massive emergency shield pops up to absorb incoming damage. Think of it like a car airbag that deploys right before the crash. Give it to your melee carry so they get to keep swinging even when they're taking heavy hits.",
             "why_it_matters": "Sterak's Gage gives AD carries both more damage and a massive reactive shield. Unlike Bloodthirster (which triggers at 40% HP), Sterak's fires at 60% — earlier, and with a bigger shield. It keeps your carry alive through the most dangerous window of a fight and gives them more AD to hit harder during it.",
             "best_on": [
                 "AD carries who need durability",
@@ -959,6 +992,7 @@
                 "name": "Stolen Goods",
                 "description": "Equip 2 random items at the start of each combat. Higher player level increases the quality of items granted."
             },
+            "plain_english": "Thief's Gloves is the ultimate gambling item — it steals two random items at the start of every fight, so your champion gets a totally different item combination each round. Sometimes you'll get amazing items, sometimes average ones, but at high levels the rolls tend to be very powerful. Put it on a flexible champion who doesn't need specific items to function.",
             "why_it_matters": "Thief's Gloves is the wildcard item — you never know what you'll get, but it takes up all 3 of a champion's item slots (it needs 2 free slots) and gives 2 random items each round. At high levels, it frequently rolls powerful Radiant or Artifact items. Put it on a flex unit to get unpredictable but potentially game-winning combinations.",
             "best_on": [
                 "Flex units without a fixed item build",
@@ -985,6 +1019,7 @@
                 "name": "Resolve",
                 "description": "Gain +2 Attack Damage and +2 Ability Power each time the holder takes damage or deals a critical strike. Stacks up to 25 times. At 25 stacks, gain +25 Armor and Magic Resist."
             },
+            "plain_english": "Titan's Resolve is the 'the longer I fight, the stronger I get' item — every time your champion takes a hit or lands a critical strike, they gain a permanent damage stack. When you reach 25 stacks, you also get a big armor and magic resist bonus, turning your champion into a damage-dealing tank. Put it on a brawler who stays in the fight for a long time.",
             "why_it_matters": "Titan's Resolve is a snowball item that rewards tanky champions who stay alive long enough to stack it fully. At 25 stacks it gives massive stats across the board — AD, AP, and bonus resistances. It turns a frontline tank into a legitimate damage threat while also getting harder to kill as the fight progresses.",
             "best_on": [
                 "Tanks that deal damage (Juggernaut, Bruiser)",

@@ -90,6 +90,15 @@ export default function ItemModal({ item, componentMap, onClose }: ItemModalProp
           <StatBlock stats={item.stats} />
           <RecipePills components={recipeComponents} itemName={item.name} />
 
+          {/* Plain English */}
+          {item.plain_english && (
+            <div className="bg-accent-purple/8 border border-accent-purple/20 rounded-xl px-4 py-3">
+              <p className="text-text-secondary text-sm leading-relaxed">
+                {item.plain_english}
+              </p>
+            </div>
+          )}
+
           {/* Passive */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">

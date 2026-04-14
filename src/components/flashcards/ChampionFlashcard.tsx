@@ -12,6 +12,14 @@ const COST_BADGE: Record<number, string> = {
   5: "bg-amber-500/30 text-amber-200 border-amber-500/40",
 };
 
+const COST_BORDER_COLOR: Record<number, string> = {
+  1: "rgba(163,163,163,0.45)",
+  2: "rgba(34,197,94,0.45)",
+  3: "rgba(59,130,246,0.45)",
+  4: "rgba(168,85,247,0.45)",
+  5: "rgba(245,158,11,0.55)",
+};
+
 const COST_STARS: Record<number, { stars: string; color: string }> = {
   1: { stars: "★☆☆☆☆", color: "text-neutral-400" },
   2: { stars: "★★☆☆☆", color: "text-green-400" },
@@ -113,6 +121,9 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
   const typeMeta  = champion.championType ? CHAMP_TYPE_META[champion.championType] : null;
   const roleMeta  = ROLE_META[champion.role];
   const badge     = abilityBadge(champion.ability.description);
+  const borderColor = typeMeta?.border ?? COST_BORDER_COLOR[champion.cost];
+  const cardBorder  = `2px solid ${borderColor}`;
+  const cardGlow    = `0 0 18px ${borderColor}, 0 0 6px ${borderColor}`;
 
   return (
     <div
@@ -125,7 +136,7 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
       <div className={`flashcard-inner w-full h-full rounded-2xl shadow-2xl ${isFlipped ? "is-flipped" : ""}`}>
 
         {/* ══ FRONT ═══════════════════════════════════════════════════════════ */}
-        <div className="flashcard-face rounded-2xl overflow-hidden">
+        <div className="flashcard-face rounded-2xl overflow-hidden" style={{ border: cardBorder, boxShadow: cardGlow }}>
           <div className="relative w-full h-full">
             <img
               src={champion.splashIcon}
@@ -169,7 +180,7 @@ export default function ChampionFlashcard({ champion, isFlipped, onFlip, itemMap
         </div>
 
         {/* ══ BACK ════════════════════════════════════════════════════════════ */}
-        <div className="flashcard-face flashcard-face--back rounded-2xl bg-bg-elevated border border-white/10 overflow-hidden flex flex-col">
+        <div className="flashcard-face flashcard-face--back rounded-2xl bg-bg-elevated overflow-hidden flex flex-col" style={{ border: cardBorder, boxShadow: cardGlow }}>
 
           {/* Header */}
           <div className="flex items-center gap-3 px-4 py-3 border-b border-white/8 bg-bg-surface/60 shrink-0">
