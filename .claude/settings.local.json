@@ -30,7 +30,12 @@
       "Bash(sed -n '978,1025p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
       "Bash(sed -n '210,270p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
       "Bash(sed -n '565,615p' /Users/amoljadhav/Documents/workspace/tft-academy/data/traits.json)",
-      "Bash(wc -l /Users/amoljadhav/Documents/workspace/tft-academy/src/components/simulator/*.tsx)"
+      "Bash(wc -l /Users/amoljadhav/Documents/workspace/tft-academy/src/components/simulator/*.tsx)",
+      "WebFetch(domain:support.google.com)",
+      "WebFetch(domain:www.thepolyglotdeveloper.com)",
+      "WebFetch(domain:adstimate.com)",
+      "WebFetch(domain:wpadvancedads.com)",
+      "WebFetch(domain:monetiscope.com)"
     ]
   }
 }

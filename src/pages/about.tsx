@@ -114,23 +114,47 @@ export default function AboutPage() {
             </p>
           </section>
 
+          {/* Meet the team */}
+          <section className="bg-bg-surface rounded-2xl border border-white/8 p-6">
+            <h2 className="font-heading text-xl text-accent-gold tracking-wide mb-4">
+              Who Makes TFT School?
+            </h2>
+            <div className="flex items-start gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-accent-purple/20 border border-accent-purple/30 flex items-center justify-center shrink-0">
+                <span className="text-xl font-bold text-accent-purple-light">AJ</span>
+              </div>
+              <div className="flex-1">
+                <p className="text-text-primary font-semibold text-sm mb-0.5">Amol J.</p>
+                <p className="text-accent-gold text-xs mb-3">Founder &amp; Lead Editor · Diamond TFT Player</p>
+                <p className="text-text-secondary text-xs leading-relaxed mb-3">
+                  Amol has been playing Teamfight Tactics since Set 4 and writing strategy content since Set 6. After years of watching friends struggle to understand basic TFT concepts that YouTube tutorials glossed over, he built TFT School to be the learning resource he always wished existed — one that explains every mechanic clearly, without jargon, without assuming prior knowledge.
+                </p>
+                <p className="text-text-secondary text-xs leading-relaxed">
+                  He peaked at Diamond in Set 16 and focuses primarily on economy-first play styles, flexible comp building, and helping new players develop a framework for consistent top-4 finishes. All guides on TFT School are written and reviewed by Amol before publishing.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="bg-bg-surface rounded-2xl border border-white/8 p-6">
             <h2 className="font-heading text-xl text-accent-gold tracking-wide mb-3">
               Contact &amp; Feedback
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-3">
-              TFT School is an independent fan project and is not affiliated with, endorsed, or sponsored by Riot Games. All champion names, images, and game content are the intellectual property of Riot Games.
+              TFT School is an independent fan project and is not affiliated with, endorsed, or sponsored by Riot Games. All champion names, images, and game content are the intellectual property of Riot Games. See our{" "}
+              <a href="/disclaimer" className="text-accent-gold underline hover:text-accent-gold-light">Disclaimer</a>{" "}
+              for full legal details.
             </p>
             <p className="text-text-secondary text-sm leading-relaxed">
-              For feedback, bug reports, or questions, please reach out at{" "}
+              For feedback, bug reports, content suggestions, or questions, please reach out at{" "}
               <a
                 href="mailto:clickfixdev8@gmail.com"
                 className="text-accent-gold hover:text-accent-gold-light underline transition-colors"
               >
                 clickfixdev8@gmail.com
               </a>
-              . We read every message and genuinely appreciate hearing from players.
+              . Every message is read personally and we genuinely appreciate hearing from players.
             </p>
           </section>
 

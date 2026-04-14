@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
+import AdUnit from "@/components/ads/AdUnit";
+import AuthorBio from "@/components/blog/AuthorBio";
+import RelatedArticles from "@/components/blog/RelatedArticles";
 
 export default function LiftingCompetitionGuide() {
   return (
@@ -37,12 +40,12 @@ export default function LiftingCompetitionGuide() {
             <p className="text-text-secondary text-base leading-relaxed">
               How to hit every HP threshold, when to pivot away from Bruisers, and whether the Impossible Lift is a win condition or a trap.
             </p>
-            <div className="flex items-center gap-3 mt-4 text-[11px] text-text-muted/50">
+            <div className="flex items-center gap-3 mt-4 text-[11px] text-text-muted/50 flex-wrap">
+              <AuthorBio compact />
+              <span className="text-white/15">·</span>
               <span>April 5, 2026</span>
               <span className="text-white/15">·</span>
               <span>6 min read</span>
-              <span className="text-white/15">·</span>
-              <span>TFT School Editorial</span>
             </div>
           </header>
 
@@ -118,6 +121,9 @@ export default function LiftingCompetitionGuide() {
               </p>
             </section>
 
+            {/* Ad unit */}
+            <AdUnit slot="0134567890" format="auto" className="my-2" />
+
             {/* Mid game */}
             <section>
               <h2 className="font-heading text-xl text-accent-gold mb-4">Mid-Game: The Tempo Pivot</h2>
@@ -192,6 +198,9 @@ export default function LiftingCompetitionGuide() {
               </div>
             </section>
 
+            {/* Ad unit */}
+            <AdUnit slot="0134567891" format="auto" className="my-2" />
+
             {/* TL;DR */}
             <section className="bg-bg-surface rounded-2xl border border-white/8 p-5">
               <h2 className="font-heading text-base text-accent-gold mb-3">TL;DR</h2>
@@ -228,6 +237,16 @@ export default function LiftingCompetitionGuide() {
             </section>
 
           </div>
+
+          <AuthorBio />
+
+          <RelatedArticles posts={[
+            { href: "/blog/tft-augment-tier-list", title: "TFT Augment Tier List: Best Picks in Set 17", category: "Augments", categoryColor: "text-purple-400 bg-purple-500/10 border-purple-500/25", readTime: "7 min read" },
+            { href: "/blog/tft-economy-guide", title: "TFT Economy Guide: Interest, Leveling & When to Spend", category: "Economy", categoryColor: "text-blue-400 bg-blue-500/10 border-blue-500/25", readTime: "7 min read" },
+            { href: "/blog/tft-item-building-guide", title: "TFT Item Building Guide: Components, Slam vs Hold", category: "Items", categoryColor: "text-amber-400 bg-amber-500/10 border-amber-500/25", readTime: "7 min read" },
+            { href: "/blog/tft-traits-guide-set17", title: "TFT Set 17 Traits Guide: Every Synergy Explained", category: "Traits", categoryColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/25", readTime: "8 min read" },
+          ]} />
+
         </article>
       </PageShell>
     </>

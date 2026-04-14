@@ -306,6 +306,8 @@ export default function LandingPage() {
             <Link href="/contact" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Contact</Link>
             <span className="text-white/15 text-xs">·</span>
             <Link href="/privacy" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Privacy Policy</Link>
+            <span className="text-white/15 text-xs">·</span>
+            <Link href="/disclaimer" className="text-text-muted text-xs hover:text-text-secondary transition-colors">Disclaimer</Link>
           </div>
           <p className="text-text-muted text-xs tracking-wider">
             TFT SCHOOL &nbsp;·&nbsp; Set 17 · Patch 17.1

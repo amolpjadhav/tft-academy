@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
+import AdUnit from "@/components/ads/AdUnit";
 
 export interface GuidePost {
   slug: string;
@@ -16,6 +17,105 @@ export interface GuidePost {
 
 export const ALL_GUIDES: GuidePost[] = [
   {
+    slug: "tft-beginners-guide",
+    title: "TFT Beginner's Guide: How to Play Set 17 Space Gods",
+    description: "New to TFT? Everything you need to know — how combat works, gold management, traits, items, and your first game checklist.",
+    category: "Beginner",
+    categoryColor: "text-sky-400 bg-sky-500/10 border-sky-500/25",
+    date: "April 11, 2026",
+    readTime: "9 min read",
+    set: "Set 17",
+    featured: true,
+  },
+  {
+    slug: "tft-economy-guide",
+    title: "TFT Economy Guide: Interest, Leveling & When to Spend",
+    description: "Master TFT economy in Set 17. How interest gold works, win-streak vs loss-streak, and the exact stages to level up for maximum advantage.",
+    category: "Economy",
+    categoryColor: "text-blue-400 bg-blue-500/10 border-blue-500/25",
+    date: "April 8, 2026",
+    readTime: "7 min read",
+    set: "Set 17",
+    featured: true,
+  },
+  {
+    slug: "tft-positioning-guide",
+    title: "TFT Positioning Guide: Frontline, Backline & Counter-Positioning",
+    description: "A well-positioned weaker board beats a poorly-positioned stronger one. Full guide to placement, carry protection, and scouting habits.",
+    category: "Strategy",
+    categoryColor: "text-teal-400 bg-teal-500/10 border-teal-500/25",
+    date: "April 9, 2026",
+    readTime: "6 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "tft-item-building-guide",
+    title: "TFT Item Building Guide: Components, Slam vs Hold & Priority",
+    description: "Which components to prioritize at carousel, when to slam items vs hold for a better build, and how to adapt when your target item is contested.",
+    category: "Items",
+    categoryColor: "text-amber-400 bg-amber-500/10 border-amber-500/25",
+    date: "April 10, 2026",
+    readTime: "7 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "tft-traits-guide-set17",
+    title: "TFT Set 17 Traits Guide: Every Synergy Explained",
+    description: "Complete guide to every trait in Set 17: Space Gods. Breakpoints, what each trait does, and which champions power them.",
+    category: "Traits",
+    categoryColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/25",
+    date: "April 10, 2026",
+    readTime: "8 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "tft-augment-tier-list",
+    title: "TFT Augment Tier List: Best Picks in Set 17",
+    description: "Best Silver, Gold, and Prismatic augments ranked. Which ones to always take, which are context-dependent, and which traps to avoid.",
+    category: "Augments",
+    categoryColor: "text-purple-400 bg-purple-500/10 border-purple-500/25",
+    date: "April 11, 2026",
+    readTime: "7 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "how-to-play-flex-tft",
+    title: "How to Play Flex: Reading the Lobby and Pivoting",
+    description: "Stop forcing the same comp every game. Learn how to scout an open lane, identify when to pivot, and consistently finish top 4 as a flex player.",
+    category: "Strategy",
+    categoryColor: "text-orange-400 bg-orange-500/10 border-orange-500/25",
+    date: "April 12, 2026",
+    readTime: "6 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "tft-carousel-strategy",
+    title: "TFT Carousel Strategy: What to Pick and Why",
+    description: "Component carousels, full-item carousels, when to take the champion instead of the item — a complete framework for every carousel round.",
+    category: "Strategy",
+    categoryColor: "text-violet-400 bg-violet-500/10 border-violet-500/25",
+    date: "April 12, 2026",
+    readTime: "5 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
+    slug: "tft-leveling-guide",
+    title: "TFT Leveling Guide: When to Level Up Every Stage",
+    description: "Exact leveling timelines for Set 17. When to push Level 6, 7, 8, and 9 — and how leveling decisions interact with your economy line.",
+    category: "Economy",
+    categoryColor: "text-blue-400 bg-blue-500/10 border-blue-500/25",
+    date: "April 13, 2026",
+    readTime: "6 min read",
+    set: "Set 17",
+    featured: false,
+  },
+  {
     slug: "lifting-competition-augment-guide",
     title: "Lifting Competition Augment: Full Strategy Guide",
     description: "Master the Lifting Competition quest augment — how to hit every HP threshold, when to pivot, and whether chasing the Impossible Lift is actually worth it.",
@@ -24,7 +124,7 @@ export const ALL_GUIDES: GuidePost[] = [
     date: "April 5, 2026",
     readTime: "6 min read",
     set: "Set 16",
-    featured: true,
+    featured: false,
   },
 ];
 
@@ -61,6 +161,9 @@ export default function GuidesIndex() {
             </section>
           )}
 
+          {/* Ad unit */}
+          <AdUnit slot="0234567890" format="auto" className="my-2" />
+
           {/* All guides */}
           {rest.length > 0 && (
             <section>
@@ -73,16 +176,6 @@ export default function GuidesIndex() {
                 ))}
               </div>
             </section>
-          )}
-
-          {/* Empty state / coming soon */}
-          {ALL_GUIDES.length < 5 && (
-            <div className="bg-bg-surface rounded-2xl border border-white/8 p-6 text-center">
-              <p className="text-text-muted text-sm mb-1">More articles coming soon</p>
-              <p className="text-text-muted/50 text-xs">
-                Economy guide, itemization deep-dive, positioning fundamentals, and more — in progress.
-              </p>
-            </div>
           )}
         </div>
       </PageShell>
